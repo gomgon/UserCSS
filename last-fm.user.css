@@ -11,11 +11,11 @@
 @advanced color bg-lighter "Lighter elements" #282828
 @advanced color border-color "Borders color" #323232
 @advanced color secondary-button "Secondary buttons" #323232
-@advanced color secondary-buttony-H "Secondary buttons hover" #505050
+@advanced color secondary-button-H "Secondary buttons hover" #505050
 @advanced color main-text "Main text" #CCCCCC
 @advanced color trend-bar-color "6 month listening trend bar" #CCCCCC
 @advanced color color-global "Main Color" #5C809E
-@advanced color main-color-hover "Main color lighter" #77A6CC
+@advanced color color-global-hover "Main color lighter" #77A6CC
 @advanced dropdown header-desaturate "Desaturate header image" {
 No "No" <<<EOT
 EOT;
@@ -847,9 +847,7 @@ background:/*[[bg-lighter]]*/!important;
 .user-dashboard-history-subscribe-banner-cta::after,
 .user-dashboard-history-subscribe-banner-cta::before,
 .header-popularity-rank-tooltip,
-.player-bar .player-bar-progress,
-.kerve .trendwave_inner .bar,
-.kerve .trendbarwrap .bar{
+.player-bar .player-bar-progress{
 background:/*[[bg-lighter]]*/;
 }
 .user-dashboard-banner,
@@ -859,6 +857,14 @@ background-color:/*[[bg-lighter]]*/!important;
 }
 .player-bar .player-bar-progress-slug{
 background:/*[[color-global]]*/!important;
+}
+.kerve .trendwavewrap .bar,
+.kerve .trendbarwrap .graph_global .bar{
+background:/*[[bg-lighter]]*/;
+}
+.kerve .trendwave_inner .bar,
+.kerve .trendbarwrap .bar{
+background:/*[[color-global]]*/;
 }
 #adSkinLeft,
 #adSkinRight,
@@ -911,10 +917,6 @@ table.table tr:nth-child(2n) td,
 .lazy-recs-bar-full-width-wrapper,
 .lazy-recs-bar-container{
 background:/*[[bg]]*/!important;
-}
-.kerve .trendwavewrap .bar,
-.kerve .trendbarwrap .graph_global .bar{
-background:/*[[kerve-bar-global]]*/;
 }
 .chartlist .now-scrobbling{
 background:/*[[scrobbling-now-bg]]*/!important;
