@@ -52,6 +52,10 @@ filter:brightness(100%)!important;
 }
 @advanced dropdown library-icons "Library category icons color" {
 White "White" <<<EOT
+.library-controls .secondary-nav-item .secondary-nav-item-link::before{
+-webkit-filter: saturate(0%)!important;
+filter: saturate(0%)!important;
+}
 .library-controls .secondary-nav-item--albums .secondary-nav-item-link.secondary-nav-item-link--active::before,
 .library-controls .secondary-nav-item--albums .secondary-nav-item-link:focus::before,
 .library-controls .secondary-nav-item--albums .secondary-nav-item-link:hover::before,
@@ -68,6 +72,10 @@ White "White" <<<EOT
 filter:saturate(0%) brightness(600%)!important;
 } EOT;
 Blue "Blue" <<<EOT
+.library-controls .secondary-nav-item .secondary-nav-item-link::before{
+-webkit-filter: saturate(0%)!important;
+filter: saturate(0%)!important;
+}
 .library-controls .secondary-nav-item--albums .secondary-nav-item-link.secondary-nav-item-link--active::before,
 .library-controls .secondary-nav-item--albums .secondary-nav-item-link:focus::before,
 .library-controls .secondary-nav-item--albums .secondary-nav-item-link:hover::before,
@@ -82,6 +90,26 @@ Blue "Blue" <<<EOT
 .library-controls .secondary-nav-item--tracks .secondary-nav-item-link:hover::before{
 -webkit-filter:hue-rotate(230deg) brightness(320%) saturate(22%)!important;
 filter:hue-rotate(230deg) brightness(320%) saturate(22%)!important;
+} EOT;
+Red "Red" <<<EOT
+.library-controls .secondary-nav-item .secondary-nav-item-link::before{
+-webkit-filter: saturate(0%)!important;
+filter: saturate(0%)!important;
+} 
+.library-controls .secondary-nav-item--albums .secondary-nav-item-link.secondary-nav-item-link--active::before,
+.library-controls .secondary-nav-item--albums .secondary-nav-item-link:focus::before,
+.library-controls .secondary-nav-item--albums .secondary-nav-item-link:hover::before,
+.library-controls .secondary-nav-item--artists .secondary-nav-item-link.secondary-nav-item-link--active::before,
+.library-controls .secondary-nav-item--artists .secondary-nav-item-link:focus::before,
+.library-controls .secondary-nav-item--artists .secondary-nav-item-link:hover::before,
+.library-controls .secondary-nav-item--overview .secondary-nav-item-link.secondary-nav-item-link--active::before,
+.library-controls .secondary-nav-item--overview .secondary-nav-item-link:focus::before,
+.library-controls .secondary-nav-item--overview .secondary-nav-item-link:hover::before,
+.library-controls .secondary-nav-item--tracks .secondary-nav-item-link.secondary-nav-item-link--active::before,
+.library-controls .secondary-nav-item--tracks .secondary-nav-item-link:focus::before,
+.library-controls .secondary-nav-item--tracks .secondary-nav-item-link:hover::before{
+-webkit-filter: saturate(100%)!important;
+filter: saturate(100%)!important;
 } EOT;
 }
 @advanced text loading-gif "Loading gif (16x16)" "http://www.last.fm/static/images/loading.gif"
