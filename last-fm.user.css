@@ -1,29 +1,21 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.0.0
+@version     2.1.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
 @author      gomgon
-@preprocessor uso
-@advanced color main-background "Main background" #1E1E1E
-@advanced color main-text "Main text" #CCCCCC
-@advanced color main-color "Links & colored text" #5C809E
-@advanced color main-color-hover "Links hover" #77A6CC
-@advanced color main-back "Colored elements" #5C809E
-@advanced color highlight-element "Highlighted elements" #282828
+@advanced color bg "Background" #1E1E1E
 @advanced color scrobbling-now-bg "Scrobbling now background" #1E1E1E
+@advanced color bg-lighter "Lighter elements" #282828
 @advanced color border-color "Borders color" #323232
-@advanced color primary-button "Primary buttons" #5C809E
-@advanced color primary-button-H "Primary buttons hover" #77A6CC
 @advanced color secondary-button "Secondary buttons" #323232
 @advanced color secondary-buttony-H "Secondary buttons hover" #505050
-@advanced color player-bar "Player bar" #282828
-@advanced color player-bar-progress "Player bar progress" #5C809E
-@advanced color kerve-bar-global "Listening Trends bars (global)" #323232
-@advanced color kerve-bar-you "Listening Trends bars (you)" #5C809E
+@advanced color main-text "Main text" #CCCCCC
 @advanced color trend-bar-color "6 month listening trend bar" #CCCCCC
+@advanced color color-global "Main Color" #5C809E
+@advanced color main-color-hover "Main color lighter" #77A6CC
 @advanced dropdown header-desaturate "Desaturate header image" {
 No "No" <<<EOT
 EOT;
@@ -59,22 +51,6 @@ filter:brightness(100%)!important;
 } EOT;
 }
 @advanced dropdown library-icons "Library category icons color" {
-Blue "Blue" <<<EOT
-.library-controls .secondary-nav-item--albums .secondary-nav-item-link.secondary-nav-item-link--active::before,
-.library-controls .secondary-nav-item--albums .secondary-nav-item-link:focus::before,
-.library-controls .secondary-nav-item--albums .secondary-nav-item-link:hover::before,
-.library-controls .secondary-nav-item--artists .secondary-nav-item-link.secondary-nav-item-link--active::before,
-.library-controls .secondary-nav-item--artists .secondary-nav-item-link:focus::before,
-.library-controls .secondary-nav-item--artists .secondary-nav-item-link:hover::before,
-.library-controls .secondary-nav-item--overview .secondary-nav-item-link.secondary-nav-item-link--active::before,
-.library-controls .secondary-nav-item--overview .secondary-nav-item-link:focus::before,
-.library-controls .secondary-nav-item--overview .secondary-nav-item-link:hover::before,
-.library-controls .secondary-nav-item--tracks .secondary-nav-item-link.secondary-nav-item-link--active::before,
-.library-controls .secondary-nav-item--tracks .secondary-nav-item-link:focus::before,
-.library-controls .secondary-nav-item--tracks .secondary-nav-item-link:hover::before{
--webkit-filter:hue-rotate(230deg) brightness(320%) saturate(22%)!important;
-filter:hue-rotate(230deg) brightness(320%) saturate(22%)!important;
-} EOT;
 White "White" <<<EOT
 .library-controls .secondary-nav-item--albums .secondary-nav-item-link.secondary-nav-item-link--active::before,
 .library-controls .secondary-nav-item--albums .secondary-nav-item-link:focus::before,
@@ -90,6 +66,22 @@ White "White" <<<EOT
 .library-controls .secondary-nav-item--tracks .secondary-nav-item-link:hover::before{
 -webkit-filter:saturate(0%) brightness(600%)!important;
 filter:saturate(0%) brightness(600%)!important;
+} EOT;
+Blue "Blue" <<<EOT
+.library-controls .secondary-nav-item--albums .secondary-nav-item-link.secondary-nav-item-link--active::before,
+.library-controls .secondary-nav-item--albums .secondary-nav-item-link:focus::before,
+.library-controls .secondary-nav-item--albums .secondary-nav-item-link:hover::before,
+.library-controls .secondary-nav-item--artists .secondary-nav-item-link.secondary-nav-item-link--active::before,
+.library-controls .secondary-nav-item--artists .secondary-nav-item-link:focus::before,
+.library-controls .secondary-nav-item--artists .secondary-nav-item-link:hover::before,
+.library-controls .secondary-nav-item--overview .secondary-nav-item-link.secondary-nav-item-link--active::before,
+.library-controls .secondary-nav-item--overview .secondary-nav-item-link:focus::before,
+.library-controls .secondary-nav-item--overview .secondary-nav-item-link:hover::before,
+.library-controls .secondary-nav-item--tracks .secondary-nav-item-link.secondary-nav-item-link--active::before,
+.library-controls .secondary-nav-item--tracks .secondary-nav-item-link:focus::before,
+.library-controls .secondary-nav-item--tracks .secondary-nav-item-link:hover::before{
+-webkit-filter:hue-rotate(230deg) brightness(320%) saturate(22%)!important;
+filter:hue-rotate(230deg) brightness(320%) saturate(22%)!important;
 } EOT;
 }
 @advanced text loading-gif "Loading gif (16x16)" "http://www.last.fm/static/images/loading.gif"
@@ -695,11 +687,11 @@ top: -52px;
 .correction-vote-yes-on,
 .inbox .inbox-buttons .inbox-compose-button,
 .clipboard-button{
-background:/*[[primary-button]]*/!important;
+background:/*[[color-global]]*/!important;
 }
 .header-follower-btn .follower-btn-add-follower::before,
 .user-list-follower-btn .follower-btn-add-follower{
-background-color:/*[[primary-button]]*/;
+background-color:/*[[color-global]]*/;
 }
 .add-event-btn:hover,
 .btn-add:hover,
@@ -710,11 +702,11 @@ background-color:/*[[primary-button]]*/;
 .inbox .inbox-buttons .inbox-compose-button:focus,
 .clipboard-button:hover,
 .clipboard-button:focus{
-background:/*[[primary-button-H]]*/!important;
+background:/*[[color-global-hover]]*/!important;
 }
 .header-follower-btn .follower-btn-add-follower:hover::before,
 .user-list-follower-btn .follower-btn-add-follower:hover{
-background-color:/*[[primary-button-H]]*/;
+background-color:/*[[color-global-hover]]*/;
 }
 .btn-secondary,
 .attendance-btn,
@@ -779,11 +771,11 @@ background-color:/*[[secondary-button-H]]*/!important;
 .inbox .inbox-buttons .inbox-compose-button,
 .scrobble-stats-graph .user-dashboard-legend-item--current::before,
 .scrobble-stats-graph .user-dashboard-legend-item--comparison::before{
-background:/*[[main-back]]*/!important;
+background:/*[[color-global]]*/!important;
 }
 .inbox-notifications .inbox-notifications__item-unread-indicator::after,
 .user-status-subscriber::after{
-background-color:/*[[main-back]]*/;
+background-color:/*[[color-global]]*/;
 }
 .alert,
 .alert-info,
@@ -820,25 +812,25 @@ background-color:/*[[main-back]]*/;
 .inbox-notifications .inbox-notifications__item--hover:focus,
 .inbox-notifications .inbox-notifications__item--highlight-hover:hover,
 .inbox-notifications .inbox-notifications__item--highlight-hover:focus{
-background:/*[[highlight-element]]*/!important;
+background:/*[[bg-lighter]]*/!important;
 }
 .recommended-next-page,
 .user-dashboard-module,
 .user-dashboard-history-subscribe-banner-cta::after,
 .user-dashboard-history-subscribe-banner-cta::before,
-.header-popularity-rank-tooltip{
-background:/*[[highlight-element]]*/;
+.header-popularity-rank-tooltip,
+.player-bar .player-bar-progress,
+.kerve .trendwave_inner .bar,
+.kerve .trendbarwrap .bar{
+background:/*[[bg-lighter]]*/;
 }
 .user-dashboard-banner,
 .shout-container--active,
 .listening-report-promo:hover{
-background-color:/*[[highlight-element]]*/!important;
-}
-.player-bar .player-bar-progress{
-background:/*[[player-bar]]*/!important;
+background-color:/*[[bg-lighter]]*/!important;
 }
 .player-bar .player-bar-progress-slug{
-background:/*[[player-bar-progress]]*/!important;
+background:/*[[color-global]]*/!important;
 }
 #adSkinLeft,
 #adSkinRight,
@@ -890,15 +882,11 @@ body:not(.dashbody) .kerve.widget,
 table.table tr:nth-child(2n) td,
 .lazy-recs-bar-full-width-wrapper,
 .lazy-recs-bar-container{
-background:/*[[main-background]]*/!important;
+background:/*[[bg]]*/!important;
 }
 .kerve .trendwavewrap .bar,
 .kerve .trendbarwrap .graph_global .bar{
 background:/*[[kerve-bar-global]]*/;
-}
-.kerve .trendwave_inner .bar,
-.kerve .trendbarwrap .bar{
-background:/*[[kerve-bar-you]]*/;
 }
 .chartlist .now-scrobbling{
 background:/*[[scrobbling-now-bg]]*/!important;
@@ -985,13 +973,13 @@ border-color:#B90000!important;
 border:1px solid /*[[border-color]]*/!important;
 }
 .kerve .venn2{
-border:2px solid /*[[main-back]]*/;
+border:2px solid /*[[color-global]]*/;
 }
 .kerve .venn2 .handle{
-border:3px solid /*[[main-back]]*/;
+border:3px solid /*[[color-global]]*/;
 }
 .kerve .vennname2{
-border-bottom:1px solid /*[[main-back]]*/!important;
+border-bottom:1px solid /*[[color-global]]*/!important;
 }
 .events-filters{
 border-bottom: 1px solid /*[[border-color]]*/;
@@ -1028,11 +1016,11 @@ box-shadow:0 0 0 1px /*[[secondary-button-H]]*/ inset;
 }
 .pagination-page[aria-current],
 .pagination-page:not(.pagination-page--ellipsis):hover{
--webkit-box-shadow: 0 -3px /*[[main-back]]*/ inset;
-box-shadow:0 -3px /*[[main-back]]*/ inset;
+-webkit-box-shadow: 0 -3px /*[[color-global]]*/ inset;
+box-shadow:0 -3px /*[[color-global]]*/ inset;
 }
 .metacritic-score{
-color:/*[[main-background]]*/!important;
+color:/*[[bg]]*/!important;
 }
 a,
 .stationlink-list .btn,
@@ -1061,13 +1049,13 @@ div.username,
 .secondary-nav--step-nav a.secondary-nav-item-link:focus,
 .secondary-nav--step-nav a.secondary-nav-item-link:hover,
 .pagination-page[aria-current]{
-color:/*[[main-color]]*/;
+color:/*[[color-global]]*/;
 }
 .selectbox .selectboxit-selected .selectboxit-option-anchor,
 .dropdown-menu-clickable-item--selected,
 .dropdown-menu-clickable-item--selected:hover,
 .date-range-picker-preset--selected a{
-color:/*[[main-color]]*/!important;
+color:/*[[color-global]]*/!important;
 }
 a:hover,
 a:focus,
@@ -1083,10 +1071,10 @@ h2 a:hover,
 .shout-reply.shout-reply--open,
 a.shout-permalink:hover,
 a.shout-permalink:focus{
-color:/*[[main-color-hover]]*/;
+color:/*[[color-global-hover]]*/;
 }
 .kerve .nowslider_copywrap a:hover{
-color:/*[[main-color-hover]]*/!important;
+color:/*[[color-global-hover]]*/!important;
 }
 body,
 p,
@@ -1197,23 +1185,23 @@ fill:/*[[main-text]]*/!important;
 .user-dashboard-chart-square-inner .highcharts-background,
 .user-dashboard-scalable-content .highcharts-background,
 .js-listening-clock-target.user-dashboard-chart-square-inner > svg.user-dashboard-module-svg > g > circle:nth-of-type(1){
-fill:/*[[highlight-element]]*/;
+fill:/*[[bg-lighter]]*/;
 }
 .highcharts-background {
-fill:/*[[main-background]]*/;
+fill:/*[[bg]]*/;
 }
 .highcharts-markers > path {
 fill:/*[[trend-bar-color]]*/;
 }
 .highcharts-container > svg > g.highcharts-series-group .highcharts-series-0 > a > rect,
 .highcharts-container > svg > g.highcharts-series-group .highcharts-series-1 > a > rect{
-fill:/*[[main-back]]*/;
+fill:/*[[color-global]]*/;
 }
 .sparkline-graph .highcharts-series.highcharts-series-0 path:nth-child(1){
 stroke:/*[[trend-bar-color]]*/;
 }
 .js-listening-clock-target.user-dashboard-chart-square-inner > svg.user-dashboard-module-svg > g > g:nth-of-type(25){
-stroke:/*[[highlight-element]]*/;
+stroke:/*[[bg-lighter]]*/;
 }
 .js-listening-clock-target.user-dashboard-chart-square-inner > svg.user-dashboard-module-svg > g > g:nth-of-type(27){
 stroke:/*[[main-text]]*/;
@@ -1256,13 +1244,13 @@ background-color:transparent;
 .masthead-search-submit.disabled:hover,
 .masthead-search-submit[disabled]:hover,
 .lazy-recs-bar .lazy-recs-bar-join{
-background-color:/*[[primary-button]]*/;
+background-color:/*[[color-global]]*/;
 }
 .masthead-search-submit:focus,
 .masthead-search-submit:hover,
 .lazy-recs-bar .lazy-recs-bar-join:focus,
 .lazy-recs-bar .lazy-recs-bar-join:hover{
-background-color:/*[[primary-button-H]]*/;
+background-color:/*[[color-global-hover]]*/;
 }
 .inbox .inbox-buttons .inbox-delete-button{
 background-color:/*[[secondary-button]]*/;
@@ -1276,7 +1264,7 @@ background-color:/*[[secondary-button-H]]*/!important;
 opacity:0.3;
 }
 .user-dashboard-tooltip{
-background:/*[[highlight-element]]*/;
+background:/*[[bg-lighter]]*/;
 border-radius:0px;
 color:/*[[main-text]]*/;
 }
@@ -1364,7 +1352,7 @@ color: #FFFFFF;
 .header--sub-page .header-title-secondary a:hover,
 .user-dashboard-pagination-next-link,
 .user-dashboard-pagination-previous-link{
-color:/*[[main-color]]*/;
+color:/*[[color-global]]*/;
 }
 }
 @media (min-width:1260px){
