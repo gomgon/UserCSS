@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.1.3
+@version     2.1.4
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -182,7 +182,6 @@ div.feedback-message,
 .lastfm-ad-mobile,
 .lazy-features-footer,
 .nag-bar--catalogue-beta-in,
-.pagination a::before,
 .player-bar .player-bar-progress-slug::after,
 .related-ads,
 .subscribe-cta,
@@ -225,8 +224,7 @@ background:#141414!important;
 .selectboxit-option a:hover,
 div.overlay-side-rail,
 .kerve .trendglobal,
-.kerve a.btn_trendnav,
-.modal-content{
+.kerve a.btn_trendnav{
 background:#323232!important;
 }
 .btn--header,
@@ -350,9 +348,6 @@ ul.journalsSmall,
 ul.journalsSmall li,
 table.forumtable td{
 border-bottom:none!important;
-}
-.modal-header{
-border-bottom:1px solid #505050;
 }
 .kerve .trendglobal{
 border-left:none!important;
@@ -582,13 +577,17 @@ filter:saturate(0%) brightness(300%)!important;
 .album-grid-tags-add::before,
 .modal-dismiss::before,
 .user-dashboard-pagination-next-link::before,
-.user-dashboard-pagination-previous-link::before{
+.user-dashboard-pagination-previous-link::before,
+.pagination-previous a::before,
+.pagination-next a::before{
 -webkit-filter:saturate(0%) brightness(600%)!important;
 filter:saturate(0%) brightness(600%)!important;
 }
 .inbox-message-view .inbox-message-buttons .back-button::before,
 .user-dashboard-module-share::before,
-.listening-report-promo-date::after{
+.listening-report-promo-date::after,
+.pagination-previous:hover a::before,
+.pagination-next:hover a::before{
 -webkit-filter:saturate(0%) brightness(800%)!important;
 filter:saturate(0%) brightness(800%)!important;
 }
@@ -649,14 +648,10 @@ opacity:1;
 }
 .selectbox .selectboxit-options,
 .buylinks-dropdown-menu,
-.date-range-picker-content,
 .dropdown-menu.dropdown--open,
 .secondary-nav--scrollable.secondary-nav--more ul.secondary-nav-hidden-list,
 .secondary-nav .navlist-hidden-list{
 padding:0!important;
-}
-.btn-primary{
-padding:6px 13px!important;
 }
 .btn-primary.profile-header-set-obsession{
 padding:9px 15px!important;
@@ -669,9 +664,6 @@ padding-bottom:1px!important;
 }
 .stationbuttonLarge{
 padding-left:0!important;
-}
-.chartlist.chartlist--no-compact-image.chartlist--no-big-image tr{
-padding-left:48px!important;
 }
 .stationlink-list .btn:focus,
 .stationlink-list .btn:hover,
@@ -766,7 +758,8 @@ body:not(.dashbody) .kerve.widget,
 .header--sub-page .container, .header--overview .container,
 table.table tr:nth-child(2n) td,
 .lazy-recs-bar-full-width-wrapper,
-.lazy-recs-bar-container{
+.lazy-recs-bar-container,
+.modal-content{
 background:/*[[bg]]*/!important;
 }
 .alert,
@@ -974,8 +967,7 @@ table.forumtable td,
 ul.forumComments li.odd,
 ul.journalsSmall li,
 .inbox-message-view .form-section,
-.already-joined,
-.date-range-picker-form{
+.already-joined{
 border-top:1px solid /*[[border-color]]*/ !important;
 }
 #page .sic #content,
@@ -999,7 +991,10 @@ input.button:hover,
 input.confirmButton:hover,
 .user-list-shared-artists,
 .event-venue-section,
-.lazy-recs-bar-full-width-wrapper{
+.lazy-recs-bar-full-width-wrapper,
+.modal-header,
+.modal-body .delete-catalogue-item-form,
+.date-range-picker-presets a::after{
 border-color:/*[[border-color]]*/!important;
 }
 .content-form .has-error .form-control,
@@ -1031,7 +1026,8 @@ table.table td,
 table.table th,
 .inbox .inbox-table tr,
 .inbox-notifications .inbox-notifications__item--highlight,
-.inbox-notifications .inbox-notifications__item--hover{
+.inbox-notifications .inbox-notifications__item--hover,
+.secondary-nav{
 -webkit-box-shadow:0px -1px /*[[border-color]]*/ inset!important;
 box-shadow:0px -1px /*[[border-color]]*/ inset!important;
 }
@@ -1093,7 +1089,10 @@ div.username,
 .chartlist .delete-scrobble-menu-item,
 .minimal-navigation-item-link--active,
 .minimal-navigation-item-link--active:focus,
-.minimal-navigation-item-link--active:hover{
+.minimal-navigation-item-link--active:hover,
+.delete-catalogue-item-form .checkbox label,
+.delete-catalogue-item-form .form-group .form-group-controls--checkbox label,
+.delete-catalogue-item-form .form-group ul:not(.bulleted-list):not(.redactor-toolbar) li label{
 color:/*[[color-global]]*/;
 }
 .selectbox .selectboxit-selected .selectboxit-option-anchor,
@@ -1355,8 +1354,11 @@ margin-right: 0px;
 .user-dashboard-pagination-previous{
 margin-top:-28px;
 }
-.date-range-picker-content {
+.date-range-picker-content{
 padding: 15px !important;
+}
+.date-range-picker-form{
+border-top:1px solid /*[[border-color]]*/ !important;
 }
 .wiki-history .wiki-history-table td,
 .wiki-history .wiki-history-table th{
@@ -1366,6 +1368,10 @@ box-shadow: 0 -1px /*[[border-color]]*/ inset;
 .inbox .inbox-table {
 -webkit-box-shadow: 0 1px /*[[color-global]]*/ inset;
 box-shadow: 0 1px /*[[border-color]]*/ inset;
+}
+.secondary-nav{
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
 }
 .user-dashboard-catalogue-item .user-dashboard-comparison {
 top: -54px;
