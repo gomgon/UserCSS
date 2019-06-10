@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.1.2
+@version     2.1.3
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -161,6 +161,14 @@ display:none!important;
 No "No" <<<EOT
 EOT;
 }
+@advanced dropdown hide-unavailable-shouts "Hide unavailable shouts" {
+Yes "Yes" <<<EOT
+.shout--deleted{
+display:none!important;
+} EOT;
+No "No" <<<EOT
+EOT;
+}
 ==/UserStyle== */
 @-moz-document domain("last.fm"){
 .col-xs-2,
@@ -236,8 +244,15 @@ background:transparent;
 .chartlist tr{
 background-color:#592929!important;
 }
-.masthead-wrapper .masthead,
-.dropdown-menu-clickable::before{
+.user-dashboard-upsell-cta,
+.btn-subscribe{
+background-color: #78684a;
+}
+.user-dashboard-upsell-cta:hover,
+.btn-subscribe:hover{
+background-color: #a69066;
+}
+.masthead-wrapper .masthead{
 background-image:none!important;
 }
 .dashbody .kerve .venn_mask{
@@ -412,7 +427,8 @@ border-top:none;
 .inbox-buttons > *,
 .btn-lite,
 .header-popularity-rank-tooltip,
-.lazy-recs-bar .lazy-recs-bar-join{
+.lazy-recs-bar .lazy-recs-bar-join,
+.user-dashboard-upsell-cta{
 border-radius:0!important;
 }
 .library-controls-datepicker{
@@ -448,7 +464,8 @@ box-shadow:none!important;
 }
 .btn_trendnav_month,
 .btn_trendnav_week,
-.trendglobal{
+.trendglobal,
+.obsession-history-item .obsession-first{
 color:#000000!important;
 }
 .btn-add-sm,
@@ -584,6 +601,12 @@ font-weight:bold;
 .dashbody .header-background::before{
 height: 100%;
 }
+.content-form input[type="date"],
+.content-form input[type="datetime-local"],
+.content-form input[type="month"],
+.content-form input[type="time"] {
+line-height: normal;
+}
 .dashbody .kerve .worldwrap{
 margin:0;
 }
@@ -690,6 +713,7 @@ top: -52px;
 /*[[hide-cookies]]*/
 /*[[hide-social-media]]*/
 /*[[hide-buy]]*/
+/*[[hide-unavailable-shouts]]*/
 /*[[loved-icon-color]]*/
 /*[[header-desaturate]]*/
 /*[[library-icons]]*/
@@ -789,7 +813,8 @@ background:/*[[bg-lighter]]*/!important;
 .header-popularity-rank-tooltip,
 .player-bar .player-bar-progress,
 .kerve .trendwavewrap .bar,
-.kerve .trendbarwrap .graph_global .bar{
+.kerve .trendbarwrap .graph_global .bar,
+.secondary-nav .navlist-hidden-list a{
 background:/*[[bg-lighter]]*/;
 }
 .user-dashboard-banner,
@@ -878,9 +903,7 @@ button.confirmButton,
 input.button,
 input.confirmButton,
 .recommended-next-button,
-.secondary-nav .navlist-hidden-list,
 .secondary-nav .navlist-hidden-list a:hover,
-.secondary-nav .navlist-hidden-list a:focus,
 .more-disclose-mobile .more-block{
 background-color:/*[[secondary-button]]*/!important;
 }
@@ -903,11 +926,7 @@ button.confirmButton:hover,
 input.button:hover,
 input.confirmButton:hover,
 .recommended-next-page:hover .recommended-next-button,
-.recommended-next-page:active .recommended-next-button,
-.secondary-nav .navlist-hidden-list a:hover:hover,
-.secondary-nav .navlist-hidden-list a:focus:hover,
-.secondary-nav .navlist-hidden-list a:hover:focus,
-.secondary-nav .navlist-hidden-list a:focus:focus{
+.recommended-next-page:active .recommended-next-button{
 background-color:/*[[secondary-button-H]]*/!important;
 }
 .chartlist .now-scrobbling{
@@ -1070,7 +1089,11 @@ div.username,
 .secondary-nav--step-nav .secondary-nav-item-link--active,
 .secondary-nav--step-nav a.secondary-nav-item-link:focus,
 .secondary-nav--step-nav a.secondary-nav-item-link:hover,
-.pagination-page[aria-current]{
+.pagination-page[aria-current],
+.chartlist .delete-scrobble-menu-item,
+.minimal-navigation-item-link--active,
+.minimal-navigation-item-link--active:focus,
+.minimal-navigation-item-link--active:hover{
 color:/*[[color-global]]*/;
 }
 .selectbox .selectboxit-selected .selectboxit-option-anchor,
@@ -1173,7 +1196,8 @@ color:/*[[main-text]]*/!important;
 .featured-item-heading,
 .header-popularity-rank-tooltip,
 .lazy-recs-bar-recommended-items .lazy-recs-bar-recommended-item-artist,
-.lazy-recs-bar-recommended-items .lazy-recs-bar-recommended-item-title{
+.lazy-recs-bar-recommended-items .lazy-recs-bar-recommended-item-title,
+.content-form legend{
 color:/*[[main-text]]*/;
 }
 .dropdown-menu-clickable-button:hover,
@@ -1251,6 +1275,32 @@ padding-right: 16px;
 background-size: 64px 64px !important;
 background: url(/*[[loading-gif-64]]*/) 50% 50% no-repeat !important;
 }
+.date-range-picker-content::before{
+left: 126px !important;
+}
+.dropdown-menu-clickable::before{
+left: 50px !important;
+}
+.secondary-nav .navlist-hidden-list::before{
+left: 44px!important;
+}
+.date-range-picker-content::before,
+.dropdown-menu-clickable::before,
+.secondary-nav .navlist-hidden-list::before{
+top:-18px;
+background-image: none;
+width: 0px;
+height: 0px;
+border: 9px solid transparent;
+}
+.date-range-picker-content::before,
+.dropdown-menu-clickable::before,
+.secondary-nav .navlist-hidden-list::before{
+border-left-color: transparent;
+border-right-color: transparent;
+border-top-color: transparent;
+border-bottom-color:  /*[[bg-lighter]]*/;
+}
 @media (min-width:768px){
 .chartlist tr.chartlist-row--even .chartlist-more-button{
 background-color:transparent;
@@ -1306,9 +1356,7 @@ margin-right: 0px;
 margin-top:-28px;
 }
 .date-range-picker-content {
-padding-bottom: 18px !important;
-padding-left: 15px !important;
-padding-right: 15px !important;
+padding: 15px !important;
 }
 .wiki-history .wiki-history-table td,
 .wiki-history .wiki-history-table th{
