@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.1.5
+@version     2.2.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -13,7 +13,6 @@
 @advanced color secondary-button "Secondary buttons" #323232
 @advanced color secondary-button-H "Secondary buttons hover" #505050
 @advanced color main-text "Main text" #CCCCCC
-@advanced color trend-bar-color "6 month listening trend bar" #CCCCCC
 @advanced color color-global "Main Color" #5C809E
 @advanced color color-global-hover "Main color lighter" #77A6CC
 @advanced dropdown header-desaturate "Desaturate header image" {
@@ -198,7 +197,8 @@ div.feedback-message,
 .music-more-link a::before,
 .features-more-link a::before,
 .full-bleed-ad-container,
-#taboola-below-content-thumbnails{
+#taboola-below-content-thumbnails,
+.section-with-separator::after{
 display:none!important;
 }
 .chartlist .chartlist-album,
@@ -240,8 +240,7 @@ background-color:transparent!important;
 .user-dashboard-module-share{
 background:transparent;
 }
-.alert-danger,
-.chartlist tr{
+.alert-danger{
 background-color:#592929!important;
 }
 .user-dashboard-upsell-cta,
@@ -671,9 +670,6 @@ padding:0!important;
 .btn-primary.profile-header-set-obsession{
 padding:9px 15px!important;
 }
-.chartlist tr{
-padding:9px 62px 1px 85px!important;
-}
 .chartlist .countbar-bar{
 padding-bottom:1px!important;
 }
@@ -776,7 +772,8 @@ table.table tr:nth-child(2n) td,
 .popup_visible .modal-content .alert,
 .features-header .features-teaser-body,
 .features-teaser--promoted .features-teaser-body,
-.features-post-header-body{
+.features-post-header-body,
+.chartlist-row:hover{
 background:/*[[bg]]*/!important;
 }
 .alert,
@@ -865,7 +862,7 @@ background:/*[[border-color]]*/;
 .correction-vote-yes-on,
 .inbox .inbox-buttons .inbox-compose-button,
 .clipboard-button,
-.countbar-bar-slug,
+.chartlist-count-bar-slug,
 .kerve .trenduser,
 .kerve a.btn_trendnav.current,
 .dashbody .kerve .wave .track,
@@ -900,7 +897,9 @@ background-color:/*[[color-global]]*/;
 .inbox .inbox-buttons .inbox-compose-button:hover,
 .inbox .inbox-buttons .inbox-compose-button:focus,
 .clipboard-button:hover,
-.clipboard-button:focus{
+.clipboard-button:focus,
+a:focus .chartlist-count-bar-slug,
+a:hover .chartlist-count-bar-slug{
 background:/*[[color-global-hover]]*/!important;
 }
 .header-follower-btn .follower-btn-add-follower:hover::before,
@@ -952,7 +951,8 @@ input.confirmButton:hover,
 .recommended-next-page:active .recommended-next-button{
 background-color:/*[[secondary-button-H]]*/!important;
 }
-.chartlist .now-scrobbling{
+.chartlist-row--highlight,
+.chartlist-row--now-scrobbling{
 background:/*[[scrobbling-now-bg]]*/!important;
 }
 .widget_listeningnow,
@@ -1021,7 +1021,13 @@ input.confirmButton:hover,
 .modal-header,
 .modal-body .delete-catalogue-item-form,
 .date-range-picker-presets a::after,
-.features-post-main .features-post-body hr{
+.features-post-main .features-post-body hr,
+.chartlist-break::after,
+.chartlist-row::after,
+.stationlink-list .stationlink::after,
+.resource-external-link::after,
+.more-link-with-action a + a::before,
+.shout-form{
 border-color:/*[[border-color]]*/!important;
 }
 .content-form .has-error .form-control,
@@ -1047,8 +1053,6 @@ border-bottom:1px solid /*[[color-global]]*/!important;
 border-bottom: 1px solid /*[[border-color]]*/;
 }
 .buylink-list li,
-.chartlist tr,
-.stationlink-list li:nth-last-child(n+2),
 table.table td,
 table.table th,
 .inbox .inbox-table tr,
@@ -1073,6 +1077,25 @@ box-shadow:0 0 0 1px /*[[secondary-button]]*/ inset;
 .btn-primary.profile-header-set-obsession:focus{
 -webkit-box-shadow:0 0 0 1px /*[[secondary-button-H]]*/ inset;
 box-shadow:0 0 0 1px /*[[secondary-button-H]]*/ inset;
+}
+.catalogue-tags .tag a,
+.catalogue-tags .tags-add,
+.catalogue-tags .tags-add-cta{
+	-webkit-box-shadow: 0 0 0 1px /*[[color-global]]*/ inset;
+	box-shadow: 0 0 0 1px /*[[color-global]]*/ inset;
+}
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .catalogue-tags .tag a:focus,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .catalogue-tags .tags-add-cta:focus,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .catalogue-tags .tags-add:focus,
+body:not([data-whatinput="touch"]) .catalogue-tags .tag a .focus-visible,
+body:not([data-whatinput="touch"]) .catalogue-tags .tag a:hover,
+body:not([data-whatinput="touch"]) .catalogue-tags .tags-add-cta .focus-visible,
+body:not([data-whatinput="touch"]) .catalogue-tags .tags-add-cta:hover,
+body:not([data-whatinput="touch"]) .catalogue-tags .tags-add .focus-visible,
+body:not([data-whatinput="touch"]) .catalogue-tags .tags-add:hover{
+color:/*[[color-global-hover]]*/!important;
+	-webkit-box-shadow: 0 0 0 1px /*[[color-global-hover]]*/ inset;
+	box-shadow: 0 0 0 1px /*[[color-global-hover]]*/ inset;
 }
 .pagination-page[aria-current],
 .pagination-page:not(.pagination-page--ellipsis):hover{
@@ -1134,7 +1157,10 @@ color:/*[[color-global]]*/;
 .selectbox .selectboxit-selected .selectboxit-option-anchor,
 .dropdown-menu-clickable-item--selected,
 .dropdown-menu-clickable-item--selected:hover,
-.date-range-picker-preset--selected a{
+.date-range-picker-preset--selected a,
+.catalogue-tags .tag a,
+.catalogue-tags .tags-add,
+.catalogue-tags .tags-add-cta{
 color:/*[[color-global]]*/!important;
 }
 a:hover,
@@ -1273,18 +1299,21 @@ fill:/*[[main-text]]*/!important;
 .user-dashboard-tube-tags-scroll .highcharts-background,
 .user-dashboard-chart-square-inner .highcharts-background,
 .user-dashboard-scalable-content .highcharts-background,
-.js-listening-clock-target.user-dashboard-chart-square-inner > svg.user-dashboard-module-svg > g > circle:nth-of-type(1){
+.js-listening-clock-target.user-dashboard-chart-square-inner > svg.user-dashboard-module-svg > g > circle:nth-of-type(1),
+g.highcharts-plot-bands-0 path.highcharts-plot-band
+{
 fill:/*[[bg-lighter]]*/;
 }
 .highcharts-background {
 fill:/*[[bg]]*/;
 }
-.highcharts-markers > path {
-fill:/*[[trend-bar-color]]*/;
-}
 .highcharts-container > svg > g.highcharts-series-group .highcharts-series-0 > a > rect,
 .highcharts-container > svg > g.highcharts-series-group .highcharts-series-1 > a > rect{
 fill:/*[[color-global]]*/;
+}
+.highcharts-series-0.highcharts-area-series.highcharts-color-undefined path.highcharts-area{
+fill:/*[[color-global]]*/;
+opacity:.1;
 }
 .sparkline-graph .highcharts-series.highcharts-series-0 path:nth-child(1){
 stroke:/*[[trend-bar-color]]*/;
@@ -1294,6 +1323,10 @@ stroke:/*[[bg-lighter]]*/;
 }
 .js-listening-clock-target.user-dashboard-chart-square-inner > svg.user-dashboard-module-svg > g > g:nth-of-type(27){
 stroke:/*[[main-text]]*/;
+}
+g.highcharts-series.highcharts-series-0.highcharts-area-series.highcharts-color-undefined path.highcharts-graph,
+g.highcharts-markers.highcharts-series-0.highcharts-area-series.highcharts-color-undefined.highcharts-tracker path{
+stroke:/*[[color-global]]*/;
 }
 .scrobble-stats-graph .user-dashboard-legend-item--comparison::before,
 .highcharts-container > svg > g.highcharts-series-group .highcharts-series-0 > a > rect{
