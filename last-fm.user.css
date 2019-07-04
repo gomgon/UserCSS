@@ -111,8 +111,8 @@ filter: saturate(0%)!important;
 filter: saturate(100%)!important;
 } EOT;
 }
-@advanced text loading-gif "Loading gif (16x16)" "http://www.last.fm/static/images/loading.gif"
-@advanced text loading-gif-64 "Loading gif (64x64)" "http://www.last.fm/static/images/loading_fff_64.gif"
+@advanced text loading-gif "Loading gif (16x16)" "https://www.last.fm/static/images/loading.gif"
+@advanced text loading-gif-64 "Loading gif (64x64)" "https://www.last.fm/static/images/loading_fff_64.gif"
 @advanced dropdown hide-social-media "Hide social media sharing" {
 Yes "Yes" <<<EOT
 .share-desktop,
@@ -255,18 +255,18 @@ background-color: #a69066;
 background-image:none!important;
 }
 .dashbody .kerve .venn_mask{
-background-image:url(http://i.imgur.com/ety944K.png)!important;
+background-image:url(https://i.imgur.com/ety944K.png)!important;
 }
 .shout-more-replies-before::before{
-background-image:url(http://www.last.fm/static/images/icons/dropdown_arrow_fff.png);
+background-image:url(https://www.last.fm/static/images/icons/dropdown_arrow_fff.png);
 }
 .content-form .table .delete::before,
 .inbox-message-view .inbox-message-buttons .delete-button::before,
 .lazy-recs-bar-close::before{
-background-image:url(http://www.last.fm/static/images/icons/delete_fff_16.png);
+background-image:url(https://www.last.fm/static/images/icons/delete_fff_16.png);
 }
 .search-submit::before{
-background-image:url(http://www.last.fm/static/images/icons/search_16.png);
+background-image:url(https://www.last.fm/static/images/icons/search_16.png);
 }
 .shout-more-actions:hover::before,
 .shout-more-actions:focus::before,
