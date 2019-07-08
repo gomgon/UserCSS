@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.2.0
+@version     2.3.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -26,28 +26,26 @@ filter:saturate(0%)!important;
 }
 @advanced dropdown loved-icon-color "Loved icon color" {
 White "White" <<<EOT
-.love-button{
--webkit-filter:saturate(0%) brightness(60%)!important;
-filter:saturate(0%) brightness(60%)!important;
+.love-button,
+.chartlist-love-button::before{
+-webkit-filter:saturate(0%) !important;
+filter:saturate(0%)!important;
 }
-.love-button.love-button--loved{
+.love-button.love-button--loved,
+[data-toggle-button-current-state="loved"] .chartlist-love-button::before,
+[data-toggle-button-current-state="loved"] a.chartlist-love-button::before,
+[data-toggle-button-current-state="loved"] button.chartlist-love-button::before{
 -webkit-filter:saturate(0%) brightness(500%)!important;
 filter:saturate(0%) brightness(500%)!important;
 }
-.love-button:hover{
+.love-button:hover,
+button.chartlist-love-button:hover::before,
+button.chartlist-love-button:focus::before{
 -webkit-filter:saturate(0%) brightness(600%)!important;
 filter:saturate(0%) brightness(600%)!important;
 } EOT;
 Red "Red" <<<EOT
-.love-button{
--webkit-filter:brightness(60%)!important;
-filter:brightness(60%)!important;
-}
-.love-button.love-button--loved,
-.love-button:hover{
--webkit-filter:brightness(100%)!important;
-filter:brightness(100%)!important;
-} EOT;
+EOT;
 }
 @advanced dropdown library-icons "Library category icons color" {
 White "White" <<<EOT
@@ -136,10 +134,7 @@ EOT;
 @advanced dropdown hide-buy "Hide buy links on covers" {
 Yes "Yes" <<<EOT
 .lazy-buylinks{
-display:none!important;
-}
-.chartlist--with-buylinks .show-lazy-buylinks .chartlist-ellipsis-wrap{
-right:0px;
+visibility:hidden!important;
 } EOT;
 No "No" <<<EOT
 EOT;
@@ -147,6 +142,22 @@ EOT;
 @advanced dropdown hide-footer "Hide footer" {
 Yes "Yes" <<<EOT
 .footer{
+display:none!important;
+} EOT;
+No "No" <<<EOT
+EOT;
+}
+@advanced dropdown hide-trending-tracks "Hide Trending Tracks section" {
+Yes "Yes" <<<EOT
+.trending-tracks-section-wrapper{
+display:none!important;
+} EOT;
+No "No" <<<EOT
+EOT;
+}
+@advanced dropdown hide-features "Hide Features section" {
+Yes "Yes" <<<EOT
+.lazy-features-page-bottom{
 display:none!important;
 } EOT;
 No "No" <<<EOT
@@ -257,9 +268,6 @@ background-image:none!important;
 .dashbody .kerve .venn_mask{
 background-image:url(https://i.imgur.com/ety944K.png)!important;
 }
-.shout-more-replies-before::before{
-background-image:url(https://www.last.fm/static/images/icons/dropdown_arrow_fff.png);
-}
 .content-form .table .delete::before,
 .inbox-message-view .inbox-message-buttons .delete-button::before,
 .lazy-recs-bar-close::before{
@@ -282,14 +290,6 @@ background-position:0 -16px;
 .kerve .nowleft,
 .kerve .trendleft{
 background-position:0 -50px;
-}
-.chartlist .chartlist-delete-button:focus::before,
-.chartlist .chartlist-delete-button:hover::before,
-.chartlist .chartlist-play-button:focus::before,
-.chartlist .chartlist-play-button:hover::before,
-.stationlink:focus::before,
-.stationlink:hover::before{
-background-position:-6px -6px;
 }
 .shout-reply:hover::before,
 .shout-reply:focus::before,
@@ -505,21 +505,29 @@ filter: brightness(50%);
 -webkit-filter: brightness(100%);
 filter: brightness(100%);
 }
-.dropdown-menu-clickable-button::after,
 .link-block .profile-banner-close::before{
 -webkit-filter: invert(50%);
 filter: invert(50%);
 }
-.dropdown-menu-clickable-button:hover::after,
 .link-block .profile-banner-close:focus::before,
 .link-block .profile-banner-close:hover::before,
 .chartlist .chartlist-more-button:focus::before,
-.chartlist .chartlist-more-button:hover::before{
+.chartlist .chartlist-more-button:hover::before,
+.chartlist .lazy-buylinks-toggle.disclose-active::before,
+.chartlist .lazy-buylinks-toggle .focus-visible::before,
+.chartlist .lazy-buylinks-toggle:hover::before,
+body:not(.js-focus-visible) .chartlist .lazy-buylinks-toggle:focus::before{
 -webkit-filter: invert(100%);
 filter: invert(100%);
 }
 .shout-report::before,
-.nag-bar .nag-bar-close::before{
+.nag-bar .nag-bar-close::before,
+.more-item--edit::before,
+.more-item--track::before,
+.more-item--artist::before,
+.more-item--obsession::before,
+.more-item--delete::before,
+.more-item--report::before{
 -webkit-filter: invert(90%);
 filter: invert(90%);
 }
@@ -529,6 +537,15 @@ filter: invert(90%);
 .share-chart .share-button-profile::before{
 -webkit-filter:invert(88.2%) saturate(0%)!important;
 filter:invert(88.2%) saturate(0%)!important;
+}
+.more-item--edit:hover::before,
+.more-item--track:hover::before,
+.more-item--artist:hover::before,
+.more-item--obsession:hover::before,
+.more-item--delete:hover::before,
+.more-item--report:hover::before{
+-webkit-filter: invert(100%) brightness(200%)!important;
+filter: invert(100%) brightness(200%)!important;
 }
 .kerve .nowleft,
 .kerve .nowright,
@@ -548,7 +565,9 @@ filter:saturate(0%)!important;
 filter:saturate(0%) brightness(140%)!important;
 }
 .tags-add::before,
-.album-grid-tags-add::before{
+.album-grid-tags-add::before,
+.dropdown-menu-clickable-button:hover::after
+{
 -webkit-filter:saturate(0%) brightness(220%)!important;
 filter:saturate(0%) brightness(220%)!important;
 }
@@ -634,6 +653,9 @@ opacity:0!important;
 .kerve .venn2 .handle_hover{
 opacity:0.25!important;
 }
+.chartlist-count-bar-slug{
+opacity:0.25;
+}
 .kerve .nowslider_artist{
 opacity:0.5;
 }
@@ -715,6 +737,8 @@ top: -52px;
 /*[[hide-cookies]]*/
 /*[[hide-social-media]]*/
 /*[[hide-buy]]*/
+/*[[hide-trending-tracks]]*/
+/*[[hide-features]]*/
 /*[[hide-unavailable-shouts]]*/
 /*[[loved-icon-color]]*/
 /*[[header-desaturate]]*/
@@ -1126,8 +1150,6 @@ div.username,
 .gallery-upload-rules,
 .events-date-heading,
 .features-feed .features-post-info h2 > a,
-.content-top .secondary-nav-item-link--active,
-.content-top .secondary-nav-item-link--active:focus,
 .user-dashboard-date,
 .user-dashboard-on-repeat-item-date,
 .nag-bar .nag-bar-message a,
@@ -1160,7 +1182,9 @@ color:/*[[color-global]]*/;
 .date-range-picker-preset--selected a,
 .catalogue-tags .tag a,
 .catalogue-tags .tags-add,
-.catalogue-tags .tags-add-cta{
+.catalogue-tags .tags-add-cta,
+.content-top .secondary-nav-item-link--active,
+.content-top .secondary-nav-item-link--active:focus{
 color:/*[[color-global]]*/!important;
 }
 a:hover,
@@ -1226,7 +1250,8 @@ a.buylink,
 .header--overview .header-title-secondary a:hover,
 .featured-item-heading-link,
 .recommended-next-page-title,
-.header .header-metadata-title{
+.header .header-metadata-title,
+.btn-secondary{
 color:/*[[main-text]]*/!important;
 }
 .kerve .nowslider_name,
@@ -1315,9 +1340,6 @@ fill:/*[[color-global]]*/;
 fill:/*[[color-global]]*/;
 opacity:.1;
 }
-.sparkline-graph .highcharts-series.highcharts-series-0 path:nth-child(1){
-stroke:/*[[trend-bar-color]]*/;
-}
 .js-listening-clock-target.user-dashboard-chart-square-inner > svg.user-dashboard-module-svg > g > g:nth-of-type(25){
 stroke:/*[[bg-lighter]]*/;
 }
@@ -1374,6 +1396,110 @@ border-right-color: transparent;
 border-top-color: transparent;
 border-bottom-color:  /*[[bg-lighter]]*/;
 }
+.dropdown-menu-clickable-button.shoutbox-sort-toggle::after,
+.section-controls .dropdown-menu-clickable-button::after,
+.dropdown-menu-clickable-button.section-control::after{
+background-image:none;
+border: solid /*[[main-text]]*/;
+border-width: 0 2px 2px 0;
+display: inline-block;
+padding: 3px;
+width: 3px;
+height: 3px;
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+.dropdown-menu-clickable-button.shoutbox-sort-toggle::after{
+top: 18px;
+margin-right: 1px;
+}
+.section-controls .dropdown-menu-clickable-button::after{
+top: 14px;
+margin-right: 1px;
+}
+.dropdown-menu-clickable-button.section-control::after{
+top: 20px;
+margin-right: 1px;
+}
+.chartlist-row:hover a .chartlist-count-bar-value::after{
+background-image:none;
+border: solid /*[[main-text]]*/;
+border-width: 0 2px 2px 0;
+display: inline-block;
+padding: 3px;
+width: 3px;
+height: 3px;
+-webkit-transform: rotate(-45deg);
+transform: rotate(-45deg);
+}
+.chartlist-row:hover a .chartlist-count-bar-value::after{
+top: 19px;
+margin-right: 3px;
+}
+.more-link a::before,
+.more-link-fullwidth-right a::before,
+.more-link-with-action a:nth-child(n+2)::after{
+background-image:none;
+border: solid /*[[color-global]]*/;
+border-width: 0 2px 2px 0;
+display: inline-block;
+padding: 3px;
+width: 3px;
+height: 3px;
+-webkit-transform: rotate(-45deg);
+transform: rotate(-45deg);
+}
+.more-link a::before{
+top: 12px;
+margin-right: 6px;
+}
+.more-link-fullwidth-right a::before{
+top: 13px;
+margin-right: 3px;
+}
+.more-link-with-action a:nth-child(n+2)::after{
+margin-bottom: 1px;
+margin-left: 6px;
+}
+.more-link a:hover::before,
+.more-link-fullwidth-right a:hover::before,
+.more-link-with-action a:nth-child(n+2):hover::after{
+border-color: /*[[color-global-hover]]*/;
+}
+.shout-more-replies-before::before{
+background-image:none;
+border: solid /*[[color-global]]*/;
+border-width: 0 2px 2px 0;
+display: inline-block;
+padding: 3px;
+width: 3px;
+height: 3px;
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+.shout-more-replies-before::before{
+top: 13px;
+margin-right: 2px;
+}
+.shout-more-replies-before:hover::before{
+border-color: /*[[color-global-hover]]*/;
+}
+.inline-add-icon::before {
+background-image:none;
+position:relative;
+content:"\d7";
+font-size:22px;
+color:/*[[color-global]]*/;
+font-weight:bold;
+top:3px;
+margin-right:5px;
+line-height:10px;
+-webkit-transform:rotate(-45deg);
+transform:rotate(-45deg);
+}
+.inline-add-icon:hover::before{
+color:/*[[color-global-hover]]*/;
+}
 @media (max-width:767px){
 .features-header-inner-wrap{
 background-color:/*[[bg]]*/;
@@ -1408,22 +1534,22 @@ background-color:/*[[secondary-button-H]]*/;
 }
 .recommended-next-page-container:not(:hover):not(.recommended-next-page-container--desktop-expanded) .recommended-next-button {
 background-color:/*[[secondary-button-H]]*/!important;
-opacity:0.3;
+opacity: 0.3;
 }
 .user-dashboard-tooltip{
-background:/*[[bg-lighter]]*/;
-border-radius:0px;
-color:/*[[main-text]]*/;
+background: /*[[bg-lighter]]*/;
+border-radius: 0px;
+color: /*[[main-text]]*/;
 }
 .mega-menu--open .dropdown-menu-dark{
-border-radius:0px!important;
+border-radius: 0px !important;
 }
 .recommended-next-page-container{
-position: absolute!important;
-top: 58px!important;
+position: absolute !important;
+top: 58px !important;
 }
 .about-me-sidebar{
-margin-bottom:15px!important;
+margin-bottom: 15px!important;
 }
 .date-range-picker-presets-wrap{
 margin-left: 0px;
@@ -1431,13 +1557,13 @@ margin-right: 0px;
 }
 .user-dashboard-pagination-next,
 .user-dashboard-pagination-previous{
-margin-top:-28px;
+margin-top: -28px;
 }
 .date-range-picker-content{
 padding: 15px !important;
 }
 .date-range-picker-form{
-border-top:1px solid /*[[border-color]]*/ !important;
+border-top: 1px solid /*[[border-color]]*/ !important;
 }
 .wiki-history .wiki-history-table td,
 .wiki-history .wiki-history-table th{
@@ -1459,10 +1585,10 @@ top: -54px;
 .header * + .header-metadata-item--tasteometer::before,
 .header * + .header-metadata-item--user-scrobbles::before,
 .header :not(.header-metadata-item--user-scrobbles) + .header-metadata-item--listeners-you-know::before{
-border-color:/*[[border-color]]*/;
+border-color: /*[[border-color]]*/;
 }
 .mega-menu--open .dropdown-menu-dark{
-padding:0px!important;
+padding: 0px !important;
 }
 .chartlist tr:nth-child(2n) .chartlist-more-button{
 background-color:transparent;
@@ -1524,7 +1650,7 @@ left: 91px !important;
 left: 671px !important;
 }
 .secondary-nav .navlist-hidden-list::before{
-left: 44px!important;
+left: 44px !important;
 }
 }
 }
