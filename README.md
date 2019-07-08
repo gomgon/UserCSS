@@ -1,8 +1,11 @@
-A [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) compatible userstyle manager is required, common ones include:
+A [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) compatible userstyle manager is required, those are recommended:
 
-🎨 Stylus for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) or [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/). (recommended)<br>
-🎨 xStyle for [Firefox](https://addons.mozilla.org/firefox/addon/xstyle/) or [Chrome](https://chrome.google.com/webstore/detail/xstyle/hncgkmhphmncjohllpoleelnibpmccpj).
+ Stylus for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) or [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/).<br>
+ Cascadea for [Safari](https://cascadea.app/).
+
+The stylesheet will be updated automaticaly by the addon.
 
 Then:
 
-📦 [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) the usercss. Supports automatic updates.
+![Last.fm](/images/last.fm.png) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) Last.fm stylesheet.<br>
+![Discogs](/images/discogs.png) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css) Discogs stylesheet.
