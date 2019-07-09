@@ -65,14 +65,16 @@ ul.module_blocks .footer,
 .tab_menu li.current,
 .tab_menu,
 #site_header_wrap,
-.alert-message.alert-message-broadcast{
+.alert-message.alert-message-broadcast,
+.button.button-green{
 border:none;
 }
 div.section h3,
 .section.tracklist table tr,
 table.cards tr,
 ul.module_blocks > li.module_placeholder,
-.module_blocks .dashboard_addmodules{
+.module_blocks .dashboard_addmodules,
+.review{
 border-color:#323232;
 }
 .cw_block_collection h2,
@@ -83,7 +85,8 @@ ul.module_blocks > li.focused.module_placeholder,
 ul.module_blocks > li.dragging.module_placeholder,
 .module_blocks .dragging.dashboard_addmodules,
 ul.module_blocks > li.module_placeholder:hover,
-.module_blocks .dashboard_addmodules:hover{
+.module_blocks .dashboard_addmodules:hover,
+#review_compose.form-block div.review_preview{
 border-color:#505050;
 }
 ul.module_blocks > li.module_placeholder,
@@ -107,7 +110,9 @@ body,
 .section.credits span.role,
 .section.barcodes span.type,
 .section.companies span.type,
-.notes_add{
+.notes_add,
+#review_compose.form-block .review_head .instructions,
+#review_compose.form-block label{
 color:#999999;
 }
 .section.tracklist table tr td.tracklist_track_duration{
@@ -127,6 +132,12 @@ a:hover,
 .is_not_mobile .youtube_track:hover,
 .tab_menu li.menu-item a:hover{
 color:#77A5CC;
+}
+a:visited{
+color:#805C9E;
+}
+a:visited:hover{
+color:#A677CC;
 }
 #page.aside_right #page_content,
 div.section div.section_content,
@@ -184,6 +195,8 @@ padding:12px!important;
 #page.aside_right #page_content{
 padding-right:12px;
 }
+
+a:hover,
 .is_not_mobile .youtube_track:hover strong{
 text-decoration:none;
 }
@@ -215,12 +228,15 @@ box-shadow:none;
 background-color:rgba(255,255,255,.2);
 color:#FFFFFF;
 }
-.button.button_blue{
+.button.button_blue,
+.button.button-green{
 border:none;
 background-color:#5C809E;
 }
 .button.button_blue:hover,
-.button.button_blue:focus{
+.button.button_blue:focus,
+.button.button-green:hover,
+.button.button-green:focus{
 background:#77A5CC;
 }
 #discography_header{
@@ -295,5 +311,20 @@ background:#505050;
 background:#505050;
 border:none;
 border-radius:0px;
+}
+.button.button-green[disabled],
+.button.button-blue[disabled],
+.button.button-red[disabled],
+.button.button-dark[disabled],
+.button.button-white[disabled],
+.button[disabled]{
+border:none;
+background-color:#404040;
+background-image:none;
+color:#222222;
+box-shadow:none;
+}
+.review:last-child{
+border-bottom:none;
 }
 }
