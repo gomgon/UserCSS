@@ -1,11 +1,34 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.3.1
+@version     2.4.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
 @author      gomgon
+@advanced dropdown compact-mode "Compact mode"{
+No "No" <<<EOT
+EOT;
+Yes "Yes" <<<EOT
+.chartlist-row{
+	padding-top:0px;
+	padding-bottom:1px;
+}
+.chartlist--with-bar .chartlist-row {
+	padding-top:1px;
+	padding-bottom:2px;
+}
+.anhv1 .stationlink-list .stationlink {
+	padding-top: 2px;
+	padding-bottom: 6px;
+}
+.chartlist-name {
+	font-weight: normal;
+}
+#top-tracks.section-with-control .chartlist-row--with-artist .chartlist-name {
+	font-weight: 700;
+} EOT;
+}
 @advanced color bg "Background" #1E1E1E
 @advanced color scrobbling-now-bg "Scrobbling now background" #1E1E1E
 @advanced color bg-lighter "Lighter elements" #282828
@@ -131,10 +154,14 @@ right: 26px;
 No "No" <<<EOT
 EOT;
 }
-@advanced dropdown hide-buy "Hide buy links on covers" {
+@advanced dropdown hide-buy "Hide buy links" {
 Yes "Yes" <<<EOT
 .lazy-buylinks{
 visibility:hidden!important;
+}
+.show-focus-controls:not([data-ajax-form-state="deleted"]) .chartlist-album::before,
+.show-focus-controls:not([data-ajax-form-state="deleted"]).chartlist-row--with-artist .chartlist-artist::before{
+	width: 32px;
 } EOT;
 No "No" <<<EOT
 EOT;
@@ -756,8 +783,8 @@ top: -52px;
 .chartlist-play-button::before,
 .section-playlink::before,
 .stationlink-list .stationlink::before{
-	-webkit-transition: filter .1s linear;
-	transition: filter .1s linear;
+	-webkit-transition: none;
+	transition: none;
 }
 /*[[hide-footer]]*/
 /*[[hide-cookies]]*/
@@ -1100,7 +1127,15 @@ border-color:#B90000!important;
 .chartlist-play-button::before,
 .section-playlink::before,
 .stationlink-list .stationlink::before{
-border: 1px solid rgb(32,32,32);
+border: 1px solid rgb(240,240,240);
+}
+.chartlist-play-button:focus::before,
+.chartlist-play-button:hover::before,
+.section-playlink:focus::before,
+.section-playlink:hover::before,
+.stationlink-list .stationlink:focus::before,
+.stationlink-list .stationlink:hover::before{
+border: 1px solid rgb(200,200,200);
 }
 .kerve .venn2{
 border:2px solid /*[[color-global]]*/;
@@ -1431,6 +1466,7 @@ padding-right: 16px;
 background-size: 64px 64px !important;
 background: url(/*[[loading-gif-64]]*/) 50% 50% no-repeat !important;
 }
+/*[[compact-mode]]*/
 .date-range-picker-content::before,
 .dropdown-menu-clickable::before,
 .secondary-nav .navlist-hidden-list::before,
