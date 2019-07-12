@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.4.0
+@version     2.4.1
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -11,22 +11,22 @@ No "No" <<<EOT
 EOT;
 Yes "Yes" <<<EOT
 .chartlist-row{
-	padding-top:0px;
-	padding-bottom:1px;
+padding-top:0px;
+padding-bottom:1px;
 }
 .chartlist--with-bar .chartlist-row {
-	padding-top:1px;
-	padding-bottom:2px;
+padding-top:1px;
+padding-bottom:2px;
 }
 .anhv1 .stationlink-list .stationlink {
-	padding-top: 2px;
-	padding-bottom: 6px;
+padding-top: 2px;
+padding-bottom: 6px;
 }
 .chartlist-name {
-	font-weight: normal;
+font-weight: normal;
 }
 #top-tracks.section-with-control .chartlist-row--with-artist .chartlist-name {
-	font-weight: 700;
+font-weight: 700;
 } EOT;
 }
 @advanced color bg "Background" #1E1E1E
@@ -573,7 +573,9 @@ filter: invert(50%);
 filter: invert(60%);
 }
 .video-preview-upload-cta::before,
-.section-settings-toggle::before{
+.section-settings-toggle::before,
+.gallery-image-vote-up-off .gallery-image-votes::before,
+.gallery-image-vote-down-off .gallery-image-votes::before{
 -webkit-filter: invert(80%);
 filter: invert(80%);
 }
@@ -1479,7 +1481,9 @@ color:/*[[main-text]]*/;
 .pagination-next a,
 .pagination-previous a,
 .btn-subscribe,
-.attendance-btn{
+.attendance-btn,
+.gallery-image-vote-up-off,
+.gallery-image-vote-down-off{
 color:/*[[button-text]]*/;
 }
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-primary:focus,
@@ -1517,7 +1521,13 @@ body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .attendance-btn:f
 body:not([data-whatinput="touch"]) .attendance-btn .focus-visible,
 body:not([data-whatinput="touch"]) .attendance-btn:hover,
 .attendance-btn--turn-off.attendance-btn--maybe,
-.attendance-btn--turn-off.attendance-btn--attending{
+.attendance-btn--turn-off.attendance-btn--attending,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .gallery-image-vote-up-off:focus,
+body:not([data-whatinput="touch"]) .gallery-image-vote-up-off .focus-visible,
+body:not([data-whatinput="touch"]) .gallery-image-vote-up-off:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .gallery-image-vote-down-off:focus,
+body:not([data-whatinput="touch"]) .gallery-image-vote-down-off .focus-visible,
+body:not([data-whatinput="touch"]) .gallery-image-vote-down-off:hover{
 color:/*[[button-text-H]]*/;
 }
 hr{
@@ -1691,10 +1701,11 @@ margin-left: 3px;
 border-color: /*[[button-text-H]]*/;
 }
 .more-link a::before,
+.more-link-fullwidth a::before,
 .more-link-fullwidth-right a::before,
+.more-link-fullwidth-right-flush-top a::before,
 .more-link-with-action a:nth-child(n+2)::after,
 .more-items::before,
-.more-link-fullwidth a::before,
 .js .date-range-picker-button .date-range-picker-button-inner::before,
 .wiki-block-cta .cta-link-wrap a::before,
 .external-link-cta .cta-link-wrap a::before,
@@ -1708,9 +1719,10 @@ width: 3px;
 height: 3px;
 }
 .more-link a::before,
-.more-link-fullwidth-right a::before,
-.more-link-with-action a:nth-child(n+2)::after,
 .more-link-fullwidth a::before,
+.more-link-fullwidth-right a::before,
+.more-link-fullwidth-right-flush-top a::before,
+.more-link-with-action a:nth-child(n+2)::after,
 .wiki-block-cta .cta-link-wrap a::before,
 .external-link-cta .cta-link-wrap a::before,
 .lyrics-snippet-more-link a::before{
@@ -1725,6 +1737,7 @@ transform: rotate(45deg);
 .more-link a::before,
 .more-link-fullwidth a::before,
 .more-link-fullwidth-right a::before,
+.more-link-fullwidth-right-flush-top a::before,
 .wiki-block-cta .cta-link-wrap a::before,
 .external-link-cta .cta-link-wrap a::before,
 .more-items::before,
@@ -1738,10 +1751,11 @@ margin-bottom: 1px;
 margin-left: 6px;
 }
 .more-link a:hover::before,
+.more-link-fullwidth a:hover::before,
 .more-link-fullwidth-right a:hover::before,
+.more-link-fullwidth-right-flush-top a:hover::before,
 .more-link-with-action a:nth-child(n+2):hover::after,
 .more-items:hover::before,
-.more-link-fullwidth a:hover::before,
 .js .date-range-picker-button:hover .date-range-picker-button-inner::before,
 .wiki-block-cta .cta-link-wrap a:hover::before,
 .external-link-cta .cta-link-wrap a:hover::before,
@@ -1990,6 +2004,9 @@ color:/*[[color-global-hover]]*/;
 }
 .subscribe-plan{
 background:/*[[bg-lighter]]*/;
+}
+.header-new-gallery {
+color:inherit!important;
 }
 }
 @media (min-width:1260px){
