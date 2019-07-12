@@ -1,11 +1,34 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.3.1
+@version     2.4.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
 @author      gomgon
+@advanced dropdown compact-mode "Compact mode"{
+No "No" <<<EOT
+EOT;
+Yes "Yes" <<<EOT
+.chartlist-row{
+	padding-top:0px;
+	padding-bottom:1px;
+}
+.chartlist--with-bar .chartlist-row {
+	padding-top:1px;
+	padding-bottom:2px;
+}
+.anhv1 .stationlink-list .stationlink {
+	padding-top: 2px;
+	padding-bottom: 6px;
+}
+.chartlist-name {
+	font-weight: normal;
+}
+#top-tracks.section-with-control .chartlist-row--with-artist .chartlist-name {
+	font-weight: 700;
+} EOT;
+}
 @advanced color bg "Background" #1E1E1E
 @advanced color scrobbling-now-bg "Scrobbling now background" #1E1E1E
 @advanced color bg-lighter "Lighter elements" #282828
@@ -13,6 +36,8 @@
 @advanced color secondary-button "Secondary buttons" #323232
 @advanced color secondary-button-H "Secondary buttons hover" #505050
 @advanced color main-text "Main text" #CCCCCC
+@advanced color button-text "Buttons text" #CCCCCC
+@advanced color button-text-H "Buttons text hover" #FFFFFF
 @advanced color color-global "Main Color" #5C809E
 @advanced color color-global-hover "Main color lighter" #77A6CC
 @advanced dropdown header-desaturate "Desaturate header image" {
@@ -118,7 +143,8 @@ Yes "Yes" <<<EOT
 .share-chart .share-button-profile,
 .user-dashboard-module .user-dashboard-module-share,
 .user-dashboard-share,
-.share-footer{
+.share-footer,
+.share-chart{
 display:none!important;
 }
 .stationlinks,
@@ -131,10 +157,14 @@ right: 26px;
 No "No" <<<EOT
 EOT;
 }
-@advanced dropdown hide-buy "Hide buy links on covers" {
+@advanced dropdown hide-buy "Hide buy links" {
 Yes "Yes" <<<EOT
 .lazy-buylinks{
 visibility:hidden!important;
+}
+.show-focus-controls:not([data-ajax-form-state="deleted"]) .chartlist-album::before,
+.show-focus-controls:not([data-ajax-form-state="deleted"]).chartlist-row--with-artist .chartlist-artist::before{
+	width: 32px;
 } EOT;
 No "No" <<<EOT
 EOT;
@@ -226,8 +256,7 @@ background:none!important;
 }
 input,
 select,
-textarea,
-.context{
+textarea{
 background:#000000!important;
 }
 .date-range-picker-preset a:focus,
@@ -248,7 +277,8 @@ background:#323232!important;
 .listening-report-promo,
 .chartlist-play-button::before,
 .section-playlink::before,
-.stationlink-list .stationlink::before{
+.stationlink::before,
+.obsession-history-play-all::before{
 background-color:transparent!important;
 }
 .user-dashboard-module-share{
@@ -262,7 +292,9 @@ background-color:#592929!important;
 background-color: #78684a;
 }
 .user-dashboard-upsell-cta:hover,
-.btn-subscribe:hover{
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-subscribe:focus,
+body:not([data-whatinput="touch"]) .btn-subscribe .focus-visible,
+body:not([data-whatinput="touch"]) .btn-subscribe:hover{
 background-color: #a69066;
 }
 .masthead-wrapper .masthead{
@@ -279,11 +311,22 @@ background-image:url(https://www.last.fm/static/images/icons/delete_fff_16.png);
 .search-submit::before{
 background-image:url(https://www.last.fm/static/images/icons/search_16.png);
 }
+.subscribe-plan-item {
+background-image:url("https://www.last.fm/static/images/icons/accept_fff_16.png");
+}
 .shout-more-actions:hover::before,
 .shout-more-actions:focus::before,
 .shout-more-actions.disclose-active::before,
 .header .header-message-user:hover::before,
-.header .header-message-user:focus::before{
+.header .header-message-user:focus::before,
+.chartlist-more-button.disclose-active::before,
+.chartlist-more-button .focus-visible::before,
+.chartlist-more-button:hover::before,
+body:not(.js-focus-visible) .chartlist-more-button:focus::before,
+.chartlist .lazy-buylinks-toggle.disclose-active::before,
+.chartlist .lazy-buylinks-toggle .focus-visible::before,
+.chartlist .lazy-buylinks-toggle:hover::before,
+body:not(.js-focus-visible) .chartlist .lazy-buylinks-toggle:focus::before{
 background-position: 0 0px;
 }
 .chartlist--with-buylinks .lazy-buylinks-toggle:focus::after,
@@ -297,7 +340,7 @@ background-position:0 -50px;
 .shout-reply:hover::before,
 .shout-reply:focus::before,
 .shout-reply.shout-reply--open::before{
-background-position: -10px 0px;
+background-position: 0px 0px;
 }
 .shout-delete::before{
 background-position: -10px -10px;
@@ -308,7 +351,8 @@ background-position:-30px -50px;
 }
 .chartlist-play-button::before,
 .section-playlink::before,
-.stationlink-list .stationlink::before{
+.stationlink::before,
+.obsession-history-play-all::before{
 background-position: 7px 7px !important;
 }
 article,
@@ -433,7 +477,11 @@ border-top:none;
 .header-popularity-rank-tooltip,
 .lazy-recs-bar .lazy-recs-bar-join,
 .user-dashboard-upsell-cta,
-.async-content-error-message{
+.async-content-error-message,
+.api-session-connect,
+.share-chart .share-block,
+.subscribe-form .login-signup,
+.subscribe-form .subscription-options{
 border-radius:0!important;
 }
 .library-controls-datepicker{
@@ -451,7 +499,6 @@ bottom:-5px!important;
 .recs-feed .recs-feed-item,
 .site-links,
 .context,
-.date-range-picker-content,
 .dropdown-menu.dropdown--open,
 .dropdown-buylinks--light .dropdown-featured-buylink,
 .dropdown-buylinks--light .dropdown-more-buylinks,
@@ -463,7 +510,8 @@ bottom:-5px!important;
 .user-dashboard-module-share,
 .user-dashboard-history-subscribe-banner-cta::after,
 .user-dashboard-history-subscribe-banner-cta::before,
-.header-popularity-rank-tooltip{
+.header-popularity-rank-tooltip,
+.video-preview-upload-cta{
 -webkit-box-shadow:none!important;
 box-shadow:none!important;
 }
@@ -484,7 +532,8 @@ color:#000000!important;
 .user-dashboard-scalable-content span .js-ticker,
 .user-dashboard-scalable-content a .js-ticker,
 .user-dashboard-catalogue-count-total a .js-ticker,
-.user-dashboard-big-datapoint-value a .js-ticker{
+.user-dashboard-big-datapoint-value a .js-ticker,
+.obsession-history-item-inner a{
 color:#FFFFFF!important;
 }
 .content-top .secondary-nav-item-link,
@@ -517,9 +566,22 @@ filter: brightness(100%);
 -webkit-filter: invert(50%);
 filter: invert(50%);
 }
+.resource-external-link--homepage::before,
+.resource-external-link--apple-music::before,
+.buylink.buylink--itunes::before{
+-webkit-filter: invert(60%);
+filter: invert(60%);
+}
+.video-preview-upload-cta::before,
+.section-settings-toggle::before{
+-webkit-filter: invert(80%);
+filter: invert(80%);
+}
 .chartlist-play-button::before,
 .section-playlink::before,
-.stationlink-list .stationlink::before{
+.stationlink::before,
+.selectbox .selectboxit-text::before,
+.obsession-history-play-all::before{
 -webkit-filter: invert(80%)!important;
 filter: invert(80%)!important;
 }
@@ -532,7 +594,9 @@ filter: invert(80%)!important;
 .more-item--delete::before,
 .more-item--report::before,
 .more-item--play::before,
-.more-item--album::before{
+.more-item--album::before,
+.more-item--artist-link::before,
+.chartlist-more-menu-love::before{
 -webkit-filter: invert(90%);
 filter: invert(90%);
 }
@@ -540,19 +604,23 @@ filter: invert(90%);
 .link-block .profile-banner-close:hover::before,
 .chartlist .chartlist-more-button:focus::before,
 .chartlist .chartlist-more-button:hover::before,
-.chartlist .lazy-buylinks-toggle.disclose-active::before,
-.chartlist .lazy-buylinks-toggle .focus-visible::before,
-.chartlist .lazy-buylinks-toggle:hover::before,
-body:not(.js-focus-visible) .chartlist .lazy-buylinks-toggle:focus::before{
+.share-chart .share-button-profile::before,
+.share-chart .share-button-library::before,
+.video-preview-upload-cta:hover::before,
+.section-settings-toggle:focus::before,
+.section-settings-toggle:hover::before{
 -webkit-filter: invert(100%);
 filter: invert(100%);
 }
-.section-settings-toggle::before,
-.selectbox .selectboxit-text::before,
-.stationlink::before,
-.share-chart .share-button-profile::before{
--webkit-filter:invert(88.2%) saturate(0%)!important;
-filter:invert(88.2%) saturate(0%)!important;
+.user-dashboard-pagination-next-link::before,
+.user-dashboard-pagination-previous-link::before{
+-webkit-filter:invert(90%) saturate(0%);
+filter:invert(90%) saturate(0%);
+}
+.user-dashboard-pagination-next-link:hover::before,
+.user-dashboard-pagination-previous-link:hover::before{
+-webkit-filter:invert(90%) saturate(0%) brightness(200%);
+filter:invert(90%) saturate(0%) brightness(200%);
 }
 .more-item--edit:hover::before,
 .more-item--track:hover::before,
@@ -562,12 +630,17 @@ filter:invert(88.2%) saturate(0%)!important;
 .more-item--report:hover::before,
 .more-item--play:hover::before,
 .more-item--album:hover::before,
+.more-item--artist-link:hover::before,
+.chartlist-more-menu-love:focus::before,
+.chartlist-more-menu-love:hover::before,
 .chartlist-play-button:focus::before,
 .chartlist-play-button:hover::before,
 .section-playlink:focus::before,
 .section-playlink:hover::before,
-.stationlink-list .stationlink:focus::before,
-.stationlink-list .stationlink:hover::before{
+.stationlink:focus::before,
+.stationlink:hover::before,
+.obsession-history-play-all:focus::before,
+.obsession-history-play-all:hover::before{
 -webkit-filter: invert(100%) brightness(200%)!important;
 filter: invert(100%) brightness(200%)!important;
 }
@@ -581,14 +654,21 @@ filter:saturate(0%)!important;
 }
 .tags-add::before,
 .album-grid-tags-add::before,
-.dropdown-menu-clickable-button:hover::after
-{
+.dropdown-menu-clickable-button:hover::after{
 -webkit-filter:saturate(0%) brightness(220%)!important;
 filter:saturate(0%) brightness(220%)!important;
 }
 .dropdown-buylinks--light .dropdown-more-buylinks::before,
 .suggest-correction-cta::before,
-.header .header-message-user:hover::before{
+.header .header-message-user:hover::before,
+.chartlist-more-button.disclose-active::before,
+.chartlist-more-button .focus-visible::before,
+.chartlist-more-button:hover::before,
+body:not(.js-focus-visible) .chartlist-more-button:focus::before,
+.chartlist .lazy-buylinks-toggle.disclose-active::before,
+.chartlist .lazy-buylinks-toggle .focus-visible::before,
+.chartlist .lazy-buylinks-toggle:hover::before,
+body:not(.js-focus-visible) .chartlist .lazy-buylinks-toggle:focus::before{
 -webkit-filter:saturate(0%) brightness(300%)!important;
 filter:saturate(0%) brightness(300%)!important;
 }
@@ -602,7 +682,6 @@ filter:saturate(0%) brightness(300%)!important;
 .dropdown-buylinks--light .dropdown-more-buylinks:hover::before,
 .js .date-picker-button::before,
 .js .date-picker-button::after,
-.js .date-range-picker-button .date-range-picker-button-inner::before,
 .js .date-range-picker-button::before,
 .js .events-filter-location::before,
 .js .events-filter-location::after,
@@ -613,19 +692,13 @@ filter:saturate(0%) brightness(300%)!important;
 .masthead-logo,
 .tags-add:hover::before,
 .album-grid-tags-add::before,
-.modal-dismiss::before,
-.user-dashboard-pagination-next-link::before,
-.user-dashboard-pagination-previous-link::before,
-.pagination-previous a::before,
-.pagination-next a::before{
+.modal-dismiss::before{
 -webkit-filter:saturate(0%) brightness(600%)!important;
 filter:saturate(0%) brightness(600%)!important;
 }
 .inbox-message-view .inbox-message-buttons .back-button::before,
 .user-dashboard-module-share::before,
 .listening-report-promo-date::after,
-.pagination-previous:hover a::before,
-.pagination-next:hover a::before,
 .share-features .share-button::before{
 -webkit-filter:saturate(0%) brightness(800%)!important;
 filter:saturate(0%) brightness(800%)!important;
@@ -645,6 +718,7 @@ height: 100%;
 .content-form input[type="time"] {
 line-height: normal;
 }
+.share-chart .share-block,
 .dashbody .kerve .worldwrap{
 margin:0;
 }
@@ -653,6 +727,19 @@ margin-bottom:0!important;
 }
 .secondary-nav--scrollable.secondary-nav--more .secondary-nav-hidden-list{
 margin-left:-6px!important;
+}
+.dropdown-menu-clickable::before,
+.date-picker-content::before,
+.date-range-picker-content::before,
+.buylinks-dropdown-menu::before,
+.secondary-nav .navlist-hidden-list::before,
+#events-location::before,
+.chartlist-more-menu::before,
+.library-top #share-library-artist::before,
+.library-top #share-library-album::before,
+#share-library-artist::before,
+#share-library-album::before{
+margin-left:9px;
 }
 .secondary-nav--scrollable.secondary-nav--more ul.secondary-nav-hidden-list{
 margin-top:12px!important;
@@ -755,9 +842,9 @@ top: -52px;
 }
 .chartlist-play-button::before,
 .section-playlink::before,
-.stationlink-list .stationlink::before{
-	-webkit-transition: filter .1s linear;
-	transition: filter .1s linear;
+.stationlink::before{
+-webkit-transition: none;
+transition: none;
 }
 /*[[hide-footer]]*/
 /*[[hide-cookies]]*/
@@ -774,7 +861,6 @@ top: -52px;
 .container.page-content,
 .content-top,
 .content-top-lower,
-.date-range-picker-content,
 .date-picker-content,
 .dropdown-menu.dropdown--open ,.dropdown-menu.dropdown--open,
 .footer-wrapper,
@@ -796,7 +882,6 @@ body,
 textarea.comment-input,
 tr.js-link-block,
 .recs-feed .recs-feed-item,
-.date-range-picker-content,
 .lfmRed .site-search .search-box,
 .fiflufi .leftCol,
 .stationbuttonLarge,
@@ -822,8 +907,10 @@ table.table tr:nth-child(2n) td,
 .popup_visible .modal-content .alert,
 .features-header .features-teaser-body,
 .features-teaser--promoted .features-teaser-body,
+.features-teaser-wrap--promoted .features-teaser-body,
 .features-post-header-body,
-.chartlist-row:hover{
+.chartlist-row:hover,
+.trending-tracks-section{
 background:/*[[bg]]*/!important;
 }
 .alert,
@@ -875,7 +962,15 @@ background:/*[[bg-lighter]]*/!important;
 .kerve .trendwavewrap .bar,
 .kerve .trendbarwrap .graph_global .bar,
 .secondary-nav .navlist-hidden-list a,
-.async-content-error-message{
+.async-content-error-message,
+.video-preview-upload-cta,
+.video-preview-upload-cta:not(.cta--inactive):focus,
+.video-preview-upload-cta:not(.cta--inactive):hover,
+.music-section-rediscover-subscribe-banner-cta,
+.event-status--cancelled,
+.subscribe-features,
+.subscribe-form .login-signup,
+.subscribe-form .subscription-options{
 background:/*[[bg-lighter]]*/;
 }
 .user-dashboard-banner,
@@ -887,7 +982,8 @@ background-color:/*[[bg-lighter]]*/!important;
 .features-post-top::after,
 .music-recommended-tracks-track-context::before,
 .factbox-summary + .music-recommended-artists-context::before,
-.music-recommended-artists-artist-stats + .music-recommended-artists-context::before{
+.music-recommended-artists-artist-stats + .music-recommended-artists-context::before,
+.api-session::after{
 background:/*[[border-color]]*/;
 }
 .add-event-btn,
@@ -930,7 +1026,8 @@ background:/*[[color-global]]*/!important;
 .kerve .trendwave_inner .bar,
 .kerve .trendbarwrap .bar,
 .music-section-heading::after,
-.features-teaser-has-video{
+.features-teaser-has-video,
+.api-session-connect{
 background:/*[[color-global]]*/;
 }
 .header-follower-btn .follower-btn-add-follower::before,
@@ -939,7 +1036,8 @@ background:/*[[color-global]]*/;
 .user-status-subscriber::after,
 .secondary-nav-item-link--active::after,
 a.secondary-nav-item-link:focus::after,
-a.secondary-nav-item-link:hover::after{
+a.secondary-nav-item-link:hover::after,
+.avatar-status-dot--subscriber{
 background-color:/*[[color-global]]*/;
 }
 .add-event-btn:hover,
@@ -956,7 +1054,10 @@ a:hover .chartlist-count-bar-slug{
 background:/*[[color-global-hover]]*/!important;
 }
 .header-follower-btn .follower-btn-add-follower:hover::before,
-.user-list-follower-btn .follower-btn-add-follower:hover{
+.user-list-follower-btn .follower-btn-add-follower:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .api-session-connect:focus,
+body:not([data-whatinput="touch"]) .api-session-connect .focus-visible,
+body:not([data-whatinput="touch"]) .api-session-connect:hover{
 background-color:/*[[color-global-hover]]*/;
 }
 .btn-secondary,
@@ -1084,8 +1185,16 @@ input.confirmButton:hover,
 .personal-stats-item::after,
 .personal-stats-item::before,
 .wiki-block::after,
-.wiki-block::before{
+.wiki-block::before,
+.menu-title::after{
 border-color:/*[[border-color]]*/!important;
+}
+.subscribe-plan,
+.subscribe-plan-item,
+.subscribe-form .subscription-options-recurring + .subscription-options-one-off,
+.subscribe-form .subscription-options-recurring + .subscription-options-one-off + .subscription-options-one-off,
+.section-divider{
+border-color:/*[[border-color]]*/;
 }
 .content-form .has-error .form-control,
 .content-form .has-error input[type="text"],
@@ -1094,13 +1203,25 @@ border-color:/*[[border-color]]*/!important;
 .content-form .has-error input[type="url"],
 .content-form .has-error input[type="date"],
 .content-form .has-error textarea,
-.content-form .has-error select{
+.content-form .has-error select,
+.subscribe-plan--subscriber{
 border-color:#B90000!important;
 }
 .chartlist-play-button::before,
 .section-playlink::before,
-.stationlink-list .stationlink::before{
-border: 1px solid rgb(32,32,32);
+.stationlink::before,
+.obsession-history-play-all::before{
+border: 1px solid rgb(240,240,240);
+}
+.chartlist-play-button:focus::before,
+.chartlist-play-button:hover::before,
+.section-playlink:focus::before,
+.section-playlink:hover::before,
+.stationlink:focus::before,
+.stationlink:hover::before,
+.obsession-history-play-all:focus::before,
+.obsession-history-play-all:hover::before{
+border: 1px solid rgb(200,200,200);
 }
 .kerve .venn2{
 border:2px solid /*[[color-global]]*/;
@@ -1142,8 +1263,8 @@ box-shadow:0 0 0 1px /*[[secondary-button-H]]*/ inset;
 .catalogue-tags .tag a,
 .catalogue-tags .tags-add,
 .catalogue-tags .tags-add-cta{
-	-webkit-box-shadow: 0 0 0 1px /*[[color-global]]*/ inset;
-	box-shadow: 0 0 0 1px /*[[color-global]]*/ inset;
+-webkit-box-shadow: 0 0 0 1px /*[[color-global]]*/ inset;
+box-shadow: 0 0 0 1px /*[[color-global]]*/ inset;
 }
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .catalogue-tags .tag a:focus,
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .catalogue-tags .tags-add-cta:focus,
@@ -1155,8 +1276,8 @@ body:not([data-whatinput="touch"]) .catalogue-tags .tags-add-cta:hover,
 body:not([data-whatinput="touch"]) .catalogue-tags .tags-add .focus-visible,
 body:not([data-whatinput="touch"]) .catalogue-tags .tags-add:hover{
 color:/*[[color-global-hover]]*/!important;
-	-webkit-box-shadow: 0 0 0 1px /*[[color-global-hover]]*/ inset;
-	box-shadow: 0 0 0 1px /*[[color-global-hover]]*/ inset;
+-webkit-box-shadow: 0 0 0 1px /*[[color-global-hover]]*/ inset;
+box-shadow: 0 0 0 1px /*[[color-global-hover]]*/ inset;
 }
 .pagination-page[aria-current],
 .pagination-page:not(.pagination-page--ellipsis):hover{
@@ -1165,11 +1286,14 @@ box-shadow:0 -3px /*[[color-global]]*/ inset;
 }
 .wiki-history .wiki-history-table tr{
 -webkit-box-shadow: 0 -1px /*[[border-color]]*/ inset;
-box-shadow: 0 -1px /*[[border-color]]*/ inset;
+box-shadow:0 -1px /*[[border-color]]*/ inset;
 }
 .features-teaser-has-video{
 -webkit-box-shadow:0 0 0 18px /*[[bg]]*/;
 box-shadow:0 0 0 18px /*[[bg]]*/;
+}
+.avatar-status-dot {
+box-shadow:0 0 0 2px /*[[bg]]*/;
 }
 .secondary-nav{
 -webkit-box-shadow:none;
@@ -1177,9 +1301,10 @@ box-shadow:none ;
 }
 .chartlist-play-button::before,
 .section-playlink::before,
-.stationlink-list .stationlink::before{
-	-webkit-box-shadow: none !important;
-	box-shadow: none !important;
+.stationlink::before,
+.obsession-history-play-all::before{
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
 }
 .metacritic-score{
 color:/*[[bg]]*/!important;
@@ -1218,6 +1343,7 @@ div.username,
 .features-header .features-teaser-category,
 .features-teaser-category,
 .features-teaser--promoted .features-teaser-category,
+.features-teaser-wrap--promoted .features-teaser-category,
 .features-section-heading,
 .features-post-category,
 .events-list-sidebar .events-list-item-date-icon-month,
@@ -1236,7 +1362,9 @@ color:/*[[color-global]]*/;
 .catalogue-tags .tags-add,
 .catalogue-tags .tags-add-cta,
 .content-top .secondary-nav-item-link--active,
-.content-top .secondary-nav-item-link--active:focus{
+.content-top .secondary-nav-item-link--active:focus,
+.header--overview .header-title-secondary a,
+.header--sub-page .header-title-secondary a{
 color:/*[[color-global]]*/!important;
 }
 a:hover,
@@ -1254,10 +1382,16 @@ h2 a:hover,
 a.shout-permalink:hover,
 a.shout-permalink:focus,
 .more-items:focus,
-.more-items:hover{
+.more-items:hover,
+.js .date-range-picker-button:focus,
+.js .date-range-picker-button:hover{
 color:/*[[color-global-hover]]*/;
 }
-.kerve .nowslider_copywrap a:hover{
+.kerve .nowslider_copywrap a:hover,
+.header--overview .header-title-secondary a:focus,
+.header--overview .header-title-secondary a:hover,
+.header--sub-page .header-title-secondary a:focus,
+.header--sub-page .header-title-secondary a:hover{
 color:/*[[color-global-hover]]*/!important;
 }
 body,
@@ -1300,24 +1434,15 @@ a.buylink,
 .duration-data .duration-data-value,
 .wiki-style-rules,
 .more-disclose-mobile .more-item,
-.header--overview .header-title-secondary a,
-.header--overview .header-title-secondary a:hover,
 .featured-item-heading-link,
 .recommended-next-page-title,
-.header .header-metadata-title,
-.btn-secondary{
+.header .header-metadata-title{
 color:/*[[main-text]]*/!important;
 }
 .kerve .nowslider_name,
 .kerve .nowslider_artist,
 .kerve .nowslider_track,
 .kerve .nowslider_scrobbles,
-.dropdown-menu-clickable-button,
-.dropdown-menu-clickable-button:hover,
-.dropdown-menu-clickable-button:focus,
-.dropdown-menu-clickable-button.disclose-active,
-.dropdown-menu-clickable-item,
-.dropdown-menu-clickable-item:hover,
 .date-range-picker-presets a,
 .date-range-picker-presets a:hover,
 .date-range-picker-presets a:focus,
@@ -1334,39 +1459,66 @@ color:/*[[main-text]]*/!important;
 .content-form .has-error .form-group .form-group-controls--checkbox,
 .content-form .has-success .form-group .form-group-controls--checkbox,
 .content-form .has-warning .form-group .form-group-controls--checkbox,
-.btn-lite,
-.btn-primary.profile-header-set-obsession,
 .featured-item-heading,
 .header-popularity-rank-tooltip,
 .lazy-recs-bar-recommended-items .lazy-recs-bar-recommended-item-artist,
 .lazy-recs-bar-recommended-items .lazy-recs-bar-recommended-item-title,
 .content-form legend,
 .features-post-author,
-.js .dropdown-menu-clickable-button-js-only,
-.js .dropdown-menu-clickable-button-js-only.disclose-active,
-.js .dropdown-menu-clickable-button-js-only:focus,
-.js .dropdown-menu-clickable-button-js-only:hover{
+.dropdown-menu-clickable-item,
+.shout-timestamp,
+.menu-title{
 color:/*[[main-text]]*/;
 }
-.dropdown-menu-clickable-button:hover,
-.dropdown-menu-clickable-button:focus,
-.dropdown-menu-clickable-item:hover,
-.dropdown-menu-clickable-item:focus,
+.btn-primary,
+.btn-secondary,
+.api-session-connect,
+.btn-lite,
+.dropdown-menu-clickable-button,
+.js .dropdown-menu-clickable-button-js-only,
+.pagination-next a,
+.pagination-previous a,
+.btn-subscribe,
+.attendance-btn{
+color:/*[[button-text]]*/;
+}
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-primary:focus,
+body:not([data-whatinput="touch"]) .btn-primary .focus-visible,
+body:not([data-whatinput="touch"]) .btn-primary:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-secondary:focus,
+body:not([data-whatinput="touch"]) .btn-secondary .focus-visible,
+body:not([data-whatinput="touch"]) .btn-secondary:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .api-session-connect:focus,
+body:not([data-whatinput="touch"]) .api-session-connect .focus-visible,
+body:not([data-whatinput="touch"]) .api-session-connect:hover,
 .btn-lite:active,
 .btn-lite:focus,
 .btn-lite:focus:not(:hover),
 .btn-lite:hover,
-.btn-primary.profile-header-set-obsession:hover,
-.btn-primary.profile-header-set-obsession:focus{
-color:#FFFFFF;
-}
-.player-bar,
-button.btn-primary,
-.music-featured-item .wiki-content p,
-.music-featured-artist-item-media-body p,
-.music-featured-artist-item-media-body p span.stat-name,
-.music-featured-item p a.music-featured-tag-featured-artist-link{
-color:#FFFFFF!important;
+.dropdown-menu-clickable-button:hover,
+.dropdown-menu-clickable-button:focus,
+.dropdown-menu-clickable-button.disclose-active,
+.dropdown-menu-clickable-item:hover,
+.dropdown-menu-clickable-item:hover,
+.dropdown-menu-clickable-item:focus,
+.js .dropdown-menu-clickable-button-js-only.disclose-active,
+.js .dropdown-menu-clickable-button-js-only:focus,
+.js .dropdown-menu-clickable-button-js-only:hover,
+.pagination-next a:focus,
+.pagination-next a:hover,
+.pagination-previous a:focus,
+.pagination-previous a:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-subscribe:focus,
+body:not([data-whatinput="touch"]) .btn-subscribe .focus-visible,
+body:not([data-whatinput="touch"]) .btn-subscribe:hover,
+.chartlist-now-scrobbling a:focus,
+.chartlist-now-scrobbling a:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .attendance-btn:focus,
+body:not([data-whatinput="touch"]) .attendance-btn .focus-visible,
+body:not([data-whatinput="touch"]) .attendance-btn:hover,
+.attendance-btn--turn-off.attendance-btn--maybe,
+.attendance-btn--turn-off.attendance-btn--attending{
+color:/*[[button-text-H]]*/;
 }
 hr{
 color:/*[[border-color]]*/!important;
@@ -1412,6 +1564,13 @@ stroke:/*[[color-global]]*/;
 .highcharts-container > svg > g.highcharts-series-group .highcharts-series-0 > a > rect{
 opacity:.2;
 }
+.shout-timestamp{
+opacity:.4;
+}
+.shout-timestamp:focus,
+.shout-timestamp:hover{
+opacity:1;
+}
 .loading-indicator,
 .content-form .form-loading-indicator:before,
 .lazy-buylinks-loading:before,
@@ -1431,12 +1590,14 @@ padding-right: 16px;
 background-size: 64px 64px !important;
 background: url(/*[[loading-gif-64]]*/) 50% 50% no-repeat !important;
 }
+/*[[compact-mode]]*/
 .date-range-picker-content::before,
 .dropdown-menu-clickable::before,
 .secondary-nav .navlist-hidden-list::before,
 .date-picker-content::before,
 .events-filter-location-dropdown::before,
-.buylinks-dropdown-menu::before{
+.buylinks-dropdown-menu::before,
+.share-chart .share-block::before{
 top:-18px;
 background-image: none;
 width: 0px;
@@ -1448,15 +1609,14 @@ border: 9px solid transparent;
 .secondary-nav .navlist-hidden-list::before,
 .date-picker-content::before,
 .events-filter-location-dropdown::before,
-.buylinks-dropdown-menu::before{
+.buylinks-dropdown-menu::before,
+.share-chart .share-block::before{
 border-left-color: transparent;
 border-right-color: transparent;
 border-top-color: transparent;
 border-bottom-color:  /*[[bg-lighter]]*/;
 }
-.dropdown-menu-clickable-button.shoutbox-sort-toggle::after,
-.section-controls .dropdown-menu-clickable-button::after,
-.dropdown-menu-clickable-button.section-control::after,
+.dropdown-menu-clickable-button::after,
 .js .dropdown-menu-clickable-button-js-only::after{
 background-image:none;
 border: solid /*[[main-text]]*/;
@@ -1481,26 +1641,64 @@ margin-right: 1px;
 top: 20px;
 margin-right: 1px;
 }
+.namespace--user_library_artists .library-top .dropdown-menu-clickable-button::after{
+top: 22px;
+margin-right: 0px;
+}
 .chartlist-row:hover a .chartlist-count-bar-value::after{
+border: solid /*[[main-text]]*/;;
+}
+.pagination-next a::before,
+.pagination-previous a::before{
+border: solid /*[[button-text]]*/;
+}
+.chartlist-row:hover a .chartlist-count-bar-value::after,
+.pagination-next a::before,
+.pagination-previous a::before{
 background-image:none;
-border: solid /*[[main-text]]*/;
-border-width: 0 2px 2px 0;
 display: inline-block;
 padding: 3px;
 width: 3px;
 height: 3px;
+}
+.chartlist-row:hover a .chartlist-count-bar-value::after,
+.pagination-next a::before{
+border-width: 0 2px 2px 0;
+}
+.pagination-previous a::before{
+border-width: 2px 0 0 2px;
+}
+.chartlist-row:hover a .chartlist-count-bar-value::after,
+.pagination-next a::before{
 -webkit-transform: rotate(-45deg);
 transform: rotate(-45deg);
 }
-.chartlist-row:hover a .chartlist-count-bar-value::after{
+.pagination-previous a::before{
+-webkit-transform: rotate(-45deg);
+transform: rotate(-45deg);
+}
+.chartlist-row:hover a .chartlist-count-bar-value::after,
+.pagination-next a::before{
 top: 19px;
 margin-right: 3px;
+}
+.pagination-previous a::before{
+top: 19px;
+margin-left: 3px;
+}
+.pagination-previous a:hover::before,
+.pagination-next a:hover::before{
+border-color: /*[[button-text-H]]*/;
 }
 .more-link a::before,
 .more-link-fullwidth-right a::before,
 .more-link-with-action a:nth-child(n+2)::after,
 .more-items::before,
-.more-link-fullwidth a::before{
+.more-link-fullwidth a::before,
+.js .date-range-picker-button .date-range-picker-button-inner::before,
+.wiki-block-cta .cta-link-wrap a::before,
+.external-link-cta .cta-link-wrap a::before,
+.lyrics-snippet-more-link a::before{
 background-image:none;
 border: solid /*[[color-global]]*/;
 border-width: 0 2px 2px 0;
@@ -1512,19 +1710,26 @@ height: 3px;
 .more-link a::before,
 .more-link-fullwidth-right a::before,
 .more-link-with-action a:nth-child(n+2)::after,
-.more-link-fullwidth a::before{
+.more-link-fullwidth a::before,
+.wiki-block-cta .cta-link-wrap a::before,
+.external-link-cta .cta-link-wrap a::before,
+.lyrics-snippet-more-link a::before{
 -webkit-transform: rotate(-45deg);
 transform: rotate(-45deg);
 }
-.more-items::before{
+.more-items::before,
+.js .date-range-picker-button .date-range-picker-button-inner::before{
 -webkit-transform: rotate(45deg);
 transform: rotate(45deg);
 }
-.more-link a::before{
-top: 12px;
-margin-right: 6px;
-}
-.more-link-fullwidth-right a::before{
+.more-link a::before,
+.more-link-fullwidth a::before,
+.more-link-fullwidth-right a::before,
+.wiki-block-cta .cta-link-wrap a::before,
+.external-link-cta .cta-link-wrap a::before,
+.more-items::before,
+.js .date-range-picker-button .date-range-picker-button-inner::before,
+.lyrics-snippet-more-link a::before{
 top: 13px;
 margin-right: 3px;
 }
@@ -1532,15 +1737,15 @@ margin-right: 3px;
 margin-bottom: 1px;
 margin-left: 6px;
 }
-.more-items::before{
-top: 13px;
-margin-right: 2px;
-}
 .more-link a:hover::before,
 .more-link-fullwidth-right a:hover::before,
 .more-link-with-action a:nth-child(n+2):hover::after,
 .more-items:hover::before,
-.more-link-fullwidth a:hover::before{
+.more-link-fullwidth a:hover::before,
+.js .date-range-picker-button:hover .date-range-picker-button-inner::before,
+.wiki-block-cta .cta-link-wrap a:hover::before,
+.external-link-cta .cta-link-wrap a:hover::before,
+.lyrics-snippet-more-link a:hover::before{
 border-color: /*[[color-global-hover]]*/;
 }
 .shout-more-replies-before::before{
@@ -1554,9 +1759,10 @@ height: 3px;
 -webkit-transform: rotate(45deg);
 transform: rotate(45deg);
 }
+.more-items::before,
 .shout-more-replies-before::before{
 top: 13px;
-margin-right: 2px;
+margin-right:0px;
 }
 .shout-more-replies-before:hover::before{
 border-color: /*[[color-global-hover]]*/;
@@ -1594,17 +1800,12 @@ background-color:/*[[bg-lighter]]*/;
 .more-link-fullwidth-right,
 .more-link-with-action,
 .more-link-fullwidth{
-	-webkit-box-shadow: inset 0 1px 0 /*[[border-color]]*/;
-	box-shadow: inset 0 1px 0 /*[[border-color]]*/;
+-webkit-box-shadow: inset 0 1px 0 /*[[border-color]]*/;
+box-shadow: inset 0 1px 0 /*[[border-color]]*/;
 }
 .secondary-nav{
 -webkit-box-shadow:0px -1px /*[[border-color]]*/ inset!important;
 box-shadow:0px -1px /*[[border-color]]*/ inset!important;
-}
-.more-link-fullwidth-right a::before,
-.more-link-fullwidth a::before{
-	top: 24px;
-	margin-right: 3px;
 }
 .personal-stats-item--scrobbles .personal-stats-inner::before,
 .personal-stats-listeners::before,
@@ -1618,7 +1819,7 @@ width: 3px;
 height: 3px;
 -webkit-transform: rotate(-45deg);
 transform: rotate(-45deg);
-}
+}fter
 .personal-stats-item--scrobbles .personal-stats-inner::before,
 .personal-stats-listeners::before,
 .wiki-block-inner-2::before{
@@ -1633,6 +1834,25 @@ margin-right: 3px;
 .personal-stats-listeners:hover::before,
 .wiki-block-inner-2:hover::before{
 border-color: /*[[color-global-hover]]*/;
+}
+a .chartlist-count-bar-value::after{
+border: solid /*[[main-text]]*/;
+background-image:none;
+display: inline-block;
+padding: 2px!important;
+width: 3px;
+height: 3px;
+border-width: 0 2px 2px 0;
+-webkit-transform: rotate(-45deg);
+transform: rotate(-45deg);
+top: 12px!important;
+margin-right: 3px;
+}
+.chartlist-row:hover a .chartlist-count-bar-value::after{
+border-color:/*[[button-text-H]]*/;
+}
+.dropdown-menu-clickable-item::after {
+border-color:/*[[border-color]]*/;
 }
 }
 @media (min-width:768px){
@@ -1673,6 +1893,10 @@ color: /*[[main-text]]*/;
 }
 .mega-menu--open .dropdown-menu-dark{
 border-radius: 0px !important;
+}
+.events-list-anhv1 td, .events-list-anhv1 th {
+-webkit-box-shadow: inset 0 -1px /*[[border-color]]*/;
+box-shadow: inset 0 -1px /*[[border-color]]*/;
 }
 .recommended-next-page-container{
 position: absolute !important;
@@ -1750,36 +1974,27 @@ background:/*[[secondary-button-H]]*/;
 .more-disclose-desktop .more-item:hover{
 color: #FFFFFF;
 }
-.header--overview .header-title-secondary a,
-.header--overview .header-title-secondary a:focus,
-.header--overview .header-title-secondary a:hover,
-.header--sub-page .header-title-secondary a,
-.header--sub-page .header-title-secondary a:focus,
-.header--sub-page .header-title-secondary a:hover,
 .user-dashboard-pagination-next-link,
 .user-dashboard-pagination-previous-link{
 color:/*[[color-global]]*/;
+}
+.header--overview .header-title-secondary a,
+.header--sub-page .header-title-secondary a{
+color:/*[[color-global]]*/;
+}
+.header--overview .header-title-secondary a:focus,
+.header--overview .header-title-secondary a:hover,
+.header--sub-page .header-title-secondary a:focus,
+.header--sub-page .header-title-secondary a:hover{
+color:/*[[color-global-hover]]*/;
+}
+.subscribe-plan{
+background:/*[[bg-lighter]]*/;
 }
 }
 @media (min-width:1260px){
 .user-dashboard-catalogue-item .user-dashboard-comparison{
 top: -68px;
-}
-.date-picker-content::before,
-.date-range-picker-content::before{
-left: 126px !important;
-}
-.buylinks-dropdown-menu::before{
-left: 91px !important;
-}
-.dropdown-menu-clickable::before{
-left: 671px !important;
-}
-.secondary-nav .navlist-hidden-list::before{
-left: 44px !important;
-}
-#events-location::before{
-left: 227px !important;
 }
 }
 }
