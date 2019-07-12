@@ -36,6 +36,8 @@ Yes "Yes" <<<EOT
 @advanced color secondary-button "Secondary buttons" #323232
 @advanced color secondary-button-H "Secondary buttons hover" #505050
 @advanced color main-text "Main text" #CCCCCC
+@advanced color button-text "Buttons text" #CCCCCC
+@advanced color button-text-H "Buttons text hover" #FFFFFF
 @advanced color color-global "Main Color" #5C809E
 @advanced color color-global-hover "Main color lighter" #77A6CC
 @advanced dropdown header-desaturate "Desaturate header image" {
@@ -141,7 +143,8 @@ Yes "Yes" <<<EOT
 .share-chart .share-button-profile,
 .user-dashboard-module .user-dashboard-module-share,
 .user-dashboard-share,
-.share-footer{
+.share-footer,
+.share-chart{
 display:none!important;
 }
 .stationlinks,
@@ -275,7 +278,7 @@ background:#323232!important;
 .listening-report-promo,
 .chartlist-play-button::before,
 .section-playlink::before,
-.stationlink-list .stationlink::before{
+.stationlink::before{
 background-color:transparent!important;
 }
 .user-dashboard-module-share{
@@ -310,7 +313,15 @@ background-image:url(https://www.last.fm/static/images/icons/search_16.png);
 .shout-more-actions:focus::before,
 .shout-more-actions.disclose-active::before,
 .header .header-message-user:hover::before,
-.header .header-message-user:focus::before{
+.header .header-message-user:focus::before,
+.chartlist-more-button.disclose-active::before,
+.chartlist-more-button .focus-visible::before,
+.chartlist-more-button:hover::before,
+body:not(.js-focus-visible) .chartlist-more-button:focus::before,
+.chartlist .lazy-buylinks-toggle.disclose-active::before,
+.chartlist .lazy-buylinks-toggle .focus-visible::before,
+.chartlist .lazy-buylinks-toggle:hover::before,
+body:not(.js-focus-visible) .chartlist .lazy-buylinks-toggle:focus::before{
 background-position: 0 0px;
 }
 .chartlist--with-buylinks .lazy-buylinks-toggle:focus::after,
@@ -324,7 +335,7 @@ background-position:0 -50px;
 .shout-reply:hover::before,
 .shout-reply:focus::before,
 .shout-reply.shout-reply--open::before{
-background-position: -10px 0px;
+background-position: 0px 0px;
 }
 .shout-delete::before{
 background-position: -10px -10px;
@@ -335,7 +346,7 @@ background-position:-30px -50px;
 }
 .chartlist-play-button::before,
 .section-playlink::before,
-.stationlink-list .stationlink::before{
+.stationlink::before{
 background-position: 7px 7px !important;
 }
 article,
@@ -460,7 +471,9 @@ border-top:none;
 .header-popularity-rank-tooltip,
 .lazy-recs-bar .lazy-recs-bar-join,
 .user-dashboard-upsell-cta,
-.async-content-error-message{
+.async-content-error-message,
+.api-session-connect,
+.share-chart .share-block{
 border-radius:0!important;
 }
 .library-controls-datepicker{
@@ -478,7 +491,6 @@ bottom:-5px!important;
 .recs-feed .recs-feed-item,
 .site-links,
 .context,
-.date-range-picker-content,
 .dropdown-menu.dropdown--open,
 .dropdown-buylinks--light .dropdown-featured-buylink,
 .dropdown-buylinks--light .dropdown-more-buylinks,
@@ -490,7 +502,8 @@ bottom:-5px!important;
 .user-dashboard-module-share,
 .user-dashboard-history-subscribe-banner-cta::after,
 .user-dashboard-history-subscribe-banner-cta::before,
-.header-popularity-rank-tooltip{
+.header-popularity-rank-tooltip,
+.video-preview-upload-cta{
 -webkit-box-shadow:none!important;
 box-shadow:none!important;
 }
@@ -544,9 +557,18 @@ filter: brightness(100%);
 -webkit-filter: invert(50%);
 filter: invert(50%);
 }
+.resource-external-link--apple-music::before,
+.resource-external-link--homepage::before{
+-webkit-filter: invert(60%);
+filter: invert(60%);
+}
+.video-preview-upload-cta::before{
+-webkit-filter: invert(80%);
+filter: invert(80%);
+}
 .chartlist-play-button::before,
 .section-playlink::before,
-.stationlink-list .stationlink::before{
+.stationlink::before{
 -webkit-filter: invert(80%)!important;
 filter: invert(80%)!important;
 }
@@ -559,7 +581,8 @@ filter: invert(80%)!important;
 .more-item--delete::before,
 .more-item--report::before,
 .more-item--play::before,
-.more-item--album::before{
+.more-item--album::before,
+.more-item--artist-link::before{
 -webkit-filter: invert(90%);
 filter: invert(90%);
 }
@@ -567,17 +590,15 @@ filter: invert(90%);
 .link-block .profile-banner-close:hover::before,
 .chartlist .chartlist-more-button:focus::before,
 .chartlist .chartlist-more-button:hover::before,
-.chartlist .lazy-buylinks-toggle.disclose-active::before,
-.chartlist .lazy-buylinks-toggle .focus-visible::before,
-.chartlist .lazy-buylinks-toggle:hover::before,
-body:not(.js-focus-visible) .chartlist .lazy-buylinks-toggle:focus::before{
+.share-chart .share-button-profile::before,
+.share-chart .share-button-library::before,
+.video-preview-upload-cta:hover::before{
 -webkit-filter: invert(100%);
 filter: invert(100%);
 }
 .section-settings-toggle::before,
 .selectbox .selectboxit-text::before,
-.stationlink::before,
-.share-chart .share-button-profile::before{
+.stationlink::before{
 -webkit-filter:invert(88.2%) saturate(0%)!important;
 filter:invert(88.2%) saturate(0%)!important;
 }
@@ -589,12 +610,13 @@ filter:invert(88.2%) saturate(0%)!important;
 .more-item--report:hover::before,
 .more-item--play:hover::before,
 .more-item--album:hover::before,
+.more-item--artist-link:hover::before,
 .chartlist-play-button:focus::before,
 .chartlist-play-button:hover::before,
 .section-playlink:focus::before,
 .section-playlink:hover::before,
-.stationlink-list .stationlink:focus::before,
-.stationlink-list .stationlink:hover::before{
+.stationlink:focus::before,
+.stationlink:hover::before{
 -webkit-filter: invert(100%) brightness(200%)!important;
 filter: invert(100%) brightness(200%)!important;
 }
@@ -608,14 +630,21 @@ filter:saturate(0%)!important;
 }
 .tags-add::before,
 .album-grid-tags-add::before,
-.dropdown-menu-clickable-button:hover::after
-{
+.dropdown-menu-clickable-button:hover::after{
 -webkit-filter:saturate(0%) brightness(220%)!important;
 filter:saturate(0%) brightness(220%)!important;
 }
 .dropdown-buylinks--light .dropdown-more-buylinks::before,
 .suggest-correction-cta::before,
-.header .header-message-user:hover::before{
+.header .header-message-user:hover::before,
+.chartlist-more-button.disclose-active::before,
+.chartlist-more-button .focus-visible::before,
+.chartlist-more-button:hover::before,
+body:not(.js-focus-visible) .chartlist-more-button:focus::before,
+.chartlist .lazy-buylinks-toggle.disclose-active::before,
+.chartlist .lazy-buylinks-toggle .focus-visible::before,
+.chartlist .lazy-buylinks-toggle:hover::before,
+body:not(.js-focus-visible) .chartlist .lazy-buylinks-toggle:focus::before{
 -webkit-filter:saturate(0%) brightness(300%)!important;
 filter:saturate(0%) brightness(300%)!important;
 }
@@ -629,7 +658,6 @@ filter:saturate(0%) brightness(300%)!important;
 .dropdown-buylinks--light .dropdown-more-buylinks:hover::before,
 .js .date-picker-button::before,
 .js .date-picker-button::after,
-.js .date-range-picker-button .date-range-picker-button-inner::before,
 .js .date-range-picker-button::before,
 .js .events-filter-location::before,
 .js .events-filter-location::after,
@@ -640,19 +668,13 @@ filter:saturate(0%) brightness(300%)!important;
 .masthead-logo,
 .tags-add:hover::before,
 .album-grid-tags-add::before,
-.modal-dismiss::before,
-.user-dashboard-pagination-next-link::before,
-.user-dashboard-pagination-previous-link::before,
-.pagination-previous a::before,
-.pagination-next a::before{
+.modal-dismiss::before{
 -webkit-filter:saturate(0%) brightness(600%)!important;
 filter:saturate(0%) brightness(600%)!important;
 }
 .inbox-message-view .inbox-message-buttons .back-button::before,
 .user-dashboard-module-share::before,
 .listening-report-promo-date::after,
-.pagination-previous:hover a::before,
-.pagination-next:hover a::before,
 .share-features .share-button::before{
 -webkit-filter:saturate(0%) brightness(800%)!important;
 filter:saturate(0%) brightness(800%)!important;
@@ -672,6 +694,7 @@ height: 100%;
 .content-form input[type="time"] {
 line-height: normal;
 }
+.share-chart .share-block,
 .dashbody .kerve .worldwrap{
 margin:0;
 }
@@ -782,7 +805,7 @@ top: -52px;
 }
 .chartlist-play-button::before,
 .section-playlink::before,
-.stationlink-list .stationlink::before{
+.stationlink::before{
 	-webkit-transition: none;
 	transition: none;
 }
@@ -801,7 +824,6 @@ top: -52px;
 .container.page-content,
 .content-top,
 .content-top-lower,
-.date-range-picker-content,
 .date-picker-content,
 .dropdown-menu.dropdown--open ,.dropdown-menu.dropdown--open,
 .footer-wrapper,
@@ -823,7 +845,6 @@ body,
 textarea.comment-input,
 tr.js-link-block,
 .recs-feed .recs-feed-item,
-.date-range-picker-content,
 .lfmRed .site-search .search-box,
 .fiflufi .leftCol,
 .stationbuttonLarge,
@@ -850,7 +871,8 @@ table.table tr:nth-child(2n) td,
 .features-header .features-teaser-body,
 .features-teaser--promoted .features-teaser-body,
 .features-post-header-body,
-.chartlist-row:hover{
+.chartlist-row:hover,
+.trending-tracks-section{
 background:/*[[bg]]*/!important;
 }
 .alert,
@@ -902,7 +924,10 @@ background:/*[[bg-lighter]]*/!important;
 .kerve .trendwavewrap .bar,
 .kerve .trendbarwrap .graph_global .bar,
 .secondary-nav .navlist-hidden-list a,
-.async-content-error-message{
+.async-content-error-message,
+.video-preview-upload-cta,
+.video-preview-upload-cta:not(.cta--inactive):focus,
+.video-preview-upload-cta:not(.cta--inactive):hover{
 background:/*[[bg-lighter]]*/;
 }
 .user-dashboard-banner,
@@ -914,7 +939,8 @@ background-color:/*[[bg-lighter]]*/!important;
 .features-post-top::after,
 .music-recommended-tracks-track-context::before,
 .factbox-summary + .music-recommended-artists-context::before,
-.music-recommended-artists-artist-stats + .music-recommended-artists-context::before{
+.music-recommended-artists-artist-stats + .music-recommended-artists-context::before,
+.api-session::after{
 background:/*[[border-color]]*/;
 }
 .add-event-btn,
@@ -957,7 +983,8 @@ background:/*[[color-global]]*/!important;
 .kerve .trendwave_inner .bar,
 .kerve .trendbarwrap .bar,
 .music-section-heading::after,
-.features-teaser-has-video{
+.features-teaser-has-video,
+.api-session-connect{
 background:/*[[color-global]]*/;
 }
 .header-follower-btn .follower-btn-add-follower::before,
@@ -966,7 +993,8 @@ background:/*[[color-global]]*/;
 .user-status-subscriber::after,
 .secondary-nav-item-link--active::after,
 a.secondary-nav-item-link:focus::after,
-a.secondary-nav-item-link:hover::after{
+a.secondary-nav-item-link:hover::after,
+.avatar-status-dot--subscriber{
 background-color:/*[[color-global]]*/;
 }
 .add-event-btn:hover,
@@ -983,7 +1011,10 @@ a:hover .chartlist-count-bar-slug{
 background:/*[[color-global-hover]]*/!important;
 }
 .header-follower-btn .follower-btn-add-follower:hover::before,
-.user-list-follower-btn .follower-btn-add-follower:hover{
+.user-list-follower-btn .follower-btn-add-follower:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .api-session-connect:focus,
+body:not([data-whatinput="touch"]) .api-session-connect .focus-visible,
+body:not([data-whatinput="touch"]) .api-session-connect:hover{
 background-color:/*[[color-global-hover]]*/;
 }
 .btn-secondary,
@@ -1114,6 +1145,9 @@ input.confirmButton:hover,
 .wiki-block::before{
 border-color:/*[[border-color]]*/!important;
 }
+.menu-title::after{
+border-color:/*[[border-color]]*/!important;
+}
 .content-form .has-error .form-control,
 .content-form .has-error input[type="text"],
 .content-form .has-error input[type="password"],
@@ -1126,15 +1160,15 @@ border-color:#B90000!important;
 }
 .chartlist-play-button::before,
 .section-playlink::before,
-.stationlink-list .stationlink::before{
+.stationlink::before{
 border: 1px solid rgb(240,240,240);
 }
 .chartlist-play-button:focus::before,
 .chartlist-play-button:hover::before,
 .section-playlink:focus::before,
 .section-playlink:hover::before,
-.stationlink-list .stationlink:focus::before,
-.stationlink-list .stationlink:hover::before{
+.stationlink:focus::before,
+.stationlink:hover::before{
 border: 1px solid rgb(200,200,200);
 }
 .kerve .venn2{
@@ -1200,11 +1234,14 @@ box-shadow:0 -3px /*[[color-global]]*/ inset;
 }
 .wiki-history .wiki-history-table tr{
 -webkit-box-shadow: 0 -1px /*[[border-color]]*/ inset;
-box-shadow: 0 -1px /*[[border-color]]*/ inset;
+box-shadow:0 -1px /*[[border-color]]*/ inset;
 }
 .features-teaser-has-video{
 -webkit-box-shadow:0 0 0 18px /*[[bg]]*/;
 box-shadow:0 0 0 18px /*[[bg]]*/;
+}
+.avatar-status-dot {
+	box-shadow:0 0 0 2px /*[[bg]]*/;
 }
 .secondary-nav{
 -webkit-box-shadow:none;
@@ -1212,7 +1249,7 @@ box-shadow:none ;
 }
 .chartlist-play-button::before,
 .section-playlink::before,
-.stationlink-list .stationlink::before{
+.stationlink::before{
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
 }
@@ -1289,7 +1326,9 @@ h2 a:hover,
 a.shout-permalink:hover,
 a.shout-permalink:focus,
 .more-items:focus,
-.more-items:hover{
+.more-items:hover,
+.js .date-range-picker-button:focus,
+.js .date-range-picker-button:hover{
 color:/*[[color-global-hover]]*/;
 }
 .kerve .nowslider_copywrap a:hover{
@@ -1339,20 +1378,13 @@ a.buylink,
 .header--overview .header-title-secondary a:hover,
 .featured-item-heading-link,
 .recommended-next-page-title,
-.header .header-metadata-title,
-.btn-secondary{
+.header .header-metadata-title{
 color:/*[[main-text]]*/!important;
 }
 .kerve .nowslider_name,
 .kerve .nowslider_artist,
 .kerve .nowslider_track,
 .kerve .nowslider_scrobbles,
-.dropdown-menu-clickable-button,
-.dropdown-menu-clickable-button:hover,
-.dropdown-menu-clickable-button:focus,
-.dropdown-menu-clickable-button.disclose-active,
-.dropdown-menu-clickable-item,
-.dropdown-menu-clickable-item:hover,
 .date-range-picker-presets a,
 .date-range-picker-presets a:hover,
 .date-range-picker-presets a:focus,
@@ -1369,39 +1401,54 @@ color:/*[[main-text]]*/!important;
 .content-form .has-error .form-group .form-group-controls--checkbox,
 .content-form .has-success .form-group .form-group-controls--checkbox,
 .content-form .has-warning .form-group .form-group-controls--checkbox,
-.btn-lite,
-.btn-primary.profile-header-set-obsession,
 .featured-item-heading,
 .header-popularity-rank-tooltip,
 .lazy-recs-bar-recommended-items .lazy-recs-bar-recommended-item-artist,
 .lazy-recs-bar-recommended-items .lazy-recs-bar-recommended-item-title,
 .content-form legend,
 .features-post-author,
-.js .dropdown-menu-clickable-button-js-only,
-.js .dropdown-menu-clickable-button-js-only.disclose-active,
-.js .dropdown-menu-clickable-button-js-only:focus,
-.js .dropdown-menu-clickable-button-js-only:hover{
+.dropdown-menu-clickable-item,
+.shout-timestamp,
+.menu-title{
 color:/*[[main-text]]*/;
 }
-.dropdown-menu-clickable-button:hover,
-.dropdown-menu-clickable-button:focus,
-.dropdown-menu-clickable-item:hover,
-.dropdown-menu-clickable-item:focus,
+.btn-primary,
+.btn-secondary,
+.api-session-connect,
+.btn-lite,
+.dropdown-menu-clickable-button,
+.js .dropdown-menu-clickable-button-js-only,
+.pagination-next a,
+.pagination-previous a{
+color:/*[[button-text]]*/;
+}
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-primary:focus,
+body:not([data-whatinput="touch"]) .btn-primary .focus-visible,
+body:not([data-whatinput="touch"]) .btn-primary:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-secondary:focus,
+body:not([data-whatinput="touch"]) .btn-secondary .focus-visible,
+body:not([data-whatinput="touch"]) .btn-secondary:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .api-session-connect:focus,
+body:not([data-whatinput="touch"]) .api-session-connect .focus-visible,
+body:not([data-whatinput="touch"]) .api-session-connect:hover,
 .btn-lite:active,
 .btn-lite:focus,
 .btn-lite:focus:not(:hover),
 .btn-lite:hover,
-.btn-primary.profile-header-set-obsession:hover,
-.btn-primary.profile-header-set-obsession:focus{
-color:#FFFFFF;
-}
-.player-bar,
-button.btn-primary,
-.music-featured-item .wiki-content p,
-.music-featured-artist-item-media-body p,
-.music-featured-artist-item-media-body p span.stat-name,
-.music-featured-item p a.music-featured-tag-featured-artist-link{
-color:#FFFFFF!important;
+.dropdown-menu-clickable-button:hover,
+.dropdown-menu-clickable-button:focus,
+.dropdown-menu-clickable-button.disclose-active,
+.dropdown-menu-clickable-item:hover,
+.dropdown-menu-clickable-item:hover,
+.dropdown-menu-clickable-item:focus,
+.js .dropdown-menu-clickable-button-js-only.disclose-active,
+.js .dropdown-menu-clickable-button-js-only:focus,
+.js .dropdown-menu-clickable-button-js-only:hover,
+.pagination-next a:focus,
+.pagination-next a:hover,
+.pagination-previous a:focus,
+.pagination-previous a:hover{
+color:/*[[button-text-H]]*/;
 }
 hr{
 color:/*[[border-color]]*/!important;
@@ -1447,6 +1494,13 @@ stroke:/*[[color-global]]*/;
 .highcharts-container > svg > g.highcharts-series-group .highcharts-series-0 > a > rect{
 opacity:.2;
 }
+.shout-timestamp{
+opacity:.4;
+}
+.shout-timestamp:focus,
+.shout-timestamp:hover{
+opacity:1;
+}
 .loading-indicator,
 .content-form .form-loading-indicator:before,
 .lazy-buylinks-loading:before,
@@ -1472,7 +1526,8 @@ background: url(/*[[loading-gif-64]]*/) 50% 50% no-repeat !important;
 .secondary-nav .navlist-hidden-list::before,
 .date-picker-content::before,
 .events-filter-location-dropdown::before,
-.buylinks-dropdown-menu::before{
+.buylinks-dropdown-menu::before,
+.share-chart .share-block::before{
 top:-18px;
 background-image: none;
 width: 0px;
@@ -1484,15 +1539,14 @@ border: 9px solid transparent;
 .secondary-nav .navlist-hidden-list::before,
 .date-picker-content::before,
 .events-filter-location-dropdown::before,
-.buylinks-dropdown-menu::before{
+.buylinks-dropdown-menu::before,
+.share-chart .share-block::before{
 border-left-color: transparent;
 border-right-color: transparent;
 border-top-color: transparent;
 border-bottom-color:  /*[[bg-lighter]]*/;
 }
-.dropdown-menu-clickable-button.shoutbox-sort-toggle::after,
-.section-controls .dropdown-menu-clickable-button::after,
-.dropdown-menu-clickable-button.section-control::after,
+.dropdown-menu-clickable-button::after,
 .js .dropdown-menu-clickable-button-js-only::after{
 background-image:none;
 border: solid /*[[main-text]]*/;
@@ -1517,26 +1571,63 @@ margin-right: 1px;
 top: 20px;
 margin-right: 1px;
 }
+.namespace--user_library_artists .library-top .dropdown-menu-clickable-button::after{
+top: 22px;
+margin-right: 0px;
+}
 .chartlist-row:hover a .chartlist-count-bar-value::after{
+border: solid /*[[main-text]]*/;;
+}
+.pagination-next a::before,
+.pagination-previous a::before{
+border: solid /*[[button-text]]*/;
+}
+.chartlist-row:hover a .chartlist-count-bar-value::after,
+.pagination-next a::before,
+.pagination-previous a::before{
 background-image:none;
-border: solid /*[[main-text]]*/;
-border-width: 0 2px 2px 0;
 display: inline-block;
 padding: 3px;
 width: 3px;
 height: 3px;
+}
+.chartlist-row:hover a .chartlist-count-bar-value::after,
+.pagination-next a::before{
+border-width: 0 2px 2px 0;
+}
+.pagination-previous a::before{
+border-width: 2px 0 0 2px;
+}
+.chartlist-row:hover a .chartlist-count-bar-value::after,
+.pagination-next a::before{
 -webkit-transform: rotate(-45deg);
 transform: rotate(-45deg);
 }
-.chartlist-row:hover a .chartlist-count-bar-value::after{
+.pagination-previous a::before{
+-webkit-transform: rotate(-45deg);
+transform: rotate(-45deg);
+}
+.chartlist-row:hover a .chartlist-count-bar-value::after,
+.pagination-next a::before{
 top: 19px;
 margin-right: 3px;
+}
+.pagination-previous a::before{
+top: 19px;
+margin-left: 3px;
+}
+.pagination-previous a:hover::before,
+.pagination-next a:hover::before{
+border-color: /*[[button-text-H]]*/;
 }
 .more-link a::before,
 .more-link-fullwidth-right a::before,
 .more-link-with-action a:nth-child(n+2)::after,
 .more-items::before,
-.more-link-fullwidth a::before{
+.more-link-fullwidth a::before,
+.js .date-range-picker-button .date-range-picker-button-inner::before,
+.wiki-block-cta .cta-link-wrap a::before,
+.external-link-cta .cta-link-wrap a::before{
 background-image:none;
 border: solid /*[[color-global]]*/;
 border-width: 0 2px 2px 0;
@@ -1548,19 +1639,23 @@ height: 3px;
 .more-link a::before,
 .more-link-fullwidth-right a::before,
 .more-link-with-action a:nth-child(n+2)::after,
-.more-link-fullwidth a::before{
+.more-link-fullwidth a::before,
+.wiki-block-cta .cta-link-wrap a::before,
+.external-link-cta .cta-link-wrap a::before{
 -webkit-transform: rotate(-45deg);
 transform: rotate(-45deg);
 }
-.more-items::before{
+.more-items::before,
+.js .date-range-picker-button .date-range-picker-button-inner::before{
 -webkit-transform: rotate(45deg);
 transform: rotate(45deg);
 }
-.more-link a::before{
-top: 12px;
-margin-right: 6px;
-}
-.more-link-fullwidth-right a::before{
+.more-link a::before,
+.more-link-fullwidth-right a::before,
+.wiki-block-cta .cta-link-wrap a::before,
+.external-link-cta .cta-link-wrap a::before,
+.more-items::before,
+.js .date-range-picker-button .date-range-picker-button-inner::before{
 top: 13px;
 margin-right: 3px;
 }
@@ -1568,15 +1663,14 @@ margin-right: 3px;
 margin-bottom: 1px;
 margin-left: 6px;
 }
-.more-items::before{
-top: 13px;
-margin-right: 2px;
-}
 .more-link a:hover::before,
 .more-link-fullwidth-right a:hover::before,
 .more-link-with-action a:nth-child(n+2):hover::after,
 .more-items:hover::before,
-.more-link-fullwidth a:hover::before{
+.more-link-fullwidth a:hover::before,
+.js .date-range-picker-button:hover .date-range-picker-button-inner::before,
+.wiki-block-cta .cta-link-wrap a:hover::before,
+.external-link-cta .cta-link-wrap a:hover::before{
 border-color: /*[[color-global-hover]]*/;
 }
 .shout-more-replies-before::before{
@@ -1801,21 +1895,18 @@ color:/*[[color-global]]*/;
 .user-dashboard-catalogue-item .user-dashboard-comparison{
 top: -68px;
 }
+.dropdown-menu-clickable::before,
 .date-picker-content::before,
-.date-range-picker-content::before{
-left: 126px !important;
-}
-.buylinks-dropdown-menu::before{
-left: 91px !important;
-}
-.dropdown-menu-clickable::before{
-left: 671px !important;
-}
-.secondary-nav .navlist-hidden-list::before{
-left: 44px !important;
-}
-#events-location::before{
-left: 227px !important;
+.date-range-picker-content::before,
+.buylinks-dropdown-menu::before,
+.secondary-nav .navlist-hidden-list::before,
+#events-location::before,
+.chartlist-more-menu::before,
+.library-top #share-library-artist::before,
+.library-top #share-library-album::before,
+#share-library-artist::before,
+#share-library-album::before{
+margin-left:9px;
 }
 }
 }
