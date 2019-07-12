@@ -582,7 +582,8 @@ filter: invert(80%)!important;
 .more-item--report::before,
 .more-item--play::before,
 .more-item--album::before,
-.more-item--artist-link::before{
+.more-item--artist-link::before,
+.chartlist-more-menu-love::before{
 -webkit-filter: invert(90%);
 filter: invert(90%);
 }
@@ -611,6 +612,8 @@ filter:invert(88.2%) saturate(0%)!important;
 .more-item--play:hover::before,
 .more-item--album:hover::before,
 .more-item--artist-link:hover::before,
+.chartlist-more-menu-love:focus::before,
+.chartlist-more-menu-love:hover::before,
 .chartlist-play-button:focus::before,
 .chartlist-play-button:hover::before,
 .section-playlink:focus::before,
@@ -703,6 +706,19 @@ margin-bottom:0!important;
 }
 .secondary-nav--scrollable.secondary-nav--more .secondary-nav-hidden-list{
 margin-left:-6px!important;
+}
+.dropdown-menu-clickable::before,
+.date-picker-content::before,
+.date-range-picker-content::before,
+.buylinks-dropdown-menu::before,
+.secondary-nav .navlist-hidden-list::before,
+#events-location::before,
+.chartlist-more-menu::before,
+.library-top #share-library-artist::before,
+.library-top #share-library-album::before,
+#share-library-artist::before,
+#share-library-album::before{
+margin-left:9px;
 }
 .secondary-nav--scrollable.secondary-nav--more ul.secondary-nav-hidden-list{
 margin-top:12px!important;
@@ -1627,7 +1643,8 @@ border-color: /*[[button-text-H]]*/;
 .more-link-fullwidth a::before,
 .js .date-range-picker-button .date-range-picker-button-inner::before,
 .wiki-block-cta .cta-link-wrap a::before,
-.external-link-cta .cta-link-wrap a::before{
+.external-link-cta .cta-link-wrap a::before,
+.lyrics-snippet-more-link a::before{
 background-image:none;
 border: solid /*[[color-global]]*/;
 border-width: 0 2px 2px 0;
@@ -1641,7 +1658,8 @@ height: 3px;
 .more-link-with-action a:nth-child(n+2)::after,
 .more-link-fullwidth a::before,
 .wiki-block-cta .cta-link-wrap a::before,
-.external-link-cta .cta-link-wrap a::before{
+.external-link-cta .cta-link-wrap a::before,
+.lyrics-snippet-more-link a::before{
 -webkit-transform: rotate(-45deg);
 transform: rotate(-45deg);
 }
@@ -1651,11 +1669,13 @@ transform: rotate(-45deg);
 transform: rotate(45deg);
 }
 .more-link a::before,
+.more-link-fullwidth a::before,
 .more-link-fullwidth-right a::before,
 .wiki-block-cta .cta-link-wrap a::before,
 .external-link-cta .cta-link-wrap a::before,
 .more-items::before,
-.js .date-range-picker-button .date-range-picker-button-inner::before{
+.js .date-range-picker-button .date-range-picker-button-inner::before,
+.lyrics-snippet-more-link a::before{
 top: 13px;
 margin-right: 3px;
 }
@@ -1670,7 +1690,8 @@ margin-left: 6px;
 .more-link-fullwidth a:hover::before,
 .js .date-range-picker-button:hover .date-range-picker-button-inner::before,
 .wiki-block-cta .cta-link-wrap a:hover::before,
-.external-link-cta .cta-link-wrap a:hover::before{
+.external-link-cta .cta-link-wrap a:hover::before,
+.lyrics-snippet-more-link a:hover::before{
 border-color: /*[[color-global-hover]]*/;
 }
 .shout-more-replies-before::before{
@@ -1684,9 +1705,10 @@ height: 3px;
 -webkit-transform: rotate(45deg);
 transform: rotate(45deg);
 }
+.more-items::before,
 .shout-more-replies-before::before{
 top: 13px;
-margin-right: 2px;
+margin-right:0px;
 }
 .shout-more-replies-before:hover::before{
 border-color: /*[[color-global-hover]]*/;
@@ -1731,11 +1753,7 @@ background-color:/*[[bg-lighter]]*/;
 -webkit-box-shadow:0px -1px /*[[border-color]]*/ inset!important;
 box-shadow:0px -1px /*[[border-color]]*/ inset!important;
 }
-.more-link-fullwidth-right a::before,
-.more-link-fullwidth a::before{
-	top: 24px;
-	margin-right: 3px;
-}
+
 .personal-stats-item--scrobbles .personal-stats-inner::before,
 .personal-stats-listeners::before,
 .wiki-block-inner-2::before{
@@ -1763,6 +1781,9 @@ margin-right: 3px;
 .personal-stats-listeners:hover::before,
 .wiki-block-inner-2:hover::before{
 border-color: /*[[color-global-hover]]*/;
+}
+.dropdown-menu-clickable-item::after {
+	border-color:/*[[border-color]]*/;
 }
 }
 @media (min-width:768px){
@@ -1894,19 +1915,6 @@ color:/*[[color-global]]*/;
 @media (min-width:1260px){
 .user-dashboard-catalogue-item .user-dashboard-comparison{
 top: -68px;
-}
-.dropdown-menu-clickable::before,
-.date-picker-content::before,
-.date-range-picker-content::before,
-.buylinks-dropdown-menu::before,
-.secondary-nav .navlist-hidden-list::before,
-#events-location::before,
-.chartlist-more-menu::before,
-.library-top #share-library-artist::before,
-.library-top #share-library-album::before,
-#share-library-artist::before,
-#share-library-album::before{
-margin-left:9px;
 }
 }
 }
