@@ -8,6 +8,12 @@ A [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) compatible userst
 The stylesheet will be updated automaticaly by the addon.
 
 # Then:
+<img align="right" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/LastfmScreenshot2.png" height="80" title="Click to enlarge"></img>
+<img align="right" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/LastfmScreenshot1.png" height="80" title="Click to enlarge"></img>
+<img align="right" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/LastfmScreenshot3.png" height="80" title="Click to enlarge"></img>
+![Last.fm](/images/last.fm.png) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) Last.fm stylesheet.
 
-![Last.fm](/images/last.fm.png) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) Last.fm stylesheet.<br>
+<br>
+
+#
 ![Discogs](/images/discogs.png) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css) Discogs stylesheet.
