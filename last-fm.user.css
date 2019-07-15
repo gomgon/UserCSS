@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.4.1
+@version     2.4.2
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -40,15 +40,6 @@ font-weight: 700;
 @advanced color button-text-H "Buttons text hover" #FFFFFF
 @advanced color color-global "Main Color" #5C809E
 @advanced color color-global-hover "Main color lighter" #77A6CC
-@advanced dropdown header-desaturate "Desaturate header image" {
-No "No" <<<EOT
-EOT;
-Yes "Yes" <<<EOT
-.header-background--has-image{
-filter:saturate(0%)!important;
--webkit-filter:saturate(0%)!important;
-} EOT;
-}
 @advanced dropdown loved-icon-color "Loved icon color" {
 White "White" <<<EOT
 .love-button,
@@ -110,8 +101,8 @@ filter: saturate(0%)!important;
 .library-controls .secondary-nav-item--tracks .secondary-nav-item-link.secondary-nav-item-link--active::before,
 .library-controls .secondary-nav-item--tracks .secondary-nav-item-link:focus::before,
 .library-controls .secondary-nav-item--tracks .secondary-nav-item-link:hover::before{
--webkit-filter:hue-rotate(230deg) brightness(320%) saturate(22%)!important;
-filter:hue-rotate(230deg) brightness(320%) saturate(22%)!important;
+-webkit-filter:hue-rotate(232deg) brightness(320%) saturate(25%)!important;
+filter:hue-rotate(232deg) brightness(320%) saturate(25%)!important;
 } EOT;
 Red "Red" <<<EOT
 .library-controls .secondary-nav-item .secondary-nav-item-link::before{
@@ -134,8 +125,7 @@ filter: saturate(0%)!important;
 filter: saturate(100%)!important;
 } EOT;
 }
-@advanced text loading-gif "Loading gif (16x16)" "https://www.last.fm/static/images/loading.gif"
-@advanced text loading-gif-64 "Loading gif (64x64)" "https://www.last.fm/static/images/loading_fff_64.gif"
+@advanced text loading-gif "Loading gif (64x64)" "https://www.last.fm/static/images/loading_fff_64.gif"
 @advanced dropdown hide-social-media "Hide social media sharing" {
 Yes "Yes" <<<EOT
 .share-desktop,
@@ -311,8 +301,11 @@ background-image:url(https://www.last.fm/static/images/icons/delete_fff_16.png);
 .search-submit::before{
 background-image:url(https://www.last.fm/static/images/icons/search_16.png);
 }
-.subscribe-plan-item {
-background-image:url("https://www.last.fm/static/images/icons/accept_fff_16.png");
+.subscribe-plan-item{
+background-image:url(https://www.last.fm/static/images/icons/accept_fff_16.png);
+}
+.top-listeners-follow-btn .follower-btn-add-follower::before {
+	background-image: url(https://www.last.fm/static/images/icons/add_fff_16.png);
 }
 .shout-more-actions:hover::before,
 .shout-more-actions:focus::before,
@@ -377,6 +370,8 @@ div.overlay-content,
 .modal-content,
 .tag-cta,
 .tag-cta:hover,
+.album-artwork-upload-cta,
+.album-artwork-upload-cta:hover,
 .upload-artwork-cta,
 .upload-artwork-cta:hover,
 .upload-image-cta,
@@ -394,6 +389,9 @@ div.overlay-content,
 .user-dashboard-comparison,
 .more-disclose-mobile .more-block{
 border:none!important;
+}
+.content{
+border:none;
 }
 .secondary-nav,
 .secondary-nav--scrollable,
@@ -484,6 +482,12 @@ border-top:none;
 .subscribe-form .subscription-options{
 border-radius:0!important;
 }
+pre,
+.blurb,
+.content,
+.left-column{
+border-radius:0;
+}
 .library-controls-datepicker{
 border-style:none!important;
 }
@@ -511,7 +515,8 @@ bottom:-5px!important;
 .user-dashboard-history-subscribe-banner-cta::after,
 .user-dashboard-history-subscribe-banner-cta::before,
 .header-popularity-rank-tooltip,
-.video-preview-upload-cta{
+.video-preview-upload-cta,
+.album-artwork-upload-cta{
 -webkit-box-shadow:none!important;
 box-shadow:none!important;
 }
@@ -573,6 +578,10 @@ filter: invert(50%);
 filter: invert(60%);
 }
 .video-preview-upload-cta::before,
+.album-artwork-upload-cta::before,
+.coloured-cta--upload-image-icon::before,
+.coloured-cta--wiki-icon::before,
+.coloured-cta--tag-icon::before,
 .section-settings-toggle::before,
 .gallery-image-vote-up-off .gallery-image-votes::before,
 .gallery-image-vote-down-off .gallery-image-votes::before{
@@ -654,12 +663,6 @@ filter: invert(100%) brightness(200%)!important;
 -webkit-filter:saturate(0%)!important;
 filter:saturate(0%)!important;
 }
-.tags-add::before,
-.album-grid-tags-add::before,
-.dropdown-menu-clickable-button:hover::after{
--webkit-filter:saturate(0%) brightness(220%)!important;
-filter:saturate(0%) brightness(220%)!important;
-}
 .dropdown-buylinks--light .dropdown-more-buylinks::before,
 .suggest-correction-cta::before,
 .header .header-message-user:hover::before,
@@ -692,8 +695,6 @@ filter:saturate(0%) brightness(300%)!important;
 .kerve .trendleft:hover,
 .kerve .trendright:hover,
 .masthead-logo,
-.tags-add:hover::before,
-.album-grid-tags-add::before,
 .modal-dismiss::before{
 -webkit-filter:saturate(0%) brightness(600%)!important;
 filter:saturate(0%) brightness(600%)!important;
@@ -705,6 +706,7 @@ filter:saturate(0%) brightness(600%)!important;
 -webkit-filter:saturate(0%) brightness(800%)!important;
 filter:saturate(0%) brightness(800%)!important;
 }
+.btn-primary,
 .label{
 font-weight:600!important;
 }
@@ -856,7 +858,6 @@ transition: none;
 /*[[hide-features]]*/
 /*[[hide-unavailable-shouts]]*/
 /*[[loved-icon-color]]*/
-/*[[header-desaturate]]*/
 /*[[library-icons]]*/
 #adSkinLeft,
 #adSkinRight,
@@ -915,13 +916,21 @@ table.table tr:nth-child(2n) td,
 .trending-tracks-section{
 background:/*[[bg]]*/!important;
 }
+pre,
+.blurb,
+.left-column{
+background:/*[[bg]]*/;
+}
 .alert,
 .alert-info,
 .alert-warning,
 .gallery-upload-rules,
 .profile-banner,
+.coloured-cta,
 .tag-cta,
 .tag-cta:hover,
+.album-artwork-upload-cta,
+.album-artwork-upload-cta:hover,
 .upload-artwork-cta,
 .upload-artwork-cta:hover,
 .upload-image-cta,
@@ -955,6 +964,7 @@ background:/*[[bg]]*/!important;
 .date-picker-content{
 background:/*[[bg-lighter]]*/!important;
 }
+.content,
 .recommended-next-page,
 .user-dashboard-module,
 .user-dashboard-history-subscribe-banner-cta::after,
@@ -1057,6 +1067,11 @@ background:/*[[color-global-hover]]*/!important;
 }
 .header-follower-btn .follower-btn-add-follower:hover::before,
 .user-list-follower-btn .follower-btn-add-follower:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .user-list-follower-btn .follower-btn-add-follower:focus,
+body:not([data-whatinput="touch"]) .user-list-follower-btn .follower-btn-add-follower .focus-visible,
+body:not([data-whatinput="touch"]) .user-list-follower-btn .follower-btn-add-follower:hover,
+.top-listeners-follow-btn .follower-btn-add-follower.disclose-active,
+.top-listeners-follow-btn .follower-btn-add-follower:active,
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .api-session-connect:focus,
 body:not([data-whatinput="touch"]) .api-session-connect .focus-visible,
 body:not([data-whatinput="touch"]) .api-session-connect:hover{
@@ -1397,7 +1412,7 @@ color:/*[[color-global-hover]]*/;
 color:/*[[color-global-hover]]*/!important;
 }
 body,
-p,
+p:not(.obsession-first),
 p span,
 .countbar-bar-value,
 .hidden-xs.header-scrobble-since,
@@ -1469,7 +1484,16 @@ color:/*[[main-text]]*/!important;
 .features-post-author,
 .dropdown-menu-clickable-item,
 .shout-timestamp,
-.menu-title{
+.menu-title,
+.left-column h2,
+.site-footer h2,
+.site-footer-nav a,
+.site-footer-nav a:hover,
+.language-selector a,
+.language-selector a:hover,
+.language-selector a:focus,
+.site-footer-strapline,
+.blurb{
 color:/*[[main-text]]*/;
 }
 .btn-primary,
@@ -1598,7 +1622,14 @@ padding-right: 16px;
 .lazy-shoutbox.async-content-loading,
 .obsession-search-results.async-content-loading{
 background-size: 64px 64px !important;
-background: url(/*[[loading-gif-64]]*/) 50% 50% no-repeat !important;
+background: url(/*[[loading-gif]]*/) 50% 50% no-repeat !important;
+}
+.btn--loading,
+.menu-loading::after{
+	background-image: url(/*[[loading-gif]]*/)!important;
+	background-position: 50% 50%!important;
+	background-repeat: no-repeat!important;
+background-size: 16px 16px!important;
 }
 /*[[compact-mode]]*/
 .date-range-picker-content::before,
@@ -1629,7 +1660,7 @@ border-bottom-color:  /*[[bg-lighter]]*/;
 .dropdown-menu-clickable-button::after,
 .js .dropdown-menu-clickable-button-js-only::after{
 background-image:none;
-border: solid /*[[main-text]]*/;
+border: solid /*[[button-text]]*/;
 border-width: 0 2px 2px 0;
 display: inline-block;
 padding: 3px;
@@ -1655,12 +1686,13 @@ margin-right: 1px;
 top: 22px;
 margin-right: 0px;
 }
-.chartlist-row:hover a .chartlist-count-bar-value::after{
-border: solid /*[[main-text]]*/;;
-}
-.pagination-next a::before,
-.pagination-previous a::before{
-border: solid /*[[button-text]]*/;
+.dropdown-menu-clickable-button:focus::after,
+.dropdown-menu-clickable-button:hover::after,
+.dropdown-menu-clickable-button.disclose-active::after,
+.js .dropdown-menu-clickable-button-js-only:focus::after,
+.js .dropdown-menu-clickable-button-js-only:hover::after,
+.js .dropdown-menu-clickable-button-js-only.disclose-active::after{
+border-color: /*[[button-text-H]]*/;
 }
 .chartlist-row:hover a .chartlist-count-bar-value::after,
 .pagination-next a::before,
@@ -1670,6 +1702,13 @@ display: inline-block;
 padding: 3px;
 width: 3px;
 height: 3px;
+}
+.chartlist-row:hover a .chartlist-count-bar-value::after{
+border: solid /*[[main-text]]*/;;
+}
+.pagination-next a::before,
+.pagination-previous a::before{
+border: solid /*[[button-text]]*/;
 }
 .chartlist-row:hover a .chartlist-count-bar-value::after,
 .pagination-next a::before{
@@ -1734,7 +1773,6 @@ transform: rotate(-45deg);
 -webkit-transform: rotate(45deg);
 transform: rotate(45deg);
 }
-.more-link a::before,
 .more-link-fullwidth a::before,
 .more-link-fullwidth-right a::before,
 .more-link-fullwidth-right-flush-top a::before,
@@ -1745,6 +1783,14 @@ transform: rotate(45deg);
 .lyrics-snippet-more-link a::before{
 top: 13px;
 margin-right: 3px;
+}
+.namespace--charts_overview .sidebar-section .more-link-fullwidth-right a::before{
+top: 15px;
+margin-right: 3px;
+}
+.more-link a::before{
+top: 12px;
+margin-right: 7px;
 }
 .more-link-with-action a:nth-child(n+2)::after{
 margin-bottom: 1px;
@@ -1781,21 +1827,42 @@ margin-right:0px;
 .shout-more-replies-before:hover::before{
 border-color: /*[[color-global-hover]]*/;
 }
-.inline-add-icon::before {
+.inline-add-icon::before,
+.catalogue-tags .tags-add::before,
+.catalogue-tags .tags-add-cta::before{
+display: inline-block;
 background-image:none;
-position:relative;
 content:"\d7";
 font-size:22px;
+font-weight:600;
 color:/*[[color-global]]*/;
-font-weight:bold;
-top:3px;
-margin-right:5px;
-line-height:10px;
 -webkit-transform:rotate(-45deg);
 transform:rotate(-45deg);
 }
-.inline-add-icon:hover::before{
+.inline-add-icon::before,
+.catalogue-tags .tags-add::before{
+position:relative;
+}
+.inline-add-icon::before{
+top:3px;
+margin-right:8px;
+line-height:10px;
+}
+.catalogue-tags .tags-add::before{
+top:14px;
+left:7px;
+}
+.catalogue-tags .tags-add-cta::before{
+top:12px;
+left:11px
+}
+.inline-add-icon:hover::before,
+.catalogue-tags .tags-add:hover::before,
+.catalogue-tags .tags-add-cta:hover::before{
 color:/*[[color-global-hover]]*/;
+}
+.obsession-container .container{
+background:none!important;
 }
 @media (max-width:767px){
 .features-header-inner-wrap{
