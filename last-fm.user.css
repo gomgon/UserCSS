@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.4.2
+@version     2.4.3
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -10,6 +10,7 @@
 No "No" <<<EOT
 EOT;
 Yes "Yes" <<<EOT
+@media (min-width:768px){
 .chartlist-row{
 padding-top:0px;
 padding-bottom:1px;
@@ -27,6 +28,22 @@ font-weight: normal;
 }
 #top-tracks.section-with-control .chartlist-row--with-artist .chartlist-name {
 font-weight: 700;
+}
+.stationlink-list .stationlink::before,
+.chartlist-play-button::before,
+.chartlist-play-button:hover::before{
+	width: 30px;
+	height: 30px;
+background-position: 6px 6px!important;
+margin-top: -15px;
+}
+.namespace--user_overview #top-tracks .chartlist-play-button::before,
+.namespace--user_overview #top-tracks .chartlist-play-button:hover::before{
+	width: 32px;
+	height: 32px;
+background-position: 7px 7px!important;
+margin-top: -16px;
+}
 } EOT;
 }
 @advanced color bg "Background" #1E1E1E
@@ -229,7 +246,8 @@ div.feedback-message,
 .features-more-link a::before,
 .full-bleed-ad-container,
 #taboola-below-content-thumbnails,
-.section-with-separator::after{
+.section-with-separator::after,
+.scrobble-stats-info-tooltip::before{
 display:none!important;
 }
 .chartlist .chartlist-album,
@@ -516,7 +534,9 @@ bottom:-5px!important;
 .user-dashboard-history-subscribe-banner-cta::before,
 .header-popularity-rank-tooltip,
 .video-preview-upload-cta,
-.album-artwork-upload-cta{
+.album-artwork-upload-cta,
+.events-list-sidebar .users-you-know-user-image--you,
+.events-list .users-you-know-user-image--you{
 -webkit-box-shadow:none!important;
 box-shadow:none!important;
 }
@@ -729,6 +749,9 @@ margin:0;
 .chartlist .countbar-bar{
 margin-bottom:0!important;
 }
+.inbox-message-view .inbox-message .inbox-message-info h3.inbox-message-subject{
+margin-bottom:0;
+}
 .secondary-nav--scrollable.secondary-nav--more .secondary-nav-hidden-list{
 margin-left:-6px!important;
 }
@@ -749,7 +772,8 @@ margin-left:9px;
 margin-top:12px!important;
 }
 .user-list-shared-artists,
-.user-list-shared-artists:first-child{
+.user-list-shared-artists:first-child,
+.col-sidebar.hidden-xs section.buffer-standard{
 margin-top:0px;
 }
 .gallery-next,
@@ -798,6 +822,9 @@ opacity:1;
 .music-more-link a,
 .features-more-link a{
 padding:0!important;
+}
+.shout-form textarea{
+padding: 6px 12px;
 }
 .btn-primary.profile-header-set-obsession{
 padding:9px 15px!important;
@@ -982,7 +1009,8 @@ background:/*[[bg-lighter]]*/!important;
 .event-status--cancelled,
 .subscribe-features,
 .subscribe-form .login-signup,
-.subscribe-form .subscription-options{
+.subscribe-form .subscription-options,
+.scrobble-stats-info-tooltip{
 background:/*[[bg-lighter]]*/;
 }
 .user-dashboard-banner,
@@ -1049,7 +1077,8 @@ background:/*[[color-global]]*/;
 .secondary-nav-item-link--active::after,
 a.secondary-nav-item-link:focus::after,
 a.secondary-nav-item-link:hover::after,
-.avatar-status-dot--subscriber{
+.avatar-status-dot--subscriber,
+.inbox .inbox-message--unviewed .inbox-message-status::after{
 background-color:/*[[color-global]]*/;
 }
 .add-event-btn:hover,
@@ -1100,6 +1129,11 @@ input.confirmButton,
 .more-disclose-mobile .more-block{
 background-color:/*[[secondary-button]]*/!important;
 }
+.more-link-with-action a:active,
+body:not([data-whatinput="touch"]) .more-link-with-action a:focus,
+body:not([data-whatinput="touch"]) .more-link-with-action a:hover {
+	background-color:/*[[secondary-button-H]]*/;
+}
 .btn-secondary:hover,
 .btn-secondary:focus,
 .buylinks-dropdown-menu .buylink:focus,
@@ -1141,7 +1175,6 @@ textarea,
 .lfmRed .site-search .search-box{
 border:1px solid /*[[border-color]]*/ !important;
 }
-.inbox-buttons,
 .shout,
 ul.forumComments li.odd,
 .content-form .form-group .source-icon-list label{
@@ -1210,7 +1243,8 @@ border-color:/*[[border-color]]*/!important;
 .subscribe-plan-item,
 .subscribe-form .subscription-options-recurring + .subscription-options-one-off,
 .subscribe-form .subscription-options-recurring + .subscription-options-one-off + .subscription-options-one-off,
-.section-divider{
+.section-divider,
+.shouting-unavailable{
 border-color:/*[[border-color]]*/;
 }
 .content-form .has-error .form-control,
@@ -1958,10 +1992,13 @@ background-color:/*[[color-global-hover]]*/;
 }
 .inbox .inbox-buttons .inbox-delete-button{
 background-color:/*[[secondary-button]]*/;
+color:/*[[button-text]]*/;
 }
-.inbox .inbox-buttons .inbox-delete-button:hover,
-.inbox .inbox-buttons .inbox-delete-button:focus{
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .inbox .inbox-buttons .inbox-delete-button:focus,
+body:not([data-whatinput="touch"]) .inbox .inbox-buttons .inbox-delete-button .focus-visible,
+body:not([data-whatinput="touch"]) .inbox .inbox-buttons .inbox-delete-button:hover {
 background-color:/*[[secondary-button-H]]*/;
+color:/*[[button-text-H]]*/;
 }
 .recommended-next-page-container:not(:hover):not(.recommended-next-page-container--desktop-expanded) .recommended-next-button {
 background-color:/*[[secondary-button-H]]*/!important;
