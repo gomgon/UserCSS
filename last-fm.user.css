@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.4.3
+@version     2.4.4
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -32,15 +32,15 @@ font-weight: 700;
 .stationlink-list .stationlink::before,
 .chartlist-play-button::before,
 .chartlist-play-button:hover::before{
-	width: 30px;
-	height: 30px;
+width: 30px;
+height: 30px;
 background-position: 6px 6px!important;
 margin-top: -15px;
 }
 .namespace--user_overview #top-tracks .chartlist-play-button::before,
 .namespace--user_overview #top-tracks .chartlist-play-button:hover::before{
-	width: 32px;
-	height: 32px;
+width: 32px;
+height: 32px;
 background-position: 7px 7px!important;
 margin-top: -16px;
 }
@@ -171,7 +171,7 @@ visibility:hidden!important;
 }
 .show-focus-controls:not([data-ajax-form-state="deleted"]) .chartlist-album::before,
 .show-focus-controls:not([data-ajax-form-state="deleted"]).chartlist-row--with-artist .chartlist-artist::before{
-	width: 32px;
+width: 32px;
 } EOT;
 No "No" <<<EOT
 EOT;
@@ -323,7 +323,7 @@ background-image:url(https://www.last.fm/static/images/icons/search_16.png);
 background-image:url(https://www.last.fm/static/images/icons/accept_fff_16.png);
 }
 .top-listeners-follow-btn .follower-btn-add-follower::before {
-	background-image: url(https://www.last.fm/static/images/icons/add_fff_16.png);
+background-image: url(https://www.last.fm/static/images/icons/add_fff_16.png);
 }
 .shout-more-actions:hover::before,
 .shout-more-actions:focus::before,
@@ -1132,7 +1132,7 @@ background-color:/*[[secondary-button]]*/!important;
 .more-link-with-action a:active,
 body:not([data-whatinput="touch"]) .more-link-with-action a:focus,
 body:not([data-whatinput="touch"]) .more-link-with-action a:hover {
-	background-color:/*[[secondary-button-H]]*/;
+background-color:/*[[secondary-button-H]]*/;
 }
 .btn-secondary:hover,
 .btn-secondary:focus,
@@ -1660,9 +1660,9 @@ background: url(/*[[loading-gif]]*/) 50% 50% no-repeat !important;
 }
 .btn--loading,
 .menu-loading::after{
-	background-image: url(/*[[loading-gif]]*/)!important;
-	background-position: 50% 50%!important;
-	background-repeat: no-repeat!important;
+background-image: url(/*[[loading-gif]]*/)!important;
+background-position: 50% 50%!important;
+background-repeat: no-repeat!important;
 background-size: 16px 16px!important;
 }
 /*[[compact-mode]]*/
@@ -1898,6 +1898,39 @@ color:/*[[color-global-hover]]*/;
 .obsession-container .container{
 background:none!important;
 }
+.personal-stats-listeners-more {
+background-color:/*[[secondary-button]]*/;
+background-image:none;
+}
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .personal-stats-listeners-more:focus,
+body:not([data-whatinput="touch"]) .personal-stats-listeners-more .focus-visible,
+body:not([data-whatinput="touch"]) .personal-stats-listeners-more:hover {
+background-color:/*[[secondary-button-H]]*/;
+}
+.personal-stats-listeners-more::before {
+content: "";
+position: absolute;
+right: auto;
+background-repeat: no-repeat;
+background-position: 0 0;
+background-image: url(https://www.last.fm/static/images/icons/more_horizontal_dark_16.png);
+width: 16px;
+height: 16px;
+top: 50%;
+margin-top: -8px;
+left: 50%;
+margin-left: -8px;
+}
+.personal-stats-listeners-more::before {
+-webkit-filter: invert(80%) !important;
+filter: invert(80%) !important;
+}
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .personal-stats-listeners-more:focus::before,
+body:not([data-whatinput="touch"]) .focus-visible .personal-stats-listeners-more::before ,
+body:not([data-whatinput="touch"]) .personal-stats-listeners-more:hover::before {
+-webkit-filter: invert(100%) !important;
+filter: invert(100%) !important;
+}
 @media (max-width:767px){
 .features-header-inner-wrap{
 background-color:/*[[bg]]*/;
@@ -1996,9 +2029,44 @@ color:/*[[button-text]]*/;
 }
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .inbox .inbox-buttons .inbox-delete-button:focus,
 body:not([data-whatinput="touch"]) .inbox .inbox-buttons .inbox-delete-button .focus-visible,
-body:not([data-whatinput="touch"]) .inbox .inbox-buttons .inbox-delete-button:hover {
+body:not([data-whatinput="touch"]) .inbox .inbox-buttons .inbox-delete-button:hover{
 background-color:/*[[secondary-button-H]]*/;
 color:/*[[button-text-H]]*/;
+}
+.header-new-playlink {
+padding: 8px 20px 9px 48px;
+}
+.inbox .inbox-buttons .inbox-delete-button,
+.header-new-playlink,
+.header-new-more-button{
+background-color:transparent;
+color:/*[[button-text]]*/;
+border:1px solid /*[[button-text]]*/;
+}
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .header-new-playlink:focus,
+body:not([data-whatinput="touch"]) .header-new-playlink .focus-visible,
+body:not([data-whatinput="touch"]) .header-new-playlink:hover,
+body:not([data-whatinput="touch"]) .header-new-more-button .focus-visible,
+body:not([data-whatinput="touch"]) .header-new-more-button:hover,
+.header-new-more-button.disclose-active,
+.header-new-more-button:active{
+background-color:transparent;
+color:/*[[button-text-H]]*/;
+border:1px solid /*[[button-text-H]]*/;
+}
+.header-new-playlink::before,
+.header-new-more-button::before{
+-webkit-filter: invert(80%) !important;
+filter: invert(80%) !important;
+}
+.header-new-playlink:focus::before,
+.header-new-playlink:hover::before,
+.header-new-more-button:focus::before,
+.header-new-more-button:hover::before,
+.disclose-active.header-new-more-button::before,
+.header-new-more-button:active::before{
+-webkit-filter: invert(100%) !important;
+filter: invert(100%) !important;
 }
 .recommended-next-page-container:not(:hover):not(.recommended-next-page-container--desktop-expanded) .recommended-next-button {
 background-color:/*[[secondary-button-H]]*/!important;
