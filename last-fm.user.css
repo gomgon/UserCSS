@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.4.4
+@version     2.4.5
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -53,7 +53,7 @@ margin-top: -16px;
 @advanced color secondary-button "Secondary buttons" #323232
 @advanced color secondary-button-H "Secondary buttons hover" #505050
 @advanced color main-text "Main text" #CCCCCC
-@advanced color button-text "Buttons text" #CCCCCC
+@advanced color button-text "Buttons text" #EEEEEE
 @advanced color button-text-H "Buttons text hover" #FFFFFF
 @advanced color color-global "Main Color" #5C809E
 @advanced color color-global-hover "Main color lighter" #77A6CC
@@ -299,7 +299,9 @@ background-color:#592929!important;
 .btn-subscribe{
 background-color: #78684a;
 }
-.user-dashboard-upsell-cta:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta:focus,
+body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta .focus-visible,
+body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta:hover,
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-subscribe:focus,
 body:not([data-whatinput="touch"]) .btn-subscribe .focus-visible,
 body:not([data-whatinput="touch"]) .btn-subscribe:hover{
@@ -503,7 +505,8 @@ border-radius:0!important;
 pre,
 .blurb,
 .content,
-.left-column{
+.left-column,
+.no-data-message-button{
 border-radius:0;
 }
 .library-controls-datepicker{
@@ -536,7 +539,8 @@ bottom:-5px!important;
 .video-preview-upload-cta,
 .album-artwork-upload-cta,
 .events-list-sidebar .users-you-know-user-image--you,
-.events-list .users-you-know-user-image--you{
+.events-list .users-you-know-user-image--you,
+.video-preview-replace{
 -webkit-box-shadow:none!important;
 box-shadow:none!important;
 }
@@ -564,6 +568,14 @@ color:#FFFFFF!important;
 .content-top .secondary-nav-item-link,
 .content-top .secondary-nav-item-link:hover{
 color:#FFFFFF;
+}
+.header-new-title,
+.header-metadata-tnew-item p.header-metadata-tnew-display abbr,
+.artist-header-featured-items-item-name a,
+.artist-header-featured-items-item-name a:focus,
+.artist-header-featured-items-item-name a:hover,
+.artist-header-featured-items-item-aux-text{
+color:#EEEEEE;
 }
 .follower-btn{
 color:#666666!important;
@@ -604,7 +616,8 @@ filter: invert(60%);
 .coloured-cta--tag-icon::before,
 .section-settings-toggle::before,
 .gallery-image-vote-up-off .gallery-image-votes::before,
-.gallery-image-vote-down-off .gallery-image-votes::before{
+.gallery-image-vote-down-off .gallery-image-votes::before,
+.no-data-message--gallery::before{
 -webkit-filter: invert(80%);
 filter: invert(80%);
 }
@@ -627,7 +640,8 @@ filter: invert(80%)!important;
 .more-item--play::before,
 .more-item--album::before,
 .more-item--artist-link::before,
-.chartlist-more-menu-love::before{
+.chartlist-more-menu-love::before,
+.wiki-history-action--edit::before{
 -webkit-filter: invert(90%);
 filter: invert(90%);
 }
@@ -741,6 +755,9 @@ height: 100%;
 .content-form input[type="month"],
 .content-form input[type="time"] {
 line-height: normal;
+}
+.grid-items--fade-out::after{
+	background: linear-gradient(transparent, /*[[bg]]*/);
 }
 .share-chart .share-block,
 .dashbody .kerve .worldwrap{
@@ -1078,7 +1095,8 @@ background:/*[[color-global]]*/;
 a.secondary-nav-item-link:focus::after,
 a.secondary-nav-item-link:hover::after,
 .avatar-status-dot--subscriber,
-.inbox .inbox-message--unviewed .inbox-message-status::after{
+.inbox .inbox-message--unviewed .inbox-message-status::after,
+.no-data-message-button{
 background-color:/*[[color-global]]*/;
 }
 .add-event-btn:hover,
@@ -1103,7 +1121,10 @@ body:not([data-whatinput="touch"]) .user-list-follower-btn .follower-btn-add-fol
 .top-listeners-follow-btn .follower-btn-add-follower:active,
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .api-session-connect:focus,
 body:not([data-whatinput="touch"]) .api-session-connect .focus-visible,
-body:not([data-whatinput="touch"]) .api-session-connect:hover{
+body:not([data-whatinput="touch"]) .api-session-connect:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .no-data-message-button:focus,
+body:not([data-whatinput="touch"]) .no-data-message-button .focus-visible,
+body:not([data-whatinput="touch"]) .no-data-message-button:hover{
 background-color:/*[[color-global-hover]]*/;
 }
 .btn-secondary,
@@ -1244,7 +1265,8 @@ border-color:/*[[border-color]]*/!important;
 .subscribe-form .subscription-options-recurring + .subscription-options-one-off,
 .subscribe-form .subscription-options-recurring + .subscription-options-one-off + .subscription-options-one-off,
 .section-divider,
-.shouting-unavailable{
+.shouting-unavailable,
+.wiki-block-cta::after, .wiki-block-cta::before{
 border-color:/*[[border-color]]*/;
 }
 .content-form .has-error .form-control,
@@ -1353,7 +1375,8 @@ box-shadow:none ;
 .chartlist-play-button::before,
 .section-playlink::before,
 .stationlink::before,
-.obsession-history-play-all::before{
+.obsession-history-play-all::before,
+.lyrics-snippet-more-link{
 -webkit-box-shadow: none !important;
 box-shadow: none !important;
 }
@@ -1369,7 +1392,6 @@ div.username,
 .kerve .trendwrap .axis_y1_label2,
 .mimic-link,
 .chartlist--with-buylinks .lazy-buylinks-toggle:hover,
-.gallery-upload-rules,
 .events-date-heading,
 .features-feed .features-post-info h2 > a,
 .user-dashboard-date,
@@ -1446,7 +1468,6 @@ color:/*[[color-global-hover]]*/;
 color:/*[[color-global-hover]]*/!important;
 }
 body,
-p:not(.obsession-first),
 p span,
 .countbar-bar-value,
 .hidden-xs.header-scrobble-since,
@@ -1459,8 +1480,6 @@ select,
 textarea,
 .kerve a.btn_trendnav,
 .kerve .trendglobal,
-h1,
-.h1,
 ul.journalsSmall a strong,
 ul.forumComments div.comment h4,
 .current-language strong,
@@ -1490,6 +1509,7 @@ a.buylink,
 .header .header-metadata-title{
 color:/*[[main-text]]*/!important;
 }
+h1,
 .kerve .nowslider_name,
 .kerve .nowslider_artist,
 .kerve .nowslider_track,
@@ -1527,21 +1547,26 @@ color:/*[[main-text]]*/!important;
 .language-selector a:hover,
 .language-selector a:focus,
 .site-footer-strapline,
-.blurb{
+.blurb,
+.dropdown-menu-clickable-button,
+.js .dropdown-menu-clickable-button-js-only,
+.gallery-upload-rules,
+.grid-items-cta h3{
 color:/*[[main-text]]*/;
 }
 .btn-primary,
 .btn-secondary,
 .api-session-connect,
 .btn-lite,
-.dropdown-menu-clickable-button,
-.js .dropdown-menu-clickable-button-js-only,
 .pagination-next a,
 .pagination-previous a,
 .btn-subscribe,
 .attendance-btn,
 .gallery-image-vote-up-off,
-.gallery-image-vote-down-off{
+.gallery-image-vote-down-off,
+.header--overview .header-title a,
+.header--sub-page .header-title a,
+.header .header-metadata-display a{
 color:/*[[button-text]]*/;
 }
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-primary:focus,
@@ -1587,6 +1612,12 @@ body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .gallery-image-vo
 body:not([data-whatinput="touch"]) .gallery-image-vote-down-off .focus-visible,
 body:not([data-whatinput="touch"]) .gallery-image-vote-down-off:hover{
 color:/*[[button-text-H]]*/;
+}
+.no-data-message-button:focus,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .no-data-message-button:focus,
+body:not([data-whatinput="touch"]) .no-data-message-button .focus-visible,
+body:not([data-whatinput="touch"]) .no-data-message-button:hover{
+color:/*[[button-text-H]]*/!important;
 }
 hr{
 color:/*[[border-color]]*/!important;
@@ -1694,7 +1725,7 @@ border-bottom-color:  /*[[bg-lighter]]*/;
 .dropdown-menu-clickable-button::after,
 .js .dropdown-menu-clickable-button-js-only::after{
 background-image:none;
-border: solid /*[[button-text]]*/;
+border: solid /*[[main-text]]*/;
 border-width: 0 2px 2px 0;
 display: inline-block;
 padding: 3px;
@@ -1716,7 +1747,8 @@ margin-right: 1px;
 top: 20px;
 margin-right: 1px;
 }
-.namespace--user_library_artists .library-top .dropdown-menu-clickable-button::after{
+.namespace--user_library_artists .library-top .dropdown-menu-clickable-button::after,
+.namespace--user_library_albums .library-top .dropdown-menu-clickable-button::after{
 top: 22px;
 margin-right: 0px;
 }
@@ -1782,7 +1814,8 @@ border-color: /*[[button-text-H]]*/;
 .js .date-range-picker-button .date-range-picker-button-inner::before,
 .wiki-block-cta .cta-link-wrap a::before,
 .external-link-cta .cta-link-wrap a::before,
-.lyrics-snippet-more-link a::before{
+.lyrics-snippet-more-link a::before,
+.link-block--hover.wiki-history-entry--with-link .wiki-history-summary::before{
 background-image:none;
 border: solid /*[[color-global]]*/;
 border-width: 0 2px 2px 0;
@@ -1798,7 +1831,8 @@ height: 3px;
 .more-link-with-action a:nth-child(n+2)::after,
 .wiki-block-cta .cta-link-wrap a::before,
 .external-link-cta .cta-link-wrap a::before,
-.lyrics-snippet-more-link a::before{
+.lyrics-snippet-more-link a::before,
+.link-block--hover.wiki-history-entry--with-link .wiki-history-summary::before{
 -webkit-transform: rotate(-45deg);
 transform: rotate(-45deg);
 }
@@ -1813,7 +1847,6 @@ transform: rotate(45deg);
 .wiki-block-cta .cta-link-wrap a::before,
 .external-link-cta .cta-link-wrap a::before,
 .more-items::before,
-.js .date-range-picker-button .date-range-picker-button-inner::before,
 .lyrics-snippet-more-link a::before{
 top: 13px;
 margin-right: 3px;
@@ -1821,6 +1854,10 @@ margin-right: 3px;
 .namespace--charts_overview .sidebar-section .more-link-fullwidth-right a::before{
 top: 15px;
 margin-right: 3px;
+}
+.js .date-range-picker-button .date-range-picker-button-inner::before{
+top: 16px;
+margin-right: 1px;
 }
 .more-link a::before{
 top: 12px;
@@ -1931,6 +1968,52 @@ body:not([data-whatinput="touch"]) .personal-stats-listeners-more:hover::before 
 -webkit-filter: invert(100%) !important;
 filter: invert(100%) !important;
 }
+.header-new-bookmark-button,
+.header-new-download-button,
+.header-new-love-button,
+.header-new-more-button{
+background-color:transparent;
+color:/*[[button-text]]*/;
+border:1px solid /*[[button-text]]*/;
+}
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .header-new-bookmark-button:focus,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .header-new-download-button:focus,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .header-new-love-button:focus,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .header-new-more-button:focus,
+body:not([data-whatinput="touch"]) .header-new-bookmark-button .focus-visible,
+body:not([data-whatinput="touch"]) .header-new-bookmark-button:hover,
+body:not([data-whatinput="touch"]) .header-new-download-button .focus-visible,
+body:not([data-whatinput="touch"]) .header-new-download-button:hover,
+body:not([data-whatinput="touch"]) .header-new-love-button .focus-visible,
+body:not([data-whatinput="touch"]) .header-new-love-button:hover,
+body:not([data-whatinput="touch"]) .header-new-more-button .focus-visible,
+body:not([data-whatinput="touch"]) .header-new-more-button:hover,
+.header-new-more-button.disclose-active,
+.header-new-more-button:active{
+background-color:transparent;
+color:/*[[button-text-H]]*/;
+border:1px solid /*[[button-text-H]]*/;
+}
+.header-new-bookmark-button::before,
+.header-new-download-button::before,
+.header-new-love-button::before,
+.header-new-more-button::before{
+-webkit-filter: invert(100%) !important;
+filter: invert(100%) !important;
+}
+.header-new-bookmark-button:focus::before,
+.header-new-bookmark-button:hover::before,
+.header-new-download-button:focus::before,
+.header-new-download-button:hover::before,
+.header-new-love-button:focus::before,
+.header-new-love-button:hover::before,
+.header-new-more-button:focus::before,
+.header-new-more-button:hover::before,
+.header-new-more-button:active::before,
+.disclose-active.header-new-more-button::before{
+-webkit-filter: invert(100%) brightness(200%)!important;
+filter: invert(100%) brightness(200%)!important;
+}
 @media (max-width:767px){
 .features-header-inner-wrap{
 background-color:/*[[bg]]*/;
@@ -1942,7 +2025,10 @@ body:not([data-whatinput="touch"]) .more-link-fullwidth-right a:focus,
 body:not([data-whatinput="touch"]) .more-link-fullwidth-right a:hover,
 .more-link-fullwidth a:active,
 body:not([data-whatinput="touch"]) .more-link-fullwidth a:focus,
-body:not([data-whatinput="touch"]) .more-link-fullwidth a:hover{
+body:not([data-whatinput="touch"]) .more-link-fullwidth a:hover,
+.lyrics-snippet-more-link a:active,
+body:not([data-whatinput="touch"]) .lyrics-snippet-more-link a:focus,
+body:not([data-whatinput="touch"]) .lyrics-snippet-more-link a:hover{
 background-color:/*[[bg-lighter]]*/;
 }
 .more-link-fullwidth-right,
@@ -1957,6 +2043,7 @@ box-shadow:0px -1px /*[[border-color]]*/ inset!important;
 }
 .personal-stats-item--scrobbles .personal-stats-inner::before,
 .personal-stats-listeners::before,
+.wiki-block-cta .cta-copy::before,
 .wiki-block-inner-2::before{
 background-image:none;
 border: solid /*[[color-global]]*/;
@@ -1974,6 +2061,10 @@ transform: rotate(-45deg);
 top: 18px;
 margin-right: 3px;
 }
+.more-link-fullwidth a::before,
+.more-link-fullwidth-right a::before,
+.lyrics-snippet-more-link a::before,
+.wiki-block-cta .cta-copy::before,
 .wiki-block-inner-2::before{
 top: 50%;
 margin-right: 3px;
@@ -2037,36 +2128,26 @@ color:/*[[button-text-H]]*/;
 padding: 8px 20px 9px 48px;
 }
 .inbox .inbox-buttons .inbox-delete-button,
-.header-new-playlink,
-.header-new-more-button{
+.header-new-playlink{
 background-color:transparent;
 color:/*[[button-text]]*/;
 border:1px solid /*[[button-text]]*/;
 }
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .header-new-playlink:focus,
 body:not([data-whatinput="touch"]) .header-new-playlink .focus-visible,
-body:not([data-whatinput="touch"]) .header-new-playlink:hover,
-body:not([data-whatinput="touch"]) .header-new-more-button .focus-visible,
-body:not([data-whatinput="touch"]) .header-new-more-button:hover,
-.header-new-more-button.disclose-active,
-.header-new-more-button:active{
+body:not([data-whatinput="touch"]) .header-new-playlink:hover{
 background-color:transparent;
 color:/*[[button-text-H]]*/;
 border:1px solid /*[[button-text-H]]*/;
 }
-.header-new-playlink::before,
-.header-new-more-button::before{
--webkit-filter: invert(80%) !important;
-filter: invert(80%) !important;
-}
-.header-new-playlink:focus::before,
-.header-new-playlink:hover::before,
-.header-new-more-button:focus::before,
-.header-new-more-button:hover::before,
-.disclose-active.header-new-more-button::before,
-.header-new-more-button:active::before{
+.header-new-playlink::before{
 -webkit-filter: invert(100%) !important;
 filter: invert(100%) !important;
+}
+.header-new-playlink:focus::before,
+.header-new-playlink:hover::before{
+-webkit-filter: invert(100%) brightness(200%)!important;
+filter: invert(100%) brightness(200%)!important;
 }
 .recommended-next-page-container:not(:hover):not(.recommended-next-page-container--desktop-expanded) .recommended-next-button {
 background-color:/*[[secondary-button-H]]*/!important;
@@ -2174,7 +2255,8 @@ color:/*[[color-global]]*/;
 .header--sub-page .header-title-secondary a:hover{
 color:/*[[color-global-hover]]*/;
 }
-.subscribe-plan{
+.subscribe-plan,
+.recs-feed .context{
 background:/*[[bg-lighter]]*/;
 }
 .header-new-gallery {
