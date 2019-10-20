@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.4.5
+@version     2.4.6
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -19,14 +19,14 @@ padding-bottom:1px;
 padding-top:1px;
 padding-bottom:2px;
 }
-.anhv1 .stationlink-list .stationlink {
+.anhv1 .stationlink-list .stationlink{
 padding-top: 2px;
 padding-bottom: 6px;
 }
 .chartlist-name {
 font-weight: normal;
 }
-#top-tracks.section-with-control .chartlist-row--with-artist .chartlist-name {
+#top-tracks.section-with-control .chartlist-row--with-artist .chartlist-name{
 font-weight: 700;
 }
 .stationlink-list .stationlink::before,
@@ -57,7 +57,7 @@ margin-top: -16px;
 @advanced color button-text-H "Buttons text hover" #FFFFFF
 @advanced color color-global "Main Color" #5C809E
 @advanced color color-global-hover "Main color lighter" #77A6CC
-@advanced dropdown loved-icon-color "Loved icon color" {
+@advanced dropdown loved-icon-color "Loved icon color"{
 White "White" <<<EOT
 .love-button,
 .chartlist-love-button::before{
@@ -76,11 +76,27 @@ button.chartlist-love-button:hover::before,
 button.chartlist-love-button:focus::before{
 -webkit-filter:saturate(0%) brightness(600%)!important;
 filter:saturate(0%) brightness(600%)!important;
+}
+.header-new-love-button::before{
+filter: saturate(0%) invert(100%) brightness(125%)!important;
+}
+div[data-toggle-button-current-state="unloved"] .header-new-love-button::before{
+filter: invert(100%) !important;
+}
+.header-new-love-button:hover::before{
+filter: saturate(0%) invert(100%) brightness(500%)!important;
 } EOT;
 Red "Red" <<<EOT
-EOT;
+div[data-toggle-button-current-state="unloved"] .header-new-love-button::before{
+-webkit-filter: invert(100%) !important;
+filter: invert(100%) !important;
 }
-@advanced dropdown library-icons "Library category icons color" {
+.header-new-love-button:hover::before{
+-webkit-filter: brightness(200%)!important;
+filter: brightness(200%)!important;
+} EOT;
+}
+@advanced dropdown library-icons "Library category icons color"{
 White "White" <<<EOT
 .library-controls .secondary-nav-item .secondary-nav-item-link::before{
 -webkit-filter: saturate(0%)!important;
@@ -1551,7 +1567,8 @@ h1,
 .dropdown-menu-clickable-button,
 .js .dropdown-menu-clickable-button-js-only,
 .gallery-upload-rules,
-.grid-items-cta h3{
+.grid-items-cta h3,
+.about-artist-listeners{
 color:/*[[main-text]]*/;
 }
 .btn-primary,
@@ -1994,25 +2011,27 @@ background-color:transparent;
 color:/*[[button-text-H]]*/;
 border:1px solid /*[[button-text-H]]*/;
 }
-.header-new-bookmark-button::before,
 .header-new-download-button::before,
-.header-new-love-button::before,
 .header-new-more-button::before{
 -webkit-filter: invert(100%) !important;
 filter: invert(100%) !important;
 }
-.header-new-bookmark-button:focus::before,
-.header-new-bookmark-button:hover::before,
-.header-new-download-button:focus::before,
 .header-new-download-button:hover::before,
-.header-new-love-button:focus::before,
-.header-new-love-button:hover::before,
-.header-new-more-button:focus::before,
 .header-new-more-button:hover::before,
 .header-new-more-button:active::before,
 .disclose-active.header-new-more-button::before{
 -webkit-filter: invert(100%) brightness(200%)!important;
 filter: invert(100%) brightness(200%)!important;
+}
+.header-new-bookmark-button::before{
+filter: saturate(0%) invert(100%) brightness(140%)!important;
+}
+div[data-toggle-button-current-state="unbookmarked"] .header-new-bookmark-button::before{
+filter: invert(100%) !important;
+}
+.header-new-bookmark-button:hover::before,
+div[data-toggle-button-current-state="unbookmarked"] .header-new-bookmark-button:hover::before{
+filter: saturate(0%) invert(100%) brightness(500%)!important;
 }
 @media (max-width:767px){
 .features-header-inner-wrap{
@@ -2054,7 +2073,7 @@ width: 3px;
 height: 3px;
 -webkit-transform: rotate(-45deg);
 transform: rotate(-45deg);
-}fter
+}
 .personal-stats-item--scrobbles .personal-stats-inner::before,
 .personal-stats-listeners::before,
 .wiki-block-inner-2::before{
@@ -2261,6 +2280,9 @@ background:/*[[bg-lighter]]*/;
 }
 .header-new-gallery {
 color:inherit!important;
+}
+.track-overview-new .video-preview{
+box-shadow: 0 0 0 2px /*[[bg]]*/;
 }
 }
 @media (min-width:1260px){
