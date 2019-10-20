@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.4.6
+@version     2.4.7
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -83,13 +83,17 @@ filter: saturate(0%) invert(100%) brightness(125%)!important;
 div[data-toggle-button-current-state="unloved"] .header-new-love-button::before{
 filter: invert(100%) !important;
 }
-.header-new-love-button:hover::before{
+.header-new-love-button:hover::before,
+div[data-toggle-button-current-state="unloved"] .header-new-love-button:hover::before{
 filter: saturate(0%) invert(100%) brightness(500%)!important;
 } EOT;
 Red "Red" <<<EOT
 div[data-toggle-button-current-state="unloved"] .header-new-love-button::before{
 -webkit-filter: invert(100%) !important;
 filter: invert(100%) !important;
+}
+div[data-toggle-button-current-state="unloved"] .header-new-love-button:hover::before{
+filter: invert(100%) brightness(500%)!important;
 }
 .header-new-love-button:hover::before{
 -webkit-filter: brightness(200%)!important;
