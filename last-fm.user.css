@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.4.10
+@version     2.4.11
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -526,7 +526,8 @@ pre,
 .blurb,
 .content,
 .left-column,
-.no-data-message-button{
+.no-data-message-button,
+.inbox-message-view .inbox-message-message blockquote{
 border-radius:0;
 }
 .library-controls-datepicker{
@@ -660,6 +661,7 @@ filter: invert(80%)!important;
 .more-item--play::before,
 .more-item--album::before,
 .more-item--artist-link::before,
+.more-item--bookmark::before,
 .chartlist-more-menu-love::before,
 .wiki-history-action--edit::before{
 -webkit-filter: invert(90%);
@@ -696,6 +698,7 @@ filter:invert(90%) saturate(0%) brightness(200%);
 .more-item--play:hover::before,
 .more-item--album:hover::before,
 .more-item--artist-link:hover::before,
+.more-item--bookmark:hover::before,
 .chartlist-more-menu-love:focus::before,
 .chartlist-more-menu-love:hover::before,
 .chartlist-play-button:focus::before,
@@ -789,6 +792,9 @@ margin-bottom:0!important;
 .inbox-message-view .inbox-message .inbox-message-info h3.inbox-message-subject{
 margin-bottom:0;
 }
+.col-sidebar div{
+margin-bottom: 12px;
+}
 .secondary-nav--scrollable.secondary-nav--more .secondary-nav-hidden-list{
 margin-left:-6px!important;
 }
@@ -871,6 +877,9 @@ padding-bottom:1px!important;
 }
 .stationbuttonLarge{
 padding-left:0!important;
+}
+.sidebar-bookmark{
+padding-left:42px;
 }
 .stationlink-list .btn:focus,
 .stationlink-list .btn:hover,
@@ -1047,7 +1056,8 @@ background:/*[[bg-lighter]]*/!important;
 .subscribe-features,
 .subscribe-form .login-signup,
 .subscribe-form .subscription-options,
-.scrobble-stats-info-tooltip{
+.scrobble-stats-info-tooltip,
+.inbox-message-view .inbox-message-message blockquote{
 background:/*[[bg-lighter]]*/;
 }
 .user-dashboard-banner,
@@ -1286,7 +1296,8 @@ border-color:/*[[border-color]]*/!important;
 .subscribe-form .subscription-options-recurring + .subscription-options-one-off + .subscription-options-one-off,
 .section-divider,
 .shouting-unavailable,
-.wiki-block-cta::after, .wiki-block-cta::before{
+.wiki-block-cta::after, .wiki-block-cta::before,
+.inbox-message-view .inbox-message-message blockquote{
 border-color:/*[[border-color]]*/;
 }
 .content-form .has-error .form-control,
@@ -2027,14 +2038,24 @@ filter: invert(100%) !important;
 -webkit-filter: invert(100%) brightness(200%)!important;
 filter: invert(100%) brightness(200%)!important;
 }
-.header-new-bookmark-button::before{
+.header-new-bookmark-button::before,
+[data-toggle-button-current-state="bookmarked"] .more-item--bookmark::before,
+[data-toggle-button-current-state="bookmarked"] .sidebar-bookmark::before{
 filter: saturate(0%) invert(100%) brightness(140%)!important;
 }
 div[data-toggle-button-current-state="unbookmarked"] .header-new-bookmark-button::before{
 filter: invert(100%) !important;
 }
+.sidebar-bookmark::before{
+filter: invert(60%) !important;
+}
+.sidebar-bookmark:hover::before{
+filter: invert(90%) !important;
+}
 .header-new-bookmark-button:hover::before,
-div[data-toggle-button-current-state="unbookmarked"] .header-new-bookmark-button:hover::before{
+div[data-toggle-button-current-state="unbookmarked"] .header-new-bookmark-button:hover::before,
+[data-toggle-button-current-state="bookmarked"] .more-item--bookmark:hover::before,
+[data-toggle-button-current-state="bookmarked"] .sidebar-bookmark:hover::before{
 filter: saturate(0%) invert(100%) brightness(500%)!important;
 }
 .follower-btn-add-follower,
@@ -2219,6 +2240,7 @@ top: 58px !important;
 .about-me-sidebar{
 margin-bottom: 15px!important;
 }
+
 .date-range-picker-presets-wrap{
 margin-left: 0px;
 margin-right: 0px;
@@ -2248,7 +2270,8 @@ top: -54px;
 .header * + .header-metadata-item--event-attendance::before,
 .header * + .header-metadata-item--tasteometer::before,
 .header * + .header-metadata-item--user-scrobbles::before,
-.header :not(.header-metadata-item--user-scrobbles) + .header-metadata-item--listeners-you-know::before{
+.header :not(.header-metadata-item--user-scrobbles) + .header-metadata-item--listeners-you-know::before,
+.inbox .inbox-buttons .inbox-delete-button{
 border-color: /*[[border-color]]*/;
 }
 .mega-menu--open .dropdown-menu-dark{
