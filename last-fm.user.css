@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.4.12
+@version     2.4.13
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -635,6 +635,7 @@ filter: invert(60%);
 .coloured-cta--upload-image-icon::before,
 .coloured-cta--wiki-icon::before,
 .coloured-cta--tag-icon::before,
+.gallery-preview-cta::before,
 .section-settings-toggle::before,
 .gallery-image-vote-up-off .gallery-image-votes::before,
 .gallery-image-vote-down-off .gallery-image-votes::before,
@@ -1062,7 +1063,8 @@ background:/*[[bg-lighter]]*/;
 }
 .user-dashboard-banner,
 .shout-container--active,
-.listening-report-promo:hover{
+.listening-report-promo:hover,
+.gallery-preview-cta{
 background-color:/*[[bg-lighter]]*/!important;
 }
 .features-section-heading::after,
