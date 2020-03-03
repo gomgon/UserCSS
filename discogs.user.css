@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     0.9.3
+@version     0.9.4
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -25,7 +25,10 @@ display:none;
 }
 body,
 a.readmore_toggler,
-#site_header #site_search{
+#site_header #site_search,
+.history tr.odd, .history tr:nth-child(2n+1),
+.history tr.even, .history tr:nth-child(2n),
+.history table tr.datarow:hover{
 background:/*[[bg]]*/;
 }
 #page.aside_right #page_content .body,
@@ -41,7 +44,8 @@ table.table_block tbody tr.even,
 ul.module_blocks > li,
 .password-strength-meter,
 .discography_nav,
-#releases #pjax_container{
+#releases #pjax_container,
+.history_form{
 background:/*[[elements]]*/;
 }
 #site_header_wrap,
@@ -70,7 +74,10 @@ textarea,
 .search_focused #site_search,
 .aside_search_form,
 .aside_search_form .artist_search_form .button,
-.anv_selected{
+.anv_selected,
+.history table tr.datarow.highlight,
+.history .hili,
+table.diff th{
 background:/*[[elements-lighter]]*/;
 }
 hr{
@@ -162,7 +169,8 @@ textarea,
 .button.button-dark[disabled],
 .button.button-white[disabled],
 .button[disabled],
-a.inset_button{
+a.inset_button,
+.history_form{
 border:none;
 }
 .button{
@@ -189,7 +197,9 @@ ul.module_blocks > li.dragging.module_placeholder,
 .module_blocks .dragging.dashboard_addmodules,
 ul.module_blocks > li.module_placeholder:hover,
 .module_blocks .dashboard_addmodules:hover,
-#review_compose.form-block div.review_preview{
+#review_compose.form-block div.review_preview,
+.history table tr,
+.pagination.bottom{
 border-color:/*[[border-color]]*/;
 }
 .tab_menu li.current a{
@@ -233,9 +243,15 @@ box-shadow:none;
 #page.aside_right #page_content{
 box-sizing:border-box;
 }
+.hl_removed,
+.hl_changed1,
+.hl_added{
+color:#000000;
+}
+.hl_changed2{
+color:#404040;
+}
 body,
-#review_compose.form_block .review_head .instructions,
-#review_compose.form_block label,
 .section.tracklist table tr td.tracklist_track_duration,
 .section.credits span.role,
 .section.barcodes span.type,
@@ -254,7 +270,8 @@ textarea,
 a.readmore_toggler,
 a.inset_button,
 a.inset_button:visited,
-a.inset_button[disabled]:hover{
+a.inset_button[disabled]:hover,
+table.diff th{
 color:/*[[main-text]]*/;
 }
 .aside_search_form button:hover i,
@@ -286,7 +303,10 @@ a,
 .tab_menu a,
 .tab_menu li.menu-item a,
 .alert-message.alert-message-announcement .alert-message-icon,
-.alert-message.alert-message-announcement .announcement-title{
+.alert-message.alert-message-announcement .announcement-title,
+a.rollover_link.hl_removed,
+a.rollover_link.hl_changed1,
+a.rollover_link.hl_added{
 color:/*[[color-global]]*/;
 }
 a:hover,
@@ -357,7 +377,7 @@ padding:0 8px;
 div.section h3,
 div.section .copy_shortcut,
 .box_header_row,
-.form_block legend,
+.form-block legend,
 ul.module_blocks .header{
 padding:5px 8px;
 }
