@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.4.15
+@version     2.4.16
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -13,8 +13,8 @@ Yes "Yes" <<<EOT
 @media (min-width:768px){
 .chartlist-row,
 .anhv1 .stationlink-list .stationlink{
-padding-top:0px;
-padding-bottom:1px;
+padding-top:1px;
+padding-bottom:2px;
 }
 .chartlist--with-image .chartlist-row {
 	min-height: 32px;
