@@ -1,0 +1,895 @@
+/* ==UserStyle==
+@name        Google
+@namespace   gomgon
+@version     0.1.0
+@homepageURL https://github.com/gomgon/UserCSS
+@updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/dev/google.user.css
+@license     CC-BY-SA-4.0
+@author      gomgon
+==/UserStyle== */
+@-moz-document domain("google.com"), regexp("https:\\/\\/(www\\.)?google\\.(com|([a-z]{2}))(\\.[a-z]{2})?\\/.*"){
+._Fmb,
+._Fmb:hover,
+._Fmb.selected,
+._Fmb.selected:hover,
+.rllt__action-button:active{
+background:transparent;
+}
+body,
+#fbar,
+.sfbgg,
+#appbar,
+#hdtbSum,
+.hdtbg #hdtbSum,
+.gb_Ie,
+._dCh,
+#hdtbMenus,
+.kappbar,
+div.rl_feature,
+.rlc__slider,
+.rlc__slider-page,
+#sform,
+#rllhd__fldhc,
+.stt__tool ._ahq, 
+.stt__tool .goog-flat-menu-button,
+.stt__tool .ab_button,
+#topstuff .sh-sp__pswtr,
+._FCr,
+.minidiv .sfbg{
+background:#1E1E1E;
+}
+body.jfk-scrollbar div.bottom-wrapper div:nth-of-type(2){
+background:#1E1E1E!important;
+}
+.kp-blk,
+.rl_item,
+.lr_dct_lbl_box,
+._yX,
+._she,
+._qgo,
+#fsett,
+g-inner-card,
+.mlo-c,
+.vk_c,
+.vk_cxp,
+.tw-menu-btn:hover .tw-menu-btn-image:first-child,
+.hdtb-mn-o,
+.hdtb-mn-c,
+.ab_dropdown,
+.goog-menu,
+._xe,
+.rfli .kp-blk,
+._vx,
+._F2i,
+.cMjHbjVt9AZ__button:active,
+div._oip > g-inner-card,
+._Tfr,
+._UDr,
+._pEr,
+._ZIr,
+.BklRsd{
+background:#232323;
+}
+.hdtbItm,
+#cdr_opt,
+.o2ji6GoAIDp__menu{
+background-color:#232323;
+}
+.sbibod,
+.sbib_a,
+.sbsb_a,
+#hdtb-tls:hover,
+.sbsb_c:hover,
+.rl_item._Txn:hover,
+._wD:hover,
+._qgo:hover,
+.klitem.selected,
+.klitem:hover,
+.rl_item:hover,
+._Db:hover,
+._Db:active,
+.rllt__local-item-selected,
+.ktf,
+.ab_button{
+background:#282828;
+}
+g-fab{
+background:#282828!important;
+}
+._Wmi,
+.ab_button:hover,
+.RNNXgb,
+.aajZCb{
+background:#323232;
+}
+._W6g._Obq:hover g-fab,
+._R6g._ufp:hover g-fab,
+._S6g._ufp:hover g-fab{
+background:#323232!important;
+}
+.hdtbItm.hdtbSel,
+#hdtb-more-mn a:hover,
+.hdtbItm.hdtbSel:hover,
+.hdtbItm a:hover,
+#cdrlnk:hover,
+.oLMvxj8HcwN__highlighted,
+._ONj:active,
+.ab_dropdownitem.selected,
+.gb_Ec,
+._b5m,
+._ae.rlf__ami,
+._ae:hover,
+.ccw_data,
+.ccw_unit_selector,
+.ccw_unit_selector:hover,
+.ccw_selector_bg,
+.pVFdhc{
+background-color:#323232;
+}
+#hdtb-msb .hdtb-tl-sel,
+._xk,
+._wYb,
+.lr_c_tf,
+.sbico-c:hover,
+.goog-menuitem-highlight,
+.goog-menuitem-hover{
+background:#323232;
+}
+.jhp input[type="submit"],
+.sbdd_a input,
+.gbqfba,
+.Tg7LZd:hover,
+.Tg7LZd:focus,
+.dw-sb-cont .dw-sb-btn{
+background-color:#434343;
+}
+#hdtb-msb .hdtb-tl-sel:hover,
+.sbhl{
+background:#505050;
+}
+.gb_b:hover .gb_Ec,
+.gb_b:focus .gb_Ec,
+.jhp input[type="submit"]:hover,
+.sbdd_a input:hover,
+.gbqfba:hover,
+.dw-sb-cont .dw-sb-btn:hover{
+background-color:#505050;
+}
+.vk_ard,
+.vk_aru{
+background-color:#999999;
+}
+#sblsbb,
+.jfk-button-action,
+._Nvg,
+._Njf,
+._IUi,
+.DKlyaf{
+background-color:#5C809E;
+}
+#sblsbb:hover,
+.jfk-button-action:hover{
+background-color:#779ABD;
+}
+.ab_button,
+.jfk-button-action,
+.ccw_unit_selector,
+.ccw_selector_bg,
+.jhp input[type="submit"],
+.sbdd_a input,
+.gbqfba{
+background-image:none!important;
+}
+#fbar,
+.sbibod,
+.sbdd_b,
+#hdtbSum,
+.sfbgg,
+.klbar,
+.jfk-button-action,
+.jfk-button-action:hover,
+.jfk-button-standard,
+.jfk-button-standard:hover,
+#hdtb,
+#fsett,
+.rl_center,
+.tw-lang-selector-wrapper,
+.tw-menu-btn .tw-menu-btn-image:first-child,
+.hdtb-mn-o,
+.hdtb-mn-c,
+.ab_dropdown,
+.goog-menu,
+#rllhd__fldhc,
+._vx,
+.ccw_data,
+.ccw_unit_selector_cnt,
+.sh-sr__shop-result-group,
+._nEm,
+.kp-blk,
+.RNNXgb,
+.jhp input[type="submit"],
+.jhp input[type="submit"]:hover,
+.sbdd_a input,
+.sbdd_a input:hover,
+.gbqfba,
+.gbqfba:hover,
+.dw-sb-cont .dw-sb-btn,
+.cv2VAd{
+border:none;
+}
+.ab_button,
+#hdtb-msb .hdtb-tl-sel,
+#hdtb-tls,
+.ktf,
+body.jfk-scrollbar div.bottom-wrapper div:nth-of-type(2){
+border:none!important;
+}
+.BklRsd{
+border: 1px solid #323232;
+}
+.vk_ard::after{
+border-top:16px solid #232323;
+}
+.vk_ard::before{
+border-top:16px solid #999999;
+}
+.vk_aru::after{
+border-bottom:16px solid #232323;
+}
+.vk_aru::before{
+border-bottom:16px solid #999999;
+}
+#hdtb-msb .hdtb-mitem.hdtb-msel,
+#hdtb-msb .hdtb-mitem.hdtb-msel-pre{
+border-bottom:3px solid #5C809E;
+}
+.klitem.selected{
+border-bottom:6px solid #5C809E;
+}
+.tb_l {
+border-left: 1px solid #323232;
+}
+._qgo,
+._qhf{
+border-color:#1E1E1E;
+}
+._qhf,
+._onh,
+.kp-blk .xpdclose ._wle,
+.kp-blk .xpdopen ._xle,
+.vk_arc,
+.rl_item,
+.rl_center,
+._lMn,
+._Ns,
+.xpdclose ._T1i:not(:empty),
+.xpdopen ._U1i:not(:empty),
+._UIf ._SIf,
+._UIf ._hvg,
+.scrt td,
+.scrt tr:first-child td,
+.scrt tr:last-child td,
+.knowledge-webanswers_table__webanswers-table tr,
+.appbar,
+.appbar_b,
+div._Mib,
+.sect,
+.jfk-textinput,
+._yX,
+._yX td,
+._A2n ._B2n,
+._bXm,
+._yIl,
+._Qxk,
+.cdr_sep,
+._qJg,
+._M4k,
+._P4k,
+._wx,
+._nli ._mgh,
+._mli ._mgh,
+._k0i,
+._lli ._Vsf,
+._kli ._Vsf,
+._lli ._Hxi,
+._kli ._Hxi,
+._lli ._cxi,
+._kli ._cxi,
+#gko-sp.gko-open,
+.goog-menuseparator,
+.sh-dp__cont,
+._-dq,
+._pEr,
+._ZIr,
+._NCq,
+._SZc,
+.UVgjof,
+.dw-sb-cont .dw-sbi,
+.cbphWd,
+.xpdclose .a84NUc:not(:empty),
+.xpdopen .CQKTwc:not(:empty){
+border-color:#323232;
+}
+.kp-blk .xpdclose .farUxc,
+.kp-blk .xpdopen .mJ2Mod{
+border-color:#323232!important;
+}
+.kcb,
+.xtSCL{
+border-color:#505050;
+}
+._Db:active,
+.rllt__local-item-selected,
+.dw-sb-cont .dw-sbi:focus{
+border-color: #5C809E;
+}
+.mn-dwn-arw,
+._mx{
+border-color: #808080 transparent;
+}
+.tw-lang-selector-wrapper::after,
+.hdtb-mn-hd:hover .mn-dwn-arw,
+._Rf.rlf__open:not(.rlf__applied) ._mx,
+._Rf:hover:not(.rlf__applied) ._mx{
+border-color: #999999 transparent;
+}
+.tw-lang-selector-wrapper:hover::after {
+border-color: #CCCCCC transparent;
+}
+._vap{
+border-color: #5C809E transparent;
+}
+._Lap:hover ._vap {
+border-color: #779ABD transparent;
+}
+.ab_button,
+._fAg,
+.jfk-button-action,
+.jfk-button-standard,
+#hdtb-msb .hdtb-tl-sel,
+#sblsbb,
+.sbibod,
+g-inner-card,
+.mlo-c,
+.tw-menu-btn:hover .tw-menu-btn-image:first-child,
+#hdtb-tls,
+.o2ji6GoAIDp__menu,
+.ccw_data,
+.ccw_unit_selector_cnt,
+._IUi,
+._MQn,
+._UDr,
+._pEr,
+._ZIr,
+.kp-blk,
+.dw-sb-cont .dw-sbi,
+.RNNXgb,
+.aajZCb,
+.jhp input[type="submit"],
+.sbdd_a input,
+.gbqfba,
+.dw-sb-cont .dw-sb-btn,
+.minidiv .RNNXgb,
+.BklRsd,
+.cv2VAd,
+.kp-blk .mod:first-child,
+.kp-blk .kp-header:first-child .img-brk,
+.zPNTne{
+border-radius:0;
+}
+._vpj {
+border-radius:7px;
+}
+.kp-blk,
+#hdtb-msb .hdtb-tl-sel,
+._KBh,
+.sbibod,
+#fsett,
+._GCg,
+._GCg:hover,
+.vk_c,
+.vk_cxp,
+#rhs ._CC,
+.mlo-c,
+.rlc__slider-page ._Iho:hover,
+._rql,
+.ab_dropdown,
+#rllhd__fldhc,
+.rfli .kp-blk,
+._vx,
+#gko-sp.gko-open,
+._Tfr,
+._UDr,
+._pEr,
+.BklRsd{
+box-shadow:none;
+}
+.sben_a,
+.sh-sp__pswtr,
+._Lqc{
+color:#666666;
+}
+.sr__link,
+.sr__link:link,
+.sr__link:visited{
+color:#777777;
+}
+.s,
+.hdtb-mn-hd,
+#hdtb .hdtb-mitem a,
+._gdf,
+._Ajf,
+._TCn,
+._mMg,
+._UCn,
+._zjf,
+._Jjg,
+._xK ._h3d,
+._uAe,
+._zX,
+._LJ .exp-txt-c,
+.rllt__details.lqhpac,
+._Rf,
+.ab_button span,
+._ae ._SDf,
+._Cwm,
+._zMk,
+._ZIr{
+color:#808080;
+}
+.s,
+.tw-text-edit-btn,
+a.ab_dropdownlnkinfo,
+a.ab_dropdownlnk:visited,
+g-fab{
+color:#808080!important;
+}
+body,
+#lst-ib,
+#gb#gb a.gb_P,
+#gb#gb span.gb_P,
+#foot #navcnt .cur,
+#brs .med,
+.kno-ecr-pt,
+.rl_item .title,
+.rl_feature .kxbcl,
+.rl_feature .lxhdrbox,
+.knowledge-webanswers_table__webanswers-table th,
+._CVj,
+._GYj,
+.kxbcl,
+._XWk,
+._pk,
+._Adb,
+	._czk,
+._nPe,
+._RMe,
+._OFe,
+._PFe,
+._Lbe,
+._QFe,
+._RFe,
+._gah,
+._L9g,
+._cke,
+._wje,
+._tvg,
+._Rsi,
+._R7b,
+._N2n,
+._NEd,
+._yIl,
+._bXl,
+._Qsh,
+._JFm,
+._W5e,
+._rl,
+._Jse,
+._x2i ._baf,
+._x2i ._baf b,
+._wD ._Xbe,
+.lr_dct_lbl_box,
+.sect,
+.goog-slider li,
+.sllabel,
+.wrsf,
+._chp.ab_button,
+.tw-menu-btn,
+.tw-ta,
+.tw-lang-selector,
+.tw-lang-selector:hover,
+.ab_button,
+a.ab_button,
+a.ab_button:visited,
+div._Ie div._P9,
+div._Ie div._Vm,
+div._qpb,
+.hdtbItm label:hover,
+.hdtbItm a:hover,
+#hdtb-more-mn a:hover,
+#hdtb .hdtb-mitem a:hover,
+.hdtb-mn-hd:hover,
+#hdtb-more:hover,
+#hdtb-tls:hover,
+#hdtb-msb #hdtb-more:hover,
+#hdtb-msb #hdtb-tls:hover,
+.fbar a:hover,
+#fsett a:hover,
+._LJ .exp-txt-c:hover,
+#appbar a.ab_button:active,
+.ab_button:hover span,
+a.ab_button.selected,
+a.ab_button.selected:hover,
+a.ab_dropdownlnk:hover,
+._Rf.rlf__open:not(.rlf__applied),
+._Rf:hover:not(.rlf__applied),
+._mgh,
+._ZFj,
+._Mnl,
+._Lnl,
+._Inl,
+._Hnl,
+._Knl,
+._Jnl,
+._Gnl,
+._Hxi,
+._lli ._vxi,
+._kli ._vxi,
+._fMi,
+._zUj,
+.sr__title,
+.stt__tool,
+.stt__tool ._ahq,
+.stt__tool .goog-flat-menu-button,
+.stt__tool .ab_button,
+.goog-menuitem,
+.goog-tristatemenuitem,
+.goog-filterobsmenuitem,
+._Rfr,
+._GCr,
+._Tsf,
+._kss,
+._SZc,
+.ktf,
+._-b7,
+.UVgjof,
+.dbg0pd,
+.Jtu6Td,
+.garHBe,
+.Y28wmf,
+.Ss2Faf,
+.ObF0Re,
+.dw-sb-cont .dw-sbi,
+.gLFyf,
+.sbl1,
+.jhp input[type="submit"],
+.sbdd_a input,
+.gbqfba,
+.dw-sb-cont .dw-sb-btn,
+.qhH8z,
+.Eegi6c,
+.dUFb4e,
+#gb#gb a.gb_c,
+#gb#gb a.gb_d,
+#gb#gb span.gb_d,
+#hptl a,
+.Z0LcW,
+.p83fR,
+.B7A8m,
+#gb#gb a.gb_d,
+#gb#gb a.gb_e,
+#gb#gb span.gb_e{
+color:#999999;
+}
+._xdb .fl,
+.vk_bk,
+.tw-data-text,
+._e8k,
+a.Y0uHMb{
+color:#999999!important;
+}
+.s .st em,
+.st.s.std em,
+.kltat,
+.klfact,
+.ab_button:hover,
+a.ab_button:hover,
+.goog-menuitem-highlight .goog-menuitem-content,
+.goog-menuitem-hover .goog-menuitem-content,
+div.otByu div.FAcADc,
+div.otByu div.I1Kbt,
+div.lFApYd{
+color:#A5A5A5;
+}
+.kxbcl .kxbc:hover,
+.tw-menu-btn:hover,
+.price,
+.K7Ltle,
+.sbhl .sbl1,
+.jhp input[type="submit"]:hover,
+.sbdd_a input:hover,
+.gbqfba:hover,
+.dw-sb-cont .dw-sb-btn:hover{
+color:#CCCCCC;
+}
+._W6g._Obq:hover g-fab,
+._R6g._ufp:hover g-fab,
+._S6g._ufp:hover g-fab{
+color: #CCCCCC !important;
+}
+._ldf:hover ._chp.ab_button{
+color:#FFFFFF!important;
+}
+a,
+a:link,
+a.fl:link,
+a.flt,
+a.mblink,
+#foot #navcnt a,
+.w,
+#prs a:visited,
+#prs a:active,
+.q:active,
+.q:visited,
+.kl:active,
+.tbotu,
+.fl a,
+.flt,
+.gl a:link,
+.mblink b,
+#hdtb-msb .hdtb-mitem.hdtb-msel,
+#hdtb-msb .hdtb-mitem.hdtb-msel-pre,
+._V9o,
+.lr_dct_more_btn,
+.sbico,
+._Fqg,
+._Iqg,
+._R4k,
+.rllt__directions-button ._pMg,
+._Jrh ._Orh,
+._Jrh ._Mrh,
+.gws-local-busyness__feedback a.duf3,
+._Klm,
+._O4n,
+.TYiug,
+.GtMhHe,
+.nRfCwb,
+.ubF8Rd,
+.SDZsVb,
+.jMtmC,
+.Tg7LZd,
+.e2gLmd,
+.wUrVib,
+.EZRelc{
+color:#5C809E;
+}
+._tX{
+color:#5C809E!important;
+}
+#rcnt a:hover,
+#brs a:hover,
+#nycp a:hover,
+#nav a.pn:hover,
+.lr_dct_more_btn:hover,
+.sbico-c:hover .sbico,
+._shr:hover ._Iqg,
+._shr:hover ._Fqg,
+._O4n:hover{
+color:#779ABD;
+}
+.mblink:visited,
+a:visited{
+color:#7A5C9E;
+}
+.mblink:visited:hover,
+a:visited:hover{
+color:#9A77BD!important;
+}
+cite,
+cite a:link,
+cite a:visited,
+.cite,
+.cite:link,
+#_bGc > i,
+.bc a:link{
+color:#4D804A;
+}
+.jsb,
+.sbsb_g,
+.ab_dropdownrule{
+display:none;
+}
+._tAr,
+._knk,
+.Km0Gdb{
+fill:#999999;
+}
+._Jxg,
+._Jxg span,
+._FOl{
+filter: invert(100%);
+}
+input[type="image"],
+#gbwa > div:nth-child(1),
+.gb_rc > div:nth-child(1),
+.knowledge-related_questions_list__arrow,
+#ab_opt_icon,
+.ab_button:hover span img._Fnc,
+._Zoj,
+._apj,
+._Zgf{
+filter:invert(90%);
+-webkit-filter:invert(90%);
+}
+#ccw_chart {
+	filter: invert(88.5%);
+}
+.i8Msie{
+filter:invert(70%);
+-webkit-filter:invert(70%);
+}
+.stt-uf,
+._cXm,
+#qbi,
+button.ab_button span img._Fnc{
+filter:invert(50%);
+-webkit-filter:invert(50%);
+}
+._vpj {
+filter:invert(88%) saturate(0%);
+}
+._Q4k img,
+	.rllt__directions-button ._olf{
+filter:saturate(40%) hue-rotate(350deg) brightness(90%);
+}
+._zF {
+	height: 28px;
+}
+#sblsbb{
+height:38px;
+}
+.dw-sb-cont .dw-sb-btn {
+	line-height: 40px;
+	width: 40px;
+}
+.cdr_sep,
+.sbico-c,
+.RNNXgb{
+margin: 0;
+}
+#fbar{
+opacity:0;
+-webkit-transition: opacity .5s;
+transition: opacity .5s
+}
+#fbar:hover,
+._Fnc,
+#gb#gb a.gb_e:hover,
+#gb#gb a.gb_e:focus{
+opacity:1;
+}
+.hdtb-mn-o,
+.hdtb-mn-c,
+._v0g,
+.ab_dropdown,
+.goog-menu,
+._vx{
+padding:0;
+}
+.sbico-c{
+padding:0px 10px;
+}
+	._Psr line{
+		stroke:#505050;
+	}
+.sbico-c{
+top:0px;
+}
+.hdtb-mn-o,
+.hdtb-mn-c{
+top:30px!important;
+}
+#rcnt a:hover,
+#brs a:hover,
+#nycp a:hover,
+#nav a.pn:hover,
+._VBr:hover{
+text-decoration:none;
+}
+.kltat, .klfact{
+text-shadow:none; 
+}
+.ab_button {
+	transition: none!important;
+}
+.sfsbc,
+#sblsbb{
+width:38px;
+}
+.UUbT9{
+width:582px;
+}
+
+
+
+
+.imso-hov:hover {
+	background-color: #282828;
+}
+.jTw2d {
+	background-color: #282828;
+	border-radius: 0px;
+}
+
+.imspo_mt__lg-st-c-np,
+.imspo_mt__match-sc,
+.imspo_mt__dt-t,
+.imspo_mt__pm-inf,
+.YIikAd{
+	color: #999999;
+}
+.imspo_mt__lt-t,
+.imspo_mt__cmd,
+.escM3kbeJJz__dlg-c,
+.escM3kbeJJz__dlg-a:link,
+.escM3kbeJJz__dlg-a:visited,
+.SXBRcc{
+	color: #777777;
+}
+
+.gMTFD91jmVs__dlc-no .gMTFD91jmVs__dlc-a:link,
+.gMTFD91jmVs__dlc-no .gMTFD91jmVs__dlc-a:visited {
+	color: #5C809E;
+}
+
+.imspo_mt__vs-c {
+	background: linear-gradient(to bottom,transparent 0%,transparent 12.5%,#1E1E1E 12.5%,#1E1E1E 87.5%,transparent 87.5%,transparent 100%);
+}
+
+
+td.imspo_mt__rg svg.imspo_mt__triangle polygon{
+fill:#999999 !important;
+}
+
+.eGNEZ {
+	border-bottom: solid 1px #1E1E1E;
+}
+.MoyuKc {
+	border-right: solid 1px #1E1E1E;
+}
+
+.YPgUJe {
+	box-shadow: none;
+}
+
+li.imso-hide-overflow.tb_l{
+border-left: none;
+}
+
+.kp-blk .xpdclose .farUxc,
+.kp-blk .xpdopen .mJ2Mod {
+	border-top: solid 1px #1E1E1E;
+}
+
+.w8qArf .fl{
+color:#999999!important;
+}
+
+.goog-flat-menu-button {
+	border-radius: 0px;
+	background-color: #303030;
+	background-image: none;
+	border: none;
+	color: #A5A5A5;
+}
+.goog-flat-menu-button.goog-flat-menu-button-hover {
+	background-color: #383838;
+	background-image: none;
+	box-shadow: none;
+	border-color: #c6c6c6;
+	color: #A5A5A5
+}
+div.Qy8Xkb {
+	border-top: 1px solid #323232;
+}
+}
