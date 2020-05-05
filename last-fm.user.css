@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.4.14
+@version     2.4.15
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -11,17 +11,23 @@ No "No" <<<EOT
 EOT;
 Yes "Yes" <<<EOT
 @media (min-width:768px){
-.chartlist-row{
+.chartlist-row,
+.anhv1 .stationlink-list .stationlink{
 padding-top:0px;
 padding-bottom:1px;
 }
-.chartlist--with-bar .chartlist-row {
-padding-top:1px;
-padding-bottom:2px;
+.chartlist--with-image .chartlist-row {
+	min-height: 32px;
 }
-.anhv1 .stationlink-list .stationlink{
-padding-top: 2px;
-padding-bottom: 6px;
+.chartlist--with-bar .chartlist-row--with-artist .chartlist-name,
+.chartlist--with-multi-playlinks .chartlist-row--with-artist .chartlist-name {
+	margin-bottom: 19px;
+	padding-top: 2px;
+}
+.chartlist--with-bar .chartlist-row--with-artist .chartlist-artist,
+.chartlist--with-multi-playlinks .chartlist-row--with-artist .chartlist-artist {
+	position: absolute;
+	margin-top: 14px;
 }
 .chartlist-name {
 font-weight: normal;
@@ -867,8 +873,8 @@ opacity:1;
 .features-more-link a{
 padding:0!important;
 }
-.shout-form textarea{
-padding: 6px 12px;
+.shout-form .content-form textarea{
+padding: 6px 10px;
 }
 .btn-primary.profile-header-set-obsession{
 padding:9px 15px!important;
@@ -2166,6 +2172,9 @@ border-color:/*[[button-text-H]]*/;
 }
 .dropdown-menu-clickable-item::after {
 border-color:/*[[border-color]]*/;
+}
+.open-ad-container-mobile ~ .buffer-standard-ignore-hidden, :not(.hidden-xs):not([data-ad-container]) ~ .buffer-standard-ignore-hidden {
+	margin-top: 0px;
 }
 }
 @media (min-width:768px){
