@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.1.0
+@version     0.1.1
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/dev/google.user.css
 @license     CC-BY-SA-4.0
@@ -67,7 +67,12 @@ div._oip > g-inner-card,
 ._UDr,
 ._pEr,
 ._ZIr,
-.BklRsd{
+.BklRsd,
+.sfbgg,
+#hdtbSum,
+.jZWadf,
+.wQnou,
+#kO001e{
 background:#232323;
 }
 .hdtbItm,
@@ -78,7 +83,6 @@ background-color:#232323;
 .sbibod,
 .sbib_a,
 .sbsb_a,
-#hdtb-tls:hover,
 .sbsb_c:hover,
 .rl_item._Txn:hover,
 ._wD:hover,
@@ -90,7 +94,9 @@ background-color:#232323;
 ._Db:active,
 .rllt__local-item-selected,
 .ktf,
-.ab_button{
+.ab_button,
+.F9PbJd,
+.Pvpvv{
 background:#282828;
 }
 g-fab{
@@ -99,7 +105,10 @@ background:#282828!important;
 ._Wmi,
 .ab_button:hover,
 .RNNXgb,
-.aajZCb{
+.aajZCb,
+.zthhpf,
+.lV0vqc,
+.mye4qd{
 background:#323232;
 }
 ._W6g._Obq:hover g-fab,
@@ -111,6 +120,8 @@ background:#323232!important;
 #hdtb-more-mn a:hover,
 .hdtbItm.hdtbSel:hover,
 .hdtbItm a:hover,
+#hdtb-tls:hover,
+.ZXJQ7c:hover,
 #cdrlnk:hover,
 .oLMvxj8HcwN__highlighted,
 ._ONj:active,
@@ -144,7 +155,8 @@ background:#323232;
 background-color:#434343;
 }
 #hdtb-msb .hdtb-tl-sel:hover,
-.sbhl{
+.sbhl,
+.Vwmzxb{
 background:#505050;
 }
 .gb_b:hover .gb_Ec,
@@ -177,7 +189,11 @@ background-color:#779ABD;
 .ccw_selector_bg,
 .jhp input[type="submit"],
 .sbdd_a input,
-.gbqfba{
+.gbqfba,
+.hdtbSel,
+.hdtbSel #cdrlnk,
+#hdtb-tls:hover,
+.ZXJQ7c:hover{
 background-image:none!important;
 }
 #fbar,
@@ -207,6 +223,7 @@ background-image:none!important;
 ._nEm,
 .kp-blk,
 .RNNXgb,
+.zthhpf,
 .jhp input[type="submit"],
 .jhp input[type="submit"]:hover,
 .sbdd_a input,
@@ -214,12 +231,16 @@ background-image:none!important;
 .gbqfba,
 .gbqfba:hover,
 .dw-sb-cont .dw-sb-btn,
-.cv2VAd{
+.cv2VAd,
+.cEPPT,
+.mye4qd,
+.Pvpvv{
 border:none;
 }
 .ab_button,
 #hdtb-msb .hdtb-tl-sel,
 #hdtb-tls,
+.ZXJQ7c,
 .ktf,
 body.jfk-scrollbar div.bottom-wrapper div:nth-of-type(2){
 border:none!important;
@@ -252,6 +273,9 @@ border-left: 1px solid #323232;
 ._qgo,
 ._qhf{
 border-color:#1E1E1E;
+}
+.F9PbJd{
+border-color:#282828;
 }
 ._qhf,
 ._onh,
@@ -315,12 +339,16 @@ border-color:#323232;
 border-color:#323232!important;
 }
 .kcb,
-.xtSCL{
+.xtSCL,
+.fNHVKc,
+.TwNUtc,
+.UwAaac{
 border-color:#505050;
 }
 ._Db:active,
 .rllt__local-item-selected,
-.dw-sb-cont .dw-sbi:focus{
+.dw-sb-cont .dw-sbi:focus,
+.rQEFy{
 border-color: #5C809E;
 }
 .mn-dwn-arw,
@@ -347,6 +375,7 @@ border-color: #779ABD transparent;
 .jfk-button-action,
 .jfk-button-standard,
 #hdtb-msb .hdtb-tl-sel,
+.ZXJQ7c:hover,
 #sblsbb,
 .sbibod,
 g-inner-card,
@@ -364,7 +393,9 @@ g-inner-card,
 .kp-blk,
 .dw-sb-cont .dw-sbi,
 .RNNXgb,
+.zthhpf,
 .aajZCb,
+.lV0vqc,
 .jhp input[type="submit"],
 .sbdd_a input,
 .gbqfba,
@@ -374,7 +405,9 @@ g-inner-card,
 .cv2VAd,
 .kp-blk .mod:first-child,
 .kp-blk .kp-header:first-child .img-brk,
-.zPNTne{
+.zPNTne,
+.TwNUtc,
+.mye4qd{
 border-radius:0;
 }
 ._vpj {
@@ -404,9 +437,87 @@ border-radius:7px;
 .BklRsd{
 box-shadow:none;
 }
+a,
+a:link,
+a.fl:link,
+a.flt,
+a.mblink,
+#foot #navcnt a,
+.w,
+#prs a:visited,
+#prs a:active,
+.q:active,
+.q:visited,
+.kl:active,
+.tbotu,
+.fl a,
+.flt,
+.gl a:link,
+.mblink b,
+#hdtb-msb .hdtb-mitem.hdtb-msel,
+#hdtb-msb .hdtb-mitem.hdtb-msel-pre,
+._V9o,
+.lr_dct_more_btn,
+.sbico,
+._Fqg,
+._Iqg,
+._R4k,
+.rllt__directions-button ._pMg,
+._Jrh ._Orh,
+._Jrh ._Mrh,
+.gws-local-busyness__feedback a.duf3,
+._Klm,
+._O4n,
+.TYiug,
+.GtMhHe,
+.nRfCwb,
+.ubF8Rd,
+.SDZsVb,
+.jMtmC,
+.Tg7LZd,
+.e2gLmd,
+.wUrVib,
+.EZRelc,
+#foot .AaVjTc a,
+.rQEFy,
+.rQEFy:hover{
+color:#5C809E;
+}
+._tX{
+color:#5C809E!important;
+}
+#rcnt a:hover,
+#brs a:hover,
+#nycp a:hover,
+#nav a.pn:hover,
+.lr_dct_more_btn:hover,
+.sbico-c:hover .sbico,
+._shr:hover ._Iqg,
+._shr:hover ._Fqg,
+._O4n:hover{
+color:#779ABD;
+}
+.mblink:visited,
+a:visited{
+color:#7A5C9E;
+}
+.mblink:visited:hover,
+a:visited:hover{
+color:#9A77BD!important;
+}
+cite,
+cite a:link,
+cite a:visited,
+.cite,
+.cite:link,
+#_bGc > i,
+.bc a:link{
+color:#4D804A;
+}
 .sben_a,
 .sh-sp__pswtr,
-._Lqc{
+._Lqc,
+.fxgdke{
 color:#666666;
 }
 .sr__link,
@@ -414,6 +525,9 @@ color:#666666;
 .sr__link:visited{
 color:#777777;
 }
+.cj2HCb a,
+.T47uwc a,
+.PNyWAd,
 .s,
 .hdtb-mn-hd,
 #hdtb .hdtb-mitem a,
@@ -434,16 +548,36 @@ color:#777777;
 ._ae ._SDf,
 ._Cwm,
 ._zMk,
-._ZIr{
+._ZIr,
+.smiUbb a,
+#swml a,
+.fbar .B4GxFc #fsl a,
+#hdtb-msb #hdtb-more,
+#hdtb-msb #hdtb-tls,
+.hdtbItm.hdtbSel,
+#hdtb .hdtbItm a,
+#hdtb-more-mn a,
+#cdrlnk,
+.WGvvNb,
+.sMi44c:hover .fxgdke,
+.F9PbJd,
+.RScZKc,
+.W8wzH,
+.mye4qd{
 color:#808080;
 }
 .s,
 .tw-text-edit-btn,
 a.ab_dropdownlnkinfo,
 a.ab_dropdownlnk:visited,
-g-fab{
+g-fab,
+.F9PbJd{
 color:#808080!important;
 }
+.cj2HCb a:hover,
+.T47uwc a:hover,
+.KQsPse:hover .w6lkhd,
+a:hover .W8wzH,
 body,
 #lst-ib,
 #gb#gb a.gb_P,
@@ -461,7 +595,7 @@ body,
 ._XWk,
 ._pk,
 ._Adb,
-	._czk,
+._czk,
 ._nPe,
 ._RMe,
 ._OFe,
@@ -561,7 +695,9 @@ a.ab_dropdownlnk:hover,
 .ObF0Re,
 .dw-sb-cont .dw-sbi,
 .gLFyf,
+.JSAgYe,
 .sbl1,
+.o44hBf,
 .jhp input[type="submit"],
 .sbdd_a input,
 .gbqfba,
@@ -578,14 +714,23 @@ a.ab_dropdownlnk:hover,
 .B7A8m,
 #gb#gb a.gb_d,
 #gb#gb a.gb_e,
-#gb#gb span.gb_e{
+#gb#gb span.gb_e,
+#gb#gb a.gb_g,
+#foot .AaVjTc .YyVfkd,
+#Wprf1b,
+.smiUbb a:hover,
+#swml a:hover,
+.fbar .B4GxFc #fsl a:hover,
+.PNyWAd:hover,
+.sMi44c:hover .WGvvNb{
 color:#999999;
 }
 ._xdb .fl,
 .vk_bk,
 .tw-data-text,
 ._e8k,
-a.Y0uHMb{
+a.Y0uHMb,
+.F9PbJd:hover{
 color:#999999!important;
 }
 .s .st em,
@@ -620,80 +765,6 @@ color: #CCCCCC !important;
 ._ldf:hover ._chp.ab_button{
 color:#FFFFFF!important;
 }
-a,
-a:link,
-a.fl:link,
-a.flt,
-a.mblink,
-#foot #navcnt a,
-.w,
-#prs a:visited,
-#prs a:active,
-.q:active,
-.q:visited,
-.kl:active,
-.tbotu,
-.fl a,
-.flt,
-.gl a:link,
-.mblink b,
-#hdtb-msb .hdtb-mitem.hdtb-msel,
-#hdtb-msb .hdtb-mitem.hdtb-msel-pre,
-._V9o,
-.lr_dct_more_btn,
-.sbico,
-._Fqg,
-._Iqg,
-._R4k,
-.rllt__directions-button ._pMg,
-._Jrh ._Orh,
-._Jrh ._Mrh,
-.gws-local-busyness__feedback a.duf3,
-._Klm,
-._O4n,
-.TYiug,
-.GtMhHe,
-.nRfCwb,
-.ubF8Rd,
-.SDZsVb,
-.jMtmC,
-.Tg7LZd,
-.e2gLmd,
-.wUrVib,
-.EZRelc{
-color:#5C809E;
-}
-._tX{
-color:#5C809E!important;
-}
-#rcnt a:hover,
-#brs a:hover,
-#nycp a:hover,
-#nav a.pn:hover,
-.lr_dct_more_btn:hover,
-.sbico-c:hover .sbico,
-._shr:hover ._Iqg,
-._shr:hover ._Fqg,
-._O4n:hover{
-color:#779ABD;
-}
-.mblink:visited,
-a:visited{
-color:#7A5C9E;
-}
-.mblink:visited:hover,
-a:visited:hover{
-color:#9A77BD!important;
-}
-cite,
-cite a:link,
-cite a:visited,
-.cite,
-.cite:link,
-#_bGc > i,
-.bc a:link{
-color:#4D804A;
-}
 .jsb,
 .sbsb_g,
 .ab_dropdownrule{
@@ -722,7 +793,7 @@ filter:invert(90%);
 -webkit-filter:invert(90%);
 }
 #ccw_chart {
-	filter: invert(88.5%);
+filter: invert(88.5%);
 }
 .i8Msie{
 filter:invert(70%);
@@ -739,18 +810,18 @@ filter:invert(50%);
 filter:invert(88%) saturate(0%);
 }
 ._Q4k img,
-	.rllt__directions-button ._olf{
+.rllt__directions-button ._olf{
 filter:saturate(40%) hue-rotate(350deg) brightness(90%);
 }
 ._zF {
-	height: 28px;
+height: 28px;
 }
 #sblsbb{
 height:38px;
 }
 .dw-sb-cont .dw-sb-btn {
-	line-height: 40px;
-	width: 40px;
+line-height: 40px;
+width: 40px;
 }
 .cdr_sep,
 .sbico-c,
@@ -779,9 +850,12 @@ padding:0;
 .sbico-c{
 padding:0px 10px;
 }
-	._Psr line{
-		stroke:#505050;
-	}
+.A8SBwf{
+padding-top:6px;
+}
+._Psr line{
+stroke:#505050;
+}
 .sbico-c{
 top:0px;
 }
@@ -793,40 +867,42 @@ top:30px!important;
 #brs a:hover,
 #nycp a:hover,
 #nav a.pn:hover,
-._VBr:hover{
+._VBr:hover,
+.sMi44c:hover .WGvvNb,
+.sMi44c:hover .fxgdke{
 text-decoration:none;
 }
 .kltat, .klfact{
 text-shadow:none; 
 }
 .ab_button {
-	transition: none!important;
+transition: none!important;
 }
 .sfsbc,
 #sblsbb{
 width:38px;
 }
-.UUbT9{
+.UUbT9,
+.A8SBwf,
+.RNNXgb,
+.zthhpf{
 width:582px;
 }
 
-
-
-
+/* To sort */
 .imso-hov:hover {
-	background-color: #282828;
+background-color: #282828;
 }
-.jTw2d {
-	background-color: #282828;
-	border-radius: 0px;
+.jTw2d{
+background-color: #282828;
+border-radius: 0px;
 }
-
 .imspo_mt__lg-st-c-np,
 .imspo_mt__match-sc,
 .imspo_mt__dt-t,
 .imspo_mt__pm-inf,
 .YIikAd{
-	color: #999999;
+color: #999999;
 }
 .imspo_mt__lt-t,
 .imspo_mt__cmd,
@@ -834,62 +910,62 @@ width:582px;
 .escM3kbeJJz__dlg-a:link,
 .escM3kbeJJz__dlg-a:visited,
 .SXBRcc{
-	color: #777777;
+color: #777777;
 }
-
 .gMTFD91jmVs__dlc-no .gMTFD91jmVs__dlc-a:link,
-.gMTFD91jmVs__dlc-no .gMTFD91jmVs__dlc-a:visited {
-	color: #5C809E;
+.gMTFD91jmVs__dlc-no .gMTFD91jmVs__dlc-a:visited{
+color: #5C809E;
 }
-
-.imspo_mt__vs-c {
-	background: linear-gradient(to bottom,transparent 0%,transparent 12.5%,#1E1E1E 12.5%,#1E1E1E 87.5%,transparent 87.5%,transparent 100%);
+.imspo_mt__vs-c{
+background: linear-gradient(to bottom,transparent 0%,transparent 12.5%,#1E1E1E 12.5%,#1E1E1E 87.5%,transparent 87.5%,transparent 100%);
 }
-
-
 td.imspo_mt__rg svg.imspo_mt__triangle polygon{
 fill:#999999 !important;
 }
-
-.eGNEZ {
-	border-bottom: solid 1px #1E1E1E;
+.eGNEZ{
+border-bottom: solid 1px #1E1E1E;
 }
-.MoyuKc {
-	border-right: solid 1px #1E1E1E;
+.MoyuKc{
+border-right: solid 1px #1E1E1E;
 }
-
-.YPgUJe {
-	box-shadow: none;
+.YPgUJe{
+box-shadow: none;
 }
-
 li.imso-hide-overflow.tb_l{
 border-left: none;
 }
-
 .kp-blk .xpdclose .farUxc,
-.kp-blk .xpdopen .mJ2Mod {
-	border-top: solid 1px #1E1E1E;
+.kp-blk .xpdopen .mJ2Mod{
+border-top: solid 1px #1E1E1E;
 }
-
 .w8qArf .fl{
 color:#999999!important;
 }
-
-.goog-flat-menu-button {
-	border-radius: 0px;
-	background-color: #303030;
-	background-image: none;
-	border: none;
-	color: #A5A5A5;
+.goog-flat-menu-button{
+border-radius: 0px;
+background-color: #303030;
+background-image: none;
+border: none;
+color: #A5A5A5;
 }
-.goog-flat-menu-button.goog-flat-menu-button-hover {
-	background-color: #383838;
-	background-image: none;
-	box-shadow: none;
-	border-color: #c6c6c6;
-	color: #A5A5A5
+.goog-flat-menu-button.goog-flat-menu-button-hover{
+background-color: #383838;
+background-image: none;
+box-shadow: none;
+border-color: #c6c6c6;
+color: #A5A5A5
 }
-div.Qy8Xkb {
-	border-top: 1px solid #323232;
+div.Qy8Xkb{
+border-top: 1px solid #323232;
+}
+#gb#gb a.gb_g:hover, #gb#gb a.gb_g:focus{
+opacity: 1;
+}
+.GHDvEf, .GHDvEf:hover, .GHDvEf.selected, .GHDvEf.selected:hover{
+background-color: transparent;
+height: 12px;
+margin-top: 1px;
+user-select: none;
+width: 13px;
 }
 }
