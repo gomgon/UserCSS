@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.4.16
+@version     2.4.17
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -17,17 +17,17 @@ padding-top:1px;
 padding-bottom:2px;
 }
 .chartlist--with-image .chartlist-row {
-	min-height: 32px;
+min-height: 32px;
 }
 .chartlist--with-bar .chartlist-row--with-artist .chartlist-name,
 .chartlist--with-multi-playlinks .chartlist-row--with-artist .chartlist-name {
-	margin-bottom: 19px;
-	padding-top: 2px;
+margin-bottom: 19px;
+padding-top: 2px;
 }
 .chartlist--with-bar .chartlist-row--with-artist .chartlist-artist,
 .chartlist--with-multi-playlinks .chartlist-row--with-artist .chartlist-artist {
-	position: absolute;
-	margin-top: 14px;
+position: absolute;
+margin-top: 14px;
 }
 .chartlist-name {
 font-weight: normal;
@@ -67,20 +67,17 @@ margin-top: -16px;
 White "White" <<<EOT
 .love-button,
 .chartlist-love-button::before{
--webkit-filter:saturate(0%) !important;
 filter:saturate(0%)!important;
 }
 .love-button.love-button--loved,
 [data-toggle-button-current-state="loved"] .chartlist-love-button::before,
 [data-toggle-button-current-state="loved"] a.chartlist-love-button::before,
 [data-toggle-button-current-state="loved"] button.chartlist-love-button::before{
--webkit-filter:saturate(0%) brightness(500%)!important;
 filter:saturate(0%) brightness(500%)!important;
 }
 .love-button:hover,
 button.chartlist-love-button:hover::before,
 button.chartlist-love-button:focus::before{
--webkit-filter:saturate(0%) brightness(600%)!important;
 filter:saturate(0%) brightness(600%)!important;
 }
 .header-new-love-button::before{
@@ -95,21 +92,18 @@ filter: saturate(0%) invert(100%) brightness(500%)!important;
 } EOT;
 Red "Red" <<<EOT
 div[data-toggle-button-current-state="unloved"] .header-new-love-button::before{
--webkit-filter: invert(100%) !important;
 filter: invert(100%) !important;
 }
 div[data-toggle-button-current-state="unloved"] .header-new-love-button:hover::before{
 filter: invert(100%) brightness(500%)!important;
 }
 .header-new-love-button:hover::before{
--webkit-filter: brightness(200%)!important;
 filter: brightness(200%)!important;
 } EOT;
 }
 @advanced dropdown library-icons "Library category icons color"{
 White "White" <<<EOT
 .library-controls .secondary-nav-item .secondary-nav-item-link::before{
--webkit-filter: saturate(0%)!important;
 filter: saturate(0%)!important;
 }
 .library-controls .secondary-nav-item--albums .secondary-nav-item-link.secondary-nav-item-link--active::before,
@@ -124,12 +118,10 @@ filter: saturate(0%)!important;
 .library-controls .secondary-nav-item--tracks .secondary-nav-item-link.secondary-nav-item-link--active::before,
 .library-controls .secondary-nav-item--tracks .secondary-nav-item-link:focus::before,
 .library-controls .secondary-nav-item--tracks .secondary-nav-item-link:hover::before{
--webkit-filter:saturate(0%) brightness(600%)!important;
 filter:saturate(0%) brightness(600%)!important;
 } EOT;
 Blue "Blue" <<<EOT
 .library-controls .secondary-nav-item .secondary-nav-item-link::before{
--webkit-filter: saturate(0%)!important;
 filter: saturate(0%)!important;
 }
 .library-controls .secondary-nav-item--albums .secondary-nav-item-link.secondary-nav-item-link--active::before,
@@ -144,12 +136,10 @@ filter: saturate(0%)!important;
 .library-controls .secondary-nav-item--tracks .secondary-nav-item-link.secondary-nav-item-link--active::before,
 .library-controls .secondary-nav-item--tracks .secondary-nav-item-link:focus::before,
 .library-controls .secondary-nav-item--tracks .secondary-nav-item-link:hover::before{
--webkit-filter:hue-rotate(232deg) brightness(320%) saturate(25%)!important;
 filter:hue-rotate(232deg) brightness(320%) saturate(25%)!important;
 } EOT;
 Red "Red" <<<EOT
 .library-controls .secondary-nav-item .secondary-nav-item-link::before{
--webkit-filter: saturate(0%)!important;
 filter: saturate(0%)!important;
 } 
 .library-controls .secondary-nav-item--albums .secondary-nav-item-link.secondary-nav-item-link--active::before,
@@ -164,7 +154,6 @@ filter: saturate(0%)!important;
 .library-controls .secondary-nav-item--tracks .secondary-nav-item-link.secondary-nav-item-link--active::before,
 .library-controls .secondary-nav-item--tracks .secondary-nav-item-link:focus::before,
 .library-controls .secondary-nav-item--tracks .secondary-nav-item-link:hover::before{
--webkit-filter: saturate(100%)!important;
 filter: saturate(100%)!important;
 } EOT;
 }
@@ -568,7 +557,6 @@ bottom:-5px!important;
 .events-list-sidebar .users-you-know-user-image--you,
 .events-list .users-you-know-user-image--you,
 .video-preview-replace{
--webkit-box-shadow:none!important;
 box-shadow:none!important;
 }
 .btn_trendnav_month,
@@ -617,23 +605,19 @@ color:#999999!important;
 }
 .shout-reply::before,
 .vote-button-toggle .vote-button::before{
--webkit-filter: brightness(50%);
 filter: brightness(50%);
 }
 .shout-reply:hover::before,
 .vote-button-toggle .vote-button:hover::before,
 .vote-button.vote-button--voted::before{
--webkit-filter: brightness(100%);
 filter: brightness(100%);
 }
 .link-block .profile-banner-close::before{
--webkit-filter: invert(50%);
 filter: invert(50%);
 }
 .resource-external-link--homepage::before,
 .resource-external-link--apple-music::before,
 .buylink.buylink--itunes::before{
--webkit-filter: invert(60%);
 filter: invert(60%);
 }
 .video-preview-upload-cta::before,
@@ -646,7 +630,6 @@ filter: invert(60%);
 .gallery-image-vote-up-off .gallery-image-votes::before,
 .gallery-image-vote-down-off .gallery-image-votes::before,
 .no-data-message--gallery::before{
--webkit-filter: invert(80%);
 filter: invert(80%);
 }
 .chartlist-play-button::before,
@@ -654,7 +637,6 @@ filter: invert(80%);
 .stationlink::before,
 .selectbox .selectboxit-text::before,
 .obsession-history-play-all::before{
--webkit-filter: invert(80%)!important;
 filter: invert(80%)!important;
 }
 .shout-report::before,
@@ -671,7 +653,6 @@ filter: invert(80%)!important;
 .more-item--bookmark::before,
 .chartlist-more-menu-love::before,
 .wiki-history-action--edit::before{
--webkit-filter: invert(90%);
 filter: invert(90%);
 }
 .link-block .profile-banner-close:focus::before,
@@ -683,17 +664,14 @@ filter: invert(90%);
 .video-preview-upload-cta:hover::before,
 .section-settings-toggle:focus::before,
 .section-settings-toggle:hover::before{
--webkit-filter: invert(100%);
 filter: invert(100%);
 }
 .user-dashboard-pagination-next-link::before,
 .user-dashboard-pagination-previous-link::before{
--webkit-filter:invert(90%) saturate(0%);
 filter:invert(90%) saturate(0%);
 }
 .user-dashboard-pagination-next-link:hover::before,
 .user-dashboard-pagination-previous-link:hover::before{
--webkit-filter:invert(90%) saturate(0%) brightness(200%);
 filter:invert(90%) saturate(0%) brightness(200%);
 }
 .more-item--edit:hover::before,
@@ -716,7 +694,6 @@ filter:invert(90%) saturate(0%) brightness(200%);
 .stationlink:hover::before,
 .obsession-history-play-all:focus::before,
 .obsession-history-play-all:hover::before{
--webkit-filter: invert(100%) brightness(200%)!important;
 filter: invert(100%) brightness(200%)!important;
 }
 .kerve .nowleft,
@@ -724,7 +701,6 @@ filter: invert(100%) brightness(200%)!important;
 .kerve .trendleft,
 .kerve .trendright,
 .header .header-message-user::before{
--webkit-filter:saturate(0%)!important;
 filter:saturate(0%)!important;
 }
 .dropdown-buylinks--light .dropdown-more-buylinks::before,
@@ -738,7 +714,6 @@ body:not(.js-focus-visible) .chartlist-more-button:focus::before,
 .chartlist .lazy-buylinks-toggle .focus-visible::before,
 .chartlist .lazy-buylinks-toggle:hover::before,
 body:not(.js-focus-visible) .chartlist .lazy-buylinks-toggle:focus::before{
--webkit-filter:saturate(0%) brightness(300%)!important;
 filter:saturate(0%) brightness(300%)!important;
 }
 .user-dashboard-data-point-scrobbles::before,
@@ -760,14 +735,12 @@ filter:saturate(0%) brightness(300%)!important;
 .kerve .trendright:hover,
 .masthead-logo,
 .modal-dismiss::before{
--webkit-filter:saturate(0%) brightness(600%)!important;
 filter:saturate(0%) brightness(600%)!important;
 }
 .inbox-message-view .inbox-message-buttons .back-button::before,
 .user-dashboard-module-share::before,
 .listening-report-promo-date::after,
 .share-features .share-button::before{
--webkit-filter:saturate(0%) brightness(800%)!important;
 filter:saturate(0%) brightness(800%)!important;
 }
 .btn-primary,
@@ -787,7 +760,7 @@ height: 100%;
 line-height: normal;
 }
 .grid-items--fade-out::after{
-	background: linear-gradient(transparent, /*[[bg]]*/);
+background: linear-gradient(transparent, /*[[bg]]*/);
 }
 .share-chart .share-block,
 .dashbody .kerve .worldwrap{
@@ -927,7 +900,6 @@ top: -52px;
 .chartlist-play-button::before,
 .section-playlink::before,
 .stationlink::before{
--webkit-transition: none;
 transition: none;
 }
 /*[[hide-footer]]*/
@@ -1353,29 +1325,24 @@ table.table th,
 .inbox .inbox-table tr,
 .inbox-notifications .inbox-notifications__item--highlight,
 .inbox-notifications .inbox-notifications__item--hover{
--webkit-box-shadow:0px -1px /*[[border-color]]*/ inset!important;
 box-shadow:0px -1px /*[[border-color]]*/ inset!important;
 }
 .buylink-list{
--webkit-box-shadow:0px 1px /*[[border-color]]*/ inset!important;
 box-shadow:0px 1px /*[[border-color]]*/ inset!important;
 }
 .btn-lite,
 .btn-primary.profile-header-set-obsession{
--webkit-box-shadow:0 0 0 1px /*[[secondary-button]]*/ inset;
 box-shadow:0 0 0 1px /*[[secondary-button]]*/ inset;
 }
 .btn-lite:focus,
 .btn-lite:hover,
 .btn-primary.profile-header-set-obsession:hover,
 .btn-primary.profile-header-set-obsession:focus{
--webkit-box-shadow:0 0 0 1px /*[[secondary-button-H]]*/ inset;
 box-shadow:0 0 0 1px /*[[secondary-button-H]]*/ inset;
 }
 .catalogue-tags .tag a,
 .catalogue-tags .tags-add,
 .catalogue-tags .tags-add-cta{
--webkit-box-shadow: 0 0 0 1px /*[[color-global]]*/ inset;
 box-shadow: 0 0 0 1px /*[[color-global]]*/ inset;
 }
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .catalogue-tags .tag a:focus,
@@ -1388,27 +1355,22 @@ body:not([data-whatinput="touch"]) .catalogue-tags .tags-add-cta:hover,
 body:not([data-whatinput="touch"]) .catalogue-tags .tags-add .focus-visible,
 body:not([data-whatinput="touch"]) .catalogue-tags .tags-add:hover{
 color:/*[[color-global-hover]]*/!important;
--webkit-box-shadow: 0 0 0 1px /*[[color-global-hover]]*/ inset;
 box-shadow: 0 0 0 1px /*[[color-global-hover]]*/ inset;
 }
 .pagination-page[aria-current],
 .pagination-page:not(.pagination-page--ellipsis):hover{
--webkit-box-shadow: 0 -3px /*[[color-global]]*/ inset;
 box-shadow:0 -3px /*[[color-global]]*/ inset;
 }
 .wiki-history .wiki-history-table tr{
--webkit-box-shadow: 0 -1px /*[[border-color]]*/ inset;
 box-shadow:0 -1px /*[[border-color]]*/ inset;
 }
 .features-teaser-has-video{
--webkit-box-shadow:0 0 0 18px /*[[bg]]*/;
 box-shadow:0 0 0 18px /*[[bg]]*/;
 }
 .avatar-status-dot {
 box-shadow:0 0 0 2px /*[[bg]]*/;
 }
 .secondary-nav{
--webkit-box-shadow:none;
 box-shadow:none ;
 }
 .chartlist-play-button::before,
@@ -1416,7 +1378,6 @@ box-shadow:none ;
 .stationlink::before,
 .obsession-history-play-all::before,
 .lyrics-snippet-more-link{
--webkit-box-shadow: none !important;
 box-shadow: none !important;
 }
 .metacritic-score{
@@ -1771,7 +1732,6 @@ display: inline-block;
 padding: 3px;
 width: 3px;
 height: 3px;
--webkit-transform: rotate(45deg);
 transform: rotate(45deg);
 }
 .dropdown-menu-clickable-button.shoutbox-sort-toggle::after,
@@ -1824,20 +1784,9 @@ border-width: 0 2px 2px 0;
 border-width: 2px 0 0 2px;
 }
 .chartlist-row:hover a .chartlist-count-bar-value::after,
-.pagination-next a::before{
--webkit-transform: rotate(-45deg);
-transform: rotate(-45deg);
-}
+.pagination-next a::before,
 .pagination-previous a::before{
--webkit-transform: rotate(-45deg);
 transform: rotate(-45deg);
-}
-.chartlist-row:hover a .chartlist-count-bar-value::after,
-.pagination-next a::before{
-top: 19px;
-margin-right: 3px;
-}
-.pagination-previous a::before{
 top: 19px;
 margin-left: 3px;
 }
@@ -1873,12 +1822,10 @@ height: 3px;
 .external-link-cta .cta-link-wrap a::before,
 .lyrics-snippet-more-link a::before,
 .link-block--hover.wiki-history-entry--with-link .wiki-history-summary::before{
--webkit-transform: rotate(-45deg);
 transform: rotate(-45deg);
 }
 .more-items::before,
 .js .date-range-picker-button .date-range-picker-button-inner::before{
--webkit-transform: rotate(45deg);
 transform: rotate(45deg);
 }
 .more-link-fullwidth a::before,
@@ -1927,7 +1874,6 @@ display: inline-block;
 padding: 3px;
 width: 3px;
 height: 3px;
--webkit-transform: rotate(45deg);
 transform: rotate(45deg);
 }
 .more-items::before,
@@ -1947,7 +1893,6 @@ content:"\d7";
 font-size:22px;
 font-weight:600;
 color:/*[[color-global]]*/;
--webkit-transform:rotate(-45deg);
 transform:rotate(-45deg);
 }
 .inline-add-icon::before,
@@ -1999,13 +1944,11 @@ left: 50%;
 margin-left: -8px;
 }
 .personal-stats-listeners-more::before {
--webkit-filter: invert(80%) !important;
 filter: invert(80%) !important;
 }
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .personal-stats-listeners-more:focus::before,
 body:not([data-whatinput="touch"]) .focus-visible .personal-stats-listeners-more::before ,
 body:not([data-whatinput="touch"]) .personal-stats-listeners-more:hover::before {
--webkit-filter: invert(100%) !important;
 filter: invert(100%) !important;
 }
 .header-new-bookmark-button,
@@ -2036,14 +1979,12 @@ border:1px solid /*[[button-text-H]]*/;
 }
 .header-new-download-button::before,
 .header-new-more-button::before{
--webkit-filter: invert(100%) !important;
 filter: invert(100%) !important;
 }
 .header-new-download-button:hover::before,
 .header-new-more-button:hover::before,
 .header-new-more-button:active::before,
 .disclose-active.header-new-more-button::before{
--webkit-filter: invert(100%) brightness(200%)!important;
 filter: invert(100%) brightness(200%)!important;
 }
 .header-new-bookmark-button::before,
@@ -2114,11 +2055,9 @@ background-color:/*[[bg-lighter]]*/;
 .more-link-fullwidth-right,
 .more-link-with-action,
 .more-link-fullwidth{
--webkit-box-shadow: inset 0 1px 0 /*[[border-color]]*/;
 box-shadow: inset 0 1px 0 /*[[border-color]]*/;
 }
 .secondary-nav{
--webkit-box-shadow:0px -1px /*[[border-color]]*/ inset!important;
 box-shadow:0px -1px /*[[border-color]]*/ inset!important;
 }
 .personal-stats-item--scrobbles .personal-stats-inner::before,
@@ -2132,7 +2071,6 @@ display: inline-block;
 padding: 3px;
 width: 3px;
 height: 3px;
--webkit-transform: rotate(-45deg);
 transform: rotate(-45deg);
 }
 .personal-stats-item--scrobbles .personal-stats-inner::before,
@@ -2162,7 +2100,6 @@ padding: 2px!important;
 width: 3px;
 height: 3px;
 border-width: 0 2px 2px 0;
--webkit-transform: rotate(-45deg);
 transform: rotate(-45deg);
 top: 12px!important;
 margin-right: 3px;
@@ -2174,7 +2111,7 @@ border-color:/*[[button-text-H]]*/;
 border-color:/*[[border-color]]*/;
 }
 .open-ad-container-mobile ~ .buffer-standard-ignore-hidden, :not(.hidden-xs):not([data-ad-container]) ~ .buffer-standard-ignore-hidden {
-	margin-top: 0px;
+margin-top: 0px;
 }
 }
 @media (min-width:768px){
@@ -2224,12 +2161,10 @@ color:/*[[button-text-H]]*/;
 border:1px solid /*[[button-text-H]]*/;
 }
 .header-new-playlink::before{
--webkit-filter: invert(100%) !important;
 filter: invert(100%) !important;
 }
 .header-new-playlink:focus::before,
 .header-new-playlink:hover::before{
--webkit-filter: invert(100%) brightness(200%)!important;
 filter: invert(100%) brightness(200%)!important;
 }
 .recommended-next-page-container:not(:hover):not(.recommended-next-page-container--desktop-expanded) .recommended-next-button {
@@ -2245,7 +2180,6 @@ color: /*[[main-text]]*/;
 border-radius: 0px !important;
 }
 .events-list-anhv1 td, .events-list-anhv1 th {
--webkit-box-shadow: inset 0 -1px /*[[border-color]]*/;
 box-shadow: inset 0 -1px /*[[border-color]]*/;
 }
 .recommended-next-page-container{
@@ -2272,14 +2206,12 @@ border-top: 1px solid /*[[border-color]]*/ !important;
 }
 .wiki-history .wiki-history-table td,
 .wiki-history .wiki-history-table th{
--webkit-box-shadow: 0 -1px /*[[color-global]]*/ inset;
 box-shadow: 0 -1px /*[[border-color]]*/ inset;
 }
-.inbox .inbox-table {
--webkit-box-shadow: 0 1px /*[[color-global]]*/ inset;
+.inbox .inbox-table{
 box-shadow: 0 1px /*[[border-color]]*/ inset;
 }
-.user-dashboard-catalogue-item .user-dashboard-comparison {
+.user-dashboard-catalogue-item .user-dashboard-comparison{
 top: -54px;
 }
 .header * + .header-metadata-item--event-attendance::before,
@@ -2296,12 +2228,10 @@ padding: 0px !important;
 background-color:transparent;
 }
 .more-disclose-desktop .more-button::before{
--webkit-filter:brightness(60%);
 filter:brightness(60%);
 }
 .more-disclose-desktop .more-button:focus::before,
 .more-disclose-desktop .more-button:hover::before{
--webkit-filter:invert(100%);
 filter:invert(100%);
 }
 .more-disclose-desktop .more-block{
