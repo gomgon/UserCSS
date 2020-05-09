@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.5.1
+@version     2.5.2
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -2300,6 +2300,9 @@ box-shadow: 0 0 0 2px /*[[bg]]*/;
 .pagination-previous a::before,
 .pagination-next a::before{
 top: 19px;
+}
+a .chartlist-count-bar-value::after{
+margin-right:2px;
 }
 }
 @media (min-width:1260px){
