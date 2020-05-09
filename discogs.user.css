@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     0.9.4
+@version     0.1.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -45,7 +45,8 @@ ul.module_blocks > li,
 .password-strength-meter,
 .discography_nav,
 #releases #pjax_container,
-.history_form{
+.history_form,
+.is_not_mobile table.release_list_table tbody tr:hover{
 background:/*[[elements]]*/;
 }
 #site_header_wrap,
@@ -199,7 +200,12 @@ ul.module_blocks > li.module_placeholder:hover,
 .module_blocks .dashboard_addmodules:hover,
 #review_compose.form-block div.review_preview,
 .history table tr,
-.pagination.bottom{
+.pagination.bottom,
+.collection-value-and-pagination,
+.release_list_actions, .releaselist_stats_range_wrap,
+table.release_list_table,
+table.release_list_table tbody tr,
+table.release_list_table tbody tr:last-child{
 border-color:/*[[border-color]]*/;
 }
 .tab_menu li.current a{
@@ -271,7 +277,8 @@ a.readmore_toggler,
 a.inset_button,
 a.inset_button:visited,
 a.inset_button[disabled]:hover,
-table.diff th{
+table.diff th,
+#collection .collection-row{
 color:/*[[main-text]]*/;
 }
 .aside_search_form button:hover i,
