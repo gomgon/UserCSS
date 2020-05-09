@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.4.17
+@version     2.5.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -158,6 +158,21 @@ filter: saturate(100%)!important;
 } EOT;
 }
 @advanced text loading-gif "Loading gif (64x64)" "https://www.last.fm/static/images/loading_fff_64.gif"
+@advanced dropdown hide-separators "Hide separators" {
+Yes "Yes" <<<EOT
+.section-with-separator::after{
+display:none!important;
+}
+.user-list-shared-artists,
+.user-list-shared-artists:first-child,
+.col-sidebar.hidden-xs > section.buffer-standard{
+margin-top:0px;
+} EOT;
+No "No" <<<EOT
+.col-sidebar.hidden-xs > .buffer-standard:nth-of-type(1){
+margin-top:0px;
+} EOT;
+}
 @advanced dropdown hide-social-media "Hide social media sharing" {
 Yes "Yes" <<<EOT
 .share-desktop,
@@ -261,7 +276,6 @@ div.feedback-message,
 .features-more-link a::before,
 .full-bleed-ad-container,
 #taboola-below-content-thumbnails,
-.section-with-separator::after,
 .scrobble-stats-info-tooltip::before{
 display:none!important;
 }
@@ -794,11 +808,6 @@ margin-left:9px;
 .secondary-nav--scrollable.secondary-nav--more ul.secondary-nav-hidden-list{
 margin-top:12px!important;
 }
-.user-list-shared-artists,
-.user-list-shared-artists:first-child,
-.col-sidebar.hidden-xs section.buffer-standard{
-margin-top:0px;
-}
 .gallery-next,
 .gallery-previous{
 opacity:0!important;
@@ -894,7 +903,7 @@ text-shadow:
 2px -2px 5px #000000,
 2px 2px 5px #000000;
 }
-.user-dashboard-catalogue-item .user-dashboard-comparison {
+.user-dashboard-catalogue-item .user-dashboard-comparison{
 top: -52px;
 }
 .chartlist-play-button::before,
@@ -904,6 +913,7 @@ transition: none;
 }
 /*[[hide-footer]]*/
 /*[[hide-cookies]]*/
+/*[[hide-separators]]*/
 /*[[hide-social-media]]*/
 /*[[hide-buy]]*/
 /*[[hide-trending-tracks]]*/
@@ -1036,7 +1046,8 @@ background:/*[[bg-lighter]]*/!important;
 .subscribe-form .login-signup,
 .subscribe-form .subscription-options,
 .scrobble-stats-info-tooltip,
-.inbox-message-view .inbox-message-message blockquote{
+.inbox-message-view .inbox-message-message blockquote,
+.section-with-separator::after{
 background:/*[[bg-lighter]]*/;
 }
 .user-dashboard-banner,
@@ -1787,6 +1798,10 @@ border-width: 2px 0 0 2px;
 .pagination-next a::before,
 .pagination-previous a::before{
 transform: rotate(-45deg);
+}
+.chartlist-row:hover a .chartlist-count-bar-value::after,
+.pagination-next a::before,
+.pagination-previous a::before{
 top: 19px;
 margin-left: 3px;
 }
@@ -2179,7 +2194,7 @@ color: /*[[main-text]]*/;
 .mega-menu--open .dropdown-menu-dark{
 border-radius: 0px !important;
 }
-.events-list-anhv1 td, .events-list-anhv1 th {
+.events-list-anhv1 td, .events-list-anhv1 th{
 box-shadow: inset 0 -1px /*[[border-color]]*/;
 }
 .recommended-next-page-container{
@@ -2189,7 +2204,6 @@ top: 58px !important;
 .about-me-sidebar{
 margin-bottom: 15px!important;
 }
-
 .date-range-picker-presets-wrap{
 margin-left: 0px;
 margin-right: 0px;
