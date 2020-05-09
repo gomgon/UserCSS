@@ -13,3 +13,5 @@ The stylesheet will be updated automaticaly by the addon.
 <br>
 #
 ![Discogs](/images/discogs.png) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css) Discogs stylesheet. (work in progress)
+#
+![Google](/images/google.png) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/dev/google.user.css) Google stylesheet. (work in progress)
