@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.5.0
+@version     2.5.1
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -1772,8 +1772,8 @@ margin-right: 0px;
 border-color: /*[[button-text-H]]*/;
 }
 .chartlist-row:hover a .chartlist-count-bar-value::after,
-.pagination-next a::before,
-.pagination-previous a::before{
+.pagination-previous a::before,
+.pagination-next a::before{
 background-image:none;
 display: inline-block;
 padding: 3px;
@@ -1783,8 +1783,8 @@ height: 3px;
 .chartlist-row:hover a .chartlist-count-bar-value::after{
 border: solid /*[[main-text]]*/;;
 }
-.pagination-next a::before,
-.pagination-previous a::before{
+.pagination-previous a::before,
+.pagination-next a::before{
 border: solid /*[[button-text]]*/;
 }
 .chartlist-row:hover a .chartlist-count-bar-value::after,
@@ -1795,15 +1795,9 @@ border-width: 0 2px 2px 0;
 border-width: 2px 0 0 2px;
 }
 .chartlist-row:hover a .chartlist-count-bar-value::after,
-.pagination-next a::before,
-.pagination-previous a::before{
+.pagination-previous a::before,
+.pagination-next a::before{
 transform: rotate(-45deg);
-}
-.chartlist-row:hover a .chartlist-count-bar-value::after,
-.pagination-next a::before,
-.pagination-previous a::before{
-top: 19px;
-margin-left: 3px;
 }
 .pagination-previous a:hover::before,
 .pagination-next a:hover::before{
@@ -2128,6 +2122,14 @@ border-color:/*[[border-color]]*/;
 .open-ad-container-mobile ~ .buffer-standard-ignore-hidden, :not(.hidden-xs):not([data-ad-container]) ~ .buffer-standard-ignore-hidden {
 margin-top: 0px;
 }
+.chartlist-row:hover a .chartlist-count-bar-value::after,
+.pagination-previous a::before,
+.pagination-next a::before{
+top: 17px;
+}
+.pagination-previous a::before{
+margin-left: -3px;
+}
 }
 @media (min-width:768px){
 .chartlist tr.chartlist-row--even .chartlist-more-button{
@@ -2293,6 +2295,11 @@ color:inherit!important;
 }
 .track-overview-new .video-preview{
 box-shadow: 0 0 0 2px /*[[bg]]*/;
+}
+.chartlist-row:hover a .chartlist-count-bar-value::after,
+.pagination-previous a::before,
+.pagination-next a::before{
+top: 19px;
 }
 }
 @media (min-width:1260px){
