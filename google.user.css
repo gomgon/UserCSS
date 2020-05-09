@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.2.0
+@version     0.2.1
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/dev/google.user.css
 @license     CC-BY-SA-4.0
@@ -892,6 +892,7 @@ margin: 0;
 }
 #fbar{
 opacity:0;
+-webkit-transition: opacity .5s;
 transition: opacity .5s
 }
 #fbar:hover,
@@ -950,7 +951,14 @@ width:38px;
 .zthhpf{
 width:582px;
 }
-
+@media (min-width:768px){
+#footer{
+background: transparent;
+}
+#footer a{
+color: #999999;
+}
+}
 /* To sort */
 .imso-hov:hover {
 background-color: #282828;
