@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.3.0
+@version     0.3.1
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -1053,6 +1053,10 @@ opacity:1;
 .Tg7LZd{
 background-color:#5C809E;
 }
+#gb{
+background: #232323;
+border-bottom: none;
+}
 }
 /* To sort */
 .imso-hov:hover {
@@ -1123,7 +1127,8 @@ color: #A5A5A5
 div.Qy8Xkb{
 border-top: 1px solid #323232;
 }
-#gb#gb a.gb_g:hover, #gb#gb a.gb_g:focus{
+#gb#gb a.gb_g:hover,
+#gb#gb a.gb_g:focus{
 opacity: 1;
 }
 .GHDvEf, .GHDvEf:hover, .GHDvEf.selected, .GHDvEf.selected:hover{
