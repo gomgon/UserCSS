@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     0.1.0
+@version     1.0.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -46,7 +46,8 @@ ul.module_blocks > li,
 .discography_nav,
 #releases #pjax_container,
 .history_form,
-.is_not_mobile table.release_list_table tbody tr:hover{
+.is_not_mobile table.release_list_table tbody tr:hover,
+.ui-autocomplete a{
 background:/*[[elements]]*/;
 }
 #site_header_wrap,
@@ -78,7 +79,10 @@ textarea,
 .anv_selected,
 .history table tr.datarow.highlight,
 .history .hili,
-table.diff th{
+table.diff th,
+#search_tabs,
+.ui-autocomplete a.ui-state-hover,
+.ui-autocomplete a.ui-state-focus{
 background:/*[[elements-lighter]]*/;
 }
 hr{
@@ -171,7 +175,8 @@ textarea,
 .button.button-white[disabled],
 .button[disabled],
 a.inset_button,
-.history_form{
+.history_form,
+#search_tabs{
 border:none;
 }
 .button{
@@ -181,6 +186,9 @@ border:none!important
 .review:last-child,
 .pagination.top{
 border-bottom:none;
+}
+#search_tabs li{
+border-color:/*[[elements]]*/;
 }
 div.section h3,
 .section.tracklist table tr,
@@ -205,7 +213,10 @@ ul.module_blocks > li.module_placeholder:hover,
 .release_list_actions, .releaselist_stats_range_wrap,
 table.release_list_table,
 table.release_list_table tbody tr,
-table.release_list_table tbody tr:last-child{
+table.release_list_table tbody tr:last-child,
+.ui-autocomplete a,
+.ui-autocomplete a.ui-state-hover,
+.ui-autocomplete a.ui-state-focus{
 border-color:/*[[border-color]]*/;
 }
 .tab_menu li.current a{
@@ -246,6 +257,9 @@ textarea,
 -webkit-box-shadow:none;
 box-shadow:none;
 }
+.ui-autocomplete {
+box-shadow: 0px 0px 20px #000000;
+}
 #page.aside_right #page_content{
 box-sizing:border-box;
 }
@@ -278,8 +292,18 @@ a.inset_button,
 a.inset_button:visited,
 a.inset_button[disabled]:hover,
 table.diff th,
-#collection .collection-row{
+#collection .collection-row,
+.muted,
+.broadcast_table .gutter .icon_wrapper,
+.facet_count,
+table.table_block td.empty_row,
+ul.module_blocks .header .remove_module,
+.alert-message .alert-message-close-icon{
 color:/*[[main-text]]*/;
+}
+.ui-autocomplete a .sublabel,
+.ui-autocomplete .format{
+color:/*[[main-text]]*/!important;
 }
 .aside_search_form button:hover i,
 #site_search #do_site_search:hover i,
@@ -313,7 +337,8 @@ a,
 .alert-message.alert-message-announcement .announcement-title,
 a.rollover_link.hl_removed,
 a.rollover_link.hl_changed1,
-a.rollover_link.hl_added{
+a.rollover_link.hl_added,
+.ui-autocomplete a .label{
 color:/*[[color-global]]*/;
 }
 a:hover,
@@ -321,7 +346,8 @@ a:hover,
 .is_not_mobile .youtube_track:hover,
 .tab_menu li.menu-item a:hover,
 .is_not_mobile .facets_nav a:hover,
-a.inset_button:visited:hover{
+a.inset_button:visited:hover,
+.ui-autocomplete.ui-menu .ui-menu-item:hover a{
 color:/*[[color-global-H]]*/;
 }
 a:visited{
@@ -370,12 +396,19 @@ max-width:100%;
 .button.button-white[disabled]{
 opacity:.4;
 }
+.muted,
+.broadcast_table .gutter .icon_wrapper,
+.facet_count{
+opacity:.6;
+}
 #youtube_tracklist{
 outline:none;
 }
 #page,
 div.section div.section_content,
-#page_aside div.section:nth-child(4) div.section_content{
+#page_aside div.section:nth-child(4) div.section_content,
+.ui-autocomplete,
+.ui-autocomplete.ui-menu .ui-menu-item a{
 padding:0px;
 }
 #releases #pjax_container{
@@ -410,6 +443,9 @@ text-decoration:none;
 .button{
 text-shadow:none!important;
 }
+.ui-autocomplete{
+top:56px!important;
+}
 #page.aside_wide #page_aside,
 #full-width-header .aside_wide.full-width-header-content #page_aside,
 #user_header .aside_wide.full-width-header-content #page_aside,
@@ -422,7 +458,13 @@ width:30%;
 .aside_right.header-action-bar #page_content{
 width:70%;
 }
-.section.tracklist table{
+.section.tracklist table,
+#search_tabs{
 width:100%;
+}
+ul.module_blocks > li.loading{
+height:100px;
+background:/*[[elements]]*/;
+color:/*[[main-text]]*/;
 }
 }
