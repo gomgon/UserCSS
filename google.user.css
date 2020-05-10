@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.2.2
+@version     0.3.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -20,6 +20,9 @@ display:none;
 ._Fmb.selected:hover,
 .rllt__action-button:active{
 background:transparent;
+}
+.P1Ycoe {
+background: linear-gradient(90deg,rgba(255, 255, 255, 0),#232323);
 }
 body,
 #fbar,
@@ -42,9 +45,12 @@ div.rl_feature,
 #topstuff .sh-sp__pswtr,
 ._FCr,
 .minidiv .sfbg,
-#gb,
 #sfcnt,
-.Sl6fgd{
+.Sl6fgd,
+.Q0HXG,
+.srp,
+.Xeztj,
+html{
 background:#1E1E1E;
 }
 body.jfk-scrollbar div.bottom-wrapper div:nth-of-type(2),
@@ -82,13 +88,27 @@ div._oip > g-inner-card,
 #hdtbSum,
 .jZWadf,
 .wQnou,
-#kO001e{
+#kO001e,
+.etUWZd{
 background:#232323;
+}
+.v6U7rf #sDeBje{
+background:#232323!important;
 }
 .hdtbItm,
 #cdr_opt,
-.o2ji6GoAIDp__menu{
+.o2ji6GoAIDp__menu,
+.bRsWnc,
+.ZINbbc,
+#hdtb-msb,
+.card:not(:empty),
+.mnr-c:not(:empty),
+.YSlUOe,
+.qcTKEe{
 background-color:#232323;
+}
+.v6U7rf #mlogo{
+background-color:#232323!important;
 }
 .sbibod,
 .sbib_a,
@@ -111,11 +131,16 @@ background-color:#232323;
 #footer,
 .As6eLe,
 .gb_J,
-.gb_F{
+.gb_F,
+.BVG0Nb{
 background:#282828;
 }
 g-fab{
 background:#282828!important;
+}
+.VoEfsd,
+.JooUXc{
+background-color:#282828;
 }
 ._Wmi,
 .ab_button:hover,
@@ -123,7 +148,8 @@ background:#282828!important;
 .aajZCb,
 .zthhpf,
 .lV0vqc,
-.mye4qd{
+.mye4qd,
+.bz1lBb{
 background:#323232;
 }
 ._W6g._Obq:hover g-fab,
@@ -154,7 +180,10 @@ background:#323232!important;
 .msfi,
 .Sl6fgd .Tg7LZd,
 a.gb_O,
-a.gb_P{
+a.gb_P,
+.LKSyXe,
+.GNJvt,
+.LgElHb{
 background-color:#323232;
 }
 .msq_b,
@@ -170,7 +199,11 @@ background-color:#323232!important;
 .goog-menuitem-hover,
 .gssb_e,
 .UUbT9,
-.zGVn2e{
+.zGVn2e,
+.sc,
+.x54gtf,
+.XD1Bsc,
+.XD1Bsc:hover{
 background:#323232;
 }
 .gb_P:hover,
@@ -180,7 +213,6 @@ background-color:#404040!important;
 .jhp input[type="submit"],
 .sbdd_a input,
 .gbqfba,
-.Tg7LZd:hover,
 .Tg7LZd:focus,
 .dw-sb-cont .dw-sb-btn{
 background-color:#434343;
@@ -209,7 +241,7 @@ background-color:#999999;
 ._IUi,
 .DKlyaf,
 #tsbb,
-.Tg7LZd{
+#qdClwb{
 background-color:#5C809E;
 }
 #sblsbb:hover,
@@ -274,7 +306,11 @@ background-image:none!important;
 .zGVn2e,
 .JQyAhb,
 a.gb_O,
-a.gb_P{
+a.gb_P,
+.bRsWnc,
+#qdClwb,
+.GNJvt,
+.LgElHb{
 border:none;
 }
 .ab_button,
@@ -376,7 +412,11 @@ div._Mib,
 .xpdclose .a84NUc:not(:empty),
 .xpdopen .CQKTwc:not(:empty),
 .gb_F,
-.gb_l .gb_L{
+.gb_l .gb_L,
+.Z8j5ae > div > div,
+.Gq01wc,
+.cUnQKe .kno-ftr,
+.bnd1i{
 border-color:#323232;
 }
 .kp-blk .xpdclose .farUxc,
@@ -397,7 +437,8 @@ border-color:#505050;
 #tsbb,
 .gbcps,
 #SBmmZd a.active,
-.Tg7LZd{
+.Tg7LZd,
+span.OXXup{
 border-color: #5C809E;
 }
 .mn-dwn-arw,
@@ -461,7 +502,19 @@ g-inner-card,
 .gssb_e,
 .emca.emcav .zGVn2e,
 .Tg7LZd,
-.zGVn2e{
+.zGVn2e,
+.bz1lBb,
+.KP7LCb,
+#qdClwb,
+.ZINbbc,
+.BVG0Nb,
+.card:not(:empty),
+.mnr-c:not(:empty),
+.f587Pe,
+.V8o6yc,
+.Rk6Aqb,
+.GNJvt,
+.LgElHb{
 border-radius:0;
 }
 ._vpj {
@@ -490,7 +543,9 @@ border-radius:7px;
 ._pEr,
 .BklRsd,
 .gssb_e,
-.gb_F{
+.gb_F,
+.bz1lBb,
+#hdtb-sc{
 box-shadow:none;
 }
 a,
@@ -538,10 +593,19 @@ a.mblink,
 .rQEFy,
 .rQEFy:hover,
 .gbcps,
-#SBmmZd a.active{
+#SBmmZd a.active,
+.Sl6fgd .gBCQ5d,
+.Z7Bonf,
+.FAuhyb,
+.vvjwJb,
+.XLloXe,
+.Xb5VRe,
+.Aq3u8c,
+.OWOjU{
 color:#5C809E;
 }
-._tX{
+._tX,
+span.OXXup{
 color:#5C809E!important;
 }
 #rcnt a:hover,
@@ -552,7 +616,8 @@ color:#5C809E!important;
 .sbico-c:hover .sbico,
 ._shr:hover ._Iqg,
 ._shr:hover ._Fqg,
-._O4n:hover{
+._O4n:hover,
+.Tg7LZd:hover .FAuhyb{
 color:#779ABD;
 }
 .mblink:visited,
@@ -569,13 +634,15 @@ cite a:visited,
 .cite,
 .cite:link,
 #_bGc > i,
-.bc a:link{
+.bc a:link,
+.UPmit.AP7Wnd{
 color:#4D804A;
 }
 .sben_a,
 .sh-sp__pswtr,
 ._Lqc,
-.fxgdke{
+.fxgdke,
+.kbNtnf{
 color:#666666;
 }
 .sr__link,
@@ -621,7 +688,8 @@ color:#777777;
 .F9PbJd,
 .RScZKc,
 .W8wzH,
-.mye4qd{
+.mye4qd,
+.r9PaP{
 color:#808080;
 }
 .s,
@@ -787,7 +855,25 @@ a.ab_dropdownlnk:hover,
 #footer b,
 .fbar p, .fbar a,
 #fsettl, #fsett a,
-#gb#gb a.gb_f, #gb#gb a.gb_g, #gb#gb span.gb_g{
+#gb#gb a.gb_f,
+#gb#gb a.gb_g,
+#gb#gb span.gb_g,
+.lBbtTb,
+.Uv67qb a,
+.Uv67qb span,
+.s3v9rd.AP7Wnd,
+.deIvCb.AP7Wnd,
+.qzEoUe,
+.N60dNb,
+.N60dNb a,
+.UG0mTe,
+.s75CSd,
+.ZoN4Lb,
+.GNJvt,
+.kQdGHd,
+.XD1Bsc,
+.XD1Bsc:hover,
+input{
 color:#999999;
 }
 ._xdb .fl,
@@ -795,7 +881,9 @@ color:#999999;
 .tw-data-text,
 ._e8k,
 a.Y0uHMb,
-.F9PbJd:hover{
+.F9PbJd:hover,
+#mCljob div span span,
+#fbar .fbar div#fuserm span span{
 color:#999999!important;
 }
 .s .st em,
@@ -829,6 +917,9 @@ color: #CCCCCC !important;
 }
 ._ldf:hover ._chp.ab_button{
 color:#FFFFFF!important;
+}
+.H1KrKd {
+fill: #808080;
 }
 ._tAr,
 ._knk,
@@ -890,17 +981,6 @@ width: 40px;
 .Tg7LZd{
 margin: 0;
 }
-#fbar{
-opacity:0;
--webkit-transition: opacity .5s;
-transition: opacity .5s
-}
-#fbar:hover,
-._Fnc,
-#gb#gb a.gb_e:hover,
-#gb#gb a.gb_e:focus{
-opacity:1;
-}
 .hdtb-mn-o,
 .hdtb-mn-c,
 ._v0g,
@@ -957,6 +1037,21 @@ background: transparent;
 }
 #footer a{
 color: #999999;
+}
+#fbar{
+opacity:0;
+transition: opacity .5s
+}
+#fbar:hover,
+._Fnc,
+#gb#gb a.gb_e:hover,
+#gb#gb a.gb_e:focus{
+opacity:1;
+}
+}
+@media (max-width:767px){
+.Tg7LZd{
+background-color:#5C809E;
 }
 }
 /* To sort */
