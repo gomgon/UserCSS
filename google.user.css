@@ -1,13 +1,55 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.3.1
+@version     0.4.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
 @author      gomgon
+@advanced dropdown footer "Auto-hide footer" {
+No "No" <<<EOT
+EOT;
+Yes "Yes" <<<EOT
+#footer{
+background: transparent;
+}
+#fbar{
+opacity:0;
+transition: opacity .5s
+}
+#fbar:hover,
+._Fnc,
+#gb#gb a.gb_e:hover,
+#gb#gb a.gb_e:focus{
+opacity:1;
+} EOT;
+}
 ==/UserStyle== */
 @-moz-document domain("google.com"), regexp("https:\\/\\/(www\\.)?google\\.(com|([a-z]{2}))(\\.[a-z]{2})?\\/.*"){
+@media (min-width:768px){
+/*[[footer]]*/
+a:link,
+.q:active,
+.q:visited {
+color: #5C809E;
+}
+a.GvDr7c{
+color: #CCCCCC;
+}
+}
+@media (max-width:767px){
+.Tg7LZd{
+background-color:#5C809E;
+}
+#gb{
+background: #232323;
+border-bottom: none;
+}
+a,
+a.feGi6e{
+color:#5C809E;
+}
+}
 .jsb,
 .sbsb_g,
 .ab_dropdownrule,
@@ -24,6 +66,7 @@ background:transparent;
 .P1Ycoe {
 background: linear-gradient(90deg,rgba(255, 255, 255, 0),#232323);
 }
+html,
 body,
 #fbar,
 .sfbgg,
@@ -47,15 +90,19 @@ div.rl_feature,
 .minidiv .sfbg,
 #sfcnt,
 .Sl6fgd,
-.Q0HXG,
 .srp,
 .Xeztj,
-html{
+#isv,
+.qe1Dgc,
+.RfVIk, .FkFdQc{
 background:#1E1E1E;
 }
 body.jfk-scrollbar div.bottom-wrapper div:nth-of-type(2),
 .mssb_f{
 background:#1E1E1E!important;
+}
+.iKjWAf{
+background-color:#1E1E1E;
 }
 .kp-blk,
 .rl_item,
@@ -92,7 +139,9 @@ div._oip > g-inner-card,
 .etUWZd{
 background:#232323;
 }
-.v6U7rf #sDeBje{
+.v6U7rf #sDeBje,
+.suApsd,
+#sfcnt{
 background:#232323!important;
 }
 .hdtbItm,
@@ -102,12 +151,21 @@ background:#232323!important;
 .ZINbbc,
 #hdtb-msb,
 .card:not(:empty),
-.mnr-c:not(:empty),
 .YSlUOe,
-.qcTKEe{
+.qcTKEe,
+.I6TXqe,
+g-card,
+article,
+.card:not(:empty),
+.mnr-c:not(:empty),
+.uais2d,
+.fyNb1e,
+.D9l01,
+.v6U7rf{
 background-color:#232323;
 }
-.v6U7rf #mlogo{
+.v6U7rf #mlogo,
+.VibNM{
 background-color:#232323!important;
 }
 .sbibod,
@@ -119,7 +177,6 @@ background-color:#232323!important;
 ._qgo:hover,
 .klitem.selected,
 .klitem:hover,
-.rl_item:hover,
 ._Db:hover,
 ._Db:active,
 .rllt__local-item-selected,
@@ -132,14 +189,22 @@ background-color:#232323!important;
 .As6eLe,
 .gb_J,
 .gb_F,
-.BVG0Nb{
+.BVG0Nb,
+.H73aad,
+.y8Jpof:hover,
+.tS8mh,
+.knHJyb,
+.Nur2ud,
+.X2RyJf{
 background:#282828;
 }
 g-fab{
 background:#282828!important;
 }
 .VoEfsd,
-.JooUXc{
+.JooUXc,
+.nZWEZc .ttwCMe,
+.Z8r5Gb{
 background-color:#282828;
 }
 ._Wmi,
@@ -149,7 +214,11 @@ background-color:#282828;
 .zthhpf,
 .lV0vqc,
 .mye4qd,
-.bz1lBb{
+.bz1lBb,
+.H73aad:hover,
+.Q0HXG,
+.gIoMsd,
+.lqQNEe{
 background:#323232;
 }
 ._W6g._Obq:hover g-fab,
@@ -183,7 +252,8 @@ a.gb_O,
 a.gb_P,
 .LKSyXe,
 .GNJvt,
-.LgElHb{
+.LgElHb,
+.sbc{
 background-color:#323232;
 }
 .msq_b,
@@ -205,6 +275,9 @@ background-color:#323232!important;
 .XD1Bsc,
 .XD1Bsc:hover{
 background:#323232;
+}
+sticky-header .kpshf{
+background:#323232!important;
 }
 .gb_P:hover,
 .gb_O:hover{
@@ -310,7 +383,14 @@ a.gb_P,
 .bRsWnc,
 #qdClwb,
 .GNJvt,
-.LgElHb{
+.LgElHb,
+.I6TXqe,
+.H73aad,
+.BupAEd,
+.hBwXxe,
+.gIoMsd,
+.JlDOsc,
+.lqQNEe{
 border:none;
 }
 .ab_button,
@@ -321,6 +401,9 @@ border:none;
 body.jfk-scrollbar div.bottom-wrapper div:nth-of-type(2),
 .msfi{
 border:none!important;
+}
+.wRPYSe{
+border-bottom:none!important;
 }
 .BklRsd{
 border: 1px solid #323232;
@@ -347,11 +430,18 @@ border-bottom:6px solid #5C809E;
 .tb_l {
 border-left: 1px solid #323232;
 }
+hr,
+html body div#footer hr,
 ._qgo,
 ._qhf,
 .Sl6fgd .UUbT9,
-html body div#footer hr{
+.P6it3,
+.VibNM{
 border-color:#1E1E1E;
+}
+.arRknd,
+.vQ6j2c.LKLadb{
+border-color:#1E1E1E!important;
 }
 .F9PbJd{
 border-color:#282828;
@@ -416,11 +506,20 @@ div._Mib,
 .Z8j5ae > div > div,
 .Gq01wc,
 .cUnQKe .kno-ftr,
-.bnd1i{
+.bnd1i,
+.eZIk0e,
+.aolEtc,
+.CNf3nf,
+.xpc hr,
+.n8WSwd,
+.n8WSwd:visited,
+.F4Swt span,
+.wQncmd a, .ZldK9c{
 border-color:#323232;
 }
 .kp-blk .xpdclose .farUxc,
-.kp-blk .xpdopen .mJ2Mod{
+.kp-blk .xpdopen .mJ2Mod,
+.I6TXqe div[style]{
 border-color:#323232!important;
 }
 .kcb,
@@ -438,7 +537,8 @@ border-color:#505050;
 .gbcps,
 #SBmmZd a.active,
 .Tg7LZd,
-span.OXXup{
+span.OXXup,
+span.CQeUrc{
 border-color: #5C809E;
 }
 .mn-dwn-arw,
@@ -514,7 +614,21 @@ g-inner-card,
 .V8o6yc,
 .Rk6Aqb,
 .GNJvt,
-.LgElHb{
+.LgElHb,
+.I6TXqe,
+.HSryR .ySjHwc,
+.H73aad,
+.HIBm4b,
+.uais2d,
+.knHJyb,
+.orkam,
+.Nur2ud,
+.X2RyJf,
+.lqQNEe,
+#sfcnt.TshKde,
+#rhs .eA0Zlc.PtaMgb,
+#rhs .kno-mrg,
+#rhs .kno-mrg:not(.kno-mrg-si){
 border-radius:0;
 }
 ._vpj {
@@ -545,11 +659,13 @@ border-radius:7px;
 .gssb_e,
 .gb_F,
 .bz1lBb,
-#hdtb-sc{
+#hdtb-sc,
+.uais2d,
+.Nur2ud,
+.X2RyJf,
+.GJwImd{
 box-shadow:none;
 }
-a,
-a:link,
 a.fl:link,
 a.flt,
 a.mblink,
@@ -601,11 +717,30 @@ a.mblink,
 .XLloXe,
 .Xb5VRe,
 .Aq3u8c,
-.OWOjU{
+.OWOjU,
+.SW5pqf,
+span.CQeUrc,
+#NlXXHc,
+#NlXXHc:hover,
+#NlXXHc:visited,
+.QuRcFb,
+.QuRcFb:hover,
+.QuRcFb:visited,
+.ZldK9c,
+.wQncmd a,
+.ZbF3Ee,
+.kjc8d,
+.kp-wholepage
+.Z1hOCe a:link,
+.N82rDb, .N82rDb:visited,
+.pBGTod,
+.WpKAof,
+.sXtWJb, .UyheGb{
 color:#5C809E;
 }
 ._tX,
-span.OXXup{
+span.OXXup,
+.xXEKkb{
 color:#5C809E!important;
 }
 #rcnt a:hover,
@@ -647,7 +782,11 @@ color:#666666;
 }
 .sr__link,
 .sr__link:link,
-.sr__link:visited{
+.sr__link:visited,
+.WZ8Tjf,
+.rjmdhd,
+.s6Evvd.rz8nGb,
+.HxQHOc{
 color:#777777;
 }
 .cj2HCb a,
@@ -689,7 +828,16 @@ color:#777777;
 .RScZKc,
 .W8wzH,
 .mye4qd,
-.r9PaP{
+.r9PaP,
+.wwUB2c,
+.ftl,
+#footer a,
+.n8WSwd, .n8WSwd:visited,
+.WTHmze,
+.qIE9I,
+.Bo9xMe,
+.LeA1se,
+.AqEFvb{
 color:#808080;
 }
 .s,
@@ -697,7 +845,8 @@ color:#808080;
 a.ab_dropdownlnkinfo,
 a.ab_dropdownlnk:visited,
 g-fab,
-.F9PbJd{
+.F9PbJd,
+footer a{
 color:#808080!important;
 }
 .cj2HCb a:hover,
@@ -705,6 +854,7 @@ color:#808080!important;
 .KQsPse:hover .w6lkhd,
 a:hover .W8wzH,
 body,
+input,
 #lst-ib,
 #gb#gb a.gb_P,
 #gb#gb span.gb_P,
@@ -861,6 +1011,7 @@ a.ab_dropdownlnk:hover,
 .lBbtTb,
 .Uv67qb a,
 .Uv67qb span,
+.Pg70bf a,
 .s3v9rd.AP7Wnd,
 .deIvCb.AP7Wnd,
 .qzEoUe,
@@ -873,9 +1024,50 @@ a.ab_dropdownlnk:hover,
 .kQdGHd,
 .XD1Bsc,
 .XD1Bsc:hover,
-input{
+.JolIg,
+.hb8SAc,
+.rsir2d,
+.jleFbf,
+.cwUqwd,
+.y8Jpof .LrzXr,
+.tr9W5c,
+.ygdOJd, .HNdZMe,
+.mVDMnf,
+.isv-t,
+a.isv-t:visited,
+#yung9e, .JburEd,
+.NZmxZe,
+.hdtb-mitem a,
+#hdtb-more-mn a,
+.JNkvid .HnYYW,
+.w8qArf,
+.w8qArf a.fl,
+.kno-rdesc,
+.lyLwlc,
+.oyj2db,
+.i3LlFf,
+.Ebeqye,
+.PyJv1b,
+.wx62f,
+.aGjgEf,
+.Bgg9M,
+.IZsHSb,
+.LMMXP,
+.hDeAhf,
+.LL6Bte .PUETGe,
+.mV71fc,
+.CtCigf,
+.c2CP2c .PUETGe,
+.U1Vrnd,
+.lqQNEe,
+.N7nxZd .PUETGe,
+.GopWbb, .GopWbb span,
+.fyNb1e,
+.LL6Bte.dMcjUd .PUETGe,
+.iDjcJe{
 color:#999999;
 }
+
 ._xdb .fl,
 .vk_bk,
 .tw-data-text,
@@ -883,7 +1075,11 @@ color:#999999;
 a.Y0uHMb,
 .F9PbJd:hover,
 #mCljob div span span,
-#fbar .fbar div#fuserm span span{
+#fbar .fbar div#fuserm span span,
+footer div span span,
+.Lu0opc.eSq3C:hover g-fab,
+.tS8mh,
+sticky-header g-tabs .Dcntxe a{
 color:#999999!important;
 }
 .s .st em,
@@ -918,6 +1114,10 @@ color: #CCCCCC !important;
 ._ldf:hover ._chp.ab_button{
 color:#FFFFFF!important;
 }
+.n8WSwd,
+.n8WSwd:visited{
+fill: #5C809E;
+}
 .H1KrKd {
 fill: #808080;
 }
@@ -940,13 +1140,16 @@ input[type="image"],
 ._Zoj,
 ._apj,
 ._Zgf,
-.gbsi{
+.gbsi,
+.card-section .ZseVEf,
+.amp_r .ZseVEf{
 filter:invert(90%);
 }
 #ccw_chart {
 filter: invert(88.5%);
 }
-.i8Msie{
+.i8Msie,
+.YsGUOb{
 filter:invert(70%);
 }
 .stt-uf,
@@ -970,6 +1173,12 @@ height: 28px;
 #sblsbb{
 height:38px;
 }
+.sbc{
+height: 39px;
+}
+.sfbgg{
+height: 72px;
+}
 .dw-sb-cont .dw-sb-btn {
 line-height: 40px;
 width: 40px;
@@ -992,9 +1201,6 @@ padding:0;
 }
 .sbico-c{
 padding:0px 10px;
-}
-.A8SBwf{
-padding-top:6px;
 }
 ._Psr line{
 stroke:#505050;
@@ -1030,33 +1236,6 @@ width:38px;
 .RNNXgb,
 .zthhpf{
 width:582px;
-}
-@media (min-width:768px){
-#footer{
-background: transparent;
-}
-#footer a{
-color: #999999;
-}
-#fbar{
-opacity:0;
-transition: opacity .5s
-}
-#fbar:hover,
-._Fnc,
-#gb#gb a.gb_e:hover,
-#gb#gb a.gb_e:focus{
-opacity:1;
-}
-}
-@media (max-width:767px){
-.Tg7LZd{
-background-color:#5C809E;
-}
-#gb{
-background: #232323;
-border-bottom: none;
-}
 }
 /* To sort */
 .imso-hov:hover {
@@ -1137,5 +1316,14 @@ height: 12px;
 margin-top: 1px;
 user-select: none;
 width: 13px;
+}
+#sfcnt {
+margin-left: 0px;
+margin-right: 0px;
+padding-left: 8px;
+padding-right: 8px;
+}
+#msc {
+margin-top: 0px;
 }
 }
