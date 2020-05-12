@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.4.0
+@version     0.4.1
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -49,11 +49,15 @@ a,
 a.feGi6e{
 color:#5C809E;
 }
+.msq_a{
+color:#999999!important;
+}
 }
 .jsb,
 .sbsb_g,
 .ab_dropdownrule,
-.mssb_f td hr{
+.mssb_f td hr,
+.mssb_f{
 display:none;
 }
 ._Fmb,
@@ -184,8 +188,7 @@ background-color:#232323!important;
 .ab_button,
 .F9PbJd,
 .Pvpvv,
-#gbr,
-#footer,
+#footer:not(.ctr-p),
 .As6eLe,
 .gb_J,
 .gb_F,
@@ -218,7 +221,8 @@ background-color:#282828;
 .H73aad:hover,
 .Q0HXG,
 .gIoMsd,
-.lqQNEe{
+.lqQNEe,
+#gbr{
 background:#323232;
 }
 ._W6g._Obq:hover g-fab,
@@ -628,7 +632,8 @@ g-inner-card,
 #sfcnt.TshKde,
 #rhs .eA0Zlc.PtaMgb,
 #rhs .kno-mrg,
-#rhs .kno-mrg:not(.kno-mrg-si){
+#rhs .kno-mrg:not(.kno-mrg-si),
+#gbr{
 border-radius:0;
 }
 ._vpj {
@@ -735,7 +740,8 @@ span.CQeUrc,
 .N82rDb, .N82rDb:visited,
 .pBGTod,
 .WpKAof,
-.sXtWJb, .UyheGb{
+.sXtWJb, .UyheGb,
+.gsch_a a{
 color:#5C809E;
 }
 ._tX,
@@ -1190,6 +1196,9 @@ width: 40px;
 .Tg7LZd{
 margin: 0;
 }
+.gssb_c {
+margin-top: 2px;
+}
 .hdtb-mn-o,
 .hdtb-mn-c,
 ._v0g,
@@ -1317,9 +1326,17 @@ margin-top: 1px;
 user-select: none;
 width: 13px;
 }
-#sfcnt {
-margin-left: 0px;
-margin-right: 0px;
+#main > #sfcnt{
+background: #1E1E1E!important;
+margin-left: 0px!important;
+margin-right: 0px!important;
+padding-left: 8px;
+padding-right: 8px;
+}
+#sfcnt{
+background: #232323!important;
+margin-left: 0px!important;
+margin-right: 0px!important;
 padding-left: 8px;
 padding-right: 8px;
 }
