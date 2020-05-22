@@ -1,11 +1,16 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.4.1
+@version     0.5.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
 @author      gomgon
+@advanced color bg "Background" #1E1E1E
+@advanced color bg-lighter "Lighter elements" #232323
+@advanced color main-text "Main text" #999999
+@advanced color accent "Accent color" #5C809E
+@advanced color accent-h "Accent color lighter" #77A6CC
 @advanced dropdown footer "Auto-hide footer" {
 No "No" <<<EOT
 EOT;
@@ -31,7 +36,7 @@ opacity:1;
 a:link,
 .q:active,
 .q:visited {
-color: #5C809E;
+color:/*[[accent]]*/;
 }
 a.GvDr7c{
 color: #CCCCCC;
@@ -39,18 +44,18 @@ color: #CCCCCC;
 }
 @media (max-width:767px){
 .Tg7LZd{
-background-color:#5C809E;
+background-color:/*[[accent]]*/;
 }
 #gb{
-background: #232323;
+background:/*[[bg-lighter]]*/;
 border-bottom: none;
 }
 a,
 a.feGi6e{
-color:#5C809E;
+color:/*[[accent]]*/;
 }
 .msq_a{
-color:#999999!important;
+color:/*[[main-text]]*/!important;
 }
 }
 .jsb,
@@ -64,11 +69,21 @@ display:none;
 ._Fmb:hover,
 ._Fmb.selected,
 ._Fmb.selected:hover,
-.rllt__action-button:active{
+.rllt__action-button:active,
+.WGYX8{
 background:transparent;
 }
+.fLJSwc{
+background:transparent!important;
+}
 .P1Ycoe {
-background: linear-gradient(90deg,rgba(255, 255, 255, 0),#232323);
+background: linear-gradient(90deg,rgba(255, 255, 255, 0),/*[[bg-lighter]]*/);
+}
+#isr_chc g-right-button {
+background: linear-gradient(270deg,/*[[bg]]*/ 10%,rgba(255,255,255,0));
+}
+#isr_chc g-left-button {
+background: linear-gradient(90deg,/*[[bg]]*/ 10%,rgba(255,255,255,0));
 }
 html,
 body,
@@ -99,14 +114,14 @@ div.rl_feature,
 #isv,
 .qe1Dgc,
 .RfVIk, .FkFdQc{
-background:#1E1E1E;
+background:/*[[bg]]*/;
 }
 body.jfk-scrollbar div.bottom-wrapper div:nth-of-type(2),
 .mssb_f{
-background:#1E1E1E!important;
+background:/*[[bg]]*/!important;
 }
 .iKjWAf{
-background-color:#1E1E1E;
+background-color:/*[[bg]]*/;
 }
 .kp-blk,
 .rl_item,
@@ -141,12 +156,12 @@ div._oip > g-inner-card,
 .wQnou,
 #kO001e,
 .etUWZd{
-background:#232323;
+background:/*[[bg-lighter]]*/;
 }
 .v6U7rf #sDeBje,
 .suApsd,
 #sfcnt{
-background:#232323!important;
+background:/*[[bg-lighter]]*/!important;
 }
 .hdtbItm,
 #cdr_opt,
@@ -161,16 +176,21 @@ background:#232323!important;
 g-card,
 article,
 .card:not(:empty),
-.mnr-c:not(:empty),
 .uais2d,
 .fyNb1e,
 .D9l01,
-.v6U7rf{
-background-color:#232323;
+.v6U7rf,
+.Hwkikb,
+.MXl0lf,
+.ImROUe,
+#hdtb.hdtba #hdtbMenus,
+.Ydr8h,
+.WGYX8:hover{
+background-color:/*[[bg-lighter]]*/;
 }
 .v6U7rf #mlogo,
 .VibNM{
-background-color:#232323!important;
+background-color:/*[[bg-lighter]]*/!important;
 }
 .sbibod,
 .sbib_a,
@@ -198,7 +218,8 @@ background-color:#232323!important;
 .tS8mh,
 .knHJyb,
 .Nur2ud,
-.X2RyJf{
+.X2RyJf,
+.iFBpgc .LfE12c:not(.iqv4K):hover .MjJo9{
 background:#282828;
 }
 g-fab{
@@ -207,7 +228,8 @@ background:#282828!important;
 .VoEfsd,
 .JooUXc,
 .nZWEZc .ttwCMe,
-.Z8r5Gb{
+.Z8r5Gb,
+.Jb0Zif .kIXOkb:hover{
 background-color:#282828;
 }
 ._Wmi,
@@ -257,7 +279,11 @@ a.gb_P,
 .LKSyXe,
 .GNJvt,
 .LgElHb,
-.sbc{
+.sbc,
+.MXl0lf:hover,
+.ImROUe:hover,
+.pb5vrc,
+    .ltd0Tb{
 background-color:#323232;
 }
 .msq_b,
@@ -309,8 +335,9 @@ background-color:#505050;
 }
 .vk_ard,
 .vk_aru{
-background-color:#999999;
+background-color:/*[[main-text]]*/;
 }
+.JJP03,
 #sblsbb,
 .jfk-button-action,
 ._Nvg,
@@ -319,11 +346,15 @@ background-color:#999999;
 .DKlyaf,
 #tsbb,
 #qdClwb{
-background-color:#5C809E;
+background-color:/*[[accent]]*/;
+}
+li[aria-selected="true"] > .MjJo9{
+background-color:/*[[accent]]*/!important;
+color:#FFFFFF!important;
 }
 #sblsbb:hover,
 .jfk-button-action:hover{
-background-color:#779ABD;
+background-color:/*[[accent-h]]*/;
 }
 .ab_button,
 .jfk-button-action,
@@ -394,7 +425,11 @@ a.gb_P,
 .hBwXxe,
 .gIoMsd,
 .JlDOsc,
-.lqQNEe{
+.lqQNEe,
+.rhs-osrp .cLjAic,
+.vnLNtd.mnr-c,
+#hdtb.hdtba #hdtbMenus,
+.Jb0Zif .Si5xMe{
 border:none;
 }
 .ab_button,
@@ -413,23 +448,23 @@ border-bottom:none!important;
 border: 1px solid #323232;
 }
 .vk_ard::after{
-border-top:16px solid #232323;
+border-top:16px solid /*[[bg-lighter]]*/;
 }
 .vk_ard::before{
-border-top:16px solid #999999;
+border-top:16px solid /*[[main-text]]*/;
 }
 .vk_aru::after{
-border-bottom:16px solid #232323;
+border-bottom:16px solid /*[[bg-lighter]]*/;
 }
 .vk_aru::before{
-border-bottom:16px solid #999999;
+border-bottom:16px solid /*[[main-text]]*/;
 }
 #hdtb-msb .hdtb-mitem.hdtb-msel,
 #hdtb-msb .hdtb-mitem.hdtb-msel-pre{
-border-bottom:3px solid #5C809E;
+border-bottom:3px solid /*[[accent]]*/;
 }
 .klitem.selected{
-border-bottom:6px solid #5C809E;
+border-bottom:6px solid /*[[accent]]*/;
 }
 .tb_l {
 border-left: 1px solid #323232;
@@ -440,12 +475,13 @@ html body div#footer hr,
 ._qhf,
 .Sl6fgd .UUbT9,
 .P6it3,
-.VibNM{
-border-color:#1E1E1E;
+.VibNM,
+.Hwkikb{
+border-color:/*[[bg]]*/;
 }
 .arRknd,
 .vQ6j2c.LKLadb{
-border-color:#1E1E1E!important;
+border-color:/*[[bg]]*/!important;
 }
 .F9PbJd{
 border-color:#282828;
@@ -518,19 +554,36 @@ div._Mib,
 .n8WSwd,
 .n8WSwd:visited,
 .F4Swt span,
-.wQncmd a, .ZldK9c{
+.wQncmd a, .ZldK9c,
+.rhs-osrp .qIshu,
+.rhs-osrp .JNkvid,
+.Hwkikb .JNkvid,
+.BfIAp,
+.WDZaZd,
+.w6bhBd,
+.VJwspe,
+.MXl0lf,
+.ImROUe,
+.aokhrd .TZahnb,
+.rhs-osrp .JW2g8,
+.d7sCQ,
+.XQvBOc,
+.WGYX8,
+.ChlgHf{
 border-color:#323232;
 }
 .kp-blk .xpdclose .farUxc,
 .kp-blk .xpdopen .mJ2Mod,
-.I6TXqe div[style]{
+.I6TXqe div[style],
+.s2TyX div[jscontroller="V9u9Nb"]{
 border-color:#323232!important;
 }
 .kcb,
 .xtSCL,
 .fNHVKc,
 .TwNUtc,
-.UwAaac{
+.UwAaac,
+.BfIAp:hover{
 border-color:#505050;
 }
 ._Db:active,
@@ -543,7 +596,7 @@ border-color:#505050;
 .Tg7LZd,
 span.OXXup,
 span.CQeUrc{
-border-color: #5C809E;
+border-color:/*[[accent]]*/;
 }
 .mn-dwn-arw,
 ._mx{
@@ -553,16 +606,16 @@ border-color: #808080 transparent;
 .hdtb-mn-hd:hover .mn-dwn-arw,
 ._Rf.rlf__open:not(.rlf__applied) ._mx,
 ._Rf:hover:not(.rlf__applied) ._mx{
-border-color: #999999 transparent;
+border-color: /*[[main-text]]*/ transparent;
 }
 .tw-lang-selector-wrapper:hover::after {
 border-color: #CCCCCC transparent;
 }
 ._vap{
-border-color: #5C809E transparent;
+border-color:/*[[accent]]*/ transparent;
 }
 ._Lap:hover ._vap {
-border-color: #779ABD transparent;
+border-color: /*[[accent-h]]*/ transparent;
 }
 .ab_button,
 ._fAg,
@@ -633,7 +686,13 @@ g-inner-card,
 #rhs .eA0Zlc.PtaMgb,
 #rhs .kno-mrg,
 #rhs .kno-mrg:not(.kno-mrg-si),
-#gbr{
+#gbr,
+.emcav.emcat .RNNXgb,
+.Hwkikb,
+.lu-fs,
+.Si5xMe,
+.N0Txue,
+.Z8r5Gb{
 border-radius:0;
 }
 ._vpj {
@@ -741,13 +800,19 @@ span.CQeUrc,
 .pBGTod,
 .WpKAof,
 .sXtWJb, .UyheGb,
-.gsch_a a{
-color:#5C809E;
+.gsch_a a,
+.ImROUe,
+.LbNDAb,
+.T9EeC:hover div,
+.T9EeC:hover .WeviRb,
+.KuHTTd{
+color:/*[[accent]]*/;
 }
 ._tX,
 span.OXXup,
-.xXEKkb{
-color:#5C809E!important;
+.xXEKkb,
+.MjJo9{
+color:/*[[accent]]*/!important;
 }
 #rcnt a:hover,
 #brs a:hover,
@@ -759,7 +824,7 @@ color:#5C809E!important;
 ._shr:hover ._Fqg,
 ._O4n:hover,
 .Tg7LZd:hover .FAuhyb{
-color:#779ABD;
+color:/*[[accent-h]]*/;
 }
 .mblink:visited,
 a:visited{
@@ -783,7 +848,8 @@ color:#4D804A;
 .sh-sp__pswtr,
 ._Lqc,
 .fxgdke,
-.kbNtnf{
+.kbNtnf,
+.eipWBe{
 color:#666666;
 }
 .sr__link,
@@ -792,7 +858,15 @@ color:#666666;
 .WZ8Tjf,
 .rjmdhd,
 .s6Evvd.rz8nGb,
-.HxQHOc{
+.HxQHOc,
+.r0bn4c.rQMQod,
+.rsj3fb,
+.u1M3kd.g6Ealc,
+.Aq14fc,
+.WeviRb,
+.PmPt7d,
+.kX21rb,
+.DbaDvc{
 color:#777777;
 }
 .cj2HCb a,
@@ -843,7 +917,9 @@ color:#777777;
 .qIE9I,
 .Bo9xMe,
 .LeA1se,
-.AqEFvb{
+.AqEFvb,
+.OZ8wsd,
+.VJwspe{
 color:#808080;
 }
 .s,
@@ -1070,10 +1146,25 @@ a.isv-t:visited,
 .GopWbb, .GopWbb span,
 .fyNb1e,
 .LL6Bte.dMcjUd .PUETGe,
-.iDjcJe{
-color:#999999;
+.iDjcJe,
+.iBp4i.AP7Wnd,
+.KMdzJ,
+.ChlgHf .HnYYW,
+.bclEt,
+.cROF7c,
+.MKQ4n,
+.ksGEnc,
+.LWyAN,
+.H1ccWd,
+.cJzOGc,
+.mus_tt17,
+a .SuDEy,
+a:visited .SuDEy,
+.WGYX8,
+.WGYX8:hover,
+.ySGpV .y9PzGc{
+color:/*[[main-text]]*/;
 }
-
 ._xdb .fl,
 .vk_bk,
 .tw-data-text,
@@ -1085,8 +1176,9 @@ a.Y0uHMb,
 footer div span span,
 .Lu0opc.eSq3C:hover g-fab,
 .tS8mh,
-sticky-header g-tabs .Dcntxe a{
-color:#999999!important;
+sticky-header g-tabs .Dcntxe a,
+.Lu0opc.ESkzqb:hover g-fab{
+color:/*[[main-text]]*/!important;
 }
 .s .st em,
 .st.s.std em,
@@ -1122,15 +1214,19 @@ color:#FFFFFF!important;
 }
 .n8WSwd,
 .n8WSwd:visited{
-fill: #5C809E;
+fill:/*[[accent]]*/;
 }
-.H1KrKd {
+.BfIAp{
+fill: #606060;
+}
+.H1KrKd{
 fill: #808080;
 }
 ._tAr,
 ._knk,
-.Km0Gdb{
-fill:#999999;
+.Km0Gdb,
+.BfIAp:hover{
+fill:/*[[main-text]]*/;
 }
 ._Jxg,
 ._Jxg span,
@@ -1148,7 +1244,8 @@ input[type="image"],
 ._Zgf,
 .gbsi,
 .card-section .ZseVEf,
-.amp_r .ZseVEf{
+.amp_r .ZseVEf,
+.BlOseb.MFTKyf .KkkQv, .k2Oeod.MFTKyf .S2C1T{
 filter:invert(90%);
 }
 #ccw_chart {
@@ -1196,8 +1293,8 @@ width: 40px;
 .Tg7LZd{
 margin: 0;
 }
-.gssb_c {
-margin-top: 2px;
+.nZWEZc {
+margin: 0 0 0 10px;
 }
 .hdtb-mn-o,
 .hdtb-mn-c,
@@ -1259,7 +1356,7 @@ border-radius: 0px;
 .imspo_mt__dt-t,
 .imspo_mt__pm-inf,
 .YIikAd{
-color: #999999;
+color:/*[[main-text]]*/;
 }
 .imspo_mt__lt-t,
 .imspo_mt__cmd,
@@ -1271,19 +1368,19 @@ color: #777777;
 }
 .gMTFD91jmVs__dlc-no .gMTFD91jmVs__dlc-a:link,
 .gMTFD91jmVs__dlc-no .gMTFD91jmVs__dlc-a:visited{
-color: #5C809E;
+color:/*[[accent]]*/;
 }
 .imspo_mt__vs-c{
-background: linear-gradient(to bottom,transparent 0%,transparent 12.5%,#1E1E1E 12.5%,#1E1E1E 87.5%,transparent 87.5%,transparent 100%);
+background: linear-gradient(to bottom,transparent 0%,transparent 12.5%,/*[[bg]]*/ 12.5%,/*[[bg]]*/ 87.5%,transparent 87.5%,transparent 100%);
 }
 td.imspo_mt__rg svg.imspo_mt__triangle polygon{
-fill:#999999 !important;
+fill:/*[[main-text]]*/!important;
 }
 .eGNEZ{
-border-bottom: solid 1px #1E1E1E;
+border-bottom: solid 1px /*[[bg]]*/;
 }
 .MoyuKc{
-border-right: solid 1px #1E1E1E;
+border-right: solid 1px /*[[bg]]*/;
 }
 .YPgUJe{
 box-shadow: none;
@@ -1293,10 +1390,10 @@ border-left: none;
 }
 .kp-blk .xpdclose .farUxc,
 .kp-blk .xpdopen .mJ2Mod{
-border-top: solid 1px #1E1E1E;
+border-top: solid 1px /*[[bg]]*/;
 }
 .w8qArf .fl{
-color:#999999!important;
+color:/*[[main-text]]*/!important;
 }
 .goog-flat-menu-button{
 border-radius: 0px;
@@ -1327,14 +1424,10 @@ user-select: none;
 width: 13px;
 }
 #main > #sfcnt{
-background: #1E1E1E!important;
-margin-left: 0px!important;
-margin-right: 0px!important;
-padding-left: 8px;
-padding-right: 8px;
+background: /*[[bg]]*/!important;
 }
 #sfcnt{
-background: #232323!important;
+background:/*[[bg-lighter]]*/!important;
 margin-left: 0px!important;
 margin-right: 0px!important;
 padding-left: 8px;
