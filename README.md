@@ -13,5 +13,10 @@ The stylesheet will be updated automaticaly by the addon.
 <br>
 #
 ![Discogs](/images/discogs.png) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css) Discogs stylesheet.
+
+<img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/DiscogsScreenshot1.png" height="80" title="Click to enlarge"></img>
+<img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/DiscogsScreenshot2.png" height="80" title="Click to enlarge"></img>
+<img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/DiscogsScreenshot3.png" height="80" title="Click to enlarge"></img>
+<br>
 #
 ![Google](/images/google.png) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css) Google stylesheet. (work in progress)
