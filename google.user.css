@@ -1,14 +1,15 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.5.0
+@version     0.5.1
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
 @author      gomgon
 @advanced color bg "Background" #1E1E1E
 @advanced color bg-lighter "Lighter elements" #232323
-@advanced color main-text "Main text" #999999
+@advanced color main-text "Main text" #808080
+@advanced color title-text "Title text" #999999
 @advanced color accent "Accent color" #5C809E
 @advanced color accent-h "Accent color lighter" #77A6CC
 @advanced dropdown footer "Auto-hide footer" {
@@ -55,7 +56,7 @@ a.feGi6e{
 color:/*[[accent]]*/;
 }
 .msq_a{
-color:/*[[main-text]]*/!important;
+color:/*[[title-text]]*/!important;
 }
 }
 .jsb,
@@ -335,7 +336,7 @@ background-color:#505050;
 }
 .vk_ard,
 .vk_aru{
-background-color:/*[[main-text]]*/;
+background-color:/*[[title-text]]*/;
 }
 .JJP03,
 #sblsbb,
@@ -451,13 +452,13 @@ border: 1px solid #323232;
 border-top:16px solid /*[[bg-lighter]]*/;
 }
 .vk_ard::before{
-border-top:16px solid /*[[main-text]]*/;
+border-top:16px solid /*[[title-text]]*/;
 }
 .vk_aru::after{
 border-bottom:16px solid /*[[bg-lighter]]*/;
 }
 .vk_aru::before{
-border-bottom:16px solid /*[[main-text]]*/;
+border-bottom:16px solid /*[[title-text]]*/;
 }
 #hdtb-msb .hdtb-mitem.hdtb-msel,
 #hdtb-msb .hdtb-mitem.hdtb-msel-pre{
@@ -600,13 +601,13 @@ border-color:/*[[accent]]*/;
 }
 .mn-dwn-arw,
 ._mx{
-border-color: #808080 transparent;
+border-color: /*[[main-text]]*/ transparent;
 }
 .tw-lang-selector-wrapper::after,
 .hdtb-mn-hd:hover .mn-dwn-arw,
 ._Rf.rlf__open:not(.rlf__applied) ._mx,
 ._Rf:hover:not(.rlf__applied) ._mx{
-border-color: /*[[main-text]]*/ transparent;
+border-color: /*[[title-text]]*/ transparent;
 }
 .tw-lang-selector-wrapper:hover::after {
 border-color: #CCCCCC transparent;
@@ -805,7 +806,8 @@ span.CQeUrc,
 .LbNDAb,
 .T9EeC:hover div,
 .T9EeC:hover .WeviRb,
-.KuHTTd{
+.KuHTTd,
+.R0YiDc{
 color:/*[[accent]]*/;
 }
 ._tX,
@@ -919,8 +921,12 @@ color:#777777;
 .LeA1se,
 .AqEFvb,
 .OZ8wsd,
-.VJwspe{
-color:#808080;
+.VJwspe,
+.kno-rdesc,
+.Tx7cib,
+.zwt9nb,
+.I87zVd{
+color:/*[[main-text]]*/;
 }
 .s,
 .tw-text-edit-btn,
@@ -929,7 +935,7 @@ a.ab_dropdownlnk:visited,
 g-fab,
 .F9PbJd,
 footer a{
-color:#808080!important;
+color:/*[[main-text]]*/!important;
 }
 .cj2HCb a:hover,
 .T47uwc a:hover,
@@ -1124,7 +1130,6 @@ a.isv-t:visited,
 .JNkvid .HnYYW,
 .w8qArf,
 .w8qArf a.fl,
-.kno-rdesc,
 .lyLwlc,
 .oyj2db,
 .i3LlFf,
@@ -1162,8 +1167,10 @@ a .SuDEy,
 a:visited .SuDEy,
 .WGYX8,
 .WGYX8:hover,
-.ySGpV .y9PzGc{
-color:/*[[main-text]]*/;
+.ySGpV .y9PzGc,
+.s .st em,
+.st.s.std em{
+color:/*[[title-text]]*/;
 }
 ._xdb .fl,
 .vk_bk,
@@ -1178,10 +1185,8 @@ footer div span span,
 .tS8mh,
 sticky-header g-tabs .Dcntxe a,
 .Lu0opc.ESkzqb:hover g-fab{
-color:/*[[main-text]]*/!important;
+color:/*[[title-text]]*/!important;
 }
-.s .st em,
-.st.s.std em,
 .kltat,
 .klfact,
 .ab_button:hover,
@@ -1220,13 +1225,13 @@ fill:/*[[accent]]*/;
 fill: #606060;
 }
 .H1KrKd{
-fill: #808080;
+fill: /*[[main-text]]*/;
 }
 ._tAr,
 ._knk,
 .Km0Gdb,
 .BfIAp:hover{
-fill:/*[[main-text]]*/;
+fill:/*[[title-text]]*/;
 }
 ._Jxg,
 ._Jxg span,
@@ -1356,7 +1361,7 @@ border-radius: 0px;
 .imspo_mt__dt-t,
 .imspo_mt__pm-inf,
 .YIikAd{
-color:/*[[main-text]]*/;
+color:/*[[title-text]]*/;
 }
 .imspo_mt__lt-t,
 .imspo_mt__cmd,
@@ -1374,7 +1379,7 @@ color:/*[[accent]]*/;
 background: linear-gradient(to bottom,transparent 0%,transparent 12.5%,/*[[bg]]*/ 12.5%,/*[[bg]]*/ 87.5%,transparent 87.5%,transparent 100%);
 }
 td.imspo_mt__rg svg.imspo_mt__triangle polygon{
-fill:/*[[main-text]]*/!important;
+fill:/*[[title-text]]*/!important;
 }
 .eGNEZ{
 border-bottom: solid 1px /*[[bg]]*/;
@@ -1393,7 +1398,7 @@ border-left: none;
 border-top: solid 1px /*[[bg]]*/;
 }
 .w8qArf .fl{
-color:/*[[main-text]]*/!important;
+color:/*[[title-text]]*/!important;
 }
 .goog-flat-menu-button{
 border-radius: 0px;
