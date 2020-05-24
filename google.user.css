@@ -1,13 +1,15 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.5.1
+@version     0.6.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
 @author      gomgon
 @advanced color bg "Background" #1E1E1E
 @advanced color bg-lighter "Lighter elements" #232323
+@advanced color searchbar "Searchbar" #323232
+@advanced color border "Border color" #323232
 @advanced color main-text "Main text" #808080
 @advanced color title-text "Title text" #999999
 @advanced color accent "Accent color" #5C809E
@@ -48,15 +50,21 @@ color: #CCCCCC;
 background-color:/*[[accent]]*/;
 }
 #gb{
-background:/*[[bg-lighter]]*/;
 border-bottom: none;
 }
 a,
 a.feGi6e{
 color:/*[[accent]]*/;
 }
-.msq_a{
+.msq_a,
+#fbar .fbar .Fx4vi.cNUdAd > span > span{
 color:/*[[title-text]]*/!important;
+}
+.InNVqc > hr{
+border-color:/*[[border]]*/;
+}
+.iSZmU{
+border-bottom: 1px solid /*[[border]]*/;
 }
 }
 .jsb,
@@ -74,8 +82,13 @@ display:none;
 .WGYX8{
 background:transparent;
 }
-.fLJSwc{
+.fLJSwc,
+.MAMEle{
 background:transparent!important;
+}
+.uXmAI,
+.pWEaFf{
+background: linear-gradient(to right,rgba(255,255,255,0),/*[[bg-lighter]]*/);
 }
 .P1Ycoe {
 background: linear-gradient(90deg,rgba(255, 255, 255, 0),/*[[bg-lighter]]*/);
@@ -156,7 +169,8 @@ div._oip > g-inner-card,
 .jZWadf,
 .wQnou,
 #kO001e,
-.etUWZd{
+.etUWZd,
+.MDLhlf{
 background:/*[[bg-lighter]]*/;
 }
 .v6U7rf #sDeBje,
@@ -186,7 +200,15 @@ article,
 .ImROUe,
 #hdtb.hdtba #hdtbMenus,
 .Ydr8h,
-.WGYX8:hover{
+.WGYX8:hover,
+.EDblX.m8vZ3d,
+.card:not(:empty),
+.mnr-c:not(:empty),
+.mnr-c,
+.T47uwc,
+.ZVWN5d,
+.WDVgYb,
+#fbtns .ksb{
 background-color:/*[[bg-lighter]]*/;
 }
 .v6U7rf #mlogo,
@@ -233,17 +255,26 @@ background:#282828!important;
 .Jb0Zif .kIXOkb:hover{
 background-color:#282828;
 }
-._Wmi,
-.ab_button:hover,
+.gssb_e,
+.bz1lBb,
+.zGVn2e,
+.f4JMWb{
+background:/*[[searchbar]]*/;
+}
 .RNNXgb,
 .aajZCb,
 .zthhpf,
 .lV0vqc,
+.msfi,
+.sc,
+.Sl6fgd .Tg7LZd,
+#sf.Pg70bf{
+background-color:/*[[searchbar]]*/;
+}
+._Wmi,
+.ab_button:hover,
 .mye4qd,
-.bz1lBb,
 .H73aad:hover,
-.Q0HXG,
-.gIoMsd,
 .lqQNEe,
 #gbr{
 background:#323232;
@@ -273,23 +304,27 @@ background:#323232!important;
 .ccw_unit_selector:hover,
 .ccw_selector_bg,
 .pVFdhc,
-.msfi,
-.Sl6fgd .Tg7LZd,
 a.gb_O,
 a.gb_P,
-.LKSyXe,
 .GNJvt,
 .LgElHb,
-.sbc,
 .MXl0lf:hover,
 .ImROUe:hover,
-.pb5vrc,
-    .ltd0Tb{
+.ltd0Tb,
+.rhs-osrp a.B1uW2d:hover,
+.Jb0Zif a.B1uW2d:hover{
 background-color:#323232;
 }
 .msq_b,
 .gb_l.gb_k:hover a{
 background-color:#323232!important;
+}
+.pb5vrc,
+.Q0HXG,
+.x54gtf,
+.LKSyXe,
+.kYPvob{
+background-color:/*[[border]]*/;
 }
 #hdtb-msb .hdtb-tl-sel,
 ._xk,
@@ -298,11 +333,7 @@ background-color:#323232!important;
 .sbico-c:hover,
 .goog-menuitem-highlight,
 .goog-menuitem-hover,
-.gssb_e,
 .UUbT9,
-.zGVn2e,
-.sc,
-.x54gtf,
 .XD1Bsc,
 .XD1Bsc:hover{
 background:#323232;
@@ -346,7 +377,8 @@ background-color:/*[[title-text]]*/;
 ._IUi,
 .DKlyaf,
 #tsbb,
-#qdClwb{
+#qdClwb,
+.S9bEAe{
 background-color:/*[[accent]]*/;
 }
 li[aria-selected="true"] > .MjJo9{
@@ -430,7 +462,12 @@ a.gb_P,
 .rhs-osrp .cLjAic,
 .vnLNtd.mnr-c,
 #hdtb.hdtba #hdtbMenus,
-.Jb0Zif .Si5xMe{
+.Jb0Zif .Si5xMe,
+.msb,
+.nChh6e,
+.f4JMWb,
+.qcTKEe,
+.S9bEAe{
 border:none;
 }
 .ab_button,
@@ -446,7 +483,7 @@ border:none!important;
 border-bottom:none!important;
 }
 .BklRsd{
-border: 1px solid #323232;
+border: 1px solid /*[[border]]*/;
 }
 .vk_ard::after{
 border-top:16px solid /*[[bg-lighter]]*/;
@@ -468,7 +505,7 @@ border-bottom:3px solid /*[[accent]]*/;
 border-bottom:6px solid /*[[accent]]*/;
 }
 .tb_l {
-border-left: 1px solid #323232;
+border-left: 1px solid /*[[border]]*/;
 }
 hr,
 html body div#footer hr,
@@ -570,14 +607,22 @@ div._Mib,
 .d7sCQ,
 .XQvBOc,
 .WGYX8,
-.ChlgHf{
-border-color:#323232;
+.ChlgHf,
+#rhs .y8Jpof.rhsvw,
+.sc>div,
+.qOsZsb,
+.fbPs3b,
+.ZVWN5d,
+.PK2b9b,
+.khgTR,
+.rhs-osrp a.B1uW2d, .Jb0Zif a.B1uW2d{
+border-color:/*[[border]]*/;
 }
 .kp-blk .xpdclose .farUxc,
 .kp-blk .xpdopen .mJ2Mod,
 .I6TXqe div[style],
 .s2TyX div[jscontroller="V9u9Nb"]{
-border-color:#323232!important;
+border-color:/*[[border]]*/!important;
 }
 .kcb,
 .xtSCL,
@@ -693,7 +738,19 @@ g-inner-card,
 .lu-fs,
 .Si5xMe,
 .N0Txue,
-.Z8r5Gb{
+.Z8r5Gb,
+.minidiv .aajZCb,
+.msb,
+.msfo,
+.sb_ifc,
+.msfi,
+.nChh6e,
+.f4JMWb,
+.S9bEAe,
+.TsLrP,
+.MDLhlf,
+.WDVgYb,
+#center_col .Jb0Zif .eA0Zlc.PtaMgb{
 border-radius:0;
 }
 ._vpj {
@@ -728,7 +785,9 @@ border-radius:7px;
 .uais2d,
 .Nur2ud,
 .X2RyJf,
-.GJwImd{
+.GJwImd,
+.aajZCb,
+.lV0vqc{
 box-shadow:none;
 }
 a.fl:link,
@@ -750,7 +809,6 @@ a.mblink,
 #hdtb-msb .hdtb-mitem.hdtb-msel-pre,
 ._V9o,
 .lr_dct_more_btn,
-.sbico,
 ._Fqg,
 ._Iqg,
 ._R4k,
@@ -807,7 +865,17 @@ span.CQeUrc,
 .T9EeC:hover div,
 .T9EeC:hover .WeviRb,
 .KuHTTd,
-.R0YiDc{
+.R0YiDc,
+a:hover .JheGif,
+a:visited:hover .JheGif,
+.Ly2md,
+.WDVgYb a.ksb.KeYi0c,
+.WDVgYb a.ksb.KeYi0c:visited,
+.WDVgYb a.ksb.KeYi0c:hover,
+.WDVgYb a.ksb.KeYi0c:active,
+.WDVgYb,
+.rhs-osrp .psXvZ,
+.Jb0Zif .psXvZ{
 color:/*[[accent]]*/;
 }
 ._tX,
@@ -845,14 +913,6 @@ cite a:visited,
 .bc a:link,
 .UPmit.AP7Wnd{
 color:#4D804A;
-}
-.sben_a,
-.sh-sp__pswtr,
-._Lqc,
-.fxgdke,
-.kbNtnf,
-.eipWBe{
-color:#666666;
 }
 .sr__link,
 .sr__link:link,
@@ -925,7 +985,24 @@ color:#777777;
 .kno-rdesc,
 .Tx7cib,
 .zwt9nb,
-.I87zVd{
+.I87zVd,
+.cwUqwd,
+.ngPLf,
+.WF4CUc,
+.o5GQac img,
+.sben_a,
+.sh-sp__pswtr,
+._Lqc,
+.fxgdke,
+.kbNtnf,
+.eipWBe,
+.mK3af,
+.qjdEw img,
+.u82FPb,
+.AagHEc,
+.ifiIZd,
+.st,
+.dhIWPd{
 color:/*[[main-text]]*/;
 }
 .s,
@@ -1059,6 +1136,7 @@ a.ab_dropdownlnk:hover,
 .ObF0Re,
 .dw-sb-cont .dw-sbi,
 .gLFyf,
+.rwK9Md,
 .JSAgYe,
 .sbl1,
 .o44hBf,
@@ -1116,7 +1194,6 @@ a.ab_dropdownlnk:hover,
 .hb8SAc,
 .rsir2d,
 .jleFbf,
-.cwUqwd,
 .y8Jpof .LrzXr,
 .tr9W5c,
 .ygdOJd, .HNdZMe,
@@ -1169,7 +1246,16 @@ a:visited .SuDEy,
 .WGYX8:hover,
 .ySGpV .y9PzGc,
 .s .st em,
-.st.s.std em{
+.st.s.std em,
+#rhs .nGydZ .garHBe,
+.JheGif,
+.lCT7Rc,
+.QPEVRb,
+.ZUdMOb,
+.qOsZsb,
+.InNVqc,
+.rhs-osrp a.B1uW2d,
+.Jb0Zif a.B1uW2d{
 color:/*[[title-text]]*/;
 }
 ._xdb .fl,
@@ -1184,7 +1270,9 @@ footer div span span,
 .Lu0opc.eSq3C:hover g-fab,
 .tS8mh,
 sticky-header g-tabs .Dcntxe a,
-.Lu0opc.ESkzqb:hover g-fab{
+.Lu0opc.ESkzqb:hover g-fab,
+.k4DMHe .xXEKkb,
+.Lu0opc.Oom88b:hover g-fab{
 color:/*[[title-text]]*/!important;
 }
 .kltat,
@@ -1279,10 +1367,13 @@ height: 28px;
 .msfi,
 #tsbb,
 #sblsbb{
-height:38px;
+height:40px;
 }
 .sbc{
-height: 39px;
+height: 40px;
+}
+.srp #tsf{
+height: 40px;
 }
 .sfbgg{
 height: 72px;
@@ -1295,7 +1386,8 @@ width: 40px;
 .sbico-c,
 .RNNXgb,
 .Sl6fgd .UUbT9,
-.Tg7LZd{
+.Tg7LZd,
+.S9bEAe{
 margin: 0;
 }
 .nZWEZc {
@@ -1342,11 +1434,11 @@ transition: none!important;
 #sblsbb{
 width:38px;
 }
-.UUbT9,
-.A8SBwf,
-.RNNXgb,
+#searchform.big .RNNXgb,
+.l8SOcc .zthhpf,
+.A9xB4 .zthhpf,
 .zthhpf{
-width:582px;
+width:100%;
 }
 /* To sort */
 .imso-hov:hover {
@@ -1387,7 +1479,8 @@ border-bottom: solid 1px /*[[bg]]*/;
 .MoyuKc{
 border-right: solid 1px /*[[bg]]*/;
 }
-.YPgUJe{
+.YPgUJe,
+.iSZmU{
 box-shadow: none;
 }
 li.imso-hide-overflow.tb_l{
@@ -1415,7 +1508,7 @@ border-color: #c6c6c6;
 color: #A5A5A5
 }
 div.Qy8Xkb{
-border-top: 1px solid #323232;
+border-top: 1px solid /*[[border]]*/;
 }
 #gb#gb a.gb_g:hover,
 #gb#gb a.gb_g:focus{
@@ -1440,5 +1533,9 @@ padding-right: 8px;
 }
 #msc {
 margin-top: 0px;
+}
+.lsbb {
+width: 40px;
+margin: 0px;
 }
 }
