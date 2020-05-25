@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.6.2
+@version     0.6.3
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -46,11 +46,15 @@ color: #CCCCCC;
 }
 }
 @media (max-width:767px){
+.mnr-c:not(:empty),
+.mnr-c{
+background-color:/*[[bg-lighter]]*/;
+}
 .Tg7LZd{
 background-color:/*[[accent]]*/;
 }
 #gb{
-background:/*[[bg-lighter]]*/;
+border-bottom: none;
 }
 a,
 a.feGi6e{
@@ -80,7 +84,9 @@ display:none;
 ._Fmb.selected:hover,
 .rllt__action-button:active,
 .WGYX8,
-#gb.gb_me{
+.KcXNxb,
+.gIoMsd,
+.Qi9Fd{
 background:transparent;
 }
 .fLJSwc,
@@ -105,8 +111,6 @@ body,
 #fbar,
 .sfbgg,
 #appbar,
-#hdtbSum,
-.hdtbg #hdtbSum,
 .gb_Ie,
 ._dCh,
 #hdtbMenus,
@@ -128,7 +132,9 @@ div.rl_feature,
 .Xeztj,
 #isv,
 .qe1Dgc,
-.RfVIk, .FkFdQc{
+.RfVIk,
+.FkFdQc,
+.ABd7Db{
 background:/*[[bg]]*/;
 }
 body.jfk-scrollbar div.bottom-wrapper div:nth-of-type(2),
@@ -171,12 +177,13 @@ div._oip > g-inner-card,
 .wQnou,
 #kO001e,
 .etUWZd,
-.MDLhlf{
+.MDLhlf,
+.llgymd,
+.E72nk{
 background:/*[[bg-lighter]]*/;
 }
 .v6U7rf #sDeBje,
-.suApsd,
-#sfcnt{
+.suApsd{
 background:/*[[bg-lighter]]*/!important;
 }
 .hdtbItm,
@@ -189,7 +196,6 @@ background:/*[[bg-lighter]]*/!important;
 .YSlUOe,
 .qcTKEe,
 .I6TXqe,
-g-card,
 article,
 .card:not(:empty),
 .uais2d,
@@ -202,14 +208,14 @@ article,
 #hdtb.hdtba #hdtbMenus,
 .Ydr8h,
 .WGYX8:hover,
-.EDblX.m8vZ3d,
 .card:not(:empty),
-.mnr-c:not(:empty),
-.mnr-c,
 .T47uwc,
 .ZVWN5d,
 .WDVgYb,
-#fbtns .ksb{
+#fbtns .ksb,
+.q75kMb,
+.mnr-c.bUNBRd:not(:empty),
+.zDBTmf > div{
 background-color:/*[[bg-lighter]]*/;
 }
 .v6U7rf #mlogo,
@@ -324,7 +330,11 @@ background-color:#323232!important;
 .Q0HXG,
 .x54gtf,
 .LKSyXe,
-.kYPvob{
+.kYPvob,
+.DYMkgd,
+.mRGiRb,
+.l63HRe,
+.T7Lmse{
 background-color:/*[[border]]*/;
 }
 #hdtb-msb .hdtb-tl-sel,
@@ -381,6 +391,9 @@ background-color:/*[[title-text]]*/;
 #qdClwb,
 .S9bEAe{
 background-color:/*[[accent]]*/;
+}
+.UAN5bf{
+background-color:/*[[accent]]*/!important;
 }
 li[aria-selected="true"] > .MjJo9{
 background-color:/*[[accent]]*/!important;
@@ -457,18 +470,17 @@ a.gb_P,
 .H73aad,
 .BupAEd,
 .hBwXxe,
-.gIoMsd,
 .JlDOsc,
 .lqQNEe,
 .rhs-osrp .cLjAic,
-.vnLNtd.mnr-c,
 #hdtb.hdtba #hdtbMenus,
 .Jb0Zif .Si5xMe,
 .msb,
 .nChh6e,
 .f4JMWb,
 .qcTKEe,
-.S9bEAe{
+.S9bEAe,
+.q75kMb{
 border:none;
 }
 .ab_button,
@@ -483,7 +495,9 @@ border:none!important;
 .wRPYSe{
 border-bottom:none!important;
 }
-.BklRsd{
+.BklRsd,
+.zDBTmf,
+.Qi9Fd{
 border: 1px solid /*[[border]]*/;
 }
 .vk_ard::after{
@@ -508,7 +522,10 @@ border-bottom:6px solid /*[[accent]]*/;
 .tb_l {
 border-left: 1px solid /*[[border]]*/;
 }
-hr,
+.Jb0Zif.ss6qqb,
+.E72nk{
+border-color:transparent;
+}
 html body div#footer hr,
 ._qgo,
 ._qhf,
@@ -518,13 +535,10 @@ html body div#footer hr,
 .Hwkikb{
 border-color:/*[[bg]]*/;
 }
-.arRknd,
-.vQ6j2c.LKLadb{
-border-color:/*[[bg]]*/!important;
-}
 .F9PbJd{
 border-color:#282828;
 }
+hr,
 ._qhf,
 ._onh,
 .kp-blk .xpdclose ._wle,
@@ -616,13 +630,30 @@ div._Mib,
 .ZVWN5d,
 .PK2b9b,
 .khgTR,
-.rhs-osrp a.B1uW2d, .Jb0Zif a.B1uW2d{
+.rhs-osrp a.B1uW2d,
+.Jb0Zif a.B1uW2d,
+.Jb0Zif .qDOt0b,
+.rhs-osrp .qDOt0b,
+.qmv19b,
+.EPLo7b,
+.mnr-c .mnr-c:not(:first-child) .q1kEvb,
+.kp-wholepage #kp-wp-tab-cont-overview .naFSC,
+.FsvkMb,
+.vnLNtd.mnr-c,
+.kp-wholepage a.B1uW2d,
+.P6it3,
+.vQ6j2c.LKLadb,
+.qxsd:not(:first-child) .arRknd,
+.vtnSJf,
+g-fab.nKy3M,
+.gIoMsd{
 border-color:/*[[border]]*/;
 }
 .kp-blk .xpdclose .farUxc,
 .kp-blk .xpdopen .mJ2Mod,
 .I6TXqe div[style],
-.s2TyX div[jscontroller="V9u9Nb"]{
+.s2TyX div[jscontroller="V9u9Nb"],
+.mkHND{
 border-color:/*[[border]]*/!important;
 }
 .kcb,
@@ -642,7 +673,8 @@ border-color:#505050;
 #SBmmZd a.active,
 .Tg7LZd,
 span.OXXup,
-span.CQeUrc{
+span.CQeUrc,
+.j1Fmbd{
 border-color:/*[[accent]]*/;
 }
 .mn-dwn-arw,
@@ -751,8 +783,24 @@ g-inner-card,
 .TsLrP,
 .MDLhlf,
 .WDVgYb,
-#center_col .Jb0Zif .eA0Zlc.PtaMgb{
-border-radius:0;
+#center_col .Jb0Zif .eA0Zlc.PtaMgb,
+.EquSJe,
+.llgymd,
+.j1Fmbd,
+.OiP3Db,
+.OiP3Db img,
+.qmv19b,
+.E72nk,
+.YVaXpd,
+.FTUdLb,
+.q75kMb,
+.zDBTmf{
+border-radius:0px;
+}
+.qV9w7d,
+.R7uWl,
+.UAN5bf{
+border-radius:0px!important;
 }
 ._vpj {
 border-radius:7px;
@@ -788,7 +836,10 @@ border-radius:7px;
 .X2RyJf,
 .GJwImd,
 .aajZCb,
-.lV0vqc{
+.lV0vqc,
+.R7uWl,
+.zDBTmf,
+.Qi9Fd{
 box-shadow:none;
 }
 a.fl:link,
@@ -876,7 +927,11 @@ a:visited:hover .JheGif,
 .WDVgYb a.ksb.KeYi0c:active,
 .WDVgYb,
 .rhs-osrp .psXvZ,
-.Jb0Zif .psXvZ{
+.Jb0Zif .psXvZ,
+.WnX69c,
+.WnX69c:hover,
+.WnX69c:visited,
+.mtnwac{
 color:/*[[accent]]*/;
 }
 ._tX,
@@ -1003,7 +1058,12 @@ color:#777777;
 .AagHEc,
 .ifiIZd,
 .st,
-.dhIWPd{
+.dhIWPd,
+.FGlSad,
+.iFImNd,
+.LhRmic img,
+.efbe7b,
+.TXwUJf{
 color:/*[[main-text]]*/;
 }
 .s,
@@ -1256,7 +1316,19 @@ a:visited .SuDEy,
 .qOsZsb,
 .InNVqc,
 .rhs-osrp a.B1uW2d,
-.Jb0Zif a.B1uW2d{
+.Jb0Zif a.B1uW2d,
+.ANCoQe,
+.KA4pGd,
+.FsvkMb,
+.NwD8Xc,
+.nVijp,
+.Vouh6c,
+.XKzpCc,
+.QESlAf,
+.aRq1Vc,
+a.B1uW2d,
+.GGhx3c,
+.EUjJDc{
 color:/*[[title-text]]*/;
 }
 ._xdb .fl,
@@ -1268,12 +1340,13 @@ a.Y0uHMb,
 #mCljob div span span,
 #fbar .fbar div#fuserm span span,
 footer div span span,
-.Lu0opc.eSq3C:hover g-fab,
-.tS8mh,
 sticky-header g-tabs .Dcntxe a,
+.Lu0opc.eSq3C:hover g-fab,
 .Lu0opc.ESkzqb:hover g-fab,
+.Lu0opc.Oom88b:hover g-fab,
 .k4DMHe .xXEKkb,
-.Lu0opc.Oom88b:hover g-fab{
+.tS8mh,
+.wqg8ad{
 color:/*[[title-text]]*/!important;
 }
 .kltat,
@@ -1345,9 +1418,11 @@ filter:invert(90%);
 #ccw_chart {
 filter: invert(88.5%);
 }
-.i8Msie,
-.YsGUOb{
+.i8Msie{
 filter:invert(70%);
+}
+.YsGUOb{
+filter:invert(100%);
 }
 .stt-uf,
 ._cXm,
@@ -1393,6 +1468,12 @@ margin: 0;
 }
 .nZWEZc {
 margin: 0 0 0 10px;
+}
+.dAEiw {
+margin: 0 0 6px;
+}
+.q75kMb {
+margin-right: 8px;
 }
 .hdtb-mn-o,
 .hdtb-mn-c,
@@ -1522,11 +1603,7 @@ margin-top: 1px;
 user-select: none;
 width: 13px;
 }
-#main > #sfcnt{
-background: /*[[bg]]*/!important;
-}
 #sfcnt{
-background:/*[[bg-lighter]]*/!important;
 margin-left: 0px!important;
 margin-right: 0px!important;
 padding-left: 8px;
