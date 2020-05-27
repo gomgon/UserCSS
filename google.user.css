@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.6.3
+@version     0.6.4
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -47,7 +47,8 @@ color: #CCCCCC;
 }
 @media (max-width:767px){
 .mnr-c:not(:empty),
-.mnr-c{
+.mnr-c,
+html > body > #wrap > #iwrap > #mog > #gb{
 background-color:/*[[bg-lighter]]*/;
 }
 .Tg7LZd{
@@ -86,7 +87,12 @@ display:none;
 .WGYX8,
 .KcXNxb,
 .gIoMsd,
-.Qi9Fd{
+.Qi9Fd,
+.xBJvCb,
+.vg4Xpd,
+.EGUfvb,
+.nZWEZc .ttwCMe,
+.R1smN{
 background:transparent;
 }
 .fLJSwc,
@@ -105,6 +111,9 @@ background: linear-gradient(270deg,/*[[bg]]*/ 10%,rgba(255,255,255,0));
 }
 #isr_chc g-left-button {
 background: linear-gradient(90deg,/*[[bg]]*/ 10%,rgba(255,255,255,0));
+}
+.Wb8Fp {
+background-image: -webkit-linear-gradient(top,/*[[bg-lighter]]*/ 96%,rgba(0,0,0,0));
 }
 html,
 body,
@@ -134,14 +143,18 @@ div.rl_feature,
 .qe1Dgc,
 .RfVIk,
 .FkFdQc,
-.ABd7Db{
+.ABd7Db,
+.bI5amf{
 background:/*[[bg]]*/;
 }
 body.jfk-scrollbar div.bottom-wrapper div:nth-of-type(2),
-.mssb_f{
+.mssb_f,
+.W3btD.Ulu4lc,
+.MIyI4c > div:first-child{
 background:/*[[bg]]*/!important;
 }
-.iKjWAf{
+.iKjWAf,
+.dr1yeb{
 background-color:/*[[bg]]*/;
 }
 .kp-blk,
@@ -179,7 +192,9 @@ div._oip > g-inner-card,
 .etUWZd,
 .MDLhlf,
 .llgymd,
-.E72nk{
+.E72nk,
+#sfcnt.TshKde,
+#footer:not(.ctr-p){
 background:/*[[bg-lighter]]*/;
 }
 .v6U7rf #sDeBje,
@@ -215,7 +230,14 @@ article,
 #fbtns .ksb,
 .q75kMb,
 .mnr-c.bUNBRd:not(:empty),
-.zDBTmf > div{
+.zDBTmf > div,
+.AIkRX,
+.LOh7cb,
+.EQhGhd,
+.ChlgHf,
+.iJvafd,
+.ZWBEDd,
+div.VTZT1b{
 background-color:/*[[bg-lighter]]*/;
 }
 .v6U7rf #mlogo,
@@ -238,7 +260,6 @@ background-color:/*[[bg-lighter]]*/!important;
 .ab_button,
 .F9PbJd,
 .Pvpvv,
-#footer:not(.ctr-p),
 .As6eLe,
 .gb_J,
 .gb_F,
@@ -249,7 +270,8 @@ background-color:/*[[bg-lighter]]*/!important;
 .knHJyb,
 .Nur2ud,
 .X2RyJf,
-.iFBpgc .LfE12c:not(.iqv4K):hover .MjJo9{
+.iFBpgc .LfE12c:not(.iqv4K):hover .MjJo9,
+.p4nmG894wHI__pinned-chip{
 background:#282828;
 }
 g-fab{
@@ -257,7 +279,6 @@ background:#282828!important;
 }
 .VoEfsd,
 .JooUXc,
-.nZWEZc .ttwCMe,
 .Z8r5Gb,
 .Jb0Zif .kIXOkb:hover{
 background-color:#282828;
@@ -319,7 +340,8 @@ a.gb_P,
 .ImROUe:hover,
 .ltd0Tb,
 .rhs-osrp a.B1uW2d:hover,
-.Jb0Zif a.B1uW2d:hover{
+.Jb0Zif a.B1uW2d:hover,
+.Rip8ud{
 background-color:#323232;
 }
 .msq_b,
@@ -334,7 +356,9 @@ background-color:#323232!important;
 .DYMkgd,
 .mRGiRb,
 .l63HRe,
-.T7Lmse{
+.T7Lmse,
+.yQ8gDb,
+.E6Cqjb{
 background-color:/*[[border]]*/;
 }
 #hdtb-msb .hdtb-tl-sel,
@@ -480,7 +504,8 @@ a.gb_P,
 .f4JMWb,
 .qcTKEe,
 .S9bEAe,
-.q75kMb{
+.q75kMb,
+.NYCPFe .L3OsEb{
 border:none;
 }
 .ab_button,
@@ -519,6 +544,9 @@ border-bottom:3px solid /*[[accent]]*/;
 .klitem.selected{
 border-bottom:6px solid /*[[accent]]*/;
 }
+.U5K4re {
+border-bottom: 8px solid /*[[bg]]*/;
+}
 .tb_l {
 border-left: 1px solid /*[[border]]*/;
 }
@@ -526,17 +554,17 @@ border-left: 1px solid /*[[border]]*/;
 .E72nk{
 border-color:transparent;
 }
-html body div#footer hr,
 ._qgo,
 ._qhf,
-.Sl6fgd .UUbT9,
 .P6it3,
-.VibNM,
 .Hwkikb{
+border-color:#ff00ee;
+}
+.Sl6fgd .UUbT9{
 border-color:/*[[bg]]*/;
 }
 .F9PbJd{
-border-color:#282828;
+border-color:#eeff00;
 }
 hr,
 ._qhf,
@@ -646,14 +674,30 @@ div._Mib,
 .qxsd:not(:first-child) .arRknd,
 .vtnSJf,
 g-fab.nKy3M,
-.gIoMsd{
+.gIoMsd,
+.VibNM,
+.xBJvCb,
+.dr1yeb,
+.EGUfvb,
+.MOq6jc,
+.HQMi8c,
+.ksSzJd .TZahnb,
+.ksSzJd .NY3LVe,
+.kp-wholepage .JW2g8,
+.HSryR .qIshu,
+.KjyTCd,
+.jA1nid,
+.mod:not(:last-child) .mXtbFf,
+.c2xzTb .kno-ftr, .c2xzTb .jYyFuf,
+.fxsI0d{
 border-color:/*[[border]]*/;
 }
 .kp-blk .xpdclose .farUxc,
 .kp-blk .xpdopen .mJ2Mod,
 .I6TXqe div[style],
 .s2TyX div[jscontroller="V9u9Nb"],
-.mkHND{
+.mkHND,
+.MIyI4c div g-tabs.EIJx7b.jtEFhd{
 border-color:/*[[border]]*/!important;
 }
 .kcb,
@@ -794,7 +838,11 @@ g-inner-card,
 .YVaXpd,
 .FTUdLb,
 .q75kMb,
-.zDBTmf{
+.zDBTmf,
+.bI5amf,
+.UUbT9,
+.NYCPFe .L3OsEb,
+div.VTZT1b{
 border-radius:0px;
 }
 .qV9w7d,
@@ -839,7 +887,8 @@ border-radius:7px;
 .lV0vqc,
 .R7uWl,
 .zDBTmf,
-.Qi9Fd{
+.Qi9Fd,
+.EQhGhd{
 box-shadow:none;
 }
 a.fl:link,
@@ -931,7 +980,10 @@ a:visited:hover .JheGif,
 .WnX69c,
 .WnX69c:hover,
 .WnX69c:visited,
-.mtnwac{
+.mtnwac,
+.vfxGNc,
+a.KYeOtb  div.SVWlSe div.gsmt,
+.pVA7K{
 color:/*[[accent]]*/;
 }
 ._tX,
@@ -1063,7 +1115,14 @@ color:#777777;
 .iFImNd,
 .LhRmic img,
 .efbe7b,
-.TXwUJf{
+.TXwUJf,
+.lxqFZe,
+.KbFy2b,
+.OLJ3Rb,
+.kno-ftr a,
+.GlPvmc,
+.iPL53b,
+.U8shWc.Vy8nid{
 color:/*[[main-text]]*/;
 }
 .s,
@@ -1072,7 +1131,9 @@ a.ab_dropdownlnkinfo,
 a.ab_dropdownlnk:visited,
 g-fab,
 .F9PbJd,
-footer a{
+footer a,
+.wUrVib .aKcFGd,
+a.rjS66d.KjyTCd .EZRelc.z1asCe.lYxQe{
 color:/*[[main-text]]*/!important;
 }
 .cj2HCb a:hover,
@@ -1328,7 +1389,22 @@ a:visited .SuDEy,
 .aRq1Vc,
 a.B1uW2d,
 .GGhx3c,
-.EUjJDc{
+.EUjJDc,
+.wyrwXc.AP7Wnd,
+.BYBi9e,
+.B58ezc,
+.xBJvCb,
+.AIkRX.xW0lRd,
+.WU6Mge,
+.j2cNYe,
+.EGUfvb,
+.lQ6Auc,
+.BvfC2d,
+.HQMi8c,
+.IZACzd,
+.U85Sqf,
+.GyeGK,
+.vWB2ve{
 color:/*[[title-text]]*/;
 }
 ._xdb .fl,
@@ -1392,7 +1468,8 @@ fill: /*[[main-text]]*/;
 ._tAr,
 ._knk,
 .Km0Gdb,
-.BfIAp:hover{
+.BfIAp:hover,
+.gats7c{
 fill:/*[[title-text]]*/;
 }
 ._Jxg,
@@ -1465,6 +1542,9 @@ width: 40px;
 .Tg7LZd,
 .S9bEAe{
 margin: 0;
+}
+.Sl6fgd .UUbT9{
+padding: 0px 10px 0px 5px;
 }
 .nZWEZc {
 margin: 0 0 0 10px;
