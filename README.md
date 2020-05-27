@@ -5,18 +5,18 @@ A [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) compatible userst
 
 The stylesheet will be updated automaticaly by the addon.
 #
-![Last.fm](/images/last.fm.png) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) Last.fm stylesheet.
+[![Install](/images/last.fm.png)](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) Last.fm stylesheet.
 
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/LastfmScreenshot2.png" height="80" title="Click to enlarge"></img>
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/LastfmScreenshot1.png" height="80" title="Click to enlarge"></img>
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/LastfmScreenshot3.png" height="80" title="Click to enlarge"></img>
 <br>
 #
-![Discogs](/images/discogs.png) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css) Discogs stylesheet.
+[![Install](/images/discogs.png)](https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css) Discogs stylesheet.
 
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/DiscogsScreenshot1.png" height="80" title="Click to enlarge"></img>
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/DiscogsScreenshot2.png" height="80" title="Click to enlarge"></img>
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/DiscogsScreenshot3.png" height="80" title="Click to enlarge"></img>
 <br>
 #
-![Google](/images/google.png) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css) Google stylesheet. (work in progress)
+[![Install](/images/google.png)](https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css) Google stylesheet. (work in progress)
