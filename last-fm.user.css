@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.5.2
+@version     2.5.3
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -28,9 +28,6 @@ padding-top: 2px;
 .chartlist--with-multi-playlinks .chartlist-row--with-artist .chartlist-artist {
 position: absolute;
 margin-top: 14px;
-}
-.chartlist-name {
-font-weight: normal;
 }
 #top-tracks.section-with-control .chartlist-row--with-artist .chartlist-name{
 font-weight: 700;
@@ -247,7 +244,7 @@ No "No" <<<EOT
 EOT;
 }
 ==/UserStyle== */
-@-moz-document domain("last.fm"){
+@-moz-document domain("www.last.fm"){
 .col-xs-2,
 .copyright.col-xs-12,
 div.feedback-message,
@@ -659,7 +656,6 @@ filter: invert(80%)!important;
 .more-item--track::before,
 .more-item--artist::before,
 .more-item--obsession::before,
-.more-item--delete::before,
 .more-item--report::before,
 .more-item--play::before,
 .more-item--album::before,
