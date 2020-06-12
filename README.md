@@ -3,7 +3,8 @@ A [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) compatible userst
 ![Stylus](/images/Stylus.png) Stylus for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) or [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/).<br>
 ![Cascadea](/images/Cascadea.png) Cascadea for [Safari](https://cascadea.app/).
 
-The stylesheet will be updated automaticaly by the addon.
+The stylesheet will be updated automaticaly by the addon.<br>
+All stylesheets are mobile compatible.
 #
 [![Install](/images/last.fm.png)](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) Last.fm stylesheet.
 
