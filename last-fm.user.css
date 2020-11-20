@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.5.3
+@version     2.5.4
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -166,9 +166,7 @@ display:none!important;
 margin-top:0px;
 } EOT;
 No "No" <<<EOT
-.col-sidebar.hidden-xs > .buffer-standard:nth-of-type(1){
-margin-top:0px;
-} EOT;
+EOT;
 }
 @advanced dropdown hide-social-media "Hide social media sharing" {
 Yes "Yes" <<<EOT
@@ -640,7 +638,9 @@ filter: invert(60%);
 .section-settings-toggle::before,
 .gallery-image-vote-up-off .gallery-image-votes::before,
 .gallery-image-vote-down-off .gallery-image-votes::before,
-.no-data-message--gallery::before{
+.no-data-message--gallery::before,
+.no-data-message--playlists::before,
+.col-sidebar.hidden-xs form.section-with-separator.buffer-standard:nth-child(2) button.btn-shortcut:before{
 filter: invert(80%);
 }
 .chartlist-play-button::before,
@@ -1043,7 +1043,8 @@ background:/*[[bg-lighter]]*/!important;
 .subscribe-form .subscription-options,
 .scrobble-stats-info-tooltip,
 .inbox-message-view .inbox-message-message blockquote,
-.section-with-separator::after{
+.section-with-separator::after,
+.playlist-advice{
 background:/*[[bg-lighter]]*/;
 }
 .user-dashboard-banner,
@@ -1284,7 +1285,9 @@ border-color:/*[[border-color]]*/!important;
 .section-divider,
 .shouting-unavailable,
 .wiki-block-cta::after, .wiki-block-cta::before,
-.inbox-message-view .inbox-message-message blockquote{
+.inbox-message-view .inbox-message-message blockquote,
+.play-this-track-playlink::after,
+.sidebar-date-heading::after{
 border-color:/*[[border-color]]*/;
 }
 .content-form .has-error .form-control,
@@ -1337,9 +1340,11 @@ box-shadow:0px -1px /*[[border-color]]*/ inset!important;
 .buylink-list{
 box-shadow:0px 1px /*[[border-color]]*/ inset!important;
 }
-.btn-lite,
-.btn-primary.profile-header-set-obsession{
-box-shadow:0 0 0 1px /*[[secondary-button]]*/ inset;
+.btn-shortcut,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-shortcut:focus,
+body:not([data-whatinput="touch"]) .btn-shortcut .focus-visible,
+body:not([data-whatinput="touch"]) .btn-shortcut:hover{
+box-shadow:0 0 0 1px /*[[border-color]]*/ inset;
 }
 .btn-lite:focus,
 .btn-lite:hover,
@@ -1559,7 +1564,8 @@ h1,
 .js .dropdown-menu-clickable-button-js-only,
 .gallery-upload-rules,
 .grid-items-cta h3,
-.about-artist-listeners{
+.about-artist-listeners,
+.btn-shortcut{
 color:/*[[main-text]]*/;
 }
 .btn-primary,
@@ -1618,7 +1624,10 @@ body:not([data-whatinput="touch"]) .gallery-image-vote-up-off .focus-visible,
 body:not([data-whatinput="touch"]) .gallery-image-vote-up-off:hover,
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .gallery-image-vote-down-off:focus,
 body:not([data-whatinput="touch"]) .gallery-image-vote-down-off .focus-visible,
-body:not([data-whatinput="touch"]) .gallery-image-vote-down-off:hover{
+body:not([data-whatinput="touch"]) .gallery-image-vote-down-off:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-shortcut:focus,
+body:not([data-whatinput="touch"]) .btn-shortcut .focus-visible,
+body:not([data-whatinput="touch"]) .btn-shortcut:hover{
 color:/*[[button-text-H]]*/;
 }
 .no-data-message-button:focus,
@@ -2115,7 +2124,8 @@ border-color:/*[[button-text-H]]*/;
 .dropdown-menu-clickable-item::after {
 border-color:/*[[border-color]]*/;
 }
-.open-ad-container-mobile ~ .buffer-standard-ignore-hidden, :not(.hidden-xs):not([data-ad-container]) ~ .buffer-standard-ignore-hidden {
+.open-ad-container-mobile ~ .buffer-standard-ignore-hidden,
+:not(.hidden-xs):not([data-ad-container]) ~ .buffer-standard-ignore-hidden {
 margin-top: 0px;
 }
 .chartlist-row:hover a .chartlist-count-bar-value::after,
@@ -2299,6 +2309,9 @@ top: 19px;
 }
 a .chartlist-count-bar-value::after{
 margin-right:2px;
+}
+.col-sidebar.hidden-xs > .buffer-standard:nth-child(2){
+margin-top:0px;
 }
 }
 @media (min-width:1260px){
