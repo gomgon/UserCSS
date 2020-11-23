@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.0.1
+@version     1.0.2
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -48,7 +48,8 @@ ul.module_blocks > li,
 #releases #pjax_container,
 .history_form,
 .is_not_mobile table.release_list_table tbody tr:hover,
-.ui-autocomplete a{
+.ui-autocomplete a,
+div.section div.section_content.tall{
 background:/*[[elements]]*/;
 }
 #site_header_wrap,
@@ -316,7 +317,8 @@ ul.module_blocks .header .remove_module,
 .is_mobile.needs_reduced_ui table.cards.layout_normal .mr_toggler_mobile::before,
 .is_mobile.needs_reduced_ui .pagination .pagination_page_links li > a,
 .is_mobile.needs_reduced_ui .pagination .pagination_page_links li > span,
-a.readmore_toggler.touch, a.readmore_toggler:hover{
+a.readmore_toggler.touch, a.readmore_toggler:hover,
+.master-release-credits .grid .credits_info{
 color:/*[[main-text]]*/;
 }
 .ui-autocomplete a .sublabel,
