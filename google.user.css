@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.6.7
+@version     0.6.8
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -32,11 +32,22 @@ transition: opacity .5s
 opacity:1;
 } EOT;
 }
+@advanced dropdown Hide-add-lang "Auto-hide language option"{
+No "No" <<<EOT
+EOT;
+Yes "Yes" <<<EOT
+#gws-output-pages-elements-homepage_additional_languages__als {
+opacity:0;
+transition: opacity .5s
+}
+#gws-output-pages-elements-homepage_additional_languages__als:hover {
+opacity:1;
+} EOT;
+}
 ==/UserStyle== */
 @-moz-document domain("google.com"), regexp("https:\\/\\/(www\\.)?google\\.(com|([a-z]{2}))(\\.[a-z]{2})?\\/.*"){
 @media (min-width:768px){
 /*[[footer]]*/
-
 .q:active,
 .q:visited {
 color:/*[[accent]]*/;
@@ -75,6 +86,7 @@ border-color:/*[[border]]*/;
 border-bottom: 1px solid /*[[border]]*/;
 }
 }
+/*[[Hide-add-lang]]*/
 .jsb,
 .sbsb_g,
 .ab_dropdownrule,
@@ -802,7 +814,9 @@ g-flat-button.BwMo1:hover,
 #swml,
 .USRMqe,
 .EHzcec,
-.dGrefb{
+.dGrefb,
+.J3Tg1d,
+.UwAaac{
 border-color:/*[[border]]*/;
 }
 .kp-blk .xpdclose .farUxc,
@@ -816,13 +830,13 @@ border-color:/*[[border]]*/!important;
 .kcb,
 .fNHVKc,
 .TwNUtc,
-.UwAaac,
 .BfIAp:hover,
 .fOYFme:hover .ND0PBc,
 .fOYFme:hover .OBpDy,
 .Fjeoze:hover .PTsTab,
 .YbqTTb:hover,
-.FqnKTc{
+.FqnKTc,
+.gKlQt{
 border-color:#505050;
 }
 ._Db:active,
@@ -975,13 +989,16 @@ g-flat-button.BwMo1,
 .gws-trips__outer-card,
 .NiLAwe,
 .EHzcec,
-.tX9u1b:hover{
+.tX9u1b:hover,
+.XQ6p1d,
+.J3Tg1d{
 border-radius:0px;
 }
 .qV9w7d,
 .R7uWl,
 .UAN5bf,
-.umyQi{
+.umyQi,
+.M4dUYb{
 border-radius:0px!important;
 }
 ._vpj {
@@ -1139,7 +1156,8 @@ a.KYeOtb  div.SVWlSe div.gsmt,
 #i42,
 .Xcw0p.ztUP4e,
 .MNK4Vd .kaAt2.KKjvXb,
-.G7xsKe{
+.G7xsKe,
+title-with-lhs-icon:hover .ekf0x h3{
 color:/*[[accent]]*/;
 }
 ._tX,
@@ -1313,7 +1331,8 @@ a.EbH0bb,
 .WUjVSb,
 .AupITe,
 .nrXPnc,
-.Co1npd{
+.Co1npd,
+span.lPqy4c{
 color:/*[[main-text]]*/;
 }
 .s,
@@ -1625,7 +1644,9 @@ a.B1uW2d,
 .GxwVnb,
 .O2TtKe,
 .HRfe0e,
-.Rq5Gcb{
+.Rq5Gcb,
+title-with-lhs-icon .ekf0x,
+.gBPM8 .tmS4cc.VgAC5d .gadasb{
 color:/*[[title-text]]*/;
 }
 ._xdb .fl,
@@ -1912,5 +1933,18 @@ color: /*[[accent]]*/;
 background-color: transparent;
 border-color: /*[[border]]*/;
 color: /*[[accent-h]]*/;
+}
+.NPh6Kc .BhiwTb ,
+.P6jKkf .K5Jxee{
+background-color: transparent;
+border-color:#188038;
+}
+.tPhRLe span,
+.aM01wc[data-s="f"],
+.aM01wc[data-s="h"]{
+filter:saturate(50%) hue-rotate(342deg) brightness(80%);
+}
+.l2gNXd{
+background-color:#c69259;
 }
 }
