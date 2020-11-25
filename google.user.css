@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.6.6
+@version     0.6.7
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -220,7 +220,8 @@ div._oip > g-inner-card,
 #gsr.srp.tbo.vasq.wf-b #searchform.big .sfbg .sfbgg,
 .EsIlz,
 #gsr.srp.vasq.wf-b #searchform.big .sfbg,
-#gsr.srp.vasq #searchform.big .sfbg{
+#gsr.srp.vasq #searchform.big .sfbg,
+.EHzcec{
 background:/*[[bg-lighter]]*/;
 }
 .v6U7rf #sDeBje,
@@ -326,8 +327,7 @@ background-color: #282828;
 .sbib_a,
 .sbibod,
 .sbsb_a,
-.lst-c .sbib_a,
-.gb_5e{
+.lst-c .sbib_a{
 background:/*[[searchbar]]*/;
 }
 .RNNXgb,
@@ -425,7 +425,9 @@ background-color:#404040!important;
 .sbdd_a input,
 .gbqfba,
 .Tg7LZd:focus,
-.dw-sb-cont .dw-sb-btn{
+.dw-sb-cont .dw-sb-btn,
+.tX9u1b:hover,
+.tX9u1b:hover .Rq5Gcb{
 background-color:#434343;
 }
 #hdtb-msb .hdtb-tl-sel:hover,
@@ -798,7 +800,9 @@ g-flat-button.BwMo1:hover,
 .KRQ2Ab,
 .Jb0Zif .Si5xMe.CUaNQd,
 #swml,
-.USRMqe{
+.USRMqe,
+.EHzcec,
+.dGrefb{
 border-color:/*[[border]]*/;
 }
 .kp-blk .xpdclose .farUxc,
@@ -969,8 +973,10 @@ g-flat-button.BwMo1,
 .keP9hb,
 .EASEnb,
 .gws-trips__outer-card,
-.NiLAwe{
-border-radius: 0px;
+.NiLAwe,
+.EHzcec,
+.tX9u1b:hover{
+border-radius:0px;
 }
 .qV9w7d,
 .R7uWl,
@@ -1019,7 +1025,8 @@ border-radius:7px;
 .EQhGhd,
 .YPgUJe,
 .iSZmU,
-.gb_Wd{
+.gb_Wd,
+.EHzcec{
 box-shadow: none;
 }
 .cEW58 {
@@ -1617,7 +1624,8 @@ a.B1uW2d,
 .m7B03,
 .GxwVnb,
 .O2TtKe,
-.HRfe0e{
+.HRfe0e,
+.Rq5Gcb{
 color:/*[[title-text]]*/;
 }
 ._xdb .fl,
@@ -1857,7 +1865,6 @@ width:455px;
 .RNNXgb{
 width:100%;
 }
-/* To sort */
 .goog-flat-menu-button{
 border-radius: 0px;
 background-color: #303030;
@@ -1894,5 +1901,16 @@ margin: 0px;
 }
 img[src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABuCAIAAAALesI7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAqxJREFUeNrsmdlugzAQRYOBrP//o5GykZL0CqsWognGM7ZJ0J2HvlH7zNzZnOJ4PK6WaGa1UCMYwQhGMIIRjGAEIxjBCEYwghGMYAQjGMEIRjCCEYxgBCPYEsCKojDGLBBsvV5vt9ulgZVlCTD7d1FgLlYAgyYXArbZbFx2gSqWIGcGA9JAflVVQZNfD7bb7V4qUy/IOcEQq5cl/n8Yvwls/PbvmOcBK3vmvZZXb8oqUilhqs7ekbRt+9PZ4/EYBMRbIWxba5omKxicjVPruh73uo0eCjrYcEVwum8nJuH9fn8+n5mkiPMOh0NQM0VUBUVP09aq0EDhpP4tJ5oLl5VukNQRc/ttqoiBar/fC6iQYDZVZBGQtTUTRCUrwbfbzeYJkk1yRVFbM6mpbFW0hQTFJm4r14KJ2yUCdb1eo0y3oZ/7r6tZk5wI9ZNE6DVMdFf1uzO6kNI1A+FMT1HjrbZKEeqHI1lb81xanO6o73aM6u+Repu+rZlxDwm6lhWhbVxRFhBZWzPj+So724nw5R6ZdN9JCOZEqK+EmvYTGQxIKPGJRBhUqyN79HK5RHy30LS1alzNMhHCzufzvM9EZrwXCUb4D7EqFpiyBqKQDp4PPgVMWQDjUnmkGP2wnAeZ8VUqD5hg81eB4TzZC5FgGc0KBrN7R1KD75YJlugI403rpGwIV6Lu56/Rbr1PYaBK9M/NFKe6NSR6zUg3rJi5bgCRJ/JX2HQPQUZMNlBhSk7aSwLmIDg4StwyUK1Cf5RA3NC1NbtW01mGvm8EGX86nQSytIFKWmPlEevXSTi+7swbvf6vfh+xj0153oBhS7fvqkVnbt9p/yxPiKKB9WflzNFIkmPfYgQjGMEIRjCCEYxgBCMYwQhGMIIRjGAEIxjBCEYwghGMYATT2K8AAwDcVFvoZZKvXgAAAABJRU5ErkJggg=="]{
 filter: invert(80%) contrast(125%);
+}
+.NQV3m {
+background-color: transparent;
+border-color: /*[[border]]*/;
+border-radius: 0px;
+color: /*[[accent]]*/;
+}
+.NQV3m:hover {
+background-color: transparent;
+border-color: /*[[border]]*/;
+color: /*[[accent-h]]*/;
 }
 }
