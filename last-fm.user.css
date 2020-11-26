@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.5.4
+@version     2.6.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -60,6 +60,14 @@ margin-top: -16px;
 @advanced color button-text-H "Buttons text hover" #FFFFFF
 @advanced color color-global "Main Color" #5C809E
 @advanced color color-global-hover "Main color lighter" #77A6CC
+@advanced dropdown font "Use alternative font"{
+No "No" <<<EOT
+EOT;
+Yes "Yes" <<<EOT
+body {
+	font-family: 'Open Sans', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+} EOT;
+}
 @advanced dropdown loved-icon-color "Loved icon color"{
 White "White" <<<EOT
 .love-button,
@@ -917,6 +925,7 @@ transition: none;
 /*[[hide-unavailable-shouts]]*/
 /*[[loved-icon-color]]*/
 /*[[library-icons]]*/
+/*[[font]]*/
 #adSkinLeft,
 #adSkinRight,
 .container.page-content,
