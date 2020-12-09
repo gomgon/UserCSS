@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.6.8
+@version     0.6.9
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -114,7 +114,11 @@ display:none;
 .sfbgg,
 .lgJJud,
 .yvg0ob span,
-.uch-xa-tl{
+.uch-xa-tl,
+.YSlUOe,
+.MGqjK,
+.kp-blk,
+g-card{
 background:transparent;
 }
 .fLJSwc,
@@ -143,7 +147,10 @@ background: linear-gradient(90deg,/*[[bg]]*/ 10%,rgba(255,255,255,0));
 background: linear-gradient(to bottom,transparent 0%,transparent 12.5%,/*[[bg]]*/ 12.5%,/*[[bg]]*/ 87.5%,transparent 87.5%,transparent 100%);
 }
 .Wb8Fp {
-background-image: -webkit-linear-gradient(top,/*[[bg-lighter]]*/ 96%,rgba(0,0,0,0));
+background-image: linear-gradient(top,/*[[bg-lighter]]*/ 96%,rgba(0,0,0,0));
+}
+.jvCr1e {
+background-image: linear-gradient(/*[[border]]*/ 1px,rgba(255,255,255,0) 0);
 }
 html,
 body,
@@ -176,7 +183,8 @@ div.rl_feature,
 .bI5amf,
 .zQTmif,
 .YtXOzd,
-.sfbg{
+.sfbg,
+.kp-blk.cUnQKe{
 background:/*[[bg]]*/;
 }
 body.jfk-scrollbar div.bottom-wrapper div:nth-of-type(2),
@@ -190,7 +198,6 @@ background:/*[[bg]]*/!important;
 .cEW58{
 background-color:/*[[bg]]*/;
 }
-.kp-blk,
 .rl_item,
 .lr_dct_lbl_box,
 ._yX,
@@ -247,7 +254,6 @@ background:/*[[bg-lighter]]*/!important;
 .ZINbbc,
 #hdtb-msb,
 .card:not(:empty),
-.YSlUOe,
 .qcTKEe,
 .I6TXqe,
 .card:not(:empty),
@@ -278,16 +284,15 @@ background:/*[[bg-lighter]]*/!important;
 div.VTZT1b,
 .h312td,
 .kLhEKe,
-.MGqjK,
 .s8GCU,
 .iMCzjd,
 .w90itc,
-.EASEnb,
-.ExnoTd{
+.ExnoTd,
+.yg51vc,
+.dU5Kl:hover{
 background-color:/*[[bg-lighter]]*/;
 }
 .v6U7rf #mlogo,
-.VibNM,
 div.pGxpHc header#gb{
 background-color:/*[[bg-lighter]]*/!important;
 }
@@ -401,6 +406,7 @@ background-color:#323232;
 .gb_l.gb_k:hover a{
 background-color:#323232!important;
 }
+.akqY6,
 .pb5vrc,
 .Q0HXG,
 .x54gtf,
@@ -474,7 +480,8 @@ background:/*[[accent]]*/;
 #tsbb,
 #qdClwb,
 .S9bEAe,
-.w7qIhd{
+.w7qIhd,
+.Dl0KZd{
 background-color:/*[[accent]]*/;
 }
 .UAN5bf{
@@ -816,7 +823,9 @@ g-flat-button.BwMo1:hover,
 .EHzcec,
 .dGrefb,
 .J3Tg1d,
-.UwAaac{
+.UwAaac,
+.XaEgO,
+.eEz1Rd{
 border-color:/*[[border]]*/;
 }
 .kp-blk .xpdclose .farUxc,
@@ -836,7 +845,9 @@ border-color:/*[[border]]*/!important;
 .Fjeoze:hover .PTsTab,
 .YbqTTb:hover,
 .FqnKTc,
-.gKlQt{
+.gKlQt,
+.wiiKJb,
+.pMgxyd{
 border-color:#505050;
 }
 ._Db:active,
@@ -866,7 +877,8 @@ border-color: /*[[title-text]]*/ transparent;
 .tw-lang-selector-wrapper:hover::after {
 border-color: #CCCCCC transparent;
 }
-._vap{
+._vap,
+.BTP3Ac{
 border-color:/*[[accent]]*/ transparent;
 }
 ._Lap:hover ._vap {
@@ -991,7 +1003,8 @@ g-flat-button.BwMo1,
 .EHzcec,
 .tX9u1b:hover,
 .XQ6p1d,
-.J3Tg1d{
+.J3Tg1d,
+.kp-header:first-child .BIZ8kb .thumb{
 border-radius:0px;
 }
 .qV9w7d,
@@ -1001,7 +1014,7 @@ border-radius:0px;
 .M4dUYb{
 border-radius:0px!important;
 }
-._vpj {
+._vpj{
 border-radius:7px;
 }
 .kp-blk,
@@ -1157,13 +1170,17 @@ a.KYeOtb  div.SVWlSe div.gsmt,
 .Xcw0p.ztUP4e,
 .MNK4Vd .kaAt2.KKjvXb,
 .G7xsKe,
-title-with-lhs-icon:hover .ekf0x h3{
+title-with-lhs-icon:hover .ekf0x h3,
+.FoAEQ,
+.TADXpd,
+.O8Q2Ie{
 color:/*[[accent]]*/;
 }
 ._tX,
 span.OXXup,
 .xXEKkb,
-.MjJo9{
+.MjJo9,
+.dU5Kl .xxjNNe{
 color:/*[[accent]]*/!important;
 }
 #rcnt a:hover,
@@ -1203,8 +1220,6 @@ color:#4D804A;
 .s6Evvd.rz8nGb,
 .HxQHOc,
 .r0bn4c.rQMQod,
-.u1M3kd.g6Ealc,
-.Aq14fc,
 .WeviRb,
 .PmPt7d,
 .DbaDvc,
@@ -1332,7 +1347,10 @@ a.EbH0bb,
 .AupITe,
 .nrXPnc,
 .Co1npd,
-span.lPqy4c{
+span.lPqy4c,
+.Aq14fc,
+.Eb9vv,
+.amyZLb{
 color:/*[[main-text]]*/;
 }
 .s,
@@ -1344,7 +1362,8 @@ g-fab,
 footer a,
 .wUrVib .aKcFGd,
 a.rjS66d.KjyTCd .EZRelc.z1asCe.lYxQe,
-.gRqDMe{
+.gRqDMe,
+.vk_gy{
 color:/*[[main-text]]*/!important;
 }
 .cj2HCb a:hover,
@@ -1646,7 +1665,13 @@ a.B1uW2d,
 .HRfe0e,
 .Rq5Gcb,
 title-with-lhs-icon .ekf0x,
-.gBPM8 .tmS4cc.VgAC5d .gadasb{
+.gBPM8 .tmS4cc.VgAC5d .gadasb,
+.G5rmf,
+.u9sbk.W2lMue,
+.Ss2Faf a,
+.u1M3kd.W2lMue,
+.u1M3kd.g6Ealc,
+.hqwb1b{
 color:/*[[title-text]]*/;
 }
 ._xdb .fl,
@@ -1946,5 +1971,13 @@ filter:saturate(50%) hue-rotate(342deg) brightness(80%);
 }
 .l2gNXd{
 background-color:#c69259;
+}
+.AkREi {
+filter:invert(100) brightness(150%);
+border-radius:50%;
+}
+.dU5Kl {
+background-color: transparent;
+border-color: /*[[border]]*/;
 }
 }
