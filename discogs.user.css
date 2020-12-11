@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.0.3
+@version     1.0.4
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -52,6 +52,11 @@ ul.module_blocks > li,
 div.section div.section_content.tall{
 background:/*[[elements]]*/;
 }
+#page_content .messageContents table#deh-wrapper tbody tr td table tbody tr td table{
+background-color:/*[[elements]]*/;
+border: none!important;
+box-shadow:none!important;
+}
 #site_header_wrap,
 div.section h3,
 .form-block legend,
@@ -88,6 +93,9 @@ table.diff th,
 aside li:hover > a,
 .aside-thread:hover ul{
 background:/*[[elements-lighter]]*/;
+}
+#messages_list .unread_message{
+background-color:/*[[elements-lighter]]*/;
 }
 #full-width-header, #user_header {
 	background-color: #252525;
@@ -201,6 +209,9 @@ border-bottom:none;
 .threads-table{
 border-top:none;
 }
+#messages_list .messagelist tr {
+	border-color: /*[[bg]]*/;
+}
 #search_tabs li{
 border-color:/*[[elements]]*/;
 }
@@ -240,7 +251,8 @@ table.release_list_table tbody tr:last-child,
 .is_mobile.needs_reduced_ui #mobile_options .open_filter,
 .thread .thread_message,
 .forum-landing-topic-list .section-box,
-.more_lists_link::before{
+.more_lists_link::before,
+.messageHeader{
 border-color:/*[[border-color]]*/;
 }
 .tab_menu li.current a{
