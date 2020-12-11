@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.0.2
+@version     1.0.3
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -84,8 +84,13 @@ textarea,
 table.diff th,
 #search_tabs,
 .ui-autocomplete a.ui-state-hover,
-.ui-autocomplete a.ui-state-focus{
+.ui-autocomplete a.ui-state-focus,
+aside li:hover > a,
+.aside-thread:hover ul{
 background:/*[[elements-lighter]]*/;
+}
+#full-width-header, #user_header {
+	background-color: #252525;
 }
 hr{
 background:/*[[border-color]]*/;
@@ -108,7 +113,8 @@ background-color:/*[[secondary-button]]*/;
 .button:hover,
 .button:focus,
 .button.button-white:hover,
-.button.button-white:focus{
+.button.button-white:focus,
+table.cards tr.edit td.status{
 background:/*[[secondary-button-H]]*/;
 }
 .button.button-blue,
@@ -192,6 +198,9 @@ border:none!important
 .pagination.top{
 border-bottom:none;
 }
+.threads-table{
+border-top:none;
+}
 #search_tabs li{
 border-color:/*[[elements]]*/;
 }
@@ -228,7 +237,10 @@ table.release_list_table tbody tr:last-child,
 .is_mobile.needs_reduced_ui .table_responsive tr,
 .is_mobile.needs_reduced_ui .pagination .pagination_page_links li > a,
 .is_mobile.needs_reduced_ui .pagination .pagination_page_links li > span,
-.is_mobile.needs_reduced_ui #mobile_options .open_filter{
+.is_mobile.needs_reduced_ui #mobile_options .open_filter,
+.thread .thread_message,
+.forum-landing-topic-list .section-box,
+.more_lists_link::before{
 border-color:/*[[border-color]]*/;
 }
 .tab_menu li.current a{
@@ -318,12 +330,17 @@ ul.module_blocks .header .remove_module,
 .is_mobile.needs_reduced_ui .pagination .pagination_page_links li > a,
 .is_mobile.needs_reduced_ui .pagination .pagination_page_links li > span,
 a.readmore_toggler.touch, a.readmore_toggler:hover,
-.master-release-credits .grid .credits_info{
+.master-release-credits .grid .credits_info,
+.aside-thread li,
+.section-box .forum-landing-topic-meta li{
 color:/*[[main-text]]*/;
 }
 .ui-autocomplete a .sublabel,
 .ui-autocomplete .format{
 color:/*[[main-text]]*/!important;
+}
+#full-width-header .thread-header-info .thread-header-breadcrumb a{
+color: white;
 }
 .aside_search_form button:hover i,
 #site_search #do_site_search:hover i,
@@ -359,7 +376,8 @@ a,
 a.rollover_link.hl_removed,
 a.rollover_link.hl_changed1,
 a.rollover_link.hl_added,
-.ui-autocomplete a .label{
+.ui-autocomplete a .label,
+.is_not_mobile .row_actions a:hover{
 color:/*[[color-global]]*/;
 }
 .is_mobile.needs_reduced_ui #page.aside_off_canvas .open_filter.filters_active,
@@ -377,7 +395,8 @@ a:hover,
 .tab_menu li.menu-item a:hover,
 .is_not_mobile .facets_nav a:hover,
 a.inset_button:visited:hover,
-.ui-autocomplete.ui-menu .ui-menu-item:hover a{
+.ui-autocomplete.ui-menu .ui-menu-item:hover a,
+.thread-header-info p a{
 color:/*[[color-global-H]]*/;
 }
 a:visited{
@@ -449,8 +468,47 @@ height:100px;
 background:/*[[elements]]*/;
 color:/*[[main-text]]*/;
 }
+blockquote {
+	border:none;
+	background-color: /*[[elements-lighter]]*/;
+	border-radius: 0px;
+	box-shadow: none;
+}
+.action_menu a:focus,
+.dropdown-button .dropdown-button-options a:focus,
+.action_menu .action-menu-option:focus,
+.dropdown-button .dropdown-button-options .action-menu-option:focus {
+	background: /*[[secondary-button-H]]*/;
+}
+.ui-dialog-arrow-top-left::before,
+.ui-dialog-arrow-top-left::after,
+.ui-dialog-arrow-top-right::before,
+.ui-dialog-arrow-top-right::after{
+	border-bottom-color:  /*[[secondary-button]]*/;
+}
+.action_menu, .dropdown-button .dropdown-button-options {
+	background: /*[[secondary-button]]*/;
+	border-color: /*[[secondary-button]]*/;
+}
+.is_not_mobile .action_menu li.menu-item:hover,
+.is_not_mobile .dropdown-button .dropdown-button-options li.menu-item:hover,
+.dropdown-button .is_not_mobile .dropdown-button-options li.menu-item:hover{
+	background: /*[[secondary-button-H]]*/;
+}
+.ui-dialog-arrow-top-left.ui-dialog-arrow-highlight::after,
+.ui-dialog-arrow-top-right.ui-dialog-arrow-highlight::after{
+	border-bottom-color:  /*[[secondary-button-H]]*/;
+}
+.action_menu a,
+.dropdown-button .dropdown-button-options a,
+.action_menu .action-menu-option,
+.dropdown-button .dropdown-button-options .action-menu-option {
+	color: /*[[button-text]]*/;
+}
+.section-as-link:hover{
+	background: /*[[elements-lighter]]*/;
+}
 @media (min-width:768px){
-#page,
 div.section div.section_content,
 #page_aside div.section:nth-child(4) div.section_content,
 .ui-autocomplete,
@@ -473,16 +531,8 @@ ul.module_blocks .footer,
 .discography_nav{
 padding:8px;
 }
-#full-width-header .full-width-header-content,
-#user_header .full-width-header-content,
-.header-action-bar{
-padding:12px!important;
-}
 #page.aside_right #page_content{
 padding-right:12px;
-}
-#page{
-padding:12px!important;
 }
 #page.aside_wide #page_aside,
 #full-width-header .aside_wide.full-width-header-content #page_aside,
