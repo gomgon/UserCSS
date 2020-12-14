@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.0.5
+@version     1.0.6
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -10,8 +10,8 @@
 @advanced color elements "Elements" #282828
 @advanced color elements-lighter "Lighter elements & headers" #323232
 @advanced color border-color "Borders color" #323232
-@advanced color secondary-button "Secondary buttons" #404040
-@advanced color secondary-button-H "Secondary buttons hover" #505050
+@advanced color secondary-button "Buttons" #404040
+@advanced color secondary-button-H "Buttons hover" #505050
 @advanced color main-text "Main text" #999999
 @advanced color button-text "Buttons text" #FFFFFF
 @advanced color color-global "Main Color" #5C809E
@@ -29,8 +29,13 @@ a.readmore_toggler,
 .history tr.odd, .history tr:nth-child(2n+1),
 .history tr.even, .history tr:nth-child(2n),
 .history table tr.datarow:hover,
-.is_mobile.needs_reduced_ui #page.aside_off_canvas #page_content{
+.is_mobile.needs_reduced_ui #page.aside_off_canvas #page_content,
+table.subform_tracklist .subform_track{
 background:/*[[bg]]*/;
+}
+.layout,
+.footer{
+background-color:/*[[bg]]*/;
 }
 #page.aside_right #page_content .body,
 #page.aside_right .section,
@@ -49,7 +54,17 @@ ul.module_blocks > li,
 .history_form,
 .is_not_mobile table.release_list_table tbody tr:hover,
 .ui-autocomplete a,
-div.section div.section_content.tall{
+div.section div.section_content.tall,
+.drag_drop_field_list > li,
+.react_drag_drop_field_list .drag_drop_content,
+.editable_item,
+.drag_drop_field_list > li:hover,
+.react_drag_drop_field_list .drag_drop_content:hover,
+.editable_item:hover,
+.ref_guidelines_list :not(.ref_guidelines_highlight) .ref_guidelines_heading:hover,
+.share a,
+table.subform_table tr.subnotes,
+table.subform_table tr.collection{
 background:/*[[elements]]*/;
 }
 #page_content .messageContents table#deh-wrapper tbody tr td table tbody tr td table{
@@ -91,14 +106,18 @@ table.diff th,
 .ui-autocomplete a.ui-state-hover,
 .ui-autocomplete a.ui-state-focus,
 aside li:hover > a,
-.aside-thread:hover ul{
+.aside-thread:hover ul,
+.ref_guidelines_list > li.ref_guidelines_highlight,
+.ref_guidelines_list > li.ref_guidelines_highlight:hover,
+.ref_guidelines_list .ref_guidelines_highlight .ref_guidelines_heading:hover{
 background:/*[[elements-lighter]]*/;
 }
-#messages_list .unread_message{
+#messages_list .unread_message,
+.share a:hover{
 background-color:/*[[elements-lighter]]*/;
 }
 #full-width-header, #user_header {
-	background-color: #252525;
+background-color: #252525;
 }
 hr{
 background:/*[[border-color]]*/;
@@ -142,6 +161,9 @@ background-color:/*[[color-global]]*/;
 .facets_nav .is_not_mobile a.selected:hover,
 .is_not_mobile .current_filter:hover{
 background:/*[[color-global-H]]*/;
+}
+.history_form .vote_info_helper {
+background: hsl(60, 50%, 15%);
 }
 .section.recommendations .lazy_gallery_prev,
 .section.recommendations .lazy_gallery_next,
@@ -195,7 +217,10 @@ textarea,
 .button[disabled],
 a.inset_button,
 .history_form,
-#search_tabs{
+#search_tabs,
+.drag_drop_field_list > li,
+.react_drag_drop_field_list .drag_drop_content,
+.editable_item{
 border:none;
 }
 .button{
@@ -210,7 +235,7 @@ border-bottom:none;
 border-top:none;
 }
 #messages_list .messagelist tr {
-	border-color: /*[[bg]]*/;
+border-color: /*[[bg]]*/;
 }
 #search_tabs li{
 border-color:/*[[elements]]*/;
@@ -252,7 +277,17 @@ table.release_list_table tbody tr:last-child,
 .thread .thread_message,
 .forum-landing-topic-list .section-box,
 .more_lists_link::before,
-.messageHeader{
+.messageHeader,
+table.subform_table,
+table.subform_table tr,
+table.subform_table td,
+.reference_on #subform,
+#subform_wrapper .ref_guidelines_list > li,
+.article-vote,
+.footer,
+.format_descriptions,
+#editing_header .editing_header_help li:first-child,
+.history_form .actions{
 border-color:/*[[border-color]]*/;
 }
 #main_wrapper div#page.aside_right div#page_content div{
@@ -263,6 +298,9 @@ border-color:/*[[color-global]]*/;
 }
 .tab_menu li.current a:hover{
 border-color:/*[[color-global-H]]*/;
+}
+#ref_arrow div {
+border-right-color: /*[[bg]]*/;
 }
 ul.module_blocks > li.module_placeholder,
 .module_blocks .dashboard_addmodules,
@@ -293,8 +331,8 @@ textarea,
 .button.button-red[disabled],
 .button.button-dark[disabled],
 .button.button-white[disabled],
-.button[disabled]{
--webkit-box-shadow:none;
+.button[disabled],
+.reference_on #subform{
 box-shadow:none;
 }
 .ui-autocomplete {
@@ -347,7 +385,15 @@ ul.module_blocks .header .remove_module,
 a.readmore_toggler.touch, a.readmore_toggler:hover,
 .master-release-credits .grid .credits_info,
 .aside-thread li,
-.section-box .forum-landing-topic-meta li{
+.section-box .forum-landing-topic-meta li,
+.drag_drop_field_remove_row,
+.drag_drop_field_list .collapsible .collapse,
+.react_drag_drop_field_list .collapsible .collapse,
+.ref_guidelines_list .ref_guidelines_heading a,
+.footer,
+.footer-social-link,
+.share a:hover,
+.search::before{
 color:/*[[main-text]]*/;
 }
 .ui-autocomplete a .sublabel,
@@ -361,7 +407,10 @@ color: white;
 #site_search #do_site_search:hover i,
 a.readmore_toggler:hover,
 .anv_selected,
-.is_mobile.needs_reduced_ui #mobile_options .open_filter{
+.is_mobile.needs_reduced_ui #mobile_options .open_filter,
+.drag_drop_field_remove_row:hover,
+.drag_drop_field_list .collapsible .collapse:hover,
+.react_drag_drop_field_list .collapsible .collapse:hover{
 color:/*[[button-text]]*/;
 }
 .button,
@@ -392,7 +441,8 @@ a.rollover_link.hl_removed,
 a.rollover_link.hl_changed1,
 a.rollover_link.hl_added,
 .ui-autocomplete a .label,
-.is_not_mobile .row_actions a:hover{
+.is_not_mobile .row_actions a:hover,
+.breadcrumbs > li a{
 color:/*[[color-global]]*/;
 }
 .is_mobile.needs_reduced_ui #page.aside_off_canvas .open_filter.filters_active,
@@ -484,44 +534,75 @@ background:/*[[elements]]*/;
 color:/*[[main-text]]*/;
 }
 blockquote {
-	border:none;
-	background-color: /*[[elements-lighter]]*/;
-	border-radius: 0px;
-	box-shadow: none;
+border:none;
+background-color: /*[[elements-lighter]]*/;
+border-radius: 0px;
+box-shadow: none;
 }
 .action_menu a:focus,
 .dropdown-button .dropdown-button-options a:focus,
 .action_menu .action-menu-option:focus,
 .dropdown-button .dropdown-button-options .action-menu-option:focus {
-	background: /*[[secondary-button-H]]*/;
+background: /*[[secondary-button-H]]*/;
 }
 .ui-dialog-arrow-top-left::before,
 .ui-dialog-arrow-top-left::after,
 .ui-dialog-arrow-top-right::before,
 .ui-dialog-arrow-top-right::after{
-	border-bottom-color:  /*[[secondary-button]]*/;
+border-bottom-color:  /*[[secondary-button]]*/;
 }
 .action_menu, .dropdown-button .dropdown-button-options {
-	background: /*[[secondary-button]]*/;
-	border-color: /*[[secondary-button]]*/;
+background: /*[[secondary-button]]*/;
+border-color: /*[[secondary-button]]*/;
 }
 .is_not_mobile .action_menu li.menu-item:hover,
 .is_not_mobile .dropdown-button .dropdown-button-options li.menu-item:hover,
 .dropdown-button .is_not_mobile .dropdown-button-options li.menu-item:hover{
-	background: /*[[secondary-button-H]]*/;
+background: /*[[secondary-button-H]]*/;
 }
 .ui-dialog-arrow-top-left.ui-dialog-arrow-highlight::after,
 .ui-dialog-arrow-top-right.ui-dialog-arrow-highlight::after{
-	border-bottom-color:  /*[[secondary-button-H]]*/;
+border-bottom-color:  /*[[secondary-button-H]]*/;
 }
 .action_menu a,
 .dropdown-button .dropdown-button-options a,
 .action_menu .action-menu-option,
 .dropdown-button .dropdown-button-options .action-menu-option {
-	color: /*[[button-text]]*/;
+color: /*[[button-text]]*/;
 }
 .section-as-link:hover{
-	background: /*[[elements-lighter]]*/;
+background: /*[[elements-lighter]]*/;
+}
+[role="button"], .btn--default, .section-subscribe .dropdown-toggle, .community-recent-activity .recent-activity-controls a, .article-subscribe, .article-unsubscribe, .post-subscribe, .post-unsubscribe, .topic-controls__item--subscribe .dropdown-toggle, .topic-controls__item--subscribe .topic-unsubscribe,
+.btn--topbar, .topbar .login{
+color: /*[[button-text]]*/;
+border-color: /*[[secondary-button]]*/;
+border-radius:0px;
+}
+[role="button"]:hover, [role="button"]:focus, [role="button"]:active, .btn--default:hover, .btn--default:focus, .btn--default:active, .section-subscribe .dropdown-toggle:hover, .section-subscribe .dropdown-toggle:focus, .section-subscribe .dropdown-toggle:active, .community-recent-activity .recent-activity-controls a:hover, .community-recent-activity .recent-activity-controls a:focus, .community-recent-activity .recent-activity-controls a:active, .article-subscribe:hover, .article-subscribe:focus, .article-subscribe:active, .article-unsubscribe:hover, .article-unsubscribe:focus, .article-unsubscribe:active, .post-subscribe:hover, .post-subscribe:focus, .post-subscribe:active, .post-unsubscribe:hover, .post-unsubscribe:focus, .post-unsubscribe:active, .topic-controls__item--subscribe .dropdown-toggle:hover, .topic-controls__item--subscribe .dropdown-toggle:focus, .topic-controls__item--subscribe .dropdown-toggle:active, .topic-controls__item--subscribe .topic-unsubscribe:hover, .topic-controls__item--subscribe .topic-unsubscribe:focus, .topic-controls__item--subscribe .topic-unsubscribe:active,
+.btn--topbar:hover, .btn--topbar:focus, .btn--topbar:active, .topbar .login:hover, .topbar .login:focus, .topbar .login:active,
+.dropdown:hover a.dropdown-toggle.btn--topbar{
+color: /*[[button-text]]*/;
+border-color: /*[[secondary-button-H]]*/;
+}
+.article-vote-controls__item {
+color: /*[[button-text]]*/;
+background-color: /*[[secondary-button]]*/;
+border-color: /*[[secondary-button]]*/;
+}
+.article-vote-controls__item:hover {
+color: /*[[button-text]]*/;
+background-color: /*[[secondary-button-H]]*/;
+border-color: /*[[secondary-button-H]]*/;;
+}
+input[type="search"] {
+color: /*[[main-text]]*/;
+background-color: transparent;
+border-color: /*[[border-color]]*/;;
+border-radius: 0px;
+}
+select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .nesty-input:focus {
+border-color: /*[[color-global]]*/;
 }
 @media (min-width:768px){
 div.section div.section_content,
@@ -573,5 +654,5 @@ background-color:/*[[elements]]*/;
 .is_mobile.needs_reduced_ui #discography_wrapper.aside_nav_wrap #releases #pjax_container{
 padding-top:8px;
 }
-}  
+}
 }
