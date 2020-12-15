@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.7.0
+@version     0.7.1
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -49,7 +49,7 @@ height:30px!important;
 .logo,
 .minidiv .logo,
 body header form#sf .ZbYMvd{
-	padding: 0px 37px;
+padding: 0px 37px;
 }
 .doodle,
 body header:not(.DU1Mzb) form#sf .ZbYMvd{
@@ -632,7 +632,8 @@ a.gb_P,
 .NYCPFe .L3OsEb,
 .TieM1d,
 .rhscol .I6TXqe,
-.lgJJud{
+.lgJJud,
+.minidiv .RNNXgb{
 border:none;
 }
 .ab_button,
@@ -1885,9 +1886,6 @@ height: 40px;
 .cEW58{
 height: 63px;
 }
-.sfbgg{
-height: 72px;
-}
 .dw-sb-cont .dw-sb-btn {
 line-height: 40px;
 width: 40px;
@@ -2050,6 +2048,19 @@ border-color: /*[[border]]*/;
 }
 .IsZvec{
 opacity:.7;
+}
+.srp #searchform {
+position: absolute;
+top: 20px;
+margin-top:0px;
+padding-top:8px
+}
+.sfbg {
+height: 80px;
+top: 0;
+}
+.minidiv .RNNXgb {
+margin-top: 2px ;
 }
 /*[[logo]]*/
 /*[[Hide-add-lang]]*/
