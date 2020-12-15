@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.6.0
+@version     2.6.1
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -60,7 +60,7 @@ margin-top: -16px;
 @advanced color button-text-H "Buttons text hover" #FFFFFF
 @advanced color color-global "Main Color" #5C809E
 @advanced color color-global-hover "Main color lighter" #77A6CC
-@advanced dropdown font "Use alternative font"{
+@advanced dropdown font "Use old font"{
 No "No" <<<EOT
 EOT;
 Yes "Yes" <<<EOT
@@ -1589,7 +1589,8 @@ color:/*[[main-text]]*/;
 .gallery-image-vote-down-off,
 .header--overview .header-title a,
 .header--sub-page .header-title a,
-.header .header-metadata-display a{
+.header .header-metadata-display a,
+.user-dashboard-upsell-cta{
 color:/*[[button-text]]*/;
 }
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-primary:focus,
@@ -1636,7 +1637,10 @@ body:not([data-whatinput="touch"]) .gallery-image-vote-down-off .focus-visible,
 body:not([data-whatinput="touch"]) .gallery-image-vote-down-off:hover,
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-shortcut:focus,
 body:not([data-whatinput="touch"]) .btn-shortcut .focus-visible,
-body:not([data-whatinput="touch"]) .btn-shortcut:hover{
+body:not([data-whatinput="touch"]) .btn-shortcut:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta:focus,
+body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta .focus-visible,
+body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta:hover{
 color:/*[[button-text-H]]*/;
 }
 .no-data-message-button:focus,
@@ -1928,12 +1932,12 @@ margin-right:8px;
 line-height:10px;
 }
 .catalogue-tags .tags-add::before{
-top:14px;
+top:19px;
 left:7px;
 }
 .catalogue-tags .tags-add-cta::before{
 top:12px;
-left:11px
+left:11px;
 }
 .inline-add-icon:hover::before,
 .catalogue-tags .tags-add:hover::before,
