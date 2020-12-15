@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.0.6
+@version     1.0.7
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -393,7 +393,8 @@ a.readmore_toggler.touch, a.readmore_toggler:hover,
 .footer,
 .footer-social-link,
 .share a:hover,
-.search::before{
+.search::before,
+.ct-label{
 color:/*[[main-text]]*/;
 }
 .ui-autocomplete a .sublabel,
@@ -517,6 +518,12 @@ opacity:.6;
 }
 #youtube_tracklist{
 outline:none;
+}
+.ct-grid {
+	stroke:/*[[elements-lighter]]*/;
+}
+.ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut {
+	stroke:/*[[color-global]]*/
 }
 a:hover,
 .is_not_mobile .youtube_track:hover strong{
