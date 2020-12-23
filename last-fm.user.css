@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.6.2
+@version     2.6.3
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -236,7 +236,8 @@ EOT;
 @advanced dropdown hide-cookies "Hide cookie settings button" {
 Yes "Yes" <<<EOT
 div#_evh-button.evidon-consent-button,
-#onetrust-consent-sdk{
+#onetrust-consent-sdk,
+body > button#ot-sdk-btn.ot-sdk-show-settings{
 display:none!important;
 } EOT;
 No "No" <<<EOT
