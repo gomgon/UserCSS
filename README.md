@@ -8,8 +8,8 @@ All stylesheets are customizable and mobile compatible.
 #
 [![Install](/images/last.fm.png)](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) Last.fm stylesheet.
 
-<img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/LastfmScreenshot2.png" height="80" title="Click to enlarge"></img>
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/LastfmScreenshot1.png" height="80" title="Click to enlarge"></img>
+<img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/LastfmScreenshot2.png" height="80" title="Click to enlarge"></img>
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/LastfmScreenshot3.png" height="80" title="Click to enlarge"></img>
 <br>
 #
