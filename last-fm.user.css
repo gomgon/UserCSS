@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.6.3
+@version     2.6.4
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -349,7 +349,8 @@ background-image:url(https://i.imgur.com/ety944K.png)!important;
 }
 .content-form .table .delete::before,
 .inbox-message-view .inbox-message-buttons .delete-button::before,
-.lazy-recs-bar-close::before{
+.lazy-recs-bar-close::before,
+.user-dashboard-history-subscribe-banner-cta-close::before{
 background-image:url(https://www.last.fm/static/images/icons/delete_fff_16.png);
 }
 .search-submit::before{
@@ -541,7 +542,8 @@ pre,
 .content,
 .left-column,
 .no-data-message-button,
-.inbox-message-view .inbox-message-message blockquote{
+.inbox-message-view .inbox-message-message blockquote,
+.listening-report-library-link{
 border-radius:0;
 }
 .library-controls-datepicker{
@@ -623,7 +625,8 @@ th.metadata-title{
 color:#999999!important;
 }
 .shout-reply::before,
-.vote-button-toggle .vote-button::before{
+.vote-button-toggle .vote-button::before,
+.play-this-track-playlink--disabled::before{
 filter: brightness(50%);
 }
 .shout-reply:hover::before,
@@ -698,7 +701,6 @@ filter:invert(90%) saturate(0%) brightness(200%);
 .more-item--track:hover::before,
 .more-item--artist:hover::before,
 .more-item--obsession:hover::before,
-.more-item--delete:hover::before,
 .more-item--report:hover::before,
 .more-item--play:hover::before,
 .more-item--album:hover::before,
@@ -722,6 +724,9 @@ filter: invert(100%) brightness(200%)!important;
 .kerve .trendright,
 .header .header-message-user::before{
 filter:saturate(0%)!important;
+}
+.more-item--delete:hover::before{
+filter:brightness(200%)!important;
 }
 .dropdown-buylinks--light .dropdown-more-buylinks::before,
 .suggest-correction-cta::before,
@@ -975,7 +980,6 @@ body:not(.dashbody) .kerve.widget,
 table.table tr:nth-child(2n) td,
 .lazy-recs-bar-full-width-wrapper,
 .lazy-recs-bar-container,
-.modal-content,
 .popup_visible .modal-content .alert,
 .features-header .features-teaser-body,
 .features-teaser--promoted .features-teaser-body,
@@ -1055,7 +1059,8 @@ background:/*[[bg-lighter]]*/!important;
 .scrobble-stats-info-tooltip,
 .inbox-message-view .inbox-message-message blockquote,
 .section-with-separator::after,
-.playlist-advice{
+.playlist-advice,
+.modal-body{
 background:/*[[bg-lighter]]*/;
 }
 .user-dashboard-banner,
@@ -1113,7 +1118,8 @@ background:/*[[color-global]]*/!important;
 .kerve .trendbarwrap .bar,
 .music-section-heading::after,
 .features-teaser-has-video,
-.api-session-connect{
+.api-session-connect,
+.user-dashboard-section-header::after{
 background:/*[[color-global]]*/;
 }
 .header-follower-btn .follower-btn-add-follower::before,
@@ -1179,9 +1185,15 @@ input.confirmButton,
 .more-disclose-mobile .more-block{
 background-color:/*[[secondary-button]]*/!important;
 }
+.listening-report-library-link{
+background-color:/*[[secondary-button]]*/;
+}
 .more-link-with-action a:active,
 body:not([data-whatinput="touch"]) .more-link-with-action a:focus,
-body:not([data-whatinput="touch"]) .more-link-with-action a:hover {
+body:not([data-whatinput="touch"]) .more-link-with-action a:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .listening-report-library-link:focus,
+body:not([data-whatinput="touch"]) .listening-report-library-link .focus-visible,
+body:not([data-whatinput="touch"]) .listening-report-library-link:hover{
 background-color:/*[[secondary-button-H]]*/;
 }
 .btn-secondary:hover,
@@ -1298,7 +1310,14 @@ border-color:/*[[border-color]]*/!important;
 .wiki-block-cta::after, .wiki-block-cta::before,
 .inbox-message-view .inbox-message-message blockquote,
 .play-this-track-playlink::after,
-.sidebar-date-heading::after{
+.sidebar-date-heading::after,
+.listening-report-brick,
+.listening-report-brick--no-hover:hover,
+.listening-report-brick--no-hovers:focus,
+.listening-report-brick.listening-report-brick--combo:focus,
+.listening-report-brick.listening-report-brick--combo:hover,
+.listening-report-brick:focus,
+.listening-report-brick:hover{
 border-color:/*[[border-color]]*/;
 }
 .content-form .has-error .form-control,
@@ -1392,6 +1411,21 @@ box-shadow:0 0 0 18px /*[[bg]]*/;
 }
 .avatar-status-dot {
 box-shadow:0 0 0 2px /*[[bg]]*/;
+}
+.listening-report-brick:focus,
+.listening-report-brick:hover{
+	box-shadow: 0 0 9px 0 /*[[border-color]]*/;
+}
+.content-form .form-control:focus,
+.content-form input[type="date"]:focus,
+.content-form input[type="email"]:focus,
+.content-form input[type="number"]:focus,
+.content-form input[type="password"]:focus,
+.content-form input[type="text"]:focus,
+.content-form input[type="url"]:focus,
+.content-form select:focus,
+.content-form textarea:focus{
+	box-shadow: 0 0 9px 0 /*[[main-text]]*/;
 }
 .secondary-nav{
 box-shadow:none ;
@@ -1576,7 +1610,8 @@ h1,
 .gallery-upload-rules,
 .grid-items-cta h3,
 .about-artist-listeners,
-.btn-shortcut{
+.btn-shortcut,
+.listening-report-brick .listening-report-brick-item{
 color:/*[[main-text]]*/;
 }
 .btn-primary,
@@ -1592,7 +1627,8 @@ color:/*[[main-text]]*/;
 .header--overview .header-title a,
 .header--sub-page .header-title a,
 .header .header-metadata-display a,
-.user-dashboard-upsell-cta{
+.user-dashboard-upsell-cta,
+.listening-report-library-link{
 color:/*[[button-text]]*/;
 }
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-primary:focus,
@@ -1642,7 +1678,10 @@ body:not([data-whatinput="touch"]) .btn-shortcut .focus-visible,
 body:not([data-whatinput="touch"]) .btn-shortcut:hover,
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta:focus,
 body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta .focus-visible,
-body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta:hover{
+body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .listening-report-library-link:focus,
+body:not([data-whatinput="touch"]) .listening-report-library-link .focus-visible,
+body:not([data-whatinput="touch"]) .listening-report-library-link:hover{
 color:/*[[button-text-H]]*/;
 }
 .no-data-message-button:focus,
