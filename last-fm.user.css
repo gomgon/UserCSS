@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.6.4
+@version     2.6.5
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -991,7 +991,8 @@ background:/*[[bg]]*/!important;
 }
 pre,
 .blurb,
-.left-column{
+.left-column,
+.user-dashboard-module{
 background:/*[[bg]]*/;
 }
 .alert,
@@ -1039,7 +1040,6 @@ background:/*[[bg-lighter]]*/!important;
 }
 .content,
 .recommended-next-page,
-.user-dashboard-module,
 .user-dashboard-history-subscribe-banner-cta::after,
 .user-dashboard-history-subscribe-banner-cta::before,
 .header-popularity-rank-tooltip,
@@ -1317,7 +1317,8 @@ border-color:/*[[border-color]]*/!important;
 .listening-report-brick.listening-report-brick--combo:focus,
 .listening-report-brick.listening-report-brick--combo:hover,
 .listening-report-brick:focus,
-.listening-report-brick:hover{
+.listening-report-brick:hover,
+.listening-report-brick .listening-report-brick-inner + .listening-report-brick-inner{
 border-color:/*[[border-color]]*/;
 }
 .content-form .has-error .form-control,
@@ -1414,7 +1415,7 @@ box-shadow:0 0 0 2px /*[[bg]]*/;
 }
 .listening-report-brick:focus,
 .listening-report-brick:hover{
-	box-shadow: 0 0 9px 0 /*[[border-color]]*/;
+box-shadow: 0 0 9px 0 /*[[border-color]]*/;
 }
 .content-form .form-control:focus,
 .content-form input[type="date"]:focus,
@@ -1425,7 +1426,7 @@ box-shadow:0 0 0 2px /*[[bg]]*/;
 .content-form input[type="url"]:focus,
 .content-form select:focus,
 .content-form textarea:focus{
-	box-shadow: 0 0 9px 0 /*[[main-text]]*/;
+box-shadow: 0 0 9px 0 /*[[main-text]]*/;
 }
 .secondary-nav{
 box-shadow:none ;
@@ -1693,22 +1694,23 @@ color:/*[[button-text-H]]*/!important;
 hr{
 color:/*[[border-color]]*/!important;
 }
-.js-listening-clock-target.user-dashboard-chart-square-inner > svg.user-dashboard-module-svg > g > text{
+.js-listening-clock-target > svg.user-dashboard-module-svg > g > text,
+.st0{
 fill:/*[[main-text]]*/;
 }
 .highcharts-data-labels > g > text,
 .highcharts-axis-labels > text{
 fill:/*[[main-text]]*/!important;
 }
-.scrobble-stats-graph-chart .highcharts-background,
-.user-dashboard-tube-tags-scroll .highcharts-background,
-.user-dashboard-chart-square-inner .highcharts-background,
 .user-dashboard-scalable-content .highcharts-background,
-.js-listening-clock-target.user-dashboard-chart-square-inner > svg.user-dashboard-module-svg > g > circle:nth-of-type(1),
-g.highcharts-plot-bands-0 path.highcharts-plot-band
-{
+.user-dashboard-chart-square-inner .highcharts-background,
+.js-listening-clock-target > svg.user-dashboard-module-svg > g > circle:nth-of-type(1),
+.user-dashboard-module-inner-wrap div.js-listening-clock-target svg.user-dashboard-module-svg g g circle:first-of-type,
+g.highcharts-plot-bands-0 path.highcharts-plot-band{
 fill:/*[[bg-lighter]]*/;
 }
+.scrobble-stats-graph-chart .highcharts-background,
+.user-dashboard-tube-tags-scroll .highcharts-background,
 .highcharts-background {
 fill:/*[[bg]]*/;
 }
@@ -1720,8 +1722,11 @@ fill:/*[[color-global]]*/;
 fill:/*[[color-global]]*/;
 opacity:.1;
 }
-.js-listening-clock-target.user-dashboard-chart-square-inner > svg.user-dashboard-module-svg > g > g:nth-of-type(25){
-stroke:/*[[bg-lighter]]*/;
+.js-listening-clock-target > svg.user-dashboard-module-svg > g > g:nth-of-type(25){
+stroke:/*[[bg]]*/;
+}
+section.user-dashboard-scrobble-stats div.scrobble-stats-graph-chart svg.highcharts-root g.highcharts-grid.highcharts-yaxis-grid path.highcharts-grid-line{
+stroke:/*[[border-color]]*/;
 }
 .js-listening-clock-target.user-dashboard-chart-square-inner > svg.user-dashboard-module-svg > g > g:nth-of-type(27){
 stroke:/*[[main-text]]*/;
@@ -1731,7 +1736,7 @@ g.highcharts-markers.highcharts-series-0.highcharts-area-series.highcharts-color
 stroke:/*[[color-global]]*/;
 }
 .scrobble-stats-graph .user-dashboard-legend-item--comparison::before,
-.highcharts-container > svg > g.highcharts-series-group .highcharts-series-0 > a > rect{
+.highcharts-container > svg > g.highcharts-series-group .highcharts-series-1 > a > rect{
 opacity:.2;
 }
 .shout-timestamp{
@@ -1872,7 +1877,8 @@ border-color: /*[[button-text-H]]*/;
 .wiki-block-cta .cta-link-wrap a::before,
 .external-link-cta .cta-link-wrap a::before,
 .lyrics-snippet-more-link a::before,
-.link-block--hover.wiki-history-entry--with-link .wiki-history-summary::before{
+.link-block--hover.wiki-history-entry--with-link .wiki-history-summary::before,
+.user-dashboard-catalogue-chart .catalogue-chart-inner a::before{
 background-image:none;
 border: solid /*[[color-global]]*/;
 border-width: 0 2px 2px 0;
@@ -1889,7 +1895,8 @@ height: 3px;
 .wiki-block-cta .cta-link-wrap a::before,
 .external-link-cta .cta-link-wrap a::before,
 .lyrics-snippet-more-link a::before,
-.link-block--hover.wiki-history-entry--with-link .wiki-history-summary::before{
+.link-block--hover.wiki-history-entry--with-link .wiki-history-summary::before,
+.user-dashboard-catalogue-chart .catalogue-chart-inner a::before{
 transform: rotate(-45deg);
 }
 .more-items::before,
@@ -1902,7 +1909,8 @@ transform: rotate(45deg);
 .wiki-block-cta .cta-link-wrap a::before,
 .external-link-cta .cta-link-wrap a::before,
 .more-items::before,
-.lyrics-snippet-more-link a::before{
+.lyrics-snippet-more-link a::before,
+.user-dashboard-catalogue-chart .catalogue-chart-inner a::before{
 top: 13px;
 margin-right: 3px;
 }
