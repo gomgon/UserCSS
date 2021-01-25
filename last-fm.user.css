@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.6.6
+@version     2.6.7
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -330,7 +330,8 @@ background:transparent;
 background-color:#592929!important;
 }
 .user-dashboard-upsell-cta,
-.btn-subscribe{
+.btn-subscribe,
+.user-dashboard-subscribe-cta-link{
 background-color: #78684a;
 }
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta:focus,
@@ -338,7 +339,10 @@ body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta .focus-visible,
 body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta:hover,
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-subscribe:focus,
 body:not([data-whatinput="touch"]) .btn-subscribe .focus-visible,
-body:not([data-whatinput="touch"]) .btn-subscribe:hover{
+body:not([data-whatinput="touch"]) .btn-subscribe:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .user-dashboard-subscribe-cta-link:focus, 
+body:not([data-whatinput="touch"]) .user-dashboard-subscribe-cta-link .focus-visible,
+body:not([data-whatinput="touch"]) .user-dashboard-subscribe-cta-link:hover{
 background-color: #a69066;
 }
 .masthead-wrapper .masthead{
@@ -543,7 +547,8 @@ pre,
 .left-column,
 .no-data-message-button,
 .inbox-message-view .inbox-message-message blockquote,
-.listening-report-library-link{
+.listening-report-library-link,
+.user-dashboard-subscribe-cta-link{
 border-radius:0;
 }
 .library-controls-datepicker{
@@ -1061,7 +1066,8 @@ background:/*[[bg-lighter]]*/!important;
 .section-with-separator::after,
 .playlist-advice,
 .modal-body,
-.user-dashboard-tube-tags-position{
+.user-dashboard-tube-tags-position,
+.scrobble-stats-graph .user-dashboard-legend-item--weekend::before{
 background:/*[[bg-lighter]]*/;
 }
 .user-dashboard-banner,
@@ -1416,7 +1422,7 @@ box-shadow:0 0 0 2px /*[[bg]]*/;
 }
 .listening-report-brick:focus,
 .listening-report-brick:hover{
-	box-shadow: 0 0 9px 0 /*[[border-color]]*/;
+box-shadow: 0 0 9px 0 /*[[border-color]]*/;
 }
 .content-form .form-control:focus,
 .content-form input[type="date"]:focus,
@@ -1427,7 +1433,7 @@ box-shadow:0 0 0 2px /*[[bg]]*/;
 .content-form input[type="url"]:focus,
 .content-form select:focus,
 .content-form textarea:focus{
-	box-shadow: 0 0 9px 0 /*[[main-text]]*/;
+box-shadow: 0 0 9px 0 /*[[main-text]]*/;
 }
 .secondary-nav{
 box-shadow:none ;
@@ -1483,7 +1489,8 @@ div.username,
 .col-main .secondary-nav-item-link--active,
 .col-main .secondary-nav-item-link--active:focus,
 .col-main .secondary-nav-item-link--active:hover,
-.more-items{
+.more-items,
+.user-dashboard-musical-matches .header-metadata-display a{
 color:/*[[color-global]]*/;
 }
 .selectbox .selectboxit-selected .selectboxit-option-anchor,
@@ -1631,7 +1638,8 @@ color:/*[[main-text]]*/;
 .header--sub-page .header-title a,
 .header .header-metadata-display a,
 .user-dashboard-upsell-cta,
-.listening-report-library-link{
+.listening-report-library-link,
+.user-dashboard-subscribe-cta-link{
 color:/*[[button-text]]*/;
 }
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-primary:focus,
@@ -1684,7 +1692,10 @@ body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta .focus-visible,
 body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta:hover,
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .listening-report-library-link:focus,
 body:not([data-whatinput="touch"]) .listening-report-library-link .focus-visible,
-body:not([data-whatinput="touch"]) .listening-report-library-link:hover{
+body:not([data-whatinput="touch"]) .listening-report-library-link:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .user-dashboard-subscribe-cta-link:focus, 
+body:not([data-whatinput="touch"]) .user-dashboard-subscribe-cta-link .focus-visible,
+body:not([data-whatinput="touch"]) .user-dashboard-subscribe-cta-link:hover{
 color:/*[[button-text-H]]*/;
 }
 .no-data-message-button:focus,
@@ -1695,46 +1706,6 @@ color:/*[[button-text-H]]*/!important;
 }
 hr{
 color:/*[[border-color]]*/!important;
-}
-.js-listening-clock-target > svg.user-dashboard-module-svg > g > text,
-
-.st0{
-fill:/*[[main-text]]*/;
-}
-.highcharts-data-labels > g > text,
-.highcharts-axis-labels > text{
-fill:/*[[main-text]]*/!important;
-}
-.js-listening-clock-target > svg.user-dashboard-module-svg > g > circle:nth-of-type(1),
-.user-dashboard-module-inner-wrap div.js-listening-clock-target svg.user-dashboard-module-svg g g circle:first-of-type,
-g.highcharts-plot-bands-0 path.highcharts-plot-band{
-fill:/*[[bg-lighter]]*/;
-}
-.scrobble-stats-graph-chart .highcharts-background,
-.user-dashboard-tube-tags-scroll .highcharts-background,
-.highcharts-background {
-fill:/*[[bg]]*/;
-}
-.highcharts-container > svg > g.highcharts-series-group .highcharts-series-0 > a > rect,
-.highcharts-container > svg > g.highcharts-series-group .highcharts-series-1 > a > rect{
-fill:/*[[color-global]]*/;
-}
-.highcharts-series-0.highcharts-area-series.highcharts-color-undefined path.highcharts-area{
-fill:/*[[color-global]]*/;
-opacity:.1;
-}
-.js-listening-clock-target > svg.user-dashboard-module-svg > g > g:nth-of-type(25){
-stroke:/*[[bg]]*/;
-}
-section.user-dashboard-module div svg.highcharts-root g.highcharts-grid.highcharts-yaxis-grid path.highcharts-grid-line{
-stroke:/*[[border-color]]*/;
-}
-.js-listening-clock-target.user-dashboard-chart-square-inner > svg.user-dashboard-module-svg > g > g:nth-of-type(27){
-stroke:/*[[main-text]]*/;
-}
-g.highcharts-series.highcharts-series-0.highcharts-area-series.highcharts-color-undefined path.highcharts-graph,
-g.highcharts-markers.highcharts-series-0.highcharts-area-series.highcharts-color-undefined.highcharts-tracker path{
-stroke:/*[[color-global]]*/;
 }
 .scrobble-stats-graph .user-dashboard-legend-item--comparison::before,
 .highcharts-container > svg > g.highcharts-series-group .highcharts-series-1 > a > rect{
@@ -2111,6 +2082,61 @@ img[src="https://lastfm.freetls.fastly.net/i/u/avatar70s/4128a6eb29f94943c9d206c
 img[src="https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.webp"],
 .gallery-preview-missing-image{
 filter: invert(80%) contrast(130%);
+}
+section.user-dashboard-scrobble-stats svg.highcharts-root g path.highcharts-point,
+.js-listening-clock-target > svg.user-dashboard-module-svg > g > text,
+.st0{
+fill:/*[[main-text]]*/;
+}
+.highcharts-data-labels > g > text,
+.highcharts-axis-labels > text{
+fill:/*[[main-text]]*/!important;
+}
+.js-listening-clock-target > svg.user-dashboard-module-svg > g > circle:nth-of-type(1),
+.js-listening-clock-target svg.user-dashboard-module-svg g g circle:first-of-type,
+g.highcharts-plot-bands-0 path.highcharts-plot-band{
+fill:/*[[bg-lighter]]*/;
+}
+.scrobble-stats-graph-chart .highcharts-background,
+.user-dashboard-tube-tags-scroll .highcharts-background,
+.highcharts-background {
+fill:/*[[bg]]*/;
+}
+.highcharts-container > svg > g.highcharts-series-group .highcharts-series-0 > a > rect,
+.highcharts-container > svg > g.highcharts-series-group .highcharts-series-1 > a > rect{
+fill:/*[[color-global]]*/;
+}
+.highcharts-series-0.highcharts-area-series.highcharts-color-undefined path.highcharts-area{
+fill:/*[[color-global]]*/;
+opacity:.1;
+}
+.js-listening-clock-target > svg.user-dashboard-module-svg > g > g:nth-of-type(25),
+.highcharts-container > svg > g.highcharts-series-group .highcharts-series-0 > a > rect, .highcharts-container > svg > g.highcharts-series-group .highcharts-series-1 > a > rect,
+section.user-dashboard-catalogue-chart div svg.highcharts-root g.highcharts-tracker path.highcharts-point,
+section.user-dashboard-listening-week div svg.highcharts-root g.highcharts-tracker rect.highcharts-point{
+stroke:/*[[bg]]*/;
+}
+section.user-dashboard-listening-week div svg.highcharts-root g.highcharts-grid.highcharts-yaxis-grid path.highcharts-grid-line,
+section.user-dashboard-scrobble-stats div svg.highcharts-root g.highcharts-grid.highcharts-yaxis-grid path.highcharts-grid-line,
+section.user-dashboard-catalogue-chart div svg.highcharts-root g.highcharts-grid.highcharts-xaxis-grid path.highcharts-grid-line,
+section.user-dashboard-catalogue-chart div svg.highcharts-root g.highcharts-grid.highcharts-yaxis-grid path.highcharts-grid-line{
+stroke:/*[[border-color]]*/;
+}
+.js-listening-clock-target.user-dashboard-chart-square-inner > svg.user-dashboard-module-svg > g > g:nth-of-type(27),
+section.user-dashboard-scrobble-stats div svg.highcharts-root g path.highcharts-graph{
+stroke:/*[[main-text]]*/;
+}
+.mainstream-triangle svg line{
+stroke:/*[[color-global]]*/;
+}
+section.user-dashboard-listening-clock div.js-listening-clock-target svg g:nth-last-of-type(2) circle{
+fill:#805C9E;
+}
+section.user-dashboard-listening-clock div.js-listening-clock-target svg g polygon{
+stroke:#805C9E;
+}
+.user-dashboard-listening-clock .user-dashboard-legend-item:first-child::before {
+background: #805C9E;
 }
 @media (max-width:767px){
 .features-header-inner-wrap{
