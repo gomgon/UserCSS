@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.6.5
+@version     2.6.6
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -1060,7 +1060,8 @@ background:/*[[bg-lighter]]*/!important;
 .inbox-message-view .inbox-message-message blockquote,
 .section-with-separator::after,
 .playlist-advice,
-.modal-body{
+.modal-body,
+.user-dashboard-tube-tags-position{
 background:/*[[bg-lighter]]*/;
 }
 .user-dashboard-banner,
@@ -1415,7 +1416,7 @@ box-shadow:0 0 0 2px /*[[bg]]*/;
 }
 .listening-report-brick:focus,
 .listening-report-brick:hover{
-box-shadow: 0 0 9px 0 /*[[border-color]]*/;
+	box-shadow: 0 0 9px 0 /*[[border-color]]*/;
 }
 .content-form .form-control:focus,
 .content-form input[type="date"]:focus,
@@ -1426,7 +1427,7 @@ box-shadow: 0 0 9px 0 /*[[border-color]]*/;
 .content-form input[type="url"]:focus,
 .content-form select:focus,
 .content-form textarea:focus{
-box-shadow: 0 0 9px 0 /*[[main-text]]*/;
+	box-shadow: 0 0 9px 0 /*[[main-text]]*/;
 }
 .secondary-nav{
 box-shadow:none ;
@@ -1612,7 +1613,8 @@ h1,
 .grid-items-cta h3,
 .about-artist-listeners,
 .btn-shortcut,
-.listening-report-brick .listening-report-brick-item{
+.listening-report-brick .listening-report-brick-item,
+.user-dashboard-tube-tags-position{
 color:/*[[main-text]]*/;
 }
 .btn-primary,
@@ -1695,6 +1697,7 @@ hr{
 color:/*[[border-color]]*/!important;
 }
 .js-listening-clock-target > svg.user-dashboard-module-svg > g > text,
+
 .st0{
 fill:/*[[main-text]]*/;
 }
@@ -1702,8 +1705,6 @@ fill:/*[[main-text]]*/;
 .highcharts-axis-labels > text{
 fill:/*[[main-text]]*/!important;
 }
-.user-dashboard-scalable-content .highcharts-background,
-.user-dashboard-chart-square-inner .highcharts-background,
 .js-listening-clock-target > svg.user-dashboard-module-svg > g > circle:nth-of-type(1),
 .user-dashboard-module-inner-wrap div.js-listening-clock-target svg.user-dashboard-module-svg g g circle:first-of-type,
 g.highcharts-plot-bands-0 path.highcharts-plot-band{
@@ -1725,7 +1726,7 @@ opacity:.1;
 .js-listening-clock-target > svg.user-dashboard-module-svg > g > g:nth-of-type(25){
 stroke:/*[[bg]]*/;
 }
-section.user-dashboard-scrobble-stats div.scrobble-stats-graph-chart svg.highcharts-root g.highcharts-grid.highcharts-yaxis-grid path.highcharts-grid-line{
+section.user-dashboard-module div svg.highcharts-root g.highcharts-grid.highcharts-yaxis-grid path.highcharts-grid-line{
 stroke:/*[[border-color]]*/;
 }
 .js-listening-clock-target.user-dashboard-chart-square-inner > svg.user-dashboard-module-svg > g > g:nth-of-type(27){
