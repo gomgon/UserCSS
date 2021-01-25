@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.0.7
+@version     1.0.8
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -64,7 +64,8 @@ div.section div.section_content.tall,
 .ref_guidelines_list :not(.ref_guidelines_highlight) .ref_guidelines_heading:hover,
 .share a,
 table.subform_table tr.subnotes,
-table.subform_table tr.collection{
+table.subform_table tr.collection,
+table.subform_tracklist .subform_track.track_heading{
 background:/*[[elements]]*/;
 }
 #page_content .messageContents table#deh-wrapper tbody tr td table tbody tr td table{
@@ -394,7 +395,8 @@ a.readmore_toggler.touch, a.readmore_toggler:hover,
 .footer-social-link,
 .share a:hover,
 .search::before,
-.ct-label{
+.ct-label,
+.smallish{
 color:/*[[main-text]]*/;
 }
 .ui-autocomplete a .sublabel,
