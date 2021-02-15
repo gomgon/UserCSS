@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.7.2
+@version     0.7.3
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -22,7 +22,8 @@ body.hp #hplogo,
 body.hp #prm-pt{
 display:none!important
 }
-body.hp #lga{
+body.hp #lga,
+{
 background:url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png
 )no-repeat center 109px!important;
 background-size:272px 92px!important
@@ -46,11 +47,11 @@ stroke:#ffffff;
 No "No" <<<EOT
 EOT;
 Yes "Yes" <<<EOT
-#searchform.big .FPdoLc center{
+.FPdoLc center{
 opacity:0;
 transition: opacity .5s
 }
-#searchform.big .FPdoLc center:hover{
+.FPdoLc center:hover{
 opacity:1;
 } EOT;
 }
@@ -61,14 +62,16 @@ Yes "Yes" <<<EOT
 #footer{
 background: transparent;
 }
-#fbar{
+#fbar,
+.c93Gbe{
 opacity:0;
 transition: opacity .5s
 }
 #fbar:hover,
 ._Fnc,
 #gb#gb a.gb_e:hover,
-#gb#gb a.gb_e:focus{
+#gb#gb a.gb_e:focus,
+.c93Gbe:hover{
 opacity:1;
 } EOT;
 }
@@ -158,7 +161,8 @@ display:none;
 .YSlUOe,
 .MGqjK,
 .kp-blk,
-g-card{
+g-card,
+.c93Gbe{
 background:transparent;
 }
 .fLJSwc,
@@ -498,7 +502,6 @@ background:#505050;
 .gb_b:focus .gb_Ec,
 .jhp input[type="submit"]:hover,
 .sbdd_a input:hover,
-.gbqfba:hover,
 .dw-sb-cont .dw-sb-btn:hover{
 background-color:#505050;
 }
@@ -581,7 +584,6 @@ background-image:none!important;
 .sbdd_a input,
 .sbdd_a input:hover,
 .gbqfba,
-.gbqfba:hover,
 .dw-sb-cont .dw-sb-btn,
 .cv2VAd,
 .cEPPT,
@@ -868,7 +870,9 @@ g-flat-button.BwMo1:hover,
 .UwAaac,
 .XaEgO,
 .eEz1Rd,
-.kp-blk{
+.kp-blk,
+.uU7dJb,
+.o3AwDf .JaTJ7c{
 border-color:/*[[border]]*/;
 }
 .kp-blk .xpdclose .farUxc,
@@ -1403,10 +1407,14 @@ span.lPqy4c,
 .amyZLb,
 .Cy9gW,
 .XxrEYe,
+.hdtb-mitem .GOE98c,
 .hdtb-mitem .hdtb-dd-b,
 .hdtb-mitem a,
 .hdtb-mitem.hdtb-msel,
-.GshZze{
+.GshZze,
+a.pHiOh,
+.uU7dJb,
+.smiUbb{
 color:/*[[main-text]]*/;
 }
 .s,
@@ -1496,6 +1504,7 @@ div._qpb,
 #hdtb-tls:hover,
 #hdtb-msb #hdtb-more:hover,
 #hdtb-msb #hdtb-tls:hover,
+.hdtb-mitem .GOE98c:hover,
 .fbar a:hover,
 #fsett a:hover,
 ._LJ .exp-txt-c:hover,
@@ -1610,8 +1619,6 @@ a.ab_dropdownlnk:hover,
 a.isv-t:visited,
 #yung9e, .JburEd,
 .NZmxZe,
-.hdtb-mitem a,
-#hdtb-more-mn a,
 .JNkvid .HnYYW,
 .w8qArf,
 .w8qArf a.fl,
@@ -1703,7 +1710,7 @@ a.B1uW2d,
 .fUflyc,
 .F3p6q,
 .PVsnzc,
-.JGV0Y,*
+.JGV0Y,
 .gJBeNe,
 .Ao7Dhe,
 .WGwSK,
@@ -1771,7 +1778,6 @@ color:#A5A5A5;
 .sbhl .sbl1,
 .jhp input[type="submit"]:hover,
 .sbdd_a input:hover,
-.gbqfba:hover,
 .dw-sb-cont .dw-sb-btn:hover{
 color:#CCCCCC;
 }
@@ -2051,6 +2057,21 @@ top: 0;
 }
 .minidiv .RNNXgb {
 margin-top: 2px ;
+}
+.tfB0Bf input[type="submit"], .gbqfba {
+background-color: /*[[bg-lighter]]*/;
+border-color: /*[[bg-lighter]]*/;
+border-radius: 0px;
+color: /*[[main-text]]*/;
+}
+.tfB0Bf input[type="submit"]:hover {
+box-shadow: none;
+background-color: /*[[bg-lighter]]*/;
+border: 1px solid /*[[border]]*/;
+color: /*[[main-text]]*/;
+}
+.gbqfba:hover{
+border: 1px solid /*[[border]]*/;
 }
 /*[[logo]]*/
 /*[[Hide-add-lang]]*/
