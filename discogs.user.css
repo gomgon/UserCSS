@@ -1,13 +1,12 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.0.8
+@version     1.0.9
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
 @author      gomgon
 @advanced color bg "Background" #1E1E1E
-@advanced color idx "Indextracks" #282828
 @advanced color elements "Elements" #282828
 @advanced color elements-lighter "Lighter elements & headers" #323232
 @advanced color border-color "Borders color" #323232
@@ -31,18 +30,15 @@ a.readmore_toggler,
 .history tr.even, .history tr:nth-child(2n),
 .history table tr.datarow:hover,
 .is_mobile.needs_reduced_ui #page.aside_off_canvas #page_content,
-table.subform_tracklist .subform_track{
+table.subform_tracklist .subform_track,
+table.subform_tracklist .subform_track.track_index,
+table.subform_tracklist .subform_track.track_subtrack,
+table.subform_tracklist .subform_track.subform_subtrack{
 background:/*[[bg]]*/;
 }
 .layout,
 .footer{
 background-color:/*[[bg]]*/;
-}
-table.subform_tracklist .subform_track.track_index {
-background:/*[[idx]]*/;
-}
-table.subform_tracklist .subform_track.track_subtrack, table.subform_tracklist .subform_track.subform_subtrack {
-background:/*[[idx]]*/;
 }
 #page.aside_right #page_content .body,
 #page.aside_right .section,
@@ -295,7 +291,8 @@ table.subform_table td,
 .footer,
 .format_descriptions,
 #editing_header .editing_header_help li:first-child,
-.history_form .actions{
+.history_form .actions,
+.discloser__button{
 border-color:/*[[border-color]]*/;
 }
 #main_wrapper div#page.aside_right div#page_content div{
@@ -403,7 +400,8 @@ a.readmore_toggler.touch, a.readmore_toggler:hover,
 .share a:hover,
 .search::before,
 .ct-label,
-.smallish{
+.smallish,
+html.is_not_mobile.needs_reduced_ui.haslocalstorage.no_hastouch.no_indevmode.no_ismobile.hasformdata.hashistoryapi.hasflexbox.has3d body.win.firefox.firefox90 div#main_wrapper div#page.aside_right div#page_content div#master-release-credits.section.master-release-credits.toggle_section.toggle_section_show_controls.toggle_section_remember div.section_content.toggle_section_content button.discloser__button{
 color:/*[[main-text]]*/;
 }
 .ui-autocomplete a .sublabel,
