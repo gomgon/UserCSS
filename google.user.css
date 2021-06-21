@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.7.3
+@version     0.7.4
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -22,8 +22,7 @@ body.hp #hplogo,
 body.hp #prm-pt{
 display:none!important
 }
-body.hp #lga,
-{
+body.hp #lga{
 background:url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png
 )no-repeat center 109px!important;
 background-size:272px 92px!important
@@ -134,7 +133,8 @@ border-bottom: 1px solid /*[[border]]*/;
 .sbsb_g,
 .ab_dropdownrule,
 .mssb_f td hr,
-.mssb_f{
+.mssb_f,
+.YTDezd{
 display:none;
 }
 ._Fmb,
@@ -168,6 +168,9 @@ background:transparent;
 .fLJSwc,
 .MAMEle{
 background:transparent!important;
+}
+.NIYF4b {
+	background-color:transparent;
 }
 .uVGhGc,
 .sbsb_c:hover,
@@ -332,7 +335,8 @@ background:/*[[bg-lighter]]*/!important;
 .w90itc,
 .ExnoTd,
 .yg51vc,
-.dU5Kl:hover{
+.dU5Kl:hover,
+.k8XOCe{
 background-color:/*[[bg-lighter]]*/;
 }
 .v6U7rf #mlogo,
@@ -549,7 +553,8 @@ background-color:/*[[accent-h]]*/;
 .hdtbSel,
 .hdtbSel #cdrlnk,
 #hdtb-tls:hover,
-.ZXJQ7c:hover{
+.ZXJQ7c:hover,
+.cG5GOd{
 background-image:none!important;
 }
 #fbar,
@@ -619,7 +624,8 @@ a.gb_P,
 .TieM1d,
 .rhscol .I6TXqe,
 .lgJJud,
-.minidiv .RNNXgb{
+.minidiv .RNNXgb,
+.gke0pe{
 border:none;
 }
 .ab_button,
@@ -894,7 +900,8 @@ border-color:/*[[border]]*/!important;
 .FqnKTc,
 .gKlQt,
 .wiiKJb,
-.pMgxyd{
+.pMgxyd,
+.ACRAdd{
 border-color:#505050;
 }
 ._Db:active,
@@ -1173,7 +1180,7 @@ span.CQeUrc,
 .wQncmd a,
 .ZbF3Ee,
 .kjc8d,
-.kp-wholepage
+.kp-wholepage,
 .Z1hOCe a:link,
 .N82rDb, .N82rDb:visited,
 .pBGTod,
@@ -1220,7 +1227,9 @@ a.KYeOtb  div.SVWlSe div.gsmt,
 title-with-lhs-icon:hover .ekf0x h3,
 .FoAEQ,
 .TADXpd,
-.O8Q2Ie{
+.O8Q2Ie,
+.AaVjTc a:link,
+.KwU3F{
 color:/*[[accent]]*/;
 }
 ._tX,
@@ -1263,7 +1272,6 @@ color:#4D804A;
 .sr__link,
 .sr__link:link,
 .sr__link:visited,
-.WZ8Tjf,
 .s6Evvd.rz8nGb,
 .HxQHOc,
 .r0bn4c.rQMQod,
@@ -1414,7 +1422,11 @@ span.lPqy4c,
 .GshZze,
 a.pHiOh,
 .uU7dJb,
-.smiUbb{
+.smiUbb,
+.aypzV,
+.WZ8Tjf,
+.NwNzde th,
+.uqAUkb{
 color:/*[[main-text]]*/;
 }
 .s,
@@ -1622,7 +1634,6 @@ a.isv-t:visited,
 .JNkvid .HnYYW,
 .w8qArf,
 .w8qArf a.fl,
-.lyLwlc,
 .oyj2db,
 .i3LlFf,
 .Ebeqye,
@@ -1737,7 +1748,13 @@ title-with-lhs-icon .ekf0x,
 .hqwb1b,
 .v3jTId,
 .mmxugd,
-.YyVfkd{
+.YyVfkd,
+.zCubwf,
+.QnzgY,
+.yDYNvb.lyLwlc,
+.yXK7lf em,
+.IsZvec,
+.wM6W7d{
 color:/*[[title-text]]*/;
 }
 ._xdb .fl,
@@ -1819,7 +1836,8 @@ fill:/*[[title-text]]*/!important;
 }
 ._Jxg,
 ._Jxg span,
-._FOl{
+._FOl,
+.aXBZVd{
 filter: invert(100%);
 }
 input[type="image"],
