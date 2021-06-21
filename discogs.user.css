@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.0.9
+@version     1.0.10
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -20,7 +20,8 @@
 @advanced color link-visited-H "Visited link hover" #A677CC
 ==/UserStyle== */
 @-moz-document domain("discogs.com"){
-.section.report .section_content hr{
+.section.report .section_content hr,
+#main_wrapper #page.aside_right #page_aside .section:not(#statistics):not(#video):nth-of-type(6){
 display:none;
 }
 body,
@@ -401,7 +402,7 @@ a.readmore_toggler.touch, a.readmore_toggler:hover,
 .search::before,
 .ct-label,
 .smallish,
-html.is_not_mobile.needs_reduced_ui.haslocalstorage.no_hastouch.no_indevmode.no_ismobile.hasformdata.hashistoryapi.hasflexbox.has3d body.win.firefox.firefox90 div#main_wrapper div#page.aside_right div#page_content div#master-release-credits.section.master-release-credits.toggle_section.toggle_section_show_controls.toggle_section_remember div.section_content.toggle_section_content button.discloser__button{
+button.discloser__button{
 color:/*[[main-text]]*/;
 }
 .ui-autocomplete a .sublabel,
@@ -494,9 +495,6 @@ margin: 0px;
 }
 #releases{
 margin:0 0 12px 232px;
-}
-#page_aside div.section:nth-child(4){
-margin-bottom:0px;
 }
 ul.module_blocks > li,
 div.section{
