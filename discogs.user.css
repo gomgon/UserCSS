@@ -7,6 +7,7 @@
 @license     CC-BY-SA-4.0
 @author      gomgon
 @advanced color bg "Background" #1E1E1E
+@advanced color idx "Indextracks" #282828
 @advanced color elements "Elements" #282828
 @advanced color elements-lighter "Lighter elements & headers" #323232
 @advanced color border-color "Borders color" #323232
@@ -36,6 +37,12 @@ background:/*[[bg]]*/;
 .layout,
 .footer{
 background-color:/*[[bg]]*/;
+}
+table.subform_tracklist .subform_track.track_index {
+background:/*[[idx]]*/;
+}
+table.subform_tracklist .subform_track.track_subtrack, table.subform_tracklist .subform_track.subform_subtrack {
+background:/*[[idx]]*/;
 }
 #page.aside_right #page_content .body,
 #page.aside_right .section,
@@ -88,7 +95,7 @@ table.table_block tfoot tr,
 table.cards tr.credit_header,
 .facet-bar,
 .is_not_mobile a:hover .facet-bar,
-.is_not_mobile a:focus .facet-bar
+.is_not_mobile a:focus .facet-bar,
 .data_quality_list .data_quality_meter,
 input[type="text"],
 input[type="password"],
