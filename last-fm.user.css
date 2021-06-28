@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.6.7
+@version     2.6.8
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -311,6 +311,18 @@ div.overlay-side-rail,
 .kerve a.btn_trendnav{
 background:#323232!important;
 }
+.tag-label.tag-label--disabled{
+background:#505050;
+}
+.user-dashboard-upsell-fade-out {
+background: linear-gradient(180deg,transparent,/*[[bg]]*/);
+}
+.user-dashboard-module-share{
+background:transparent;
+}
+.tag-label--upsell {
+background: #726140;
+}
 .btn--header,
 .btn--header:focus,
 .btn-primary.profile-header-set-obsession,
@@ -323,16 +335,14 @@ background:#323232!important;
 .obsession-history-play-all::before{
 background-color:transparent!important;
 }
-.user-dashboard-module-share{
-background:transparent;
-}
 .alert-danger{
 background-color:#592929!important;
 }
 .user-dashboard-upsell-cta,
 .btn-subscribe,
-.user-dashboard-subscribe-cta-link{
-background-color: #78684a;
+.user-dashboard-subscribe-cta-link,
+.listening-report-pro-link{
+background-color: #726140;
 }
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta:focus,
 body:not([data-whatinput="touch"]) .user-dashboard-upsell-cta .focus-visible,
@@ -342,10 +352,14 @@ body:not([data-whatinput="touch"]) .btn-subscribe .focus-visible,
 body:not([data-whatinput="touch"]) .btn-subscribe:hover,
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .user-dashboard-subscribe-cta-link:focus, 
 body:not([data-whatinput="touch"]) .user-dashboard-subscribe-cta-link .focus-visible,
-body:not([data-whatinput="touch"]) .user-dashboard-subscribe-cta-link:hover{
-background-color: #a69066;
+body:not([data-whatinput="touch"]) .user-dashboard-subscribe-cta-link:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .listening-report-pro-link:focus,
+body:not([data-whatinput="touch"]) .listening-report-pro-link .focus-visible,
+body:not([data-whatinput="touch"]) .listening-report-pro-link:hover{
+background-color: #937C53;
 }
-.masthead-wrapper .masthead{
+.masthead-wrapper .masthead,
+#hero::before{
 background-image:none!important;
 }
 .dashbody .kerve .venn_mask{
@@ -548,7 +562,8 @@ pre,
 .no-data-message-button,
 .inbox-message-view .inbox-message-message blockquote,
 .listening-report-library-link,
-.user-dashboard-subscribe-cta-link{
+.user-dashboard-subscribe-cta-link,
+.listening-report-pro-link{
 border-radius:0;
 }
 .library-controls-datepicker{
@@ -615,7 +630,9 @@ color:#FFFFFF;
 .artist-header-featured-items-item-name a,
 .artist-header-featured-items-item-name a:focus,
 .artist-header-featured-items-item-name a:hover,
-.artist-header-featured-items-item-aux-text{
+.artist-header-featured-items-item-aux-text,
+#hero h1,
+.subscribe-footbox h2.subscribe-features-heading{
 color:#EEEEEE;
 }
 .follower-btn{
@@ -628,6 +645,9 @@ color:#666666!important;
 .selectboxit-text,
 th.metadata-title{
 color:#999999!important;
+}
+.auth-dropdown-menu-item.auth-dropdown-pro-text{
+color: #CA6;
 }
 .shout-reply::before,
 .vote-button-toggle .vote-button::before,
@@ -1000,6 +1020,9 @@ pre,
 .user-dashboard-module{
 background:/*[[bg]]*/;
 }
+.pro-features-experiment #subscribe-form #features.container{
+background-color:/*[[bg]]*/;
+}
 .alert,
 .alert-info,
 .alert-warning,
@@ -1076,6 +1099,9 @@ background:/*[[bg-lighter]]*/;
 .gallery-preview-cta{
 background-color:/*[[bg-lighter]]*/!important;
 }
+.listening-report-top-item-wrap .listening-report-top-item-background{
+background-color:/*[[bg-lighter]]*/;
+}
 .features-section-heading::after,
 .features-post-top::after,
 .music-recommended-tracks-track-context::before,
@@ -1126,7 +1152,9 @@ background:/*[[color-global]]*/!important;
 .music-section-heading::after,
 .features-teaser-has-video,
 .api-session-connect,
-.user-dashboard-section-header::after{
+.user-dashboard-section-header::after,
+.user-dashboard-listening-week .user-dashboard-legend-item--current::before,
+.user-dashboard-listening-week .user-dashboard-legend-item--comparison::before{
 background:/*[[color-global]]*/;
 }
 .header-follower-btn .follower-btn-add-follower::before,
@@ -1534,7 +1562,6 @@ color:/*[[color-global-hover]]*/;
 color:/*[[color-global-hover]]*/!important;
 }
 body,
-p span,
 .countbar-bar-value,
 .hidden-xs.header-scrobble-since,
 .masthead .masthead-nav-links a:hover,
@@ -1576,6 +1603,7 @@ a.buylink,
 color:/*[[main-text]]*/!important;
 }
 h1,
+p span,
 .kerve .nowslider_name,
 .kerve .nowslider_artist,
 .kerve .nowslider_track,
@@ -1621,7 +1649,10 @@ h1,
 .about-artist-listeners,
 .btn-shortcut,
 .listening-report-brick .listening-report-brick-item,
-.user-dashboard-tube-tags-position{
+.user-dashboard-tube-tags-position,
+.subscribe-intro,
+#hero .subnote,
+.card--subscribe .subscribe-benefit--copy{
 color:/*[[main-text]]*/;
 }
 .btn-primary,
@@ -1639,7 +1670,8 @@ color:/*[[main-text]]*/;
 .header .header-metadata-display a,
 .user-dashboard-upsell-cta,
 .listening-report-library-link,
-.user-dashboard-subscribe-cta-link{
+.user-dashboard-subscribe-cta-link,
+.listening-report-pro-link{
 color:/*[[button-text]]*/;
 }
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .btn-primary:focus,
@@ -1695,7 +1727,10 @@ body:not([data-whatinput="touch"]) .listening-report-library-link .focus-visible
 body:not([data-whatinput="touch"]) .listening-report-library-link:hover,
 body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .user-dashboard-subscribe-cta-link:focus, 
 body:not([data-whatinput="touch"]) .user-dashboard-subscribe-cta-link .focus-visible,
-body:not([data-whatinput="touch"]) .user-dashboard-subscribe-cta-link:hover{
+body:not([data-whatinput="touch"]) .user-dashboard-subscribe-cta-link:hover,
+body:not(.js-focus-visible) body:not([data-whatinput="touch"]) .listening-report-pro-link:focus,
+body:not([data-whatinput="touch"]) .listening-report-pro-link .focus-visible,
+body:not([data-whatinput="touch"]) .listening-report-pro-link:hover{
 color:/*[[button-text-H]]*/;
 }
 .no-data-message-button:focus,
@@ -1708,7 +1743,9 @@ hr{
 color:/*[[border-color]]*/!important;
 }
 .scrobble-stats-graph .user-dashboard-legend-item--comparison::before,
-.highcharts-container > svg > g.highcharts-series-group .highcharts-series-1 > a > rect{
+.user-dashboard-listening-week .user-dashboard-legend-item--comparison::before,
+.highcharts-container > svg > g.highcharts-series-group .highcharts-series-1 > a > rect,
+.highcharts-container > svg > g.highcharts-series-group .highcharts-series-1 > rect{
 opacity:.2;
 }
 .shout-timestamp{
@@ -1724,7 +1761,6 @@ opacity:1;
 .location-picker-detect--processing:before,
 .shout-more-replies-loading:before{
 display: block;
--moz-box-sizing: border-box;
 box-sizing: border-box;
 background: url(/*[[loading-gif]]*/) no-repeat !important;
 width: 16px;
@@ -2103,7 +2139,9 @@ fill:/*[[bg-lighter]]*/;
 fill:/*[[bg]]*/;
 }
 .highcharts-container > svg > g.highcharts-series-group .highcharts-series-0 > a > rect,
-.highcharts-container > svg > g.highcharts-series-group .highcharts-series-1 > a > rect{
+.highcharts-container > svg > g.highcharts-series-group .highcharts-series-1 > a > rect,
+.highcharts-container > svg > g.highcharts-series-group .highcharts-series-0 > rect,
+.highcharts-container > svg > g.highcharts-series-group .highcharts-series-1 > rect{
 fill:/*[[color-global]]*/;
 }
 .highcharts-series-0.highcharts-area-series.highcharts-color-undefined path.highcharts-area{
@@ -2126,7 +2164,7 @@ stroke:/*[[border-color]]*/;
 section.user-dashboard-scrobble-stats div svg.highcharts-root g path.highcharts-graph{
 stroke:/*[[main-text]]*/;
 }
-.mainstream-triangle svg line{
+.highcharts-series.highcharts-series-0.highcharts-area-series.highcharts-color-undefined path.highcharts-graph{
 stroke:/*[[color-global]]*/;
 }
 section.user-dashboard-listening-clock div.js-listening-clock-target svg g:nth-last-of-type(2) circle{
@@ -2381,7 +2419,6 @@ color:/*[[color-global]]*/;
 .header--sub-page .header-title-secondary a:hover{
 color:/*[[color-global-hover]]*/;
 }
-.subscribe-plan,
 .recs-feed .context{
 background:/*[[bg-lighter]]*/;
 }
