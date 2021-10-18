@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.7.4
+@version     0.7.5
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -162,7 +162,8 @@ display:none;
 .MGqjK,
 .kp-blk,
 g-card,
-.c93Gbe{
+.c93Gbe,
+.FalWJb{
 background:transparent;
 }
 .fLJSwc,
@@ -217,7 +218,6 @@ div.rl_feature,
 .stt__tool .ab_button,
 #topstuff .sh-sp__pswtr,
 ._FCr,
-.minidiv .sfbg,
 #sfcnt,
 .Sl6fgd,
 .srp,
@@ -230,7 +230,6 @@ div.rl_feature,
 .bI5amf,
 .zQTmif,
 .YtXOzd,
-.sfbg,
 .kp-blk.cUnQKe{
 background:/*[[bg]]*/;
 }
@@ -287,7 +286,10 @@ div._oip > g-inner-card,
 .EsIlz,
 #gsr.srp.vasq.wf-b #searchform.big .sfbg,
 #gsr.srp.vasq #searchform.big .sfbg,
-.EHzcec{
+.EHzcec,
+.sfbg,
+.minidiv .sfbg,
+.gb_Ie{
 background:/*[[bg-lighter]]*/;
 }
 .v6U7rf #sDeBje,
@@ -449,7 +451,10 @@ a.gb_P,
 .ltd0Tb,
 .rhs-osrp a.B1uW2d:hover,
 .Jb0Zif a.B1uW2d:hover,
-.Rip8ud{
+.Rip8ud,
+.gb_vc .gb_Ne.gb_Oe button:hover svg, 
+gb_Ne button:hover svg,
+.gb_C:hover{
 background-color:#323232;
 }
 .msq_b,
@@ -479,14 +484,15 @@ background-color:/*[[border]]*/;
 .goog-menuitem-hover,
 .UUbT9,
 .XD1Bsc,
-.XD1Bsc:hover{
+.XD1Bsc:hover,
+.CaY96:hover{
 background:#323232;
 }
 sticky-header .kpshf{
 background:#323232!important;
 }
 .gb_P:hover,
-.gb_O:hover{
+.gb_O:hover {
 background-color:#404040!important;
 }
 .jhp input[type="submit"],
@@ -625,7 +631,8 @@ a.gb_P,
 .rhscol .I6TXqe,
 .lgJJud,
 .minidiv .RNNXgb,
-.gke0pe{
+.gke0pe,
+.pGxpHc{
 border:none;
 }
 .ab_button,
@@ -878,7 +885,10 @@ g-flat-button.BwMo1:hover,
 .eEz1Rd,
 .kp-blk,
 .uU7dJb,
-.o3AwDf .JaTJ7c{
+.o3AwDf .JaTJ7c,
+.YeThId,
+.IvgBje,
+.UkqIHc{
 border-color:/*[[border]]*/;
 }
 .kp-blk .xpdclose .farUxc,
@@ -1058,7 +1068,8 @@ g-flat-button.BwMo1,
 .tX9u1b:hover,
 .XQ6p1d,
 .J3Tg1d,
-.kp-header:first-child .BIZ8kb .thumb{
+.kp-header:first-child .BIZ8kb .thumb,
+.MyDQSe{
 border-radius:0px;
 }
 .qV9w7d,
@@ -1229,14 +1240,16 @@ title-with-lhs-icon:hover .ekf0x h3,
 .TADXpd,
 .O8Q2Ie,
 .AaVjTc a:link,
-.KwU3F{
+.KwU3F,
+.zgAlFc{
 color:/*[[accent]]*/;
 }
 ._tX,
 span.OXXup,
 .xXEKkb,
 .MjJo9,
-.dU5Kl .xxjNNe{
+.dU5Kl .xxjNNe,
+.p5AXld{
 color:/*[[accent]]*/!important;
 }
 #rcnt a:hover,
@@ -1248,7 +1261,8 @@ color:/*[[accent]]*/!important;
 ._shr:hover ._Iqg,
 ._shr:hover ._Fqg,
 ._O4n:hover,
-.Tg7LZd:hover .FAuhyb{
+.Tg7LZd:hover .FAuhyb,
+.Tg7LZd:hover .zgAlFc{
 color:/*[[accent-h]]*/;
 }
 .mblink:visited,
@@ -1286,13 +1300,7 @@ color:#4D804A;
 .SXBRcc{
 color: #eeff00;
 }
-.IsZvec{
-color:/*[[main-text]]*/;
-}
-.aCOpRe em,
-.st em{
-color:/*[[title-text]]*/;
-}
+.IsZvec,
 .cj2HCb a,
 .T47uwc a,
 .PNyWAd,
@@ -1426,7 +1434,15 @@ a.pHiOh,
 .aypzV,
 .WZ8Tjf,
 .NwNzde th,
-.uqAUkb{
+.uqAUkb,
+.aKa4Mb,
+.wJCOBf,
+.eYGoGb,
+.sRi2ab,
+.cZ6u,
+.cmSWBc,
+.O3JH7,
+.NPb5dd{
 color:/*[[main-text]]*/;
 }
 .s,
@@ -1754,7 +1770,24 @@ title-with-lhs-icon .ekf0x,
 .yDYNvb.lyLwlc,
 .yXK7lf em,
 .IsZvec,
-.wM6W7d{
+.wM6W7d,
+.GmE3X,
+.B7YUce,
+.nQZ9tb,
+.gb_Uc.gb_Vc,
+.OThY8c,
+.eXSt3b,
+.jPCT6,
+.x7WrMb,
+.Cx1ZMc,
+a.W4LuJe, a.W4LuJe:visited,
+.aCOpRe em,
+.st em,
+.CaY96, .CaY96:visited,
+.gb_pa svg,
+.gb_Ac svg,
+.gb_Wc .gb_Zd,
+.gb_Mc .gb_Zd{
 color:/*[[title-text]]*/;
 }
 ._xdb .fl,
@@ -1837,11 +1870,11 @@ fill:/*[[title-text]]*/!important;
 ._Jxg,
 ._Jxg span,
 ._FOl,
-.aXBZVd{
+.aXBZVd,
+.YsGUOb{
 filter: invert(100%);
 }
 input[type="image"],
-#gbwa > div:nth-child(1),
 .gb_rc > div:nth-child(1),
 .knowledge-related_questions_list__arrow,
 #ab_opt_icon,
@@ -1860,11 +1893,9 @@ filter:invert(90%);
 filter: invert(88.5%);
 }
 .i8Msie,
-.aM01wc[data-s="e"]{
+.aM01wc[data-s="e"],
+.pDyGF{
 filter:invert(70%);
-}
-.YsGUOb{
-filter:invert(100%);
 }
 .stt-uf,
 ._cXm,
