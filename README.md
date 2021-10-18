@@ -4,7 +4,6 @@ A [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) compatible userst
 ![Cascadea](/images/Cascadea.png) Cascadea for [Safari](https://cascadea.app/).
 
 The stylesheet will be updated automaticaly by the addon.<br>
-All stylesheets are customizable and mobile compatible.
 #
 [![Install](/images/last.fm.png)](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) Last.fm stylesheet.
 
