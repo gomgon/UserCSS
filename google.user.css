@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.7.6
+@version     0.7.7
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -888,7 +888,10 @@ g-flat-button.BwMo1:hover,
 .o3AwDf .JaTJ7c,
 .YeThId,
 .IvgBje,
-.UkqIHc{
+.UkqIHc,
+.oySJpc,
+.aNytqb .rKnmn,
+.RzdJxc{
 border-color:/*[[border]]*/;
 }
 .kp-blk .xpdclose .farUxc,
@@ -1787,7 +1790,8 @@ a.W4LuJe, a.W4LuJe:visited,
 .gb_pa svg,
 .gb_Ac svg,
 .gb_Wc .gb_Zd,
-.gb_Mc .gb_Zd{
+.gb_Mc .gb_Zd,
+.O3JH7.qLBFXd{
 color:/*[[title-text]]*/;
 }
 ._xdb .fl,
