@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.0.10
+@version     1.0.11
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -34,7 +34,16 @@ a.readmore_toggler,
 table.subform_tracklist .subform_track,
 table.subform_tracklist .subform_track.track_index,
 table.subform_tracklist .subform_track.track_subtrack,
-table.subform_tracklist .subform_track.subform_subtrack{
+table.subform_tracklist .subform_track.subform_subtrack,
+.search_1Ms28.search_3dQh3 input,
+.search_1Ms28,
+.search_1Ms28.focus_LsKqQ,
+.search_1Ms28:focus,
+.search_1Ms28:hover,
+.is_not_mobile #site_navigation > li > a:hover,
+.is_not_mobile #site_navigation > li .nav_group_control:hover,
+.is_not_mobile #activity_menu > li > a:hover,
+.is_not_mobile #activity_menu > li .nav_group_control:hover{
 background:/*[[bg]]*/;
 }
 .layout,
@@ -135,7 +144,9 @@ background:/*[[border-color]]*/;
 .button.button-red[disabled],
 .button.button-dark[disabled],
 .button.button-white[disabled],
-a.inset_button[disabled]{
+a.inset_button[disabled],
+.button_3lXdg.grey_1js2e,
+a.button_3lXdg.grey_1js2e{
 background:/*[[secondary-button]]*/;
 }
 .is_mobile.needs_reduced_ui #mobile_options .open_filter{
@@ -146,14 +157,24 @@ background-color:/*[[secondary-button]]*/;
 .button:focus,
 .button.button-white:hover,
 .button.button-white:focus,
-table.cards tr.edit td.status{
+table.cards tr.edit td.status,
+.button_3lXdg.grey_1js2e:focus,
+.button_3lXdg.grey_1js2e:hover,
+.button_3lXdg.grey_1js2e:visited:focus,
+.button_3lXdg.grey_1js2e:visited:hover,
+a.button_3lXdg.grey_1js2e:focus,
+a.button_3lXdg.grey_1js2e:hover,
+a.button_3lXdg.grey_1js2e:visited:focus,
+a.button_3lXdg.grey_1js2e:visited:hover{
 background:/*[[secondary-button-H]]*/;
 }
 .button.button-blue,
 .button.button-green,
 .selected_facets li a,
 .facets_nav a.selected,
-.current_filter{
+.current_filter,
+.button_3lXdg.blue_2acgV,
+a.button_3lXdg.blue_2acgV{
 background-color:/*[[color-global]]*/;
 }
 .button.button-blue:hover,
@@ -164,7 +185,15 @@ background-color:/*[[color-global]]*/;
 .selected_facets li .is_not_mobile a:hover,
 .is_not_mobile .facets_nav a.selected:hover,
 .facets_nav .is_not_mobile a.selected:hover,
-.is_not_mobile .current_filter:hover{
+.is_not_mobile .current_filter:hover,
+.button_3lXdg.blue_2acgV:focus,
+.button_3lXdg.blue_2acgV:hover,
+.button_3lXdg.blue_2acgV:visited:focus,
+.button_3lXdg.blue_2acgV:visited:hover,
+a.button_3lXdg.blue_2acgV:focus,
+a.button_3lXdg.blue_2acgV:hover,
+a.button_3lXdg.blue_2acgV:visited:focus,
+a.button_3lXdg.blue_2acgV:visited:hover{
 background:/*[[color-global-H]]*/;
 }
 .history_form .vote_info_helper {
@@ -179,6 +208,10 @@ ul.module_blocks > li.dashboard_addmodules,
 .section.tracklist table tr.tracklist_track.index_track,
 .section.tracklist table tr.tracklist_track.subtrack{
 background:transparent;
+}
+.button_3lXdg.blue_2acgV,
+a.button_3lXdg.blue_2acgV{
+background-image:none;
 }
 .section.recommendations .cards,
 .button{
@@ -225,7 +258,13 @@ a.inset_button,
 #search_tabs,
 .drag_drop_field_list > li,
 .react_drag_drop_field_list .drag_drop_content,
-.editable_item{
+.editable_item,
+.button_3lXdg.grey_1js2e,
+a.button_3lXdg.grey_1js2e,
+.button_3lXdg.blue_2acgV,
+a.button_3lXdg.blue_2acgV,
+.textarea_2-zKD,
+.search_1Ms28{
 border:none;
 }
 .button{
@@ -239,7 +278,7 @@ border-bottom:none;
 .threads-table{
 border-top:none;
 }
-#messages_list .messagelist tr {
+#messages_list .messagelist tr{
 border-color: /*[[bg]]*/;
 }
 #search_tabs li{
@@ -293,13 +332,21 @@ table.subform_table td,
 .format_descriptions,
 #editing_header .editing_header_help li:first-child,
 .history_form .actions,
-.discloser__button{
+.discloser__button,
+.header_W2hzl,
+table tr,
+.report_3dOkc,
+.ratings_1pAt8,
+.masterWrapper_3J1sd,
+.releaseWrapper_3KqJj,
+.content_2nKpV{
 border-color:/*[[border-color]]*/;
 }
 #main_wrapper div#page.aside_right div#page_content div{
 border-color:/*[[border-color]]*/!important;
 }
-.tab_menu li.current a{
+.tab_menu li.current a,
+.search_1Ms28.focus_LsKqQ{
 border-color:/*[[color-global]]*/;
 }
 .tab_menu li.current a:hover{
@@ -314,6 +361,8 @@ ul.module_blocks > li.module_placeholder,
 .alert-message.alert-message-broadcast,
 .side_menu a:hover,
 .button,
+.button_3lXdg.grey_1js2e,
+a.button_3lXdg.grey_1js2e,
 .facet-bar,
 #site_search,
 input[type="text"],
@@ -324,7 +373,11 @@ textarea,
 .is_mobile.needs_reduced_ui #mobile_options .open_filter,
 .selected_facets li a,
 .facets_nav a.selected,
-.current_filter{
+.current_filter,
+.button_3lXdg.blue_2acgV,
+a.button_3lXdg.blue_2acgV,
+.textarea_2-zKD,
+.search_1Ms28{
 border-radius:0px;
 }
 .button,
@@ -340,6 +393,9 @@ textarea,
 .button[disabled],
 .reference_on #subform{
 box-shadow:none;
+}
+.textarea_2-zKD{
+box-shadow:none!important;
 }
 .ui-autocomplete {
 box-shadow: 0px 0px 20px #000000;
@@ -402,7 +458,12 @@ a.readmore_toggler.touch, a.readmore_toggler:hover,
 .search::before,
 .ct-label,
 .smallish,
-button.discloser__button{
+button.discloser__button,
+.toggle_2rDeb,
+.id_3q3rO,
+.role_2ga14,
+.count_1Q64h,
+.submit_1SQ5c{
 color:/*[[main-text]]*/;
 }
 .ui-autocomplete a .sublabel,
@@ -412,14 +473,32 @@ color:/*[[main-text]]*/!important;
 #full-width-header .thread-header-info .thread-header-breadcrumb a{
 color: white;
 }
-.aside_search_form button:hover i,
-#site_search #do_site_search:hover i,
 a.readmore_toggler:hover,
 .anv_selected,
 .is_mobile.needs_reduced_ui #mobile_options .open_filter,
 .drag_drop_field_remove_row:hover,
 .drag_drop_field_list .collapsible .collapse:hover,
-.react_drag_drop_field_list .collapsible .collapse:hover{
+.react_drag_drop_field_list .collapsible .collapse:hover,
+.button_3lXdg.grey_1js2e,
+a.button_3lXdg.grey_1js2e,
+.button_3lXdg.grey_1js2e:focus,
+.button_3lXdg.grey_1js2e:hover,
+.button_3lXdg.grey_1js2e:visited:focus,
+.button_3lXdg.grey_1js2e:visited:hover,
+a.button_3lXdg.grey_1js2e:focus,
+a.button_3lXdg.grey_1js2e:hover,
+a.button_3lXdg.grey_1js2e:visited:focus,
+a.button_3lXdg.grey_1js2e:visited:hover,
+.button_3lXdg.blue_2acgV,
+a.button_3lXdg.blue_2acgV,
+.button_3lXdg.blue_2acgV:focus,
+.button_3lXdg.blue_2acgV:hover,
+.button_3lXdg.blue_2acgV:visited:focus,
+.button_3lXdg.blue_2acgV:visited:hover,
+a.button_3lXdg.blue_2acgV:focus,
+a.button_3lXdg.blue_2acgV:hover,
+a.button_3lXdg.blue_2acgV:visited:focus,
+a.button_3lXdg.blue_2acgV:visited:hover{
 color:/*[[button-text]]*/;
 }
 .button,
@@ -440,6 +519,7 @@ color:/*[[button-text]]*/;
 color:/*[[button-text]]*/!important;
 }
 a,
+.body_32Bo9 a,
 #site_footer a,
 .youtube_track,
 .tab_menu a,
@@ -451,7 +531,10 @@ a.rollover_link.hl_changed1,
 a.rollover_link.hl_added,
 .ui-autocomplete a .label,
 .is_not_mobile .row_actions a:hover,
-.breadcrumbs > li a{
+.breadcrumbs > li a,
+.link_1ctor,
+.button_3lXdg.link_1judM,
+a.button_3lXdg.link_1judM{
 color:/*[[color-global]]*/;
 }
 .is_mobile.needs_reduced_ui #page.aside_off_canvas .open_filter.filters_active,
@@ -464,13 +547,25 @@ border-color:/*[[color-global]]*/;
 color:/*[[color-global]]*/;
 }
 a:hover,
+.body_32Bo9 a:hover,
 #site_footer a:hover,
 .is_not_mobile .youtube_track:hover,
 .tab_menu li.menu-item a:hover,
 .is_not_mobile .facets_nav a:hover,
 a.inset_button:visited:hover,
 .ui-autocomplete.ui-menu .ui-menu-item:hover a,
-.thread-header-info p a{
+.thread-header-info p a,
+.toggle_2rDeb:hover,
+.toggle_2rDeb:visited:focus,
+.toggle_2rDeb:visited:hover,
+.button_3lXdg.link_1judM:focus,
+.button_3lXdg.link_1judM:hover,
+.button_3lXdg.link_1judM:visited:focus,
+.button_3lXdg.link_1judM:visited:hover,
+a.button_3lXdg.link_1judM:focus,
+a.button_3lXdg.link_1judM:hover,
+a.button_3lXdg.link_1judM:visited:focus,
+a.button_3lXdg.link_1judM:visited:hover{
 color:/*[[color-global-H]]*/;
 }
 a:visited{
@@ -478,6 +573,13 @@ color:/*[[link-visited]]*/;
 }
 a:visited:hover{
 color:/*[[link-visited-H]]*/;
+}
+#site_search #do_site_search i{
+color:/*[[secondary-button]]*/;
+}
+.aside_search_form button:hover i,
+#site_search #do_site_search:hover i{
+color:/*[[secondary-button-H]]*/;
 }
 .is_not_mobile a:hover .facet-bar,
 .is_not_mobile a:focus .facet-bar{
@@ -615,6 +717,14 @@ border-radius: 0px;
 }
 select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .nesty-input:focus {
 border-color: /*[[color-global]]*/;
+}
+#site_header.search_focused #site_search{
+border-radius:0px;
+outline:none;
+}
+button.id_3q3rO svg.vinyl_3UAFg circle
+{
+stroke:/*[[main-text]]*/;
 }
 @media (min-width:768px){
 div.section div.section_content,
