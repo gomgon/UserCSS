@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.7.8
+@version     0.8.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -14,34 +14,6 @@
 @advanced color title-text "Title text" #999999
 @advanced color accent "Accent color" #5C809E
 @advanced color accent-h "Accent color lighter" #77A6CC
-@advanced dropdown logo "Google logo (fix soon)" {
-default "Default" <<<EOT
-EOT;
-white "white" <<<EOT
-body.hp #hplogo,
-body.hp #prm-pt{
-display:none!important
-}
-body.hp #lga{
-background:url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png
-)no-repeat center 109px!important;
-background-size:272px 92px!important
-}
-#logo>*,
-#logocont>*{
-opacity:0!important
-}
-#logo,
-#logocont{
-background:url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png
-)no-repeat center!important;
-background-size:86px 29px!important
-} 
-svg.TYpZOd path,
-svg.TYpZOd ellipse{
-stroke:#ffffff;
-} EOT;
-}
 @advanced dropdown search-btns "Auto-hide search buttons" {
 No "No" <<<EOT
 EOT;
@@ -84,6 +56,75 @@ transition: opacity .5s
 }
 #gws-output-pages-elements-homepage_additional_languages__als:hover {
 opacity:1;
+} EOT;
+}
+@advanced dropdown Gmail "Gmail (use in complement to Gmail dark theme)" {
+No "No" <<<EOT
+EOT;
+Yes "Yes" <<<EOT
+.iY .Bu,
+.nr{
+background: #1E1E1E;
+}
+.ha > .hP, 
+.hx .gD{
+color: #E2E2E2;
+}
+p.MsoNormal{
+color: #E2E2E2!important;
+}
+.go,
+.hx .hb,
+.ig .g3,
+.hI .g3,
+.iv .g3{
+color: #808080;
+}
+.hx,
+.nr{
+color: #A6A6A6;
+}
+.aju div.aCi img .ajn,
+.aju .aCi img {
+filter:invert(60%) contrast(250%);
+}
+.yO {
+background: #222222;
+}
+.nH{
+background: #1E1E1E;
+}
+.z0 > .L3{
+background-color: #323232;
+}
+.z0 > .L3:hover,
+.z0 > .T-I-KE.L3:focus {
+background-color: #454545;
+}
+.WR .z0 > .L3{
+height:38px;
+border-radius:0px;
+padding: 0 20px 0 0;
+}
+.WR .z0 > .L3::before {
+min-width: 48px;
+}
+.TK .TO,
+.n6 .ah9,
+.CL {
+border-radius: 0px;
+}
+.byl .nZ.aBP {
+background-color: #323232;
+}
+.TK .TO:active,
+.n6 .ah9.aiu:active,
+.CL:active,
+.TO.nZ,
+.TO.ol,
+.TO.NQ{
+background: #282828;
+}
 } EOT;
 }
 ==/UserStyle== */
@@ -174,7 +215,7 @@ background:transparent;
 background:transparent!important;
 }
 .NIYF4b {
-	background-color:transparent;
+background-color:transparent;
 }
 .uVGhGc,
 .sbsb_c:hover,
@@ -233,7 +274,8 @@ div.rl_feature,
 .YtXOzd,
 .kp-blk.cUnQKe,
 .RvYhPd::before,
-.rl_item{
+.rl_item,
+body.srp{
 background:/*[[bg]]*/;
 }
 body.jfk-scrollbar div.bottom-wrapper div:nth-of-type(2),
@@ -247,6 +289,9 @@ background:/*[[bg]]*/!important;
 .cEW58,
 .I6TXqe{
 background-color:/*[[bg]]*/;
+}
+#gb.gb_pa.gb_Sd.gb_Va.gb_vc.gb_Hc{
+background-color:/*[[bg]]*/!important;
 }
 .lr_dct_lbl_box,
 ._yX,
@@ -483,7 +528,9 @@ background-color:#323232!important;
 .l63HRe,
 .T7Lmse,
 .yQ8gDb,
-.E6Cqjb{
+.E6Cqjb,
+.ewE5H,
+.GUGkfc{
 background-color:/*[[border]]*/;
 }
 #hdtb-msb .hdtb-tl-sel,
@@ -653,7 +700,8 @@ a.gb_P,
 .RvYhPd::before,
 .eQ47Fc,
 .AGLhIc,
-.IK8sod{
+.IK8sod,
+.lJ9FBc input[type="submit"], .gbqfba{
 border:none;
 }
 .ab_button,
@@ -1100,7 +1148,13 @@ g-flat-button.BwMo1,
 .XQ6p1d,
 .J3Tg1d,
 .kp-header:first-child .BIZ8kb .thumb,
-.MyDQSe{
+.MyDQSe,
+.o6juZc,
+.W6pGoe,
+.IHSDrd,
+.BsbaEc,
+.lJ9FBc input[type="submit"],
+.gbqfba{
 border-radius:0px;
 }
 .qV9w7d,
@@ -1277,7 +1331,8 @@ title-with-lhs-icon:hover .ekf0x h3,
 .wcluHf,
 .ynAwRc,
 .xSQxL,
-.TII3ge{
+.TII3ge,
+.XZ5MVe{
 color:/*[[accent]]*/;
 }
 ._tX,
@@ -1299,7 +1354,10 @@ color:/*[[accent]]*/!important;
 ._shr:hover ._Fqg,
 ._O4n:hover,
 .Tg7LZd:hover .FAuhyb,
-.Tg7LZd:hover .zgAlFc{
+.Tg7LZd:hover .zgAlFc,
+.XZ5MVe:hover,
+.sbico:hover,
+.NZmxZe:hover{
 color:/*[[accent-h]]*/;
 }
 .mblink:visited,
@@ -1381,7 +1439,8 @@ color: #eeff00;
 .wwUB2c,
 .ftl,
 #footer a,
-.n8WSwd, .n8WSwd:visited,
+.n8WSwd,
+.n8WSwd:visited,
 .WTHmze,
 .qIE9I,
 .Bo9xMe,
@@ -1483,7 +1542,10 @@ a.pHiOh,
 .UdTY9,
 .yUUmWd .VfPpkd-jY41G-V67aGc,
 .lr_c_stnl,
-.U1hlv{
+.U1hlv,
+.gbZSUe,
+.JCzEY,
+#SIvCob{
 color:/*[[main-text]]*/;
 }
 .s,
@@ -1840,7 +1902,9 @@ a.W4LuJe, a.W4LuJe:visited,
 .JJYS0b:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-jY41G-V67aGc,
 .JJYS0b:active .VfPpkd-jY41G-V67aGc,
 .eQ47Fc,
-.IK8sod{
+.IK8sod,
+.og3lId,
+.lJ9FBc input[type="submit"], .gbqfba{
 color:/*[[title-text]]*/;
 }
 ._xdb .fl,
@@ -1926,7 +1990,6 @@ fill:/*[[title-text]]*/!important;
 ._Jxg,
 ._Jxg span,
 ._FOl,
-.aXBZVd,
 .YsGUOb,
 .ita-kd-img{
 filter: invert(100%);
@@ -1977,9 +2040,6 @@ filter:saturate(40%) hue-rotate(350deg) brightness(90%);
 .y6Uyqe a.k8XOCe.R0xfCb.VCOFK.s8bAkb:hover{
 filter:brightness(130%);
 }
-
-
-
 ._zF {
 height: 28px;
 }
@@ -2188,49 +2248,6 @@ color: /*[[main-text]]*/;
 .gbqfba:hover{
 border: 1px solid /*[[border]]*/;
 }
-/*[[logo]]*/
 /*[[Hide-add-lang]]*/
-	
-	
-/*Gmail (use in combinaison with the Dark Theme in Gmail settings */
-/* default mail body */
-.iY .Bu,
-.nr{
-background: #282828;
-}
-.ha > .hP, 
-.hx .gD{
-color: #E2E2E2;
-}
-p.MsoNormal{
-color: #E2E2E2!important;
-}
-.go,
-.hx .hb,
-.ig .g3,
-.hI .g3,
-.iv .g3{
-color: #808080;
-}
-.hx,
-.nr{
-color: #A6A6A6;
-}
-.ii a[href] {
-color: /*[[accent]]*/;
-}
-.ii a[href]:hover{
-color: /*[[accent-h]]*/;
-}
-.aju div.aCi img .ajn,
-.aju .aCi img {
-filter:invert(60%) contrast(250%);
-}
-/* Inbox */
-.yO {
-background: #222222;
-}
-.nH{
-background: #1E1E1E;
-}
+/*[[Gmail]]*/
 }
