@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.0.11
+@version     1.0.12
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -39,11 +39,7 @@ table.subform_tracklist .subform_track.subform_subtrack,
 .search_1Ms28,
 .search_1Ms28.focus_LsKqQ,
 .search_1Ms28:focus,
-.search_1Ms28:hover,
-.is_not_mobile #site_navigation > li > a:hover,
-.is_not_mobile #site_navigation > li .nav_group_control:hover,
-.is_not_mobile #activity_menu > li > a:hover,
-.is_not_mobile #activity_menu > li .nav_group_control:hover{
+.search_1Ms28:hover{
 background:/*[[bg]]*/;
 }
 .layout,
@@ -123,7 +119,8 @@ aside li:hover > a,
 .aside-thread:hover ul,
 .ref_guidelines_list > li.ref_guidelines_highlight,
 .ref_guidelines_list > li.ref_guidelines_highlight:hover,
-.ref_guidelines_list .ref_guidelines_highlight .ref_guidelines_heading:hover{
+.ref_guidelines_list .ref_guidelines_highlight .ref_guidelines_heading:hover,
+ul.subs_list li:hover{
 background:/*[[elements-lighter]]*/;
 }
 #messages_list .unread_message,
@@ -264,7 +261,8 @@ a.button_3lXdg.grey_1js2e,
 .button_3lXdg.blue_2acgV,
 a.button_3lXdg.blue_2acgV,
 .textarea_2-zKD,
-.search_1Ms28{
+.search_1Ms28,
+#browser #items{
 border:none;
 }
 .button{
@@ -272,7 +270,9 @@ border:none!important
 }
 #discography_header,
 .review:last-child,
-.pagination.top{
+.pagination.top,
+.site_nav_submenu,
+.site_nav_tray{
 border-bottom:none;
 }
 .threads-table{
@@ -339,7 +339,8 @@ table tr,
 .ratings_1pAt8,
 .masterWrapper_3J1sd,
 .releaseWrapper_3KqJj,
-.content_2nKpV{
+.content_2nKpV,
+ul.subs_list li{
 border-color:/*[[border-color]]*/;
 }
 #main_wrapper div#page.aside_right div#page_content div{
@@ -463,7 +464,17 @@ button.discloser__button,
 .id_3q3rO,
 .role_2ga14,
 .count_1Q64h,
-.submit_1SQ5c{
+.submit_1SQ5c,
+.explore-newly-added .card.card_large h4 a,
+.explore-newly-added .card.card_large h5 a,
+.top30-releases .card.card_large h4 a,
+.top30-releases .card.card_large h5 a,
+.explore-newly-added .card.card_large h4,
+.explore-newly-added .card.card_large h5,
+.top30-releases .card.card_large h4,
+.top30-releases .card.card_large h5,
+.explore-newly-added a:not(.default-image-as-icon),
+.top30-releases a:not(.default-image-as-icon){
 color:/*[[main-text]]*/;
 }
 .ui-autocomplete a .sublabel,
@@ -534,7 +545,8 @@ a.rollover_link.hl_added,
 .breadcrumbs > li a,
 .link_1ctor,
 .button_3lXdg.link_1judM,
-a.button_3lXdg.link_1judM{
+a.button_3lXdg.link_1judM,
+.filtergroup .filterlink a:visited{
 color:/*[[color-global]]*/;
 }
 .is_mobile.needs_reduced_ui #page.aside_off_canvas .open_filter.filters_active,
@@ -565,13 +577,23 @@ a.inset_button:visited:hover,
 a.button_3lXdg.link_1judM:focus,
 a.button_3lXdg.link_1judM:hover,
 a.button_3lXdg.link_1judM:visited:focus,
-a.button_3lXdg.link_1judM:visited:hover{
+a.button_3lXdg.link_1judM:visited:hover,
+.site_nav_submenu a:hover,
+.site_nav_tray a:hover,
+.site_nav_submenu a:hover i,
+.site_nav_tray a:hover i,
+.filtergroup .filterlink a:visited:hover{
 color:/*[[color-global-H]]*/;
 }
-a:visited{
+a:visited,
+.body_32Bo9 a:visited,
+a.sublink:visited,
+.rs a:visited,
+.filterlink a:visited{
 color:/*[[link-visited]]*/;
 }
-a:visited:hover{
+a:visited:hover,
+.body_32Bo9 a:visited:hover{
 color:/*[[link-visited-H]]*/;
 }
 #site_search #do_site_search i{
@@ -627,13 +649,15 @@ opacity:.6;
 outline:none;
 }
 .ct-grid {
-	stroke:/*[[elements-lighter]]*/;
+stroke:/*[[elements-lighter]]*/;
 }
 .ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut {
-	stroke:/*[[color-global]]*/
+stroke:/*[[color-global]]*/
 }
 a:hover,
-.is_not_mobile .youtube_track:hover strong{
+.is_not_mobile .youtube_track:hover strong,
+.site_nav_submenu a:hover,
+.site_nav_tray a:hover{
 text-decoration:none;
 }
 .button{
@@ -707,12 +731,12 @@ border-color: /*[[secondary-button]]*/;
 .article-vote-controls__item:hover {
 color: /*[[button-text]]*/;
 background-color: /*[[secondary-button-H]]*/;
-border-color: /*[[secondary-button-H]]*/;;
+border-color: /*[[secondary-button-H]]*/;
 }
 input[type="search"] {
 color: /*[[main-text]]*/;
 background-color: transparent;
-border-color: /*[[border-color]]*/;;
+border-color: /*[[border-color]]*/;
 border-radius: 0px;
 }
 select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .nesty-input:focus {
@@ -725,6 +749,43 @@ outline:none;
 button.id_3q3rO svg.vinyl_3UAFg circle
 {
 stroke:/*[[main-text]]*/;
+}
+#browser_tdl_items_title{
+background: #524E3D;
+padding: 14px 5px 14px 8px;
+color:/*[[button-text]]*/!important;
+}
+.history_browser_facet_found{
+border-color:/*[[border-color]]*/;
+border-left:0px;
+}
+#browser #historyData .history_browser_facet_found .rh{
+margin-top:0px;
+}
+#browser #historyData .history_browser_facet_found .rh,
+#browser #historyData .history_browser_facet_found .rs,
+ul.subs_list li.on{
+background: /*[[elements-lighter]]*/;
+}
+.filtergroup {
+border-color:/*[[border-color]]*/;
+max-width: 245px;
+}
+#browser_tdl_items_pager_short,
+#browser_tdl_items_pager_long{
+background-color: /*[[elements-lighter]]*/;
+}
+#browser_tdl_items_pager_short .icon{
+margin-top:2px!important;;
+}
+.site_nav_group.opened,
+.is_not_mobile #site_navigation > li > a:hover,
+.is_not_mobile #site_navigation > li .nav_group_control:hover,
+.is_not_mobile #activity_menu > li > a:hover,
+.is_not_mobile #activity_menu > li .nav_group_control:hover,
+.site_nav_submenu,
+.site_nav_tray{
+background:#202020;
 }
 @media (min-width:768px){
 div.section div.section_content,
