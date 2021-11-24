@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.6.8
+@version     2.6.9
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -460,7 +460,8 @@ div.overlay-content,
 .share-chart .share-block,
 .user-dashboard-module,
 .user-dashboard-comparison,
-.more-disclose-mobile .more-block{
+.more-disclose-mobile .more-block,
+.gallery-image-preferred-off{
 border:none!important;
 }
 .content{
@@ -552,7 +553,8 @@ border-top:none;
 .api-session-connect,
 .share-chart .share-block,
 .subscribe-form .login-signup,
-.subscribe-form .subscription-options{
+.subscribe-form .subscription-options,
+.gallery-image-preferred-off{
 border-radius:0!important;
 }
 pre,
@@ -687,6 +689,9 @@ filter: invert(80%);
 .selectbox .selectboxit-text::before,
 .obsession-history-play-all::before{
 filter: invert(80%)!important;
+}
+.gallery-image-preferred-off{
+filter: invert(87%);
 }
 .shout-report::before,
 .nag-bar .nag-bar-close::before,
@@ -1179,7 +1184,8 @@ background-color:/*[[color-global]]*/;
 .clipboard-button:hover,
 .clipboard-button:focus,
 a:focus .chartlist-count-bar-slug,
-a:hover .chartlist-count-bar-slug{
+a:hover .chartlist-count-bar-slug,
+.gallery-preview-more-overlay{
 background:/*[[color-global-hover]]*/!important;
 }
 .header-follower-btn .follower-btn-add-follower:hover::before,
