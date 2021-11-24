@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.0.12
+@version     1.1.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -13,11 +13,21 @@
 @advanced color secondary-button "Buttons" #404040
 @advanced color secondary-button-H "Buttons hover" #505050
 @advanced color main-text "Main text" #999999
-@advanced color button-text "Buttons text" #FFFFFF
+@advanced color button-text "Buttons text" #E3E3E3
+@advanced color button-text-H "Buttons text hover" #FFFFFF
 @advanced color color-global "Main Color" #5C809E
 @advanced color color-global-H "Main color hover" #77A6CC
 @advanced color link-visited "Visited link" #805C9E
 @advanced color link-visited-H "Visited link hover" #A677CC
+@advanced dropdown footer "Hide footer" {
+No "No" <<<EOT
+EOT;
+Yes "Yes" <<<EOT
+#push_footer,
+#site_footer_wrap{
+display:none;
+} EOT;
+}
 ==/UserStyle== */
 @-moz-document domain("discogs.com"){
 .section.report .section_content hr,
@@ -120,7 +130,8 @@ aside li:hover > a,
 .ref_guidelines_list > li.ref_guidelines_highlight,
 .ref_guidelines_list > li.ref_guidelines_highlight:hover,
 .ref_guidelines_list .ref_guidelines_highlight .ref_guidelines_heading:hover,
-ul.subs_list li:hover{
+ul.subs_list li:hover,
+table.mpitems th{
 background:/*[[elements-lighter]]*/;
 }
 #messages_list .unread_message,
@@ -474,11 +485,13 @@ button.discloser__button,
 .top30-releases .card.card_large h4,
 .top30-releases .card.card_large h5,
 .explore-newly-added a:not(.default-image-as-icon),
-.top30-releases a:not(.default-image-as-icon){
+.top30-releases a:not(.default-image-as-icon),
+table.mpitems th{
 color:/*[[main-text]]*/;
 }
 .ui-autocomplete a .sublabel,
-.ui-autocomplete .format{
+.ui-autocomplete .format,
+.marketplace_aside .section .section_content{
 color:/*[[main-text]]*/!important;
 }
 #full-width-header .thread-header-info .thread-header-breadcrumb a{
@@ -596,12 +609,23 @@ a:visited:hover,
 .body_32Bo9 a:visited:hover{
 color:/*[[link-visited-H]]*/;
 }
-#site_search #do_site_search i{
-color:/*[[secondary-button]]*/;
+#site_search #do_site_search i,
+.lazy_gallery_nav,
+.clear_selected_marketplace_filters,
+.clear_selected_marketplace_filters:visited{
+color:/*[[button-text]]*/;
 }
 .aside_search_form button:hover i,
-#site_search #do_site_search:hover i{
-color:/*[[secondary-button-H]]*/;
+#site_search #do_site_search:hover i,
+.lazy_gallery_nav:hover{
+color:/*[[button-text-H]]*/;
+}
+.community_number{
+color:#000;
+}
+.price,
+.small_price_id {
+	color: #CA3838;
 }
 .is_not_mobile a:hover .facet-bar,
 .is_not_mobile a:focus .facet-bar{
@@ -624,6 +648,10 @@ ul.module_blocks > li,
 div.section{
 margin-bottom:12px;
 }
+html.is_not_mobile.needs_reduced_ui.haslocalstorage.no_hastouch.no_indevmode.no_ismobile.hasformdata.hashistoryapi.hasflexbox.pjax_container_scrolled body.win.firefox.firefox95 div#main_wrapper div#page.aside_off_canvas div#page_content div.lr div.right div.section{
+margin-bottom:0px;
+}
+
 #full-width-header .aside_right.full-width-header-content #page_content,
 #user_header .aside_right.full-width-header-content #page_content,
 .aside_right.header-action-bar #page_content{
@@ -791,8 +819,14 @@ background:#202020;
 div.section div.section_content,
 #page_aside div.section:nth-child(4) div.section_content,
 .ui-autocomplete,
-.ui-autocomplete.ui-menu .ui-menu-item a{
-padding: 0px;
+.ui-autocomplete.ui-menu .ui-menu-item av,
+
+#page div.left,
+#full-width-header .full-width-header-content div.left,
+#user_header .full-width-header-content div.left,
+.header-action-bar div.left,
+.marketplace_aside{
+padding:0px;
 }
 #releases #pjax_container{
 padding:0 8px;
@@ -826,7 +860,8 @@ width:30%;
 width:70%;
 }
 .section.tracklist table,
-#search_tabs{
+#search_tabs,
+#page div.left{
 width:100%;
 }
 }
@@ -838,4 +873,5 @@ background-color:/*[[elements]]*/;
 padding-top:8px;
 }
 }
+/*[[footer]]*/
 }
