@@ -2918,29 +2918,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* wip */
 
 #content > p,
 #dnu_header + p,
@@ -2952,59 +2930,59 @@ body#staff .thin > div:nth-of-type(2) h3 {
 .table--panel-like,
 .thin > p,
 body#inbox .pagination--top + div {
-    background: #2B2B2B;
+background: #2B2B2B;
 }
 body {
-    background: #1E1E1E;
-    color: #CCCCCC;
-    font-family: 'Roboto';
-    font-size: 14px;
-    font-weight: 300;
+background: #1E1E1E;
+color: #CCCCCC;
+font-family: 'Roboto';
+font-size: 14px;
+font-weight: 300;
 }
 a {
-    color: #FFF;
+color: #FFF;
 }
 #wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 12px;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 12px;
 }
 .sidebar {
-    padding-left: 12px;
+padding-left: 12px;
 }
 .main-menu,
 .search-bar {
-    margin-bottom: 10px;
+margin-bottom: 10px;
 }
 .huge-movie-list__movie__title-row a.huge-movie-list__movie__title {
-    font-size: 18px;
-    color: #EEE;
+font-size: 18px;
+color: #EEE;
 }
 .huge-movie-list__movie__title-row .huge-movie-list__movie__year {
-    font-size: 18px;
-    color: #A2A2A2;
+font-size: 18px;
+color: #A2A2A2;
 }
 .huge-movie-list__movie__title-row .huge-movie-list__movie__director-list {
-    font-size: 18px;
-    color: #6F6E6E;
+font-size: 18px;
+color: #6F6E6E;
 }
 .huge-movie-list__movie__title-row .huge-movie-list__movie__director {
-    font-size: 18px;
-    color: #BEBEBE;
+font-size: 18px;
+color: #BEBEBE;
 }
 .huge-movie-list__movie {
-    margin-bottom: 15px;
-    background: #282828;
+margin-bottom: 15px;
+background: #282828;
 }
 .heading--small-bottom-margin {
-    font-size: 15px;
-    background: #303030;
+font-size: 15px;
+background: #303030;
 }
 .group_torrent_header {
-    font-size: 14px;
+font-size: 14px;
 }
 .small-cover-movie-list__movie__link {
-    height: 247px;
+	height: 226px;
 }
 #content > p,
 #dnu_header + p,
@@ -3018,167 +2996,168 @@ a {
 body#inbox .pagination--top + div,
 .main-column div#news .panel,
 .page__title {
-    margin-bottom: 10px;
+margin-bottom: 10px;
 }
 .page__main-content .main-column div#news {
-    margin-top: 10px;
+margin-top: 10px;
 }
 .page__main-content tbody.js-latest-posts-tbody tr td a.last_topic {
-    max-width: 700px;
+max-width: 700px;
 }
 .page__title {
-    position: relative;
-    height: 38px;
-    padding: 0 12px;
-    line-height: 38px;
-    font-size: 20px;
-    font-weight: 400;
-    text-transform: none;
-    white-space: nowrap;
-    overflow: hidden;
-    background: #232323;
+position: relative;
+height: 38px;
+padding: 0 12px;
+line-height: 38px;
+font-size: 20px;
+font-weight: 400;
+text-transform: none;
+white-space: nowrap;
+overflow: hidden;
+background: #232323;
 }
 body#forums .pagination--bottom + .linkbox a,
 input[type="button"],
 input[type="submit"] {
-    background: #5C809E;
+background: #5C809E;
 }
 a[onclick*="#taglist"]:hover,
 a[onclick^="ToggleTagSelector"]:hover,
 [class$="__bookmark"] a:hover,
 .release-name-movie-list__movie__action:hover,
-.film-club-discuss-link a:hover::before,
+.film-club-discuss-link a:hover:before,
 .js-latest-posts-tbody tr:last-of-type a:hover,
 body#forums .pagination--bottom + .linkbox a:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
-    background: #77A6CC;
+background: #77A6CC;
 }
 a[onclick*="#taglist"],
 a[onclick^="ToggleTagSelector"],
 .release-name-movie-list__movie__action,
-.film-club-discuss-link a::before,
+.film-club-discuss-link a:before,
 .js-latest-posts-tbody tr:last-of-type a {
-    border-color: #5C809E;
+border-color: #5C809E;
 }
 [class$="__bookmark"] a {
-    border-color: #77A6CC;
+border-color: #77A6CC;
 }
 .tabs__bar__item--active a,
 a[onclick*="#taglist"],
 a[onclick^="ToggleTagSelector"],
 .page__title a.artist-info-link,
-.film-club-discuss-link a::before,
+.film-club-discuss-link a:before,
 .js-latest-posts-tbody tr:last-of-type a {
-    color: #5C809E;
+color: #5C809E;
 }
 [class$="__bookmark"] a,
 .release-name-movie-list__movie__action,
 .simple-tabs__link--active,
 .page__title a.artist-info-link:hover {
-    color: #77A6CC;
+color: #77A6CC;
 }
 .tabs__bar__item--active a {
-    color: #77A6CC!important;
+color: #77A6CC!important;
 }
 body#forums .pagination--bottom + .linkbox a,
 input[type="button"],
 input[type="submit"] {
-    border-radius: 0px;
+border-radius: 0px;
 }
 div.sidebar div.box_albumart.panel div.panel__body {
-    display: block;
-    width: 100%;
-    padding: 4px 36px 0px 36px;
+display: block;
+width: 100%;
+padding: 4px 36px 0px 36px;
 }
 .basic-movie-list__torrent-edition {
-    font-size: 10px;
-    font-weight: 600;
-    color: #68BD91;
+font-size: 10px;
+font-weight: 600;
+color: #68BD91;
 }
 .cover-movie-list__movie__cover-link {
-    height: 375px;
+height: 375px;
 }
 .cover-movie-list__movie__undercover {
-    flex-grow: 0;
+flex-grow: 0;
 }
 .cover-movie-list__movie__rating {
-    display: block;
-    margin: 0 -8px;
-    padding: 2px 0;
-    background: rgba(0, 0, 0, 0.24);
-    font-weight: 700;
-    font-size: 12px;
+display: block;
+margin: 0 -8px;
+padding: 2px 0;
+background: rgba(0, 0, 0, 0.24);
+font-weight: 700;
+font-size: 12px;
 }
 .cover-movie-list__movie__title-row {
-    padding: 8px 0 0 0;
+padding: 8px 0 0 0;
 }
 .alert-bar {
-	margin: 0 0 10px 0;
+margin: 0 0 10px 0;
 }
-
-#userinfo_username::before{
+#userinfo_username:before{
 left:-60px;
 top:-44px;
-	width: 50px;
-	height: 50px;
-	line-height: 50px;
-	font-size: 24px;
-	color: rgba(255, 255, 255, 0.7);
+width: 50px;
+height: 50px;
+line-height: 50px;
+font-size: 24px;
+color: rgba(255, 255, 255, 0.7);
 }
 #userinfo_username,
 #userinfo_username a{
 width:100px;
 }
-
 #userinfo_username{
 left:1185px;
 margin-right:-200px!important;
-	font-size: 0;
-	margin-left: 0px;
+font-size: 0;
+margin-left: 0px;
 }
 #userinfo_username:hover {
-	top: 11px;
+top: 11px;
 }
-#userinfo_username:hover::before{
+#userinfo_username:hover:before{
 top:0px;
 padding-right:10px;
 width:60px;
 }
-
-
 #userinfo_major {
-	order: 0;
-	flex: 0 0 200px;
-	align-items: center;
-	height: 100%;
-	padding-left: 53.33333px;
+order: 0;
+flex: 0 0 200px;
+align-items: center;
+height: 100%;
+padding-left: 53.33333px;
 }
 #userinfo_stats {
-	flex-grow: 1;
-	justify-content: center;
-	align-items: center;
-	padding: 0 104px 0 64px;
+flex-grow: 1;
+justify-content: center;
+align-items: center;
+padding: 0 104px 0 64px;
 }
-
-
-
-
-
-
-
 .inbox-message--unread td strong a{
 font-weight: 600;
 }
-
-
-
+.pagination__link--first:before {
+content: "";
+}
+.pagination__link--last:before {
+content: "";
+}
+#userinfo_minor:before {
+content: '\E5D2';
+top: -50px;
+width: 50px;
+height: 50px;
+margin-top: 1122px;
+border-top-right-radius: 0px;
+line-height: 50px;
+font-size: 20px;
+background-color: #494949;
+}
 /*
-
-
 .linkbox {
-	text-align: center;
-	margin: 5px 5px 10px;
+text-align: center;
+margin: 5px 5px 10px;
 }
 
 blockquote,
@@ -3188,23 +3167,8 @@ blockquote,
 .qtip-content,
 .linkbox,
 .basic-movie-list__movie__tags {
-	font-size: 1.3rem;
+font-size: 1.3rem;
 }
-
-
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
