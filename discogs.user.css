@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.1.0
+@version     1.1.1
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -31,7 +31,9 @@ display:none;
 ==/UserStyle== */
 @-moz-document domain("discogs.com"){
 .section.report .section_content hr,
-#main_wrapper #page.aside_right #page_aside .section:not(#statistics):not(#video):nth-of-type(6){
+#main_wrapper #page.aside_right #page_aside .section:not(#statistics):not(#video):nth-of-type(6),
+.wrapper_MVvNX::before,
+.wrapper_MVvNX::after{
 display:none;
 }
 body,
@@ -131,7 +133,8 @@ aside li:hover > a,
 .ref_guidelines_list > li.ref_guidelines_highlight:hover,
 .ref_guidelines_list .ref_guidelines_highlight .ref_guidelines_heading:hover,
 ul.subs_list li:hover,
-table.mpitems th{
+table.mpitems th,
+.heading_24HyI{
 background:/*[[elements-lighter]]*/;
 }
 #messages_list .unread_message,
@@ -154,7 +157,8 @@ background:/*[[border-color]]*/;
 .button.button-white[disabled],
 a.inset_button[disabled],
 .button_3lXdg.grey_1js2e,
-a.button_3lXdg.grey_1js2e{
+a.button_3lXdg.grey_1js2e,
+.dropdown_2frgf ul{
 background:/*[[secondary-button]]*/;
 }
 .is_mobile.needs_reduced_ui #mobile_options .open_filter{
@@ -173,7 +177,11 @@ table.cards tr.edit td.status,
 a.button_3lXdg.grey_1js2e:focus,
 a.button_3lXdg.grey_1js2e:hover,
 a.button_3lXdg.grey_1js2e:visited:focus,
-a.button_3lXdg.grey_1js2e:visited:hover{
+a.button_3lXdg.grey_1js2e:visited:hover,
+.dropdown_2frgf li a:focus,
+.dropdown_2frgf li a:hover,
+.dropdown_2frgf li button:focus,
+.dropdown_2frgf li button:hover{
 background:/*[[secondary-button-H]]*/;
 }
 .button.button-blue,
@@ -220,6 +228,9 @@ background:transparent;
 .button_3lXdg.blue_2acgV,
 a.button_3lXdg.blue_2acgV{
 background-image:none;
+}
+.wrapper_MVvNX::after{
+width: 2em!important;
 }
 .section.recommendations .cards,
 .button{
@@ -351,7 +362,10 @@ table tr,
 .masterWrapper_3J1sd,
 .releaseWrapper_3KqJj,
 .content_2nKpV,
-ul.subs_list li{
+ul.subs_list li,
+.versions_1t0s2 tr,
+.review_1HaTA,
+.dropdown_2frgf ul{
 border-color:/*[[border-color]]*/;
 }
 #main_wrapper div#page.aside_right div#page_content div{
@@ -420,6 +434,9 @@ box-sizing:border-box;
 .hl_added{
 color:#000000;
 }
+.duration_2t4qr{
+color:#606060;
+}
 .hl_changed2{
 color:#404040;
 }
@@ -486,7 +503,8 @@ button.discloser__button,
 .top30-releases .card.card_large h5,
 .explore-newly-added a:not(.default-image-as-icon),
 .top30-releases a:not(.default-image-as-icon),
-table.mpitems th{
+table.mpitems th,
+.entity_1XpR8{
 color:/*[[main-text]]*/;
 }
 .ui-autocomplete a .sublabel,
@@ -595,7 +613,8 @@ a.button_3lXdg.link_1judM:visited:hover,
 .site_nav_tray a:hover,
 .site_nav_submenu a:hover i,
 .site_nav_tray a:hover i,
-.filtergroup .filterlink a:visited:hover{
+.filtergroup .filterlink a:visited:hover,
+.button_3lXdg.link_1judM.grey_1js2e:focus, .button_3lXdg.link_1judM.grey_1js2e:hover, .button_3lXdg.link_1judM.grey_1js2e:visited:focus, .button_3lXdg.link_1judM.grey_1js2e:visited:hover, a.button_3lXdg.link_1judM.grey_1js2e:focus, a.button_3lXdg.link_1judM.grey_1js2e:hover, a.button_3lXdg.link_1judM.grey_1js2e:visited:focus, a.button_3lXdg.link_1judM.grey_1js2e:visited:hover{
 color:/*[[color-global-H]]*/;
 }
 a:visited,
@@ -815,12 +834,27 @@ margin-top:2px!important;;
 .site_nav_tray{
 background:#202020;
 }
+.button_3lXdg.link_1judM.grey_1js2e{
+background:transparent;
+padding-right:20px;
+}
+.dropdown_2frgf ul::before {
+border-bottom-color:/*[[secondary-button]]*/;
+}
+.dropdown_2frgf ul::after {
+border-bottom-color: /*[[secondary-button]]*/;
+}
+.dropdown_2frgf li:first-child a:focus::after,
+.dropdown_2frgf li:first-child a:hover::after,
+.dropdown_2frgf li:first-child button:focus::after,
+.dropdown_2frgf li:first-child button:hover::after {
+border-bottom-color: /*[[secondary-button-H]]*/;
+}
 @media (min-width:768px){
 div.section div.section_content,
 #page_aside div.section:nth-child(4) div.section_content,
 .ui-autocomplete,
 .ui-autocomplete.ui-menu .ui-menu-item av,
-
 #page div.left,
 #full-width-header .full-width-header-content div.left,
 #user_header .full-width-header-content div.left,
@@ -863,6 +897,9 @@ width:70%;
 #search_tabs,
 #page div.left{
 width:100%;
+}
+.cards_3VSy1 li {
+padding: 0px 21px 0px 5px;
 }
 }
 @media (max-width:767px){
