@@ -1,10 +1,9 @@
 /* ==UserStyle==
 @name        PTP Raise mod
 @namespace   gomgon
-@version     0.0.2
+@version     0.0.3
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/ptp.user.css
-@license     CC-BY-SA-4.0
 @author      gomgon
 ==/UserStyle== */
 @-moz-document domain("passthepopcorn.me") {
@@ -2563,7 +2562,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0 12px 0 64px;
+    padding: 0 12px 0 44px;
     color: rgba(255, 255, 255, 0.7)
 }
 #userinfo_stats li {
@@ -3132,7 +3131,7 @@ padding-left: 53.33333px;
 flex-grow: 1;
 justify-content: center;
 align-items: center;
-padding: 0 104px 0 64px;
+padding: 0 104px 0 44px;
 }
 .inbox-message--unread td strong a{
 font-weight: 600;
@@ -3143,32 +3142,28 @@ content: "";
 .pagination__link--last:before {
 content: "";
 }
-#userinfo_minor:before {
-content: '\E5D2';
-top: -50px;
-width: 50px;
-height: 50px;
-margin-top: 1122px;
-border-top-right-radius: 0px;
-line-height: 50px;
-font-size: 20px;
-background-color: #494949;
-}
-/*
 .linkbox {
 text-align: center;
-margin: 5px 5px 10px;
 }
-
-blockquote,
-.sidebar,
 .alert-bar,
-.staff-toolbar,
-.qtip-content,
-.linkbox,
-.basic-movie-list__movie__tags {
-font-size: 1.3rem;
+.staff-toolbar{
+font-size: 1.2rem;
 }
-*/
+#userinfo_stats {
+padding: 0 40px;
+max-width:670px;
+}
+#userinfo_stats li {
+margin: 0 15px 0 0;
+}
+#userinfo_major {
+padding-left: 40px;
+}
+#stats_ratio .user-info-bar__text {
+font-size: 12px;
+font-weight: 700;
+margin: 2px 0px;
+white-space: nowrap;
+}
+}
 
-}
