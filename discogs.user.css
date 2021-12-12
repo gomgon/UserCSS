@@ -1,11 +1,12 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.1.1
+@version     1.2.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
 @author      gomgon
+@advanced text user-css "Your css code" ""
 @advanced color bg "Background" #1E1E1E
 @advanced color elements "Elements" #282828
 @advanced color elements-lighter "Lighter elements & headers" #323232
@@ -911,4 +912,5 @@ padding-top:8px;
 }
 }
 /*[[footer]]*/
+/*[[user-css]]*/
 }
