@@ -1,10 +1,11 @@
 /* ==UserStyle==
-@name        PTP Raise mod
+@name        PTP (Raise mod)
 @namespace   gomgon
-@version     0.0.3
+@version     0.0.4
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/ptp.user.css
 @author      gomgon
+@advanced    text user-css "Your css code" ""
 ==/UserStyle== */
 @-moz-document domain("passthepopcorn.me") {
 #morecast:before,
@@ -3165,5 +3166,7 @@ font-weight: 700;
 margin: 2px 0px;
 white-space: nowrap;
 }
-}
 
+
+/*[[user-css]]*/
+}
