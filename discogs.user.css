@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.2.0
+@version     1.3.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -27,6 +27,18 @@ Yes "Yes" <<<EOT
 #push_footer,
 #site_footer_wrap{
 display:none;
+} EOT;
+}
+@advanced dropdown addmodule "Auto-hide 'Add a module' on dashboard"{
+No "No" <<<EOT
+EOT;
+Yes "Yes" <<<EOT
+ul.module_blocks > li.dashboard_addmodules {
+opacity:0;
+transition: opacity .5s
+}
+ul.module_blocks > li.dashboard_addmodules:hover {
+opacity:1;
 } EOT;
 }
 ==/UserStyle== */
@@ -505,7 +517,8 @@ button.discloser__button,
 .explore-newly-added a:not(.default-image-as-icon),
 .top30-releases a:not(.default-image-as-icon),
 table.mpitems th,
-.entity_1XpR8{
+.entity_1XpR8,
+.mplabel{
 color:/*[[main-text]]*/;
 }
 .ui-autocomplete a .sublabel,
@@ -912,5 +925,6 @@ padding-top:8px;
 }
 }
 /*[[footer]]*/
+/*[[addmodule]]*/
 /*[[user-css]]*/
 }
