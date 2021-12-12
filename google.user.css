@@ -1,11 +1,12 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.8.2
+@version     0.9.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
 @author      gomgon
+@advanced text user-css "Your css code" ""
 @advanced color bg "Background" #1E1E1E
 @advanced color bg-lighter "Lighter elements" #232323
 @advanced color searchbar "Searchbar" #323232
@@ -2331,4 +2332,5 @@ border-color: /*[[border]]*/;
 }
 /*[[Hide-add-lang]]*/
 /*[[Gmail]]*/
+/*[[user-css]]*/
 }
