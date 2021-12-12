@@ -1,11 +1,12 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.6.9
+@version     2.7.0
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
 @author      gomgon
+@advanced text user-css "Your css code" ""
 @advanced dropdown compact-mode "Compact mode"{
 No "No" <<<EOT
 EOT;
@@ -2451,4 +2452,5 @@ margin-top:0px;
 top: -68px;
 }
 }
+/*[[user-css]]*/
 }
