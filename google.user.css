@@ -1,12 +1,35 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.9.1
+@version     0.9.2
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
 @author      gomgon
 @advanced text user-css "Your css code" ""
+@advanced dropdown logo "White logo" {
+No "No" <<<EOT
+EOT;
+Yes "Yes" <<<EOT
+img#hplogo,
+div.logo.doodle a img,
+div.ZbYMvd a img{
+opacity:0;
+}  
+.kKvsb{
+background:url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png) no-repeat center!important;
+background-size:272px 92px!important;
+max-height: 180px;
+}
+div.logo.doodle{
+background:url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png) no-repeat center!important;
+background-size:86px 29px!important
+}
+div.ZbYMvd{
+background:url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png) no-repeat center!important;
+background-size:86px 29px!important
+} EOT;
+}
 @advanced color bg "Background" #1E1E1E
 @advanced color bg-lighter "Lighter elements" #232323
 @advanced color searchbar "Searchbar" #323232
@@ -110,7 +133,6 @@ background-image: url('https://www.gstatic.com/images/icons/material/system_gm/1
 .hB, .mL {
 background-image: url('https://www.gstatic.com/images/icons/material/system_gm/1x/reply_white_20dp.png');
 }
-
 .hA {
 background-image: url('https://www.gstatic.com/images/icons/material/system_gm/1x/more_vert_white_20dp.png');
 }
@@ -2338,6 +2360,7 @@ border-radius: 0px;
 .Rj2Mlf:not(:disabled){
 border-color: /*[[border]]*/;
 }
+/*[[logo]]*/
 /*[[Hide-add-lang]]*/
 /*[[Gmail]]*/
 /*[[user-css]]*/
