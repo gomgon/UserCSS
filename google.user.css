@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.9.3
+@version     0.9.4
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -254,7 +254,7 @@ background:/*[[bg]]*/!important;
 .iKjWAf, .dr1yeb, .cEW58, .I6TXqe{
 background-color:/*[[bg]]*/;
 }
-#gb.gb_pa.gb_Sd.gb_Va.gb_vc.gb_Hc, #gb.gb_pa.gb_Sd.gb_Va.gb_vc.gb_Kd{
+#gb.gb_pa.gb_Sd.gb_Va.gb_vc.gb_Hc, #gb.gb_pa.gb_Sd.gb_Va.gb_vc.gb_Kd, #gb.gb_na.gb_Qd.gb_Ta.gb_tc.gb_Ec{
 background-color:/*[[bg]]*/!important;
 }
 .lr_dct_lbl_box, ._yX, ._she, ._qgo, #fsett, g-inner-card, .mlo-c, .vk_c, .vk_cxp, .tw-menu-btn:hover .tw-menu-btn-image:first-child, .hdtb-mn-o, .hdtb-mn-c, .ab_dropdown, .goog-menu, ._xe, .rfli .kp-blk, ._vx, ._F2i, .cMjHbjVt9AZ__button:active, div._oip > g-inner-card, ._Tfr, ._UDr, ._pEr, ._ZIr, .BklRsd, #hdtbSum, .jZWadf, .wQnou, #kO001e, .etUWZd, .MDLhlf, .llgymd, .E72nk, #sfcnt.TshKde, #footer:not(.ctr-p), .VvrH3b:hover, .TieM1d, #gsr.srp.tbo.vasq.wf-b #searchform.big .sfbg .sfbgg, .EsIlz, #gsr.srp.vasq.wf-b #searchform.big .sfbg, #gsr.srp.vasq #searchform.big .sfbg, .EHzcec, .sfbg, .minidiv .sfbg, .eQ47Fc:hover, .IK8sod, .Qff0zd{
