@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.9.4
+@version     0.9.5
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -13,7 +13,10 @@ EOT;
 Yes "Yes" <<<EOT
 img#hplogo, div.logo.doodle a img, div.ZbYMvd a img{
 opacity:0;
-}  
+}
+.kKvsb #hplogo{
+top:-10000px!important;
+}
 .kKvsb{
 background:url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png) no-repeat center!important;
 background-size:272px 92px!important;
@@ -520,7 +523,7 @@ fill:/*[[title-text]]*/;
 td.imspo_mt__rg svg.imspo_mt__triangle polygon{
 fill:/*[[title-text]]*/!important;
 }
-._Jxg, ._Jxg span, ._FOl, .YsGUOb, .ita-kd-img{
+._Jxg, ._Jxg span, ._FOl, .ita-kd-img{
 filter: invert(100%);
 }
 input[type="image"], .gb_rc > div:nth-child(1), .knowledge-related_questions_list__arrow, #ab_opt_icon, .ab_button:hover span img._Fnc, ._Zoj, ._apj, ._Zgf, .gbsi, .card-section .ZseVEf, .amp_r .ZseVEf, .BlOseb.MFTKyf .KkkQv, .k2Oeod.MFTKyf .S2C1T{
