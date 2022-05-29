@@ -1,5 +1,8 @@
-Really buzy at the moment so updates/fixes will be infrequent, sorry.<br>
-feel free to fork, or use the "your css code" option to simply add the fix :)
+Infrequent updates atm, so feel free to fork, or use the "your css code" option to simply add the fix :)<br>
+<br>
+Full rework in progress on all slylesheets:<br>
+Big cleanup, reformatting<br>
+Mobile display full rework (tru Stylus on Firefox Nightly)<br>
 #
 A [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) compatible userstyle manager is required, those are recommended:
 
@@ -23,11 +26,12 @@ The stylesheet will be updated automaticaly by the addon.<br>
 <br>
 #
 [![Install](/images/google.png)](https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css) Google stylesheet.<br>
-
+<br>
+Note: For compatibility, activate Google dark mode, as this sthylesheet is now written over that.<br>
+Same for the Gmail option (desktop), chose the "Dark" theme in [Gmail](https://mail.google.com) settings (top right) > Theme - View all > Scroll down a little and pick "Dark"<br>
+<br>
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/GoogleScreenshot1.png" height="80" title="Click to enlarge"></img>
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/GoogleScreenshot2.png" height="80" title="Click to enlarge"></img>
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/GoogleScreenshot3.png" height="80" title="Click to enlarge"></img>
 <br>
 
-Note: For compatibility, activate Google dark mode, on [Google](https://www.google.com) main page > settings (bottom right) > Dark Theme: On<br>
-Same for the Gmail option, chose the dark theme in [Gmail](https://mail.google.com) > settings (top right) > Theme - View all > Scroll down a little and pick "Dark"
