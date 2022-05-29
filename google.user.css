@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.9.8
+@version     0.9.9
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -171,7 +171,7 @@ border-radius:0px;
 } EOT;
 }
 ==/UserStyle== */
-@-moz-document regexp("https?://(www|images|mail|translate|myaccount|shopping|news).google.(com|([a-z]{2})).*") {
+@-moz-document regexp("https?://(www|images|mail|translate|shopping|news).google.(com|([a-z]{2})).*") {
 @media (min-width:768px){
 /*[[footer]]*/
 /*[[search-btns]]*/
@@ -258,11 +258,8 @@ background:/*[[bg]]*/!important;
 background-color:/*[[bg]]*/;
 }
 #gb.gb_pa,
-#gb.gb_na.gb_Qd.gb_Ta.gb_tc.gb_Ec,
-#gb.gb_na.gb_Rd.gb_Ua.gb_uc.gb_Fc,
-#gb.gb_na gb_Vd gb_Za gb_ha,
-#gb.gb_na.gb_Vd.gb_Za.gb_ha.gb_yc.gb_Kc,
-#gb.gb_na.gb_Zd.gb_2a.gb_ha.gb_Bc.gb_Nc{
+#gb.gb_na,
+#gb.gb_oa{
 background-color:/*[[bg]]*/!important;
 }
 .lr_dct_lbl_box, ._yX, ._she, ._qgo, #fsett, g-inner-card, .mlo-c, .vk_c, .vk_cxp, .tw-menu-btn:hover .tw-menu-btn-image:first-child, .hdtb-mn-o, .hdtb-mn-c, .ab_dropdown, .goog-menu, ._xe, .rfli .kp-blk, ._vx, ._F2i, .cMjHbjVt9AZ__button:active, div._oip > g-inner-card, ._Tfr, ._UDr, ._pEr, ._ZIr, .BklRsd, #hdtbSum, .jZWadf, .wQnou, #kO001e, .etUWZd, .MDLhlf, .llgymd, .E72nk, #sfcnt.TshKde, #footer:not(.ctr-p), .VvrH3b:hover, .TieM1d, #gsr.srp.tbo.vasq.wf-b #searchform.big .sfbg .sfbgg, .EsIlz, #gsr.srp.vasq.wf-b #searchform.big .sfbg, #gsr.srp.vasq #searchform.big .sfbg, .EHzcec, .sfbg, .minidiv .sfbg, .eQ47Fc:hover, .IK8sod, .Qff0zd{
