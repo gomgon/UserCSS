@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Google
 @namespace   gomgon
-@version     0.9.9
+@version     0.9.10
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css
 @license     CC-BY-SA-4.0
@@ -171,7 +171,7 @@ border-radius:0px;
 } EOT;
 }
 ==/UserStyle== */
-@-moz-document regexp("https?://(www|images|mail|translate|shopping|news).google.(com|([a-z]{2})).*") {
+@-moz-document regexp("https?://(www|images|translate).google.(com|([a-z]{2})).*") {
 @media (min-width:768px){
 /*[[footer]]*/
 /*[[search-btns]]*/
@@ -755,6 +755,5 @@ border-color: /*[[border]]*/;
 }
 /*[[logo]]*/
 /*[[Hide-add-lang]]*/
-/*[[Gmail]]*/
 /*[[user-css]]*/
 }
