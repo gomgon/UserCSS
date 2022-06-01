@@ -1,8 +1,8 @@
-Infrequent updates atm, so feel free to fork, or use the "your css code" option to simply add the fix :)<br>
+Infrequent updates atm, so feel free to fork, or use the "your css code" option in the stylesheetd to simply add the fix :)<br>
 <br>
 Full rework in progress on all slylesheets:<br>
 Big cleanup, reformatting<br>
-Mobile display full rework (tru Stylus on Firefox Nightly)<br>
+Mobile display full rework (tru Stylus on Firefox Nightly: [Guide](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly/))<br>
 #
 A [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) compatible userstyle manager is required, those are recommended:
 
@@ -27,8 +27,8 @@ The stylesheet will be updated automaticaly by the addon.<br>
 #
 [![Install](/images/google.png)](https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css) Google stylesheet.<br>
 <br>
-Note: For compatibility, activate Google dark mode, as this sthylesheet is now written over that.<br>
-Same for the Gmail option (desktop), chose the "Dark" theme in [Gmail](https://mail.google.com) settings (top right) > Theme - View all > Scroll down a little and pick "Dark"<br>
+Note: For compatibility, activate Google dark mode, as this sthylesheet is now beign rewritten over it.<br>
+The Gmail option is removed untill it make it clean<br>
 <br>
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/GoogleScreenshot1.png" height="80" title="Click to enlarge"></img>
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/GoogleScreenshot2.png" height="80" title="Click to enlarge"></img>
