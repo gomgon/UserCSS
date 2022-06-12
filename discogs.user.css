@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.3.0
+@version     1.3.1
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -147,7 +147,8 @@ aside li:hover > a,
 .ref_guidelines_list .ref_guidelines_highlight .ref_guidelines_heading:hover,
 ul.subs_list li:hover,
 table.mpitems th,
-.heading_24HyI{
+.heading_24HyI,
+.header_W2hzl{
 background:/*[[elements-lighter]]*/;
 }
 #messages_list .unread_message,
