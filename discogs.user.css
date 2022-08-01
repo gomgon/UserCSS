@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.3.1
+@version     1.3.2
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -64,12 +64,19 @@ table.subform_tracklist .subform_track.subform_subtrack,
 .search_1Ms28,
 .search_1Ms28.focus_LsKqQ,
 .search_1Ms28:focus,
-.search_1Ms28:hover{
+.search_1Ms28:hover,
+.readmore_wrapper{
 background:/*[[bg]]*/;
 }
 .layout,
 .footer{
 background-color:/*[[bg]]*/;
+}
+.index_3D8To{
+background-color:#272727;
+}
+.subtrack_1Itjg{
+background-color:#222222;
 }
 #page.aside_right #page_content .body,
 #page.aside_right .section,
@@ -87,6 +94,7 @@ ul.module_blocks > li,
 #releases #pjax_container,
 .history_form,
 .is_not_mobile table.release_list_table tbody tr:hover,
+table.release_list_table tbody tr:focus-within,
 .ui-autocomplete a,
 div.section div.section_content.tall,
 .drag_drop_field_list > li,
@@ -99,7 +107,21 @@ div.section div.section_content.tall,
 .share a,
 table.subform_table tr.subnotes,
 table.subform_table tr.collection,
-table.subform_tracklist .subform_track.track_heading{
+table.subform_tracklist .subform_track.track_heading,
+.button_3lXdg.nav_14Pbx:hover,
+a.button_3lXdg.nav_14Pbx:hover,
+.headericon_3fHYD:focus,
+.headericon_3fHYD:hover,
+.headericon_3fHYD:visited:focus,
+.headericon_3fHYD:visited:hover,
+a.headericon_3fHYD:focus,
+a.headericon_3fHYD:hover,
+a.headericon_3fHYD:visited:focus,
+a.headericon_3fHYD:visited:hover,
+.user_obUH5 button:focus,
+.user_obUH5 button:hover,
+.user_obUH5.open_2WiGA,
+.more_2LkB4:focus, .more_2LkB4:hover{
 background:/*[[elements]]*/;
 }
 #page_content .messageContents table#deh-wrapper tbody tr td table tbody tr td table{
@@ -148,7 +170,9 @@ aside li:hover > a,
 ul.subs_list li:hover,
 table.mpitems th,
 .heading_24HyI,
-.header_W2hzl{
+.header_W2hzl,
+.is_not_mobile .release_list_table tr:hover .notes_field,
+.is_not_mobile .release_list_table tr:focus-within .notes_field{
 background:/*[[elements-lighter]]*/;
 }
 #messages_list .unread_message,
@@ -225,6 +249,14 @@ a.button_3lXdg.blue_2acgV:hover,
 a.button_3lXdg.blue_2acgV:visited:focus,
 a.button_3lXdg.blue_2acgV:visited:hover{
 background:/*[[color-global-H]]*/;
+}
+.collection_3SHpt{
+background:#253225;
+border:none
+}
+.wantlist_3AV5h{
+background:#322525;
+border:none
 }
 .history_form .vote_info_helper {
 background: hsl(60, 50%, 15%);
@@ -317,7 +349,9 @@ border-top:none;
 #messages_list .messagelist tr{
 border-color: /*[[bg]]*/;
 }
-#search_tabs li{
+#search_tabs li,
+.wrapper_iNNjN,
+.left_2c7X6{
 border-color:/*[[elements]]*/;
 }
 div.section h3,
@@ -379,7 +413,10 @@ table tr,
 ul.subs_list li,
 .versions_1t0s2 tr,
 .review_1HaTA,
-.dropdown_2frgf ul{
+.dropdown_2frgf ul,
+div.section h2,
+.toggle_section_control,
+.more_2LkB4{
 border-color:/*[[border-color]]*/;
 }
 #main_wrapper div#page.aside_right div#page_content div{
@@ -439,9 +476,6 @@ box-shadow:none!important;
 }
 .ui-autocomplete {
 box-shadow: 0px 0px 20px #000000;
-}
-#page.aside_right #page_content{
-box-sizing:border-box;
 }
 .hl_removed,
 .hl_changed1,
@@ -519,7 +553,22 @@ button.discloser__button,
 .top30-releases a:not(.default-image-as-icon),
 table.mpitems th,
 .entity_1XpR8,
-.mplabel{
+.mplabel,
+label,
+ul.module_blocks > li.module_placeholder .label,
+.module_blocks .dashboard_addmodules .label,
+ul.module_blocks > li.focused.module_placeholder .label,
+.module_blocks .focused.dashboard_addmodules .label,
+ul.module_blocks > li.dragging.module_placeholder .label,
+.module_blocks .dragging.dashboard_addmodules .label,
+ul.module_blocks > li.module_placeholder:hover .label,
+.module_blocks .dashboard_addmodules:hover .label,
+.copy_shortcut .copy_shortcut_code,
+.readmore_toggler,
+.readmore_toggler.touch,
+.readmore_toggler:hover,
+.readmore_toggler:focus,
+.more_2LkB4{
 color:/*[[main-text]]*/;
 }
 .ui-autocomplete a .sublabel,
@@ -555,7 +604,8 @@ a.button_3lXdg.blue_2acgV,
 a.button_3lXdg.blue_2acgV:focus,
 a.button_3lXdg.blue_2acgV:hover,
 a.button_3lXdg.blue_2acgV:visited:focus,
-a.button_3lXdg.blue_2acgV:visited:hover{
+a.button_3lXdg.blue_2acgV:visited:hover,
+button{
 color:/*[[button-text]]*/;
 }
 .button,
@@ -592,7 +642,8 @@ a.rollover_link.hl_added,
 .link_1ctor,
 .button_3lXdg.link_1judM,
 a.button_3lXdg.link_1judM,
-.filtergroup .filterlink a:visited{
+.filtergroup .filterlink a:visited,
+.youtube_track .title{
 color:/*[[color-global]]*/;
 }
 .is_mobile.needs_reduced_ui #page.aside_off_canvas .open_filter.filters_active,
@@ -629,8 +680,13 @@ a.button_3lXdg.link_1judM:visited:hover,
 .site_nav_submenu a:hover i,
 .site_nav_tray a:hover i,
 .filtergroup .filterlink a:visited:hover,
-.button_3lXdg.link_1judM.grey_1js2e:focus, .button_3lXdg.link_1judM.grey_1js2e:hover, .button_3lXdg.link_1judM.grey_1js2e:visited:focus, .button_3lXdg.link_1judM.grey_1js2e:visited:hover, a.button_3lXdg.link_1judM.grey_1js2e:focus, a.button_3lXdg.link_1judM.grey_1js2e:hover, a.button_3lXdg.link_1judM.grey_1js2e:visited:focus, a.button_3lXdg.link_1judM.grey_1js2e:visited:hover{
+.button_3lXdg.link_1judM.grey_1js2e:focus, .button_3lXdg.link_1judM.grey_1js2e:hover, .button_3lXdg.link_1judM.grey_1js2e:visited:focus, .button_3lXdg.link_1judM.grey_1js2e:visited:hover, a.button_3lXdg.link_1judM.grey_1js2e:focus, a.button_3lXdg.link_1judM.grey_1js2e:hover, a.button_3lXdg.link_1judM.grey_1js2e:visited:focus, a.button_3lXdg.link_1judM.grey_1js2e:visited:hover,
+.dropdown_3tXuz a:focus, .dropdown_3tXuz a:hover, .dropdown_3tXuz a:visited:focus, .dropdown_3tXuz a:visited:hover{
 color:/*[[color-global-H]]*/;
+}
+.groups_3-ypR a:focus,
+.groups_3-ypR a:hover{
+color:/*[[color-global-H]]*/!important;
 }
 a:visited,
 .body_32Bo9 a:visited,
@@ -659,7 +715,7 @@ color:#000;
 }
 .price,
 .small_price_id {
-	color: #CA3838;
+color: #CA3838;
 }
 .is_not_mobile a:hover .facet-bar,
 .is_not_mobile a:focus .facet-bar{
@@ -675,9 +731,6 @@ div.body,
 #page_aside div.section.first.hide_mobile{
 margin: 0px;
 }
-#releases{
-margin:0 0 12px 232px;
-}
 ul.module_blocks > li,
 div.section{
 margin-bottom:12px;
@@ -685,14 +738,10 @@ margin-bottom:12px;
 html.is_not_mobile.needs_reduced_ui.haslocalstorage.no_hastouch.no_indevmode.no_ismobile.hasformdata.hashistoryapi.hasflexbox.pjax_container_scrolled body.win.firefox.firefox95 div#main_wrapper div#page.aside_off_canvas div#page_content div.lr div.right div.section{
 margin-bottom:0px;
 }
-
 #full-width-header .aside_right.full-width-header-content #page_content,
 #user_header .aside_right.full-width-header-content #page_content,
 .aside_right.header-action-bar #page_content{
 margin-right:12px;
-}
-.section.recommendations{
-max-width:100%;
 }
 .button[disabled],
 .button.button-green[disabled],
@@ -831,7 +880,6 @@ background: /*[[elements-lighter]]*/;
 }
 .filtergroup {
 border-color:/*[[border-color]]*/;
-max-width: 245px;
 }
 #browser_tdl_items_pager_short,
 #browser_tdl_items_pager_long{
@@ -865,65 +913,88 @@ border-bottom-color: /*[[secondary-button]]*/;
 .dropdown_2frgf li:first-child button:hover::after {
 border-bottom-color: /*[[secondary-button-H]]*/;
 }
-@media (min-width:768px){
-div.section div.section_content,
-#page_aside div.section:nth-child(4) div.section_content,
-.ui-autocomplete,
-.ui-autocomplete.ui-menu .ui-menu-item av,
-#page div.left,
-#full-width-header .full-width-header-content div.left,
-#user_header .full-width-header-content div.left,
-.header-action-bar div.left,
-.marketplace_aside{
-padding:0px;
+button.share_link {
+background:#404040;
+border:none;
+border-radius:0px;
+color:/*[[main-text]]*/;
+padding:3px 7px;
 }
-#releases #pjax_container{
-padding:0 8px;
+.dmfIF {
+border-color:/*[[elements-lighter]]*/;
+border-radius:0px;
 }
-div.section h3,
-div.section .copy_shortcut,
-.box_header_row,
-.form-block legend,
-ul.module_blocks .header{
-padding:5px 8px;
+#versions .ui__Filters-sc-sa8gat-0 input{
+background:/*[[bg]]*/;
 }
-#page.aside_right #page_content .body,
-#page.aside_right .section .section_content,
-ul.module_blocks .footer,
-.discography_nav{
-padding:8px;
+.eonFzo input {
+background:/*[[bg]]*/;
+border-color:/*[[elements-lighter]]*/;
+border-radius: 0px;
+color:/*[[main-text]]*/;
 }
-#page.aside_right #page_content{
-padding-right:12px;
+.nQjBk {
+background: /*[[elements]]*/;
+border-radius: 0px;
 }
-#page.aside_wide #page_aside,
-#full-width-header .aside_wide.full-width-header-content #page_aside,
-#user_header .aside_wide.full-width-header-content #page_aside,
-.aside_wide.header-action-bar #page_aside{
-width:30%;
+.gQlrKf:hover{
+background-color:/*[[elements-lighter]]*/;
 }
-#page.aside_right #page_content,
-#full-width-header .aside_right.full-width-header-content #page_content,
-#user_header .aside_right.full-width-header-content #page_content,
-.aside_right.header-action-bar #page_content{
-width:70%;
+.gSYSYR,
+.la-DcKT{
+background: /*[[bg]]*/;
+border:none;
 }
-.section.tracklist table,
-#search_tabs,
-#page div.left{
-width:100%;
+.la-DcKT:hover,
+.gSYSYR:hover{
+background: /*[[elements-lighter]]*/;
+border:none;
 }
-.cards_3VSy1 li {
-padding: 0px 21px 0px 5px;
+.fLqRRO,
+.gSYSYR:hover .fLqRRO,
+.cCzWyy,
+.eXUmLR,
+.dcVLSH,
+.hupIQu:not(:first-child),
+.hkeGTp,
+.frpXFh{
+border-color:/*[[elements]]*/;
 }
+.eXUmLR{
+background: /*[[bg]]*/;
 }
-@media (max-width:767px){
-#page{
-background-color:/*[[elements]]*/;
+.fbdVXS,
+.frpXFh{
+color:/*[[main-text]]*/;
 }
-.is_mobile.needs_reduced_ui #discography_wrapper.aside_nav_wrap #releases #pjax_container{
-padding-top:8px;
+.eLWTCf {
+align-items: center;
+background-color: transparent;
+border-color:/*[[elements-lighter]]*/;
+border-radius: 2px;
+color:/*[[main-text]]*/;
 }
+.optin_3Ze0T {
+background:/*[[elements-lighter]]*/;
+}
+.optin_3Ze0T a,
+.optin_3Ze0T a:focus,
+.optin_3Ze0T a:hover,
+.optin_3Ze0T a:visited
+{
+color:/*[[main-text]]*/;
+border-color:/*[[bg]]*/;
+}
+.iFzKUK {
+border:none;
+background: /*[[bg]]*/;
+padding: 0.5rem;
+border-radius: 0px;
+color: /*[[main-text]]*/;
+}
+.iFzKUK:focus,
+.iFzKUK:hover {
+background: /*[[elements-lighter]]*/;
 }
 /*[[footer]]*/
 /*[[addmodule]]*/
