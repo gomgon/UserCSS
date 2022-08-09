@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.3.2
+@version     1.3.3
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -44,9 +44,7 @@ opacity:1;
 ==/UserStyle== */
 @-moz-document domain("discogs.com"){
 .section.report .section_content hr,
-#main_wrapper #page.aside_right #page_aside .section:not(#statistics):not(#video):nth-of-type(6),
-.wrapper_MVvNX::before,
-.wrapper_MVvNX::after{
+#main_wrapper #page.aside_right #page_aside .section:not(#statistics):not(#video):nth-of-type(6){
 display:none;
 }
 body,
@@ -121,7 +119,8 @@ a.headericon_3fHYD:visited:hover,
 .user_obUH5 button:focus,
 .user_obUH5 button:hover,
 .user_obUH5.open_2WiGA,
-.more_2LkB4:focus, .more_2LkB4:hover{
+.more_2LkB4:focus, .more_2LkB4:hover,
+.noItems_1pC5c{
 background:/*[[elements]]*/;
 }
 #page_content .messageContents table#deh-wrapper tbody tr td table tbody tr td table{
@@ -250,6 +249,12 @@ a.button_3lXdg.blue_2acgV:visited:focus,
 a.button_3lXdg.blue_2acgV:visited:hover{
 background:/*[[color-global-H]]*/;
 }
+.wrapper_MVvNX::before {
+background: linear-gradient(270deg,hsla(0,0%,100%,0),/*[[bg]]*/);
+}
+.wrapper_MVvNX::after {
+background: linear-gradient(90deg,hsla(0,0%,100%,0),/*[[bg]]*/);
+}
 .collection_3SHpt{
 background:#253225;
 border:none
@@ -274,9 +279,6 @@ background:transparent;
 .button_3lXdg.blue_2acgV,
 a.button_3lXdg.blue_2acgV{
 background-image:none;
-}
-.wrapper_MVvNX::after{
-width: 2em!important;
 }
 .section.recommendations .cards,
 .button{
