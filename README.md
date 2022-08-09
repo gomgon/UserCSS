@@ -1,5 +1,5 @@
 Infrequent updates atm, feel free to fork, or use the "your css code" option in the stylesheets to simply add your fix :)<br>
-Full rework/rewrite in progress™ on all slylesheets, mobile display full rework aswell
+Full rework/rewrite in progress™ on all slylesheets
 #
 A [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) compatible userstyle manager is required, those are recommended:
 
@@ -8,8 +8,8 @@ A [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) compatible userst
 
 Mobile:<br>
 ![Stylus](/images/Stylus.png) [Stylus](https://addons.mozilla.org/en-US/android/addon/styl-us/) for [Firefox Nighly](https://play.google.com/store/apps/details?id=org.mozilla.fenix) (using [this](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly/))
-#
-Note: Activate the websites own dark theme if they have one, as I (re)write over that.<br>
+
+Note: Activate the websites own dark theme if they have one, as I (re)write over that.
 #
 [![Install](/images/last.fm.png)](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css) Last.fm stylesheet.
 
