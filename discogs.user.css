@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.3.10
+@version     1.3.11
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -20,9 +20,9 @@
 @advanced color color-global-H "Main color hover" #77A6CC
 @advanced color link-visited "Visited link" #805C9E
 @advanced color link-visited-H "Visited link hover" #A677CC
-@advanced color status-new "New submition color" #916f08;
-@advanced color status-edit "Recently edited color" #505050;
-@advanced color status-change "Needs changes color" #911c1c;
+@advanced color status-new "New submition color" #8f6d07
+@advanced color status-edit "Recently edited color" #505050
+@advanced color status-change "Needs changes color" #911c1c
 @advanced dropdown footer "Hide footer" {
 No "No" <<<EOT
 EOT;
