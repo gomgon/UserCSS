@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Discogs
 @namespace   gomgon
-@version     1.3.11
+@version     1.3.12
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/discogs.user.css
 @license     CC-BY-SA-4.0
@@ -14,7 +14,7 @@
 @advanced color secondary-button "Buttons" #404040
 @advanced color secondary-button-H "Buttons hover" #505050
 @advanced color main-text "Main text" #999999
-@advanced color button-text "Buttons text" #E3E3E3
+@advanced color button-text "Buttons text" #d9d9d9
 @advanced color button-text-H "Buttons text hover" #FFFFFF
 @advanced color color-global "Main Color" #5C809E
 @advanced color color-global-H "Main color hover" #77A6CC
@@ -89,8 +89,6 @@ table.table_block tbody tr.even,
 .inset-box,
 ul.module_blocks > li,
 .password-strength-meter,
-.discography_nav,
-#releases #pjax_container,
 .history_form,
 .is_not_mobile table.release_list_table tbody tr:hover,
 table.release_list_table tbody tr:focus-within,
@@ -498,8 +496,10 @@ color:#606060;
 color:#404040;
 }
 body,
+input,
 input[type="text"],
 input[type="password"],
+textarea,
 .section.tracklist table tr td.tracklist_track_duration,
 .section.credits span.role,
 .section.barcodes span.type,
@@ -510,7 +510,6 @@ input[type="password"],
 .form-block .instructions,
 .optional-label,
 .page_description,
-textarea,
 .fake-input,
 .aside_search_form button i,
 a.readmore_toggler,
@@ -614,7 +613,12 @@ a.button_3lXdg.blue_2acgV:focus,
 a.button_3lXdg.blue_2acgV:hover,
 a.button_3lXdg.blue_2acgV:visited:focus,
 a.button_3lXdg.blue_2acgV:visited:hover,
-button{
+button,
+.toggle_36IZ_,
+#site_search #do_site_search i,
+.lazy_gallery_nav,
+.clear_selected_marketplace_filters,
+.clear_selected_marketplace_filters:visited{
 color:/*[[button-text]]*/;
 }
 .button,
@@ -633,6 +637,13 @@ color:/*[[button-text]]*/;
 .current_filter,
 .is_not_mobile .facets_nav a:hover .facet_count{
 color:/*[[button-text]]*/!important;
+}
+.aside_search_form button:hover i,
+#site_search #do_site_search:hover i,
+.lazy_gallery_nav:hover,
+.toggle_36IZ_:focus,
+.toggle_36IZ_:hover{
+color:/*[[button-text-H]]*/;
 }
 a,
 .body_32Bo9 a,
@@ -653,7 +664,8 @@ a.rollover_link.hl_added,
 a.button_3lXdg.link_1judM,
 .filtergroup .filterlink a:visited,
 .youtube_track .title,
-.site_nav_submenu li a:hover:visited{
+.site_nav_submenu li a:hover:visited,
+.title_26yzZ{
 color:/*[[color-global]]*/;
 }
 .is_mobile.needs_reduced_ui #page.aside_off_canvas .open_filter.filters_active,
@@ -691,7 +703,12 @@ a.button_3lXdg.link_1judM:visited:hover,
 .site_nav_tray a:hover i,
 .filtergroup .filterlink a:visited:hover,
 .button_3lXdg.link_1judM.grey_1js2e:focus, .button_3lXdg.link_1judM.grey_1js2e:hover, .button_3lXdg.link_1judM.grey_1js2e:visited:focus, .button_3lXdg.link_1judM.grey_1js2e:visited:hover, a.button_3lXdg.link_1judM.grey_1js2e:focus, a.button_3lXdg.link_1judM.grey_1js2e:hover, a.button_3lXdg.link_1judM.grey_1js2e:visited:focus, a.button_3lXdg.link_1judM.grey_1js2e:visited:hover,
-.dropdown_3tXuz a:focus, .dropdown_3tXuz a:hover, .dropdown_3tXuz a:visited:focus, .dropdown_3tXuz a:visited:hover{
+.dropdown_3tXuz a:focus,
+.dropdown_3tXuz a:hover,
+.dropdown_3tXuz a:visited:focus,
+.dropdown_3tXuz a:visited:hover,
+.title_26yzZ .video_SuWuh:focus,
+.video_SuWuh:hover .title_26yzZ{
 color:/*[[color-global-H]]*/;
 }
 .groups_3-ypR a:focus,
@@ -708,17 +725,6 @@ color:/*[[link-visited]]*/;
 a:visited:hover,
 .body_32Bo9 a:visited:hover{
 color:/*[[link-visited-H]]*/;
-}
-#site_search #do_site_search i,
-.lazy_gallery_nav,
-.clear_selected_marketplace_filters,
-.clear_selected_marketplace_filters:visited{
-color:/*[[button-text]]*/;
-}
-.aside_search_form button:hover i,
-#site_search #do_site_search:hover i,
-.lazy_gallery_nav:hover{
-color:/*[[button-text-H]]*/;
 }
 .community_number{
 color:#000;
@@ -786,6 +792,9 @@ text-shadow:none!important;
 .ui-autocomplete{
 top:56px!important;
 }
+
+/* to sort */
+
 ul.module_blocks > li.loading{
 height:100px;
 background:/*[[elements]]*/;
@@ -895,7 +904,7 @@ border-color:/*[[border-color]]*/;
 background-color: /*[[elements-lighter]]*/;
 }
 #browser_tdl_items_pager_short .icon{
-margin-top:2px!important;;
+margin-top:2px!important;
 }
 .site_nav_group.opened,
 .is_not_mobile #site_navigation > li > a:hover,
@@ -983,7 +992,9 @@ border-color:/*[[elements-lighter]]*/;
 border-radius: 2px;
 color:/*[[main-text]]*/;
 }
-
+#m_versions div.toggle_section_control h2 button{
+margin-left:10px;
+}
   
 /* Master Release Beta Vertion */
 
