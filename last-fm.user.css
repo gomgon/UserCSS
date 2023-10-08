@@ -2183,6 +2183,14 @@ stroke:#805C9E;
 .user-dashboard-listening-clock .user-dashboard-legend-item:first-child::before {
 background: #805C9E;
 }
+.section-settings-toggle{
+filter: invert(100%)!important;
+}
+.header-new-actions .toggle-button,
+.header-new-actions .disclose-trigger.header-new-more-button{
+border-radius:0px;
+border-color:/*[[border-color]]*/;
+}
 @media (max-width:767px){
 .features-header-inner-wrap{
 background-color:/*[[bg]]*/;
