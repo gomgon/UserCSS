@@ -1,5 +1,3 @@
-Full rework/rewrite in progress™ on all slylesheets, and new ones.
-#
 A [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) compatible userstyle manager is required, those are recommended:
 
 ![Stylus](/images/Stylus.png) Stylus for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) or [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/).<br>
@@ -30,6 +28,3 @@ Mobile:<br>
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/GoogleScreenshot2.png" height="80" title="Click to enlarge"></img>
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/GoogleScreenshot3.png" height="80" title="Click to enlarge"></img>
 <br>
-
-Currently working on search and images, other "subpages" to be added after current cleanup.
-
