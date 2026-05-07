@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.7.2
+@version     2.7.3
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -1075,7 +1075,6 @@ background-color:/*[[bg]]*/;
 .date-picker-content{
 background:/*[[bg-lighter]]*/!important;
 }
-.content,
 .recommended-next-page,
 .user-dashboard-history-subscribe-banner-cta::after,
 .user-dashboard-history-subscribe-banner-cta::before,
@@ -1836,6 +1835,10 @@ width: 3px;
 height: 3px;
 transform: rotate(45deg);
 }
+body:not([data-whatinput="touch"]) .header-new-love-button,
+body:not([data-whatinput="touch"]) .header-new-love-button:hover{
+border-color:#FFFFFF
+}
 .dropdown-menu-clickable-button.shoutbox-sort-toggle::after,
 .js .dropdown-menu-clickable-button-js-only::after{
 top: 18px;
@@ -2199,10 +2202,15 @@ background: #805C9E;
 .section-settings-toggle{
 filter: invert(100%)!important;
 }
-.header-new-actions .toggle-button,
 .header-new-actions .disclose-trigger.header-new-more-button{
 border-radius:0px;
-border-color:/*[[border-color]]*/;
+}
+
+.highcharts-graph{
+stroke:/*[[color-global]]*/
+}
+.highcharts-area{
+fill:rgba(255, 255, 255, 0.1)
 }
 .share-button-row .btn-report--week {
 	background-color: /*[[color-global]]*/;
