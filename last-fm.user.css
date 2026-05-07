@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.7.3
+@version     2.7.4
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -2205,7 +2205,9 @@ filter: invert(100%)!important;
 .header-new-actions .disclose-trigger.header-new-more-button{
 border-radius:0px;
 }
-
+.highcharts-point{
+stroke:/*[[color-global]]*/
+}
 .highcharts-graph{
 stroke:/*[[color-global]]*/
 }
