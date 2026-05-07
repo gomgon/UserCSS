@@ -22,9 +22,6 @@ Mobile:<br>
 <img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/DiscogsScreenshot3.png" height="80" title="Click to enlarge"></img>
 <br>
 #
-[![Install](/images/google.png)](https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css) [Click here to install](https://raw.githubusercontent.com/gomgon/UserCSS/master/google.user.css) Google stylesheet.
-
-<img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/GoogleScreenshot1.png" height="80" title="Click to enlarge"></img>
-<img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/GoogleScreenshot2.png" height="80" title="Click to enlarge"></img>
-<img align="center" src="https://raw.githubusercontent.com/gomgon/UserCSS/master/images/GoogleScreenshot3.png" height="80" title="Click to enlarge"></img>
+Google (discontinued)
+You can get dark mode in setings at the bottom of google.com
 <br>
