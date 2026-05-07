@@ -23,5 +23,5 @@ Mobile:<br>
 <br>
 #
 Google (discontinued)
-You can get dark mode in setings at the bottom of google.com
+You can get dark mode in settings at the bottom of google.com
 <br>
