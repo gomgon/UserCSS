@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.7.1
+@version     2.7.2
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -635,7 +635,8 @@ color:#FFFFFF;
 .artist-header-featured-items-item-name a:hover,
 .artist-header-featured-items-item-aux-text,
 #hero h1,
-.subscribe-footbox h2.subscribe-features-heading{
+.subscribe-footbox h2.subscribe-features-heading,
+.report-box-container--overview{
 color:#EEEEEE;
 }
 .follower-btn{
@@ -676,7 +677,6 @@ filter: invert(60%);
 .coloured-cta--wiki-icon::before,
 .coloured-cta--tag-icon::before,
 .gallery-preview-cta::before,
-.section-settings-toggle::before,
 .gallery-image-vote-up-off .gallery-image-votes::before,
 .gallery-image-vote-down-off .gallery-image-votes::before,
 .no-data-message--gallery::before,
@@ -716,8 +716,7 @@ filter: invert(90%);
 .share-chart .share-button-profile::before,
 .share-chart .share-button-library::before,
 .video-preview-upload-cta:hover::before,
-.section-settings-toggle:focus::before,
-.section-settings-toggle:hover::before{
+.your-progress-component .loading{
 filter: invert(100%);
 }
 .user-dashboard-pagination-next-link::before,
@@ -966,7 +965,6 @@ transition: none;
 /*[[font]]*/
 #adSkinLeft,
 #adSkinRight,
-.container.page-content,
 .content-top,
 .content-top-lower,
 .date-picker-content,
@@ -1023,7 +1021,12 @@ background:/*[[bg]]*/!important;
 pre,
 .blurb,
 .left-column,
-.user-dashboard-module{
+.user-dashboard-module,
+html.js.playbar-masthead-release-shim.video.svgforeignobject.csspointerevents div.container.page-content,
+.user-dashboard-layout--version-5 .main-content, .user-dashboard-layout--version-5 .user-dashboard .container,
+.report-headline-top,
+.user-dashboard-layout--version-5 .user-dashboard .container,
+.report-box-container{
 background:/*[[bg]]*/;
 }
 .pro-features-experiment #subscribe-form #features.container{
@@ -1160,7 +1163,8 @@ background:/*[[color-global]]*/!important;
 .api-session-connect,
 .user-dashboard-section-header::after,
 .user-dashboard-listening-week .user-dashboard-legend-item--current::before,
-.user-dashboard-listening-week .user-dashboard-legend-item--comparison::before{
+.user-dashboard-listening-week .user-dashboard-legend-item--comparison::before,
+.user-dashboard--weekly .report-box-container--overview{
 background:/*[[color-global]]*/;
 }
 .header-follower-btn .follower-btn-add-follower::before,
@@ -1360,7 +1364,8 @@ border-color:/*[[border-color]]*/!important;
 .listening-report-brick.listening-report-brick--combo:hover,
 .listening-report-brick:focus,
 .listening-report-brick:hover,
-.listening-report-brick .listening-report-brick-inner + .listening-report-brick-inner{
+.listening-report-brick .listening-report-brick-inner + .listening-report-brick-inner,
+.promo-v3 .listening-report-promo{
 border-color:/*[[border-color]]*/;
 }
 .content-form .has-error .form-control,
@@ -1480,8 +1485,8 @@ box-shadow:none ;
 .lyrics-snippet-more-link{
 box-shadow: none !important;
 }
-.metacritic-score{
-color:/*[[bg]]*/!important;
+.header-new-actions .toggle-button, .header-new-actions .disclose-trigger.header-new-more-button .metacritic-score{
+color:/*[[secondary-button-H]]*/
 }
 a,
 .stationlink-list .btn,
@@ -1525,7 +1530,9 @@ div.username,
 .col-main .secondary-nav-item-link--active:focus,
 .col-main .secondary-nav-item-link--active:hover,
 .more-items,
-.user-dashboard-musical-matches .header-metadata-display a{
+.user-dashboard-musical-matches .header-metadata-display a,
+.user-dashboard--weekly .report-headline-top,
+.user-dashboard--weekly .report-headline-top .user-dashboard-pagination-previous a{
 color:/*[[color-global]]*/;
 }
 .selectbox .selectboxit-selected .selectboxit-option-anchor,
@@ -1558,7 +1565,9 @@ a.shout-permalink:focus,
 .more-items:focus,
 .more-items:hover,
 .js .date-range-picker-button:focus,
-.js .date-range-picker-button:hover{
+.js .date-range-picker-button:hover,
+.user-dashboard--weekly .report-headline-top .user-dashboard-pagination-previous a:hover,
+.user-dashboard--weekly .report-headline-top .user-dashboard-pagination-previous a:hover:not(.disabled){
 color:/*[[color-global-hover]]*/;
 }
 .kerve .nowslider_copywrap a:hover,
@@ -1606,7 +1615,8 @@ a.buylink,
 .more-disclose-mobile .more-item,
 .featured-item-heading-link,
 .recommended-next-page-title,
-.header .header-metadata-title{
+.header .header-metadata-title,
+.user-dashboard--weekly .report-box-container--overview{
 color:/*[[main-text]]*/!important;
 }
 h1,
@@ -1659,7 +1669,9 @@ p span,
 .user-dashboard-tube-tags-position,
 .subscribe-intro,
 #hero .subnote,
-.card--subscribe .subscribe-benefit--copy{
+.card--subscribe .subscribe-benefit--copy,
+.labs-cta .description,
+.labs-cta .labs-logo{
 color:/*[[main-text]]*/;
 }
 .btn-primary,
@@ -2069,7 +2081,8 @@ color:/*[[button-text-H]]*/;
 border:1px solid /*[[button-text-H]]*/;
 }
 .header-new-download-button::before,
-.header-new-more-button::before{
+.header-new-more-button::before,
+.user-dashboard--weekly .report-headline-meta .report-badge--comparison img{
 filter: invert(100%) !important;
 }
 .header-new-download-button:hover::before,
@@ -2190,6 +2203,13 @@ filter: invert(100%)!important;
 .header-new-actions .disclose-trigger.header-new-more-button{
 border-radius:0px;
 border-color:/*[[border-color]]*/;
+}
+.share-button-row .btn-report--week {
+	background-color: /*[[color-global]]*/;
+	color: #000;
+}
+.user-dashboard-layout--version-4 .btn-back-to-top, .user-dashboard-layout--version-5 .btn-back-to-top {
+	background-color: /*[[color-global]]*/
 }
 @media (max-width:767px){
 .features-header-inner-wrap{
