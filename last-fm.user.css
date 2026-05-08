@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Last.fm
 @namespace   gomgon
-@version     2.7.4
+@version     2.7.5
 @homepageURL https://github.com/gomgon/UserCSS
 @updateURL   https://raw.githubusercontent.com/gomgon/UserCSS/master/last-fm.user.css
 @license     CC-BY-SA-4.0
@@ -1026,7 +1026,8 @@ html.js.playbar-masthead-release-shim.video.svgforeignobject.csspointerevents di
 .user-dashboard-layout--version-5 .main-content, .user-dashboard-layout--version-5 .user-dashboard .container,
 .report-headline-top,
 .user-dashboard-layout--version-5 .user-dashboard .container,
-.report-box-container{
+.report-box-container,
+.container .page-content{
 background:/*[[bg]]*/;
 }
 .pro-features-experiment #subscribe-form #features.container{
@@ -1343,7 +1344,8 @@ input.confirmButton:hover,
 .personal-stats-item::before,
 .wiki-block::after,
 .wiki-block::before,
-.menu-title::after{
+.menu-title::after,
+.bubble-chart-colour-scheme--4 .bubble-chart-button{
 border-color:/*[[border-color]]*/!important;
 }
 .subscribe-plan,
@@ -1531,7 +1533,8 @@ div.username,
 .more-items,
 .user-dashboard-musical-matches .header-metadata-display a,
 .user-dashboard--weekly .report-headline-top,
-.user-dashboard--weekly .report-headline-top .user-dashboard-pagination-previous a{
+.user-dashboard--weekly .report-headline-top .user-dashboard-pagination-previous a,
+.bubble-chart-colour-scheme--4 .compare-text{
 color:/*[[color-global]]*/;
 }
 .selectbox .selectboxit-selected .selectboxit-option-anchor,
@@ -2105,7 +2108,9 @@ filter: invert(100%) !important;
 .sidebar-bookmark::before{
 filter: invert(60%) !important;
 }
-.sidebar-bookmark:hover::before{
+.sidebar-bookmark:hover::before,
+.highcharts-axis-labels .highcharts-xaxis-labels text,
+.highcharts-root .highcharts-data-labels > g > text, .highcharts-root .highcharts-axis-labels > text.highcharts-data-labels > g > text, .highcharts-axis-labels > text{
 filter: invert(90%) !important;
 }
 .header-new-bookmark-button:hover::before,
@@ -2158,8 +2163,12 @@ fill:/*[[bg-lighter]]*/;
 }
 .scrobble-stats-graph-chart .highcharts-background,
 .user-dashboard-tube-tags-scroll .highcharts-background,
-.highcharts-background {
+.highcharts-background{
 fill:/*[[bg]]*/;
+}
+.highcharts-data-labels > g > text,
+.highcharts-axis-labels > text{
+fill:/*[[bg-lighter]]*/!important;
 }
 .highcharts-container > svg > g.highcharts-series-group .highcharts-series-0 > a > rect,
 .highcharts-container > svg > g.highcharts-series-group .highcharts-series-1 > a > rect,
